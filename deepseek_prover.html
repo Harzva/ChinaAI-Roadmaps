@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>DeepSeek‑Prover 系列：形式化定理证明的进步</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>DeepSeek‑Prover 系列：形式化定理证明的进步</h1>
+    <p><strong>DeepSeek‑Prover</strong> 是针对形式化定理证明任务的语言模型系列，旨在自动化 Lean 4 等定理证明系统中的证明过程。系列包括初版 Prover、Prover‑V1.5 和 Prover‑V2。</p>
+    <h2>DeepSeek‑Prover（2024）</h2>
+    <ul>
+        <li><strong>大规模合成数据</strong>：初版通过生成大量 Lean 4 定理及证明对，构建了包含数百万条证明数据集，为模型预训练提供基础。</li>
+        <li><strong>策略学习</strong>：采用 RL 与蒙特卡洛树搜索 (MCTS) 结合，让模型在生成证明步骤时评估未来状态并选择最优路径。</li>
+        <li><strong>性能</strong>：在 MiniF2F 和 Lean problems 集上显著超过之前的神经定理证明器。</li>
+    </ul>
+    <h2>Prover‑V1.5（2024 末）</h2>
+    <ul>
+        <li><strong>Proof Assistant Feedback</strong>：利用定理助手的反馈信号指导 RL，优化奖励函数，使模型学习到更可靠的推理策略。</li>
+        <li><strong>升级 MCTS</strong>：整合启发式策略与近似价值函数，提高搜索效率。</li>
+    </ul>
+    <h2>Prover‑V2（2025）</h2>
+    <ul>
+        <li><strong>子目标分解</strong>：V2 引入自动化的子目标生成与分解技术，将复杂证明任务拆分为易于处理的小问题，并使用 RL 优化求解顺序。</li>
+        <li><strong>更大数据与模型</strong>：通过构建更大规模的证明数据集和采用更大模型，提高了在复杂定理上的成功率。</li>
+    </ul>
+    <h2>总结</h2>
+    <p>DeepSeek‑Prover 系列展示了通过 RL 与 MCTS 结合解决形式化定理证明的路径。随着 Prover‑V1.5 和 V2 引入助手反馈和子目标分解，模型在 Lean 4 环境的自动化证明能力显著增强，为 AI 在数学领域的应用开辟了新方向。</p>
+</body>
+</html>

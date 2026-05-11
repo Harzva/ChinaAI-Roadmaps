@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>GLM‑5 技术报告综述</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>GLM‑5 技术报告综述</h1>
+    <p><strong>GLM‑5</strong> 是智谱 AI 在 2026 年发布的新一代基础模型，主题为“从 Vibe Coding 到 Agentic Engineering”。报告提出多项创新以降低训练成本、扩展上下文能力，并将模型推向真实工程任务。</p>
+    <h2>主要创新</h2>
+    <ul>
+        <li><strong>动态稀疏注意力（DSA）</strong>：在注意力计算中动态选择关键 token，通过稀疏化策略显著减少训练和推理的 FLOPs，同时保留长上下文信息。这一机制使得 GLM‑5 在长文本任务中更加高效。</li>
+        <li><strong>异步强化学习基础设施</strong>：报告提出一种新的异步 RL 基础设施，将数据生成、模型训练与策略评估解耦。训练过程中，不同智能体可并行生成轨迹并由主服务器异步聚合，提高了 RL 训练吞吐并降低资源占用【181247732484451†L100-L113】。</li>
+        <li><strong>异步 Agentic 强化学习算法</strong>：基于上述基础设施，GLM‑5 采用异步 actor‑critic 算法，结合自评奖励与过程监督，实现更稳定的策略优化。这让模型能够在真实软件工程和多步骤任务中表现出色【181247732484451†L100-L113】.</li>
+    </ul>
+    <h2>性能与应用</h2>
+    <p>报告指出，GLM‑5 在多个开放评测上达到或超过当时最强模型：</p>
+    <ul>
+        <li><strong>软件工程任务</strong>：在真实代码库和项目管理任务中，GLM‑5 通过长程规划和工具调用完成度高于 GLM‑4.5 和其他开源模型。</li>
+        <li><strong>长文档理解</strong>：借助 DSA 和长上下文缓存机制，模型可处理百万级 token 的输入，在法律文档、学术文章等场景中表现优秀。</li>
+        <li><strong>Agentic 应用</strong>：异步 RL 和自我评估算法让 GLM‑5 更适合用作智能体基础模块，可以调用外部 API、检索和执行代码等，实现复杂任务链的自动化。</li>
+    </ul>
+    <h2>总结</h2>
+    <p>GLM‑5 通过 DSA 和异步强化学习架构实现训练和推理成本的双重降低，并成功过渡到工程场景下的智能体应用。这标志着 GLM 系列从纯语言模型迈向 Agentic Intelligence 的关键一步【181247732484451†L100-L113】。</p>
+</body>
+</html>

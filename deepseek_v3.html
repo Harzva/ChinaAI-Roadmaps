@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>DeepSeek‑V3 / V3.2：探索前沿的动态稀疏与任务合成</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>DeepSeek‑V3 / V3.2：探索前沿的动态稀疏与任务合成</h1>
+    <p><strong>DeepSeek‑V3</strong> 系列（含 V3.2）是 2024 末至 2025 年推出的升级版混合专家模型，在 V2 的基础上进一步引入 <strong>动态稀疏注意力 (DSA)</strong>、强化学习任务合成和强化奖励扩展等技术。</p>
+    <h2>创新点</h2>
+    <ul>
+        <li><strong>动态稀疏注意力 (DSA)</strong>：相比于固定稀疏模式，DSA 根据输入上下文动态调整注意力模式，更好地在长序列中捕捉关键依赖，显著降低推理成本并保持信息完整性。</li>
+        <li><strong>任务合成与多任务训练</strong>：V3 系列通过合成大量复杂任务（包括编程、搜索、多模态操作），利用 RL 和 DPO 等方法让模型学习跨任务迁移和策略探索。</li>
+        <li><strong>通用奖励模型与 RL 扩展</strong>：引入 Inference‑Time Scaling for Generalist Reward Modeling (GRM)，在推理时灵活放缩奖励模型，使其适应不同任务和环境，提升代理决策质量。</li>
+    </ul>
+    <h2>DeepSeek‑V3.2 的进展</h2>
+    <p>V3.2 在 V3 基础上进一步扩大模型规模并优化 RL 训练管线：</p>
+    <ul>
+        <li><strong>更大模型与数据集</strong>：使用 37B 激活参数的 MoE 模型，训练数据涉及更多真实场景，如软件工程、办公自动化与数据分析。</li>
+        <li><strong>高效 RL 框架</strong>：采用异步调度和经验池回放，使任务合成训练更高效；结合 DSA 与 NSA 保障长上下文效率。</li>
+        <li><strong>Agentic 任务合成</strong>：V3.2 聚焦将复杂目标拆分为子任务并自动调用工具（搜索、代码执行、绘图等），展现出强大的智能体能力。</li>
+    </ul>
+    <h2>总结</h2>
+    <p>DeepSeek‑V3 系列通过动态稀疏注意力和任务合成，显著提高了模型在长序列和复杂决策任务中的表现。V3.2 则在规模和 RL 基础设施上再度升级，推动开源模型向智能体方向发展。</p>
+</body>
+</html>

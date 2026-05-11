@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Muon 是可扩展的优化器</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Muon 是可扩展的优化器</h1>
+    <p>《Muon is Scalable for LLM Training》是 2025 年发表的技术报告，系统分析了 Muon 优化器在大规模预训练中的可扩展性，为 Kimi K2 采用的 MuonClip 奠定理论基础。</p>
+    <h2>研究内容</h2>
+    <ul>
+        <li><strong>理论分析</strong>：论文从梯度估计和动量校正的角度解释了 Muon 优化器如何在稀疏专家模型和长序列训练中保持稳定。作者指出，在大模型训练中，梯度噪声随 batch size 和序列长度增加而增大，而 Muon 能有效抵抗噪声。</li>
+        <li><strong>实验验证</strong>：通过在 7B、13B 和 32B 等不同规模模型上比较 Muon 与 Adam/Adafactor，论文展示了 Muon 的更高收敛速度和更低的 token 损失。尤其是在稀疏专家架构下，Muon 几乎没有额外的内存开销。</li>
+        <li><strong>扩展策略</strong>：为了适应更大的模型和更长的训练序列，论文提出多学习率分组、动量截断等技巧，保证了 Muon 优化器在 1 万亿参数级别的模型上依然高效。</li>
+    </ul>
+    <h2>贡献与意义</h2>
+    <p>Muon 优化器的可扩展性研究为 K2 采用的 <strong>MuonClip (QK‑Clip)</strong> 打下基础：后者利用权值裁剪替代梯度裁剪，大幅减少爆炸问题。通过理论与实证研究，论文证明了 Muon 及其变种是训练稀疏专家大模型的关键工具。</p>
+</body>
+</html>

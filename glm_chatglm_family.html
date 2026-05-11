@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGLM 系列综述</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2, h3 { color: #2c3e50; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>ChatGLM 系列综述</h1>
+    <p>ChatGLM 系列是在 GLM‑130B 基础上发展出的中文对话大模型家族，融合了监督微调、指令调优和强化学习来提升对话能力。该系列覆盖从 6B、13B 到 130B 的不同尺寸，并随着版本迭代在长上下文、代码生成和多模态方面持续进化。</p>
+    <h2>ChatGLM 1/2/3</h2>
+    <p>最初的 <strong>ChatGLM</strong> 采用了指令微调技术，使 6B 规模的模型能够在中英双语环境下进行自然对话。随后发布的 <strong>ChatGLM 2</strong> 通过引入更大的 <strong>32K 上下文窗口</strong>、增加代码数据和数学推理训练，在 MMLU 及 C‑Eval 等基准上显著提高表现。<strong>ChatGLM 3</strong> 进一步引入强化学习和人类反馈，提升了长文本对话和复杂任务执行能力。</p>
+    <h2>GLM‑4 系列（ChatGLM 4）</h2>
+    <p>2024 年，团队推出 <strong>GLM‑4</strong> 系列，它实际上也是 ChatGLM 家族的升级版，包含多个子模型：</p>
+    <ul>
+        <li><strong>GLM‑4‑Air</strong>：约 9B 参数，针对移动端和边缘设备优化，兼顾性能和成本。</li>
+        <li><strong>GLM‑4</strong>：主力模型，采用稀疏专家架构，在相同推理开销下提供更大的总参数规模，并支持 <strong>128K</strong> 以上的长上下文。</li>
+        <li><strong>GLM‑4V</strong>：加入视觉编码器，能够理解图像和图表并与文本进行联合推理。</li>
+        <li><strong>GLM‑4‑All Tools</strong>：在语言模型基础上引入工具调用框架，可以访问搜索、代码执行、绘图等外部插件，体现了向智能体方向的迈进。</li>
+    </ul>
+    <p>这些模型在问答、编码、数学和多模态任务上取得领先，并通过插件机制扩展模型的应用场景。</p>
+    <h2>技术亮点</h2>
+    <ul>
+        <li><strong>监督微调 + 指令蒸馏</strong>：ChatGLM 系列采用中文问答数据和命令式指令进行微调，使模型更贴近用户需求。</li>
+        <li><strong>长上下文处理</strong>：从 ChatGLM 2 起显著扩展了上下文窗口，利用稀疏注意力机制，在生成长文档时保持一致性。</li>
+        <li><strong>多模态能力</strong>：GLM‑4V 通过视觉编码器使模型具备图文理解能力，支持例如表格理解、绘图问答等任务。</li>
+        <li><strong>工具调用</strong>：GLM‑4‑All Tools 提供了插件接口，允许模型在对话中调用外部搜索引擎、计算器或代码执行环境，提升真实任务完成度。</li>
+    </ul>
+    <h2>总结</h2>
+    <p>ChatGLM 系列展示了 GLM 家族从通用语言模型向多模态智能体演进的路线。它不仅在开放领域对话上表现出色，还通过长上下文、代码能力和外部工具调用，拓展了模型在生产力和智能体领域的应用范围。</p>
+</body>
+</html>

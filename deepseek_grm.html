@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Generalist Reward Modeling 与推理时扩展</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Generalist Reward Modeling (GRM) 与推理时扩展</h1>
+    <p>在强化学习驱动的语言模型中，如何设计奖励模型并在推理阶段灵活适配不同任务，是提高模型通用性的重要课题。DeepSeek 提出的 <strong>Generalist Reward Modeling (GRM)</strong> 及其 <strong>推理时扩展策略</strong>，旨在解决奖励模型过于静态的问题。</p>
+    <h2>Generalist Reward Modeling</h2>
+    <p>GRM 指构建一个能够为多种任务提供统一奖励信号的模型。与针对单任务训练奖励函数不同，GRM 学习跨任务的偏好信息，在训练过程中对来自不同来源的样本进行打分，从而兼顾多任务需求。</p>
+    <h2>推理时扩展策略</h2>
+    <p>论文《Inference‑Time Scaling for Generalist Reward Modeling》指出，训练好的 GRM 在推理时可能受到分布差异影响。为此，作者提出在推理阶段对奖励信号进行线性缩放或温度调整，以适应不同任务难度和约束。该策略无需重新训练奖励模型，也避免了任务特定的微调。</p>
+    <h2>应用</h2>
+    <p>在 DeepSeek‑R1 和 V3 系列的强化学习训练中，GRM 与推理时扩展方法用于指导模型生成更深的思考链，并在不同任务之间动态调整奖励权重，提升总体性能。</p>
+    <h2>总结</h2>
+    <p>Generalist Reward Modeling 和推理时扩展策略为多任务强化学习提供了一种简单而有效的方案，避免了为每个任务设计独立奖励模型的繁琐，并在真实应用中表现出良好的泛化能力。</p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>WebGLM: Web-Enhanced Question Answering</title></head>
+<body>
+<h1>WebGLM: Towards an Efficient Web-Enhanced Question Answering System with Human Preferences</h1>
+<p><strong>WebGLM</strong> 是智谱团队于 2023 年提出的检索增强问答系统，将大型语言模型与互联网检索结合，提升模型回答事实性问题的能力。传统的大模型无法访问最新信息，WebGLM 在生成回答之前先搜索网络并提取候选内容，然后通过模型排序和摘要，结合人类偏好进行微调，使回答更加准确且具备时效性。</p>
+<h2>关键技术</h2>
+<ul>
+<li><strong>检索与生成融合：</strong>系统首先调用搜索引擎检索答案候选，再用语言模型对候选进行筛选和总结，最终生成回答。</li>
+<li><strong>人类偏好训练：</strong>通过人类打分和偏好优化让模型学会更好地利用检索结果，避免幻觉和过度编造。</li>
+<li><strong>模块化设计：</strong>WebGLM 作为 ChatGLM 系列的插件可独立更新，使模型随时获取最新信息。</li>
+</ul>
+<h2>应用</h2>
+<p>WebGLM 对提升问答系统在时效性和准确度方面有重要作用，特别适合新闻、科普等需要实时信息的场景。在国内外的评测中，WebGLM 在事实性问答准确率上明显优于纯语言模型基线。</p>
+</body>
+</html>
