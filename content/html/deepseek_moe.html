@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>DeepSeekMoE：Towards Ultimate Expert Specialization in Mixture‑of‑Experts</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        ul { padding-left: 20px; }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/content.css">
+    </head>
+<body>
+    <h1>DeepSeekMoE：Towards Ultimate Expert Specialization in Mixture‑of‑Experts</h1>
+    <p>《DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture‑of‑Experts Language Models》是 2024 年提出的一篇关键论文，聚焦提升稀疏专家模型的效率和性能，通过专家隔离与负载均衡策略将 MoE 推向更大规模。</p>
+    <h2>核心贡献</h2>
+    <ul>
+        <li><strong>专家隔离与共享策略</strong>：论文指出，在大规模 MoE 模型中，专家之间的相互干扰会降低泛化能力。为此，作者提出隔离共享模块与专业模块，将低层网络共享，高层专家独立，以减少不同任务之间的冲突【400596717938453†L50-L104】。</li>
+        <li><strong>负载均衡优化</strong>：为解决部分专家过载、部分专家闲置的问题，论文设计了新的路由器和损失函数，使 token 更均匀地分配到各专家【400596717938453†L50-L104】。</li>
+        <li><strong>大规模实验</strong>：团队在 16B 和 145B 等规模的 MoE 模型上验证了该策略，结果表明在不增加计算成本的情况下，模型性能可与同等规模的全密集模型媲美或更好【400596717938453†L50-L104】。</li>
+    </ul>
+    <h2>意义</h2>
+    <p>DeepSeekMoE 为后续采用稀疏专家架构的 DeepSeek‑V2/V3 提供了理论和实践基础。通过优化专家分工和负载均衡，该方法让 MoE 模型既能扩展到上百亿参数，又能保持稳定、高效的训练和推理。</p>
+</body>
+</html>
+
+

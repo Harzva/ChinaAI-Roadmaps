@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>GLM - Autoregressive Blank Infilling</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/content.css">
+    </head>
+<body>
+<h1>GLM: General Language Model Pretraining with Autoregressive Blank Infilling</h1>
+<p>《GLM: General Language Model Pretraining with Autoregressive Blank Infilling》是智谱 AI 与清华大学提出的一篇重要论文，首次将填空任务与自回归语言模型统一起来。传统的掩码语言模型（如 BERT）在生成长文本时效果欠佳，而单向自回归模型又缺乏对未来信息的理解。GLM 使用<strong>自回归填空</strong>策略：在预训练阶段随机遮盖文本的多个片段，并让模型按遮盖顺序预测各片段的内容，同时条件于未遮挡的上下文和已经预测的片段。这种方法兼顾了双向语境理解和连续文本生成能力。</p>
+<h2>主要贡献</h2>
+<ul>
+<li><strong>统一生成与理解：</strong>GLM 提供了一种统一框架，通过自回归填空既能进行句子级理解，也能自然生成完整文本。</li>
+<li><strong>灵活的掩码策略：</strong>遮盖长度和位置均可调节，使模型学习到跨句子乃至跨段落的全局依赖。</li>
+<li><strong>兼容下游任务：</strong>GLM 在多项语言理解和生成基准上表现良好，为后来的大模型如 GLM‑130B、ChatGLM 奠定基础。</li>
+</ul>
+<h2>影响</h2>
+<p>GLM 论文为后续的 GLM 系列模型提供了理论出发点，使模型可以同时具备生成和理解能力。这种填空式预训练思想也启发了后续的诸多研究，是中文大模型领域的重要里程碑。</p>
+</body>
+</html>
+
+
+

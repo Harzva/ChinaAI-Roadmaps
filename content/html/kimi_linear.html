@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Kimi Linear：Expressive and Efficient Attention Architecture</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        ul { padding-left: 20px; }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/content.css">
+    </head>
+<body>
+    <h1>Kimi Linear：Expressive and Efficient Attention Architecture</h1>
+    <p>《Kimi Linear: An Expressive, Efficient Attention Architecture》报告于 2025 年提出了一种改良的线性注意力机制，旨在在保持表达能力的同时提升长序列推理的效率。这项工作为 Kimi 系列模型提供了一种可替代的长上下文方案。</p>
+    <h2>设计理念</h2>
+    <p>传统线性注意力（如 Performer、Linear Transformer）通过内积分解降低复杂度，但会损失精确性。Kimi Linear 引入以下改进：</p>
+    <ul>
+        <li><strong>混合线性-稀疏注意力</strong>：通过在局部窗口内使用全注意力，在远距离部分使用低秩近似，兼顾局部精度与全局效率。</li>
+        <li><strong>动态权重计算</strong>：根据上下文长度和注意力分布，自适应地选择线性或稀疏模式，实现更好的鲁棒性。</li>
+        <li><strong>可表达性分析</strong>：论文通过理论推导与实验验证，表明 Kimi Linear 在语言建模和长文本推理任务上与全注意力 Transformer 的性能相当，同时大幅节省计算和显存。</li>
+    </ul>
+    <h2>实验结果</h2>
+    <p>在多种长上下文基准（例如 PG‑19、ArXiv 长论文摘要和代码理解）中，Kimi Linear 展示出优于或接近全注意力 Transformer 的性能，同时其计算复杂度接近线性，适合在资源受限场景部署。</p>
+    <h2>意义</h2>
+    <p>Kimi Linear 为 Kimi 系列提供了一种新的注意力架构，既保持了高表达能力，又实现了高效推理。该技术后续可与稀疏专家模型和 RL 策略结合，为多模态长上下文任务提供支持。</p>
+</body>
+</html>
+
+

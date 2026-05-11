@@ -1,54 +1,100 @@
-# AI Paper Roadmaps
+<p align="center">
+  <a href="https://harzva.github.io/awesome-ai-paper-roadmaps/">
+    <img src="assets/flowcharts/deepseek_flowchart_final.svg" width="720" alt="AI Paper Roadmaps preview">
+  </a>
+</p>
 
-> 用流程图、时间线和问答式解析，快速读懂 GLM、Kimi、DeepSeek、MiniMax 等大模型论文路线。
+<h1 align="center">AI Paper Roadmaps</h1>
 
-这个项目整理了四条中文大模型技术路线的论文分析、技术流程图和可下载论文入口，适合作为研究者、工程师和内容创作者的论文导读资料库。
+<p align="center">
+  <strong>GLM · Kimi · DeepSeek · MiniMax 大模型论文路线图、流程图与下载入口</strong>
+</p>
 
-## 这个工程里有什么
+<p align="center">
+  <a href="https://harzva.github.io/awesome-ai-paper-roadmaps/">GitHub Pages</a>
+  ·
+  <a href="https://harzva.github.io/awesome-ai-paper-roadmaps/downloads.html">论文下载中心</a>
+  ·
+  <a href="content/markdown/paper-downloads.md">Markdown 索引</a>
+  ·
+  <a href="content/html/analysis_page.html">专题归档</a>
+</p>
 
-| 模块 | 入口 | 内容 |
+<p align="center">
+  <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-online-0b7a75?style=flat-square">
+  <img alt="Papers" src="https://img.shields.io/badge/PDF%20links-45-b23a2b?style=flat-square">
+  <img alt="Roadmaps" src="https://img.shields.io/badge/roadmaps-4-315f91?style=flat-square">
+  <img alt="Static Site" src="https://img.shields.io/badge/static%20site-no%20build-171717?style=flat-square">
+</p>
+
+---
+
+## 在线访问
+
+正式站点已经发布到 GitHub Pages：
+
+**https://harzva.github.io/awesome-ai-paper-roadmaps/**
+
+下载页不再使用裸 Markdown，而是独立的专业页面：
+
+**https://harzva.github.io/awesome-ai-paper-roadmaps/downloads.html**
+
+## 项目定位
+
+这个仓库把四条中文大模型技术路线整理成一个可读、可分享、可二次创作的研究资料站：
+
+| 路线 | 重点 | 专题页 |
 | --- | --- | --- |
-| 完整教程页 | [index.html](index.html) | 按学习路径组织的交互式导航页 |
-| 论文下载索引 | [paper-downloads.md](paper-downloads.md) | arXiv 阅读页与 PDF 下载地址 |
-| 总览报告 | [report.md](report.md) | GLM、Kimi、DeepSeek 的英文综合分析 |
-| 中文专题导航 | [analysis_page.html](analysis_page.html) | 四个模型家族的中文专题入口 |
-| GLM 路线 | [glm_analysis.md](glm_analysis.md) | GLM 到 GLM-5 的技术演进 |
-| Kimi 路线 | [kimi_analysis.md](kimi_analysis.md) | k1.5、Muon、K2、K2.5 的路线 |
-| DeepSeek 路线 | [deepseek_analysis.md](deepseek_analysis.md) | LLM、MoE、Coder、Math、VL、R1、V3 |
-| MiniMax 路线 | [minimax_analysis.md](minimax_analysis.md) | M1、M2.5、长上下文和真实环境 RL |
+| GLM | 统一预训练、WebGLM、工具调用、GLM-5 | [GLM 专题](content/html/glm_analysis.html) |
+| Kimi | Muon、MuonClip、K2、K2.5、Agentic Intelligence | [Kimi 专题](content/html/kimi_analysis.html) |
+| DeepSeek | LLM、MoE、Coder、Math、VL、R1、V3/V3.2 | [DeepSeek 专题](content/html/deepseek_analysis.html) |
+| MiniMax | Lightning Attention、CISPO、Forge RL、真实环境 RL | [MiniMax 专题](content/html/minimax_analysis.html) |
 
-## 是否有论文下载地址
+## 论文下载
 
-有。原工程中主要下载线索集中在 [report.md](report.md) 的 `Reference Links` 部分，形式多为 arXiv `abs` 阅读页。整理后已补充为直接 PDF 下载入口：
+已整理：
 
-- 已提取并验证 43 个 arXiv PDF 地址，状态码均为 `200`。
-- 已补充 MiniMax-M1 的 arXiv/PDF 地址：`2506.13585`。
-- MiniMax-M2.5 目前更像官方技术/产品报告页，暂未整理到 arXiv PDF；教程页中保留官方报告入口。
+- 45 个可直接访问的 PDF 入口
+- 92 个唯一外链校验通过
+- MiniMax-M2.5 保留官方报告与模型页入口
+- 校验日期：2026-05-11
 
-完整列表见 [paper-downloads.md](paper-downloads.md)。
+入口：[downloads.html](downloads.html)
 
 ## 推荐学习路径
 
-1. 先打开 [index.html](index.html)，用教程页了解四条路线的整体结构。
-2. 阅读每个家族的 `*_analysis.md`，先把时间线和关键技术词串起来。
-3. 按 [paper-downloads.md](paper-downloads.md) 下载原论文，优先读摘要、方法图和实验表。
-4. 回到单篇论文解析页，用问答部分检查自己是否理解了核心贡献。
-5. 最后查看 `*_flowchart_final.svg`，把技术演进整理成自己的笔记或分享稿。
+1. 打开 [GitHub Pages 首页](https://harzva.github.io/awesome-ai-paper-roadmaps/) 建立整体地图。
+2. 进入某个模型家族专题页，先读时间线和技术路线。
+3. 在 [论文下载中心](https://harzva.github.io/awesome-ai-paper-roadmaps/downloads.html) 下载原论文。
+4. 回到 `content/markdown` 下的问答式解析，复盘每篇论文的核心贡献。
+5. 使用 `assets/flowcharts` 里的 SVG 作为分享稿、课程或笔记素材。
 
-## 适合谁
+## 目录结构
 
-- 想系统了解中文大模型路线的研究者
-- 需要快速做论文分享的学生和工程师
-- 关注 MoE、长上下文、强化学习、Agentic AI 的产品和技术团队
-- 想把论文路线转成图文内容、课程或知识库的创作者
+```text
+.
+├─ index.html              # GitHub Pages 首页
+├─ downloads.html          # 美化后的论文下载中心
+├─ README.md               # GitHub 仓库说明
+├─ assets/
+│  ├─ site.css             # 统一视觉系统
+│  ├─ images/              # 时间线、截图、PNG 素材
+│  └─ flowcharts/          # 技术路线 SVG
+└─ content/
+   ├─ markdown/            # 所有 Markdown 解析和论文索引
+   └─ html/                # 原始专题 HTML 归档
+```
 
 ## 本地查看
 
-直接用浏览器打开根目录的 [index.html](index.html) 即可。所有图片和分析页都是静态文件，不需要额外构建。
+这是纯静态站点，不需要构建。
 
-## 命名与定位
+```bash
+start index.html
+```
 
-仓库建议名：`awesome-ai-paper-roadmaps`
+或者直接访问 GitHub Pages。
 
-这个名字兼顾了 `awesome` 生态的传播性、`AI paper` 的搜索关键词，以及 `roadmaps` 对时间线/流程图内容的准确描述。
+## 说明
 
+本项目用于学习、研究和资料导航。论文与报告版权归原作者或机构所有；仓库只整理公开链接、分析笔记和自制流程图。

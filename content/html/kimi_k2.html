@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Kimi K2：Open Agentic Intelligence</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        ul { padding-left: 20px; }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/content.css">
+    </head>
+<body>
+    <h1>Kimi K2：Open Agentic Intelligence</h1>
+    <p><strong>Kimi K2</strong> 是 Moonshot AI 在 2025 年发布的旗舰模型，旨在打造开源的代理智能。模型采用 <strong>稀疏专家 (MoE)</strong> 架构，总参数达 <strong>1 万亿</strong>，每 token 激活 <strong>32 亿</strong> 参数，是 Kimi 系列迈向智能体的重要里程碑【74219691980676†L110-L132】。</p>
+    <h2>模型设计与优化</h2>
+    <ul>
+        <li><strong>MuonClip + QK‑Clip</strong>：在 Muon 优化器基础上，论文提出 <strong>MuonClip</strong>，通过裁剪权重矩阵而非梯度，稳定了混合专家训练。子模块 <strong>QK‑Clip</strong> 通过对 Query‑Key 矩阵裁剪提高注意力计算的稳定性【74219691980676†L110-L132】。</li>
+        <li><strong>大规模预训练</strong>：K2 在约 <strong>15.5 万亿 token</strong> 的多语言语料上预训练，覆盖代码、自然语言和多模态数据，从而具备跨领域能力【74219691980676†L110-L132】。</li>
+        <li><strong>多阶段后训练</strong>：包括监督微调、指令调优和强化学习，特别强调通过 <strong>可验证奖励 (RLVR)</strong> 和 <strong>自评奖励</strong> 来提升代理行为【74219691980676†L167-L200】。这种组合使模型能够在真实环境中执行复杂任务并进行自我评估。</li>
+    </ul>
+    <h2>Agentic 数据合成与强化学习</h2>
+    <p>论文提出了 <strong>大规模 Agentic 数据生成管道</strong>，自动生成工具使用与任务轨迹，并结合人工审核保证数据质量。随后，模型通过 RLVR 学习可验证的成功案例，并用自评奖励机制纠正不当行为【74219691980676†L167-L200】。</p>
+    <h2>性能</h2>
+    <p>K2 在多个基准上领先于同期开源模型：</p>
+    <ul>
+        <li><strong>Tau2‑Bench</strong>：多步推理与工具使用得分 66.1 分。</li>
+        <li><strong>ACEBench (英文)</strong>：76.5 分，显示出出色的计算与推理能力。</li>
+        <li><strong>SWE‑Bench Verified</strong>：65.8 分，证明模型具备较强的代码修复和软件工程能力【74219691980676†L110-L132】。</li>
+    </ul>
+    <p>此外，K2 在数学推理、搜索能力和多语言问答上均表现出色。</p>
+    <h2>总结</h2>
+    <p>Kimi K2 将参数规模和数据量推向新高度，通过 MuonClip 和 QK‑Clip 解决稀疏专家训练不稳定的问题，并结合 RLVR 和自评奖励引导模型学习代理行为。K2 的发布标志着 Moonshot AI 在开源 Agentic Intelligence 方面取得重要突破【74219691980676†L110-L132】。</p>
+</body>
+</html>
+
+
