@@ -1,4 +1,4 @@
-body {
+﻿body {
   max-width: 1040px !important;
   margin: 0 auto !important;
   padding: 48px 22px 80px !important;
@@ -9,7 +9,7 @@ body {
 }
 
 body::before {
-  content: "AI Paper Roadmaps";
+  content: "ChinaAI Roadmaps";
   display: inline-flex;
   margin-bottom: 28px;
   padding: 7px 12px;
@@ -145,4 +145,5 @@ th {
     padding: 16px;
   }
 }
+
 

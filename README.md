@@ -1,19 +1,19 @@
-<p align="center">
-  <a href="https://harzva.github.io/awesome-ai-paper-roadmaps/">
-    <img src="assets/flowcharts/deepseek_flowchart_final.svg" width="720" alt="AI Paper Roadmaps preview">
+﻿<p align="center">
+  <a href="https://harzva.github.io/ChinaAI-Roadmaps/">
+    <img src="assets/flowcharts/deepseek_flowchart_final.svg" width="720" alt="ChinaAI Roadmaps preview">
   </a>
 </p>
 
-<h1 align="center">AI Paper Roadmaps</h1>
+<h1 align="center">ChinaAI Roadmaps</h1>
 
 <p align="center">
-  <strong>GLM · Kimi · DeepSeek · MiniMax 大模型论文路线图、流程图与下载入口</strong>
+  <strong>GLM · Kimi · DeepSeek · MiniMax 国内开源/开放权重大模型公司技术路线分析</strong>
 </p>
 
 <p align="center">
-  <a href="https://harzva.github.io/awesome-ai-paper-roadmaps/">GitHub Pages</a>
+  <a href="https://harzva.github.io/ChinaAI-Roadmaps/">GitHub Pages</a>
   ·
-  <a href="https://harzva.github.io/awesome-ai-paper-roadmaps/downloads.html">论文下载中心</a>
+  <a href="https://harzva.github.io/ChinaAI-Roadmaps/downloads.html">论文下载中心</a>
   ·
   <a href="content/markdown/paper-downloads.md">Markdown 索引</a>
   ·
@@ -33,15 +33,15 @@
 
 正式站点已经发布到 GitHub Pages：
 
-**https://harzva.github.io/awesome-ai-paper-roadmaps/**
+**https://harzva.github.io/ChinaAI-Roadmaps/**
 
 下载页不再使用裸 Markdown，而是独立的专业页面：
 
-**https://harzva.github.io/awesome-ai-paper-roadmaps/downloads.html**
+**https://harzva.github.io/ChinaAI-Roadmaps/downloads.html**
 
 ## 项目定位
 
-这个仓库把四条中文大模型技术路线整理成一个可读、可分享、可二次创作的研究资料站：
+这个仓库不做“全 AI 论文大全”，而是聚焦国内开源/开放权重大模型公司的技术路线分析：
 
 | 路线 | 重点 | 专题页 |
 | --- | --- | --- |
@@ -63,9 +63,9 @@
 
 ## 推荐学习路径
 
-1. 打开 [GitHub Pages 首页](https://harzva.github.io/awesome-ai-paper-roadmaps/) 建立整体地图。
+1. 打开 [GitHub Pages 首页](https://harzva.github.io/ChinaAI-Roadmaps/) 建立整体地图。
 2. 进入某个模型家族专题页，先读时间线和技术路线。
-3. 在 [论文下载中心](https://harzva.github.io/awesome-ai-paper-roadmaps/downloads.html) 下载原论文。
+3. 在 [论文下载中心](https://harzva.github.io/ChinaAI-Roadmaps/downloads.html) 下载原论文。
 4. 回到 `content/markdown` 下的问答式解析，复盘每篇论文的核心贡献。
 5. 使用 `assets/flowcharts` 里的 SVG 作为分享稿、课程或笔记素材。
 
@@ -98,3 +98,4 @@ start index.html
 ## 说明
 
 本项目用于学习、研究和资料导航。论文与报告版权归原作者或机构所有；仓库只整理公开链接、分析笔记和自制流程图。
+
