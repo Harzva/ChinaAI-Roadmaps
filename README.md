@@ -1,106 +1,89 @@
-﻿<p align="center">
+<p align="center">
   <a href="https://harzva.github.io/ChinaAI-Roadmaps/">
-    <img src="assets/flowcharts/deepseek_flowchart_final.svg" width="720" alt="ChinaAI Roadmaps preview">
+    <img src="assets/flowcharts/deepseek_flowchart_final.svg" width="860" alt="ChinaAI Roadmaps preview">
   </a>
 </p>
 
-<h1 align="center">ChinaAI Roadmaps</h1>
+<div align="center">
+  <h1>ChinaAI Roadmaps</h1>
+  <p><strong>用论文、技术报告、流程图和交互式网页梳理中国 AI 模型公司的技术路线。</strong></p>
+  <p>
+    <a href="https://harzva.github.io/ChinaAI-Roadmaps/">在线站点</a>
+    ·
+    <a href="https://harzva.github.io/ChinaAI-Roadmaps/downloads.html">论文下载中心</a>
+    ·
+    <a href="content/markdown/paper-downloads.md">Markdown 索引</a>
+    ·
+    <a href="content/html/analysis_page.html">专题归档</a>
+  </p>
+  <p>
+    <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-online-0b7a75?style=flat-square">
+    <img alt="Papers" src="https://img.shields.io/badge/PDF%20links-45-b23a2b?style=flat-square">
+    <img alt="Roadmaps" src="https://img.shields.io/badge/roadmaps-4-315f91?style=flat-square">
+    <img alt="Frontend" src="https://img.shields.io/badge/frontend-React%20%2B%20Vite-171717?style=flat-square">
+  </p>
+</div>
 
-<p align="center">
-  <strong>GLM · Kimi · DeepSeek · MiniMax 国内开源/开放权重大模型公司技术路线分析</strong>
-</p>
+## 为什么看这个仓库
 
-<p align="center">
-  <a href="https://harzva.github.io/ChinaAI-Roadmaps/">GitHub Pages</a>
-  ·
-  <a href="https://harzva.github.io/ChinaAI-Roadmaps/downloads.html">论文下载中心</a>
-  ·
-  <a href="content/markdown/paper-downloads.md">Markdown 索引</a>
-  ·
-  <a href="content/html/analysis_page.html">专题归档</a>
-</p>
+国内模型公司的技术路线很容易散落在论文、发布页、GitHub、技术报告和社区讨论里。这个仓库把它们整理成三层：
 
-<p align="center">
-  <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-online-0b7a75?style=flat-square">
-  <img alt="Papers" src="https://img.shields.io/badge/PDF%20links-45-b23a2b?style=flat-square">
-  <img alt="Roadmaps" src="https://img.shields.io/badge/roadmaps-4-315f91?style=flat-square">
-  <img alt="React App" src="https://img.shields.io/badge/frontend-React%20%2B%20Vite-171717?style=flat-square">
-</p>
-
----
-
-## 在线访问
-
-正式站点已经发布到 GitHub Pages。当前首页采用 React + Vite 交互式路线平台，旧版静态专题与下载中心继续保留：
-
-**https://harzva.github.io/ChinaAI-Roadmaps/**
-
-下载页不再使用裸 Markdown，而是独立的专业页面：
-
-**https://harzva.github.io/ChinaAI-Roadmaps/downloads.html**
-
-## 项目定位
-
-这个仓库不做“全 AI 论文大全”，而是聚焦国内开源/开放权重大模型公司的技术路线分析：
-
-| 路线 | 重点 | 专题页 |
+| 层级 | 你能看到什么 | 入口 |
 | --- | --- | --- |
-| GLM | 统一预训练、WebGLM、工具调用、GLM-5 | [GLM 专题](content/html/glm_analysis.html) |
-| Kimi | Muon、MuonClip、K2、K2.5、Agentic Intelligence | [Kimi 专题](content/html/kimi_analysis.html) |
-| DeepSeek | LLM、MoE、Coder、Math、VL、R1、V3/V3.2 | [DeepSeek 专题](content/html/deepseek_analysis.html) |
+| 交互式站点 | 公司路线、模型分区、DeepSeek V4 技术分析 | [GitHub Pages](https://harzva.github.io/ChinaAI-Roadmaps/) |
+| 论文下载 | 45 个 PDF/报告入口与阅读页 | [downloads.html](https://harzva.github.io/ChinaAI-Roadmaps/downloads.html) |
+| 研究笔记 | Markdown 解析、旧版 HTML 专题、流程图素材 | [content/](content/) |
+
+## 研究范围
+
+| 路线 | 重点问题 | 已整理内容 |
+| --- | --- | --- |
+| GLM / 智谱 | 统一预训练、工具调用、WebGLM、多模态、GLM-5 | [GLM 专题](content/html/glm_analysis.html) |
+| Kimi / Moonshot | Muon、长上下文、K2、K2.5、Agentic Intelligence | [Kimi 专题](content/html/kimi_analysis.html) |
+| DeepSeek | MoE、Coder、Math、VL、R1、V3/V4、训练与推理效率 | [DeepSeek 专题](content/html/deepseek_analysis.html) |
 | MiniMax | Lightning Attention、CISPO、Forge RL、真实环境 RL | [MiniMax 专题](content/html/minimax_analysis.html) |
 
-新版站点综合了两个版本的优势：
+## 推荐阅读路径
 
-- `ChinaAI-Roadmp`：论文链接、Markdown 解析、流程图与下载中心更完整，是资料库底座。
-- `ChinaAI-Roadmpv2`：React 交互站点、模型分区导航、DeepSeek V4 技术分析更完整，是新版阅读体验。
-- 合并后：React 首页负责路线探索，`downloads.html` 与 `content/` 负责可复用资料归档。
-
-## 论文下载
-
-已整理：
-
-- 45 个可直接访问的 PDF 入口
-- 92 个唯一外链校验通过
-- MiniMax-M2.5 保留官方报告与模型页入口
-- 校验日期：2026-05-11
-
-入口：[downloads.html](downloads.html)
-
-## 推荐学习路径
-
-1. 打开 [GitHub Pages 首页](https://harzva.github.io/ChinaAI-Roadmaps/) 建立整体地图。
-2. 进入某个模型家族专题页，先读时间线和技术路线。
-3. 在 [论文下载中心](https://harzva.github.io/ChinaAI-Roadmaps/downloads.html) 下载原论文。
-4. 回到 `content/markdown` 下的问答式解析，复盘每篇论文的核心贡献。
-5. 使用 `assets/flowcharts` 里的 SVG 作为分享稿、课程或笔记素材。
-
-## 目录结构
-
-```text
-.
-├─ index.html              # GitHub Pages 首页
-├─ downloads.html          # 美化后的论文下载中心
-├─ app/                    # React + Vite 新版站点源码
-├─ README.md               # GitHub 仓库说明
-├─ assets/
-│  ├─ site.css             # 统一视觉系统
-│  ├─ images/              # 时间线、截图、PNG 素材
-│  └─ flowcharts/          # 技术路线 SVG
-└─ content/
-   ├─ markdown/            # 所有 Markdown 解析和论文索引
-   └─ html/                # 原始专题 HTML 归档
+```mermaid
+flowchart LR
+    A["打开在线站点"] --> B["选择公司路线"]
+    B --> C["读专题时间线"]
+    C --> D["下载原始论文"]
+    D --> E["回到 Markdown 笔记复盘"]
+    E --> F["使用 SVG 流程图做分享或课程素材"]
 ```
 
-## 本地查看
+1. 先从 [在线站点](https://harzva.github.io/ChinaAI-Roadmaps/) 建立整体地图。
+2. 进入公司专题，理解架构、训练、数据、评测和工程权衡。
+3. 到 [论文下载中心](https://harzva.github.io/ChinaAI-Roadmaps/downloads.html) 打开原文。
+4. 回到 `content/markdown` 用问答式笔记复盘关键贡献。
 
-仓库根目录已经包含 GitHub Pages 可直接访问的构建产物。React 源码位于 `app/`。
+## 内容资产
 
-```bash
-start index.html
-```
+| 类型 | 路径 | 说明 |
+| --- | --- | --- |
+| React 源码 | [`app/`](app/) | 新版交互站点源码 |
+| Pages 入口 | [`index.html`](index.html) | 已构建的 GitHub Pages 首页 |
+| 下载中心 | [`downloads.html`](downloads.html) | 论文与报告入口 |
+| 技术路线图 | [`assets/flowcharts`](assets/flowcharts/) | GLM、Kimi、DeepSeek、MiniMax SVG |
+| Markdown 笔记 | [`content/markdown`](content/markdown/) | 论文解析与索引 |
+| HTML 归档 | [`content/html`](content/html/) | 旧版专题页 |
 
-开发新版站点：
+## 两个版本如何合并
+
+这个仓库吸收了两个版本的长处：
+
+| 来源 | 长处 | 合并后的角色 |
+| --- | --- | --- |
+| `ChinaAI-Roadmp` | 论文链接、Markdown 解析、流程图和下载中心更完整 | 资料库底座 |
+| `ChinaAI-Roadmpv2` | React 站点、模型分区导航、DeepSeek V4 技术分析更完整 | 新版阅读体验 |
+
+合并后，首页负责快速探索，`downloads.html` 和 `content/` 负责长期可复用资料归档。
+
+## 本地开发
+
+根目录已经包含可直接发布的静态产物。开发 React 站点时进入 `app/`：
 
 ```powershell
 cd app
@@ -109,9 +92,8 @@ node .\node_modules\typescript\bin\tsc -b
 node .\node_modules\vite\bin\vite.js build
 ```
 
-说明：当前本地路径含有 `&`，Windows 下 `npm run build` 可能被 `cmd` 截断，所以这里使用显式 Node 命令。
+> 当前本地路径包含 `&`，Windows 下 `npm run build` 可能被 `cmd` 截断，因此推荐使用上面的显式 Node 命令。
 
-## 说明
+## 项目边界
 
-本项目用于学习、研究和资料导航。论文与报告版权归原作者或机构所有；仓库只整理公开链接、分析笔记和自制流程图。
-
+本项目用于学习、研究和资料导航。论文、报告和模型版权归原作者或机构所有；仓库只整理公开链接、分析笔记和自制流程图。
