@@ -24,14 +24,14 @@
   <img alt="GitHub Pages" src="https://img.shields.io/badge/GitHub%20Pages-online-0b7a75?style=flat-square">
   <img alt="Papers" src="https://img.shields.io/badge/PDF%20links-45-b23a2b?style=flat-square">
   <img alt="Roadmaps" src="https://img.shields.io/badge/roadmaps-4-315f91?style=flat-square">
-  <img alt="Static Site" src="https://img.shields.io/badge/static%20site-no%20build-171717?style=flat-square">
+  <img alt="React App" src="https://img.shields.io/badge/frontend-React%20%2B%20Vite-171717?style=flat-square">
 </p>
 
 ---
 
 ## 在线访问
 
-正式站点已经发布到 GitHub Pages：
+正式站点已经发布到 GitHub Pages。当前首页采用 React + Vite 交互式路线平台，旧版静态专题与下载中心继续保留：
 
 **https://harzva.github.io/ChinaAI-Roadmaps/**
 
@@ -49,6 +49,12 @@
 | Kimi | Muon、MuonClip、K2、K2.5、Agentic Intelligence | [Kimi 专题](content/html/kimi_analysis.html) |
 | DeepSeek | LLM、MoE、Coder、Math、VL、R1、V3/V3.2 | [DeepSeek 专题](content/html/deepseek_analysis.html) |
 | MiniMax | Lightning Attention、CISPO、Forge RL、真实环境 RL | [MiniMax 专题](content/html/minimax_analysis.html) |
+
+新版站点综合了两个版本的优势：
+
+- `ChinaAI-Roadmp`：论文链接、Markdown 解析、流程图与下载中心更完整，是资料库底座。
+- `ChinaAI-Roadmpv2`：React 交互站点、模型分区导航、DeepSeek V4 技术分析更完整，是新版阅读体验。
+- 合并后：React 首页负责路线探索，`downloads.html` 与 `content/` 负责可复用资料归档。
 
 ## 论文下载
 
@@ -75,6 +81,7 @@
 .
 ├─ index.html              # GitHub Pages 首页
 ├─ downloads.html          # 美化后的论文下载中心
+├─ app/                    # React + Vite 新版站点源码
 ├─ README.md               # GitHub 仓库说明
 ├─ assets/
 │  ├─ site.css             # 统一视觉系统
@@ -87,13 +94,22 @@
 
 ## 本地查看
 
-这是纯静态站点，不需要构建。
+仓库根目录已经包含 GitHub Pages 可直接访问的构建产物。React 源码位于 `app/`。
 
 ```bash
 start index.html
 ```
 
-或者直接访问 GitHub Pages。
+开发新版站点：
+
+```powershell
+cd app
+npm install
+node .\node_modules\typescript\bin\tsc -b
+node .\node_modules\vite\bin\vite.js build
+```
+
+说明：当前本地路径含有 `&`，Windows 下 `npm run build` 可能被 `cmd` 截断，所以这里使用显式 Node 命令。
 
 ## 说明
 

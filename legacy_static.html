@@ -1,0 +1,144 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ChinaAI Roadmaps: GLM、Kimi、DeepSeek、MiniMax 国内开源/开放权重大模型公司技术路线分析、流程图和论文下载入口。">
+  <title>ChinaAI Roadmaps | 国内开源模型公司技术路线</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="主导航">
+    <a class="brand" href="index.html" aria-label="ChinaAI Roadmaps 首页">
+      <span class="brand-mark">CAR</span>
+      <span>ChinaAI Roadmaps</span>
+    </a>
+    <div class="nav-links">
+      <a href="#roadmaps">路线图</a>
+      <a href="downloads.html">论文下载</a>
+      <a href="content/html/analysis_page.html">旧版专题</a>
+      <a href="https://github.com/Harzva/ChinaAI-Roadmaps">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-art" aria-hidden="true">
+      <img src="assets/flowcharts/deepseek_flowchart_final.svg" alt="">
+    </div>
+    <div class="hero-inner">
+      <p class="kicker">Research Atlas / 2021-2026</p>
+      <h1>国内开源模型公司技术路线，<span class="nowrap">不止是论文链接。</span></h1>
+      <p class="hero-copy">聚焦 GLM、Kimi、DeepSeek、MiniMax 等国内开源/开放权重大模型公司，整理论文、技术报告、流程图和下载入口。</p>
+      <div class="hero-actions">
+        <a class="button primary" href="downloads.html">查看论文下载中心</a>
+        <a class="button" href="#path">按教程学习</a>
+        <a class="button ghost" href="https://harzva.github.io/ChinaAI-Roadmaps/">GitHub Pages</a>
+      </div>
+      <div class="metric-strip" aria-label="项目统计">
+        <div><strong>4</strong><span>模型家族</span></div>
+        <div><strong>45</strong><span>PDF 入口</span></div>
+        <div><strong>4</strong><span>技术流程图</span></div>
+        <div><strong>80+</strong><span>整理文件</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro-grid" id="path">
+      <div>
+        <p class="section-label">Tutorial</p>
+        <h2>先读路线，再读论文。</h2>
+        <p class="section-copy">这个站点的阅读顺序被重新整理成三层：总览路线、家族专题、原始论文。这样可以先建立技术地图，再进入模型结构、训练策略、评测结果和工程权衡。</p>
+      </div>
+      <ol class="steps">
+        <li><span>01</span><strong>看四条路线</strong><p>先用流程图理解每家公司的技术主轴。</p></li>
+        <li><span>02</span><strong>读专题解析</strong><p>进入家族页，串起时间线与关键术语。</p></li>
+        <li><span>03</span><strong>下载原论文</strong><p>在下载中心打开 arXiv 阅读页或直接 PDF。</p></li>
+        <li><span>04</span><strong>复盘成笔记</strong><p>用问答式 Markdown 检查理解并整理分享稿。</p></li>
+      </ol>
+    </section>
+
+    <section class="section muted" id="roadmaps">
+      <div class="section-heading">
+        <p class="section-label">Roadmaps</p>
+        <h2>四条路线，四种工程选择。</h2>
+      </div>
+      <div class="roadmap-grid">
+        <article class="roadmap-card">
+          <img src="assets/flowcharts/glm_flowchart_final.svg" alt="GLM 技术路线流程图">
+          <div>
+            <span class="pill">GLM</span>
+            <h3>从统一预训练到 Agentic Engineering</h3>
+            <p>关注自回归填空、WebGLM、工具调用、多模态和 GLM-5 的动态稀疏注意力。</p>
+            <a href="content/html/glm_analysis.html">打开专题页</a>
+          </div>
+        </article>
+        <article class="roadmap-card">
+          <img src="assets/flowcharts/kimi_flowchart_final.svg" alt="Kimi 技术路线流程图">
+          <div>
+            <span class="pill red">Kimi</span>
+            <h3>从 Muon 到开放智能体</h3>
+            <p>围绕 k1.5、Muon/MuonClip、K2 与 K2.5 梳理强化学习和 Agentic Intelligence。</p>
+            <a href="content/html/kimi_analysis.html">打开专题页</a>
+          </div>
+        </article>
+        <article class="roadmap-card">
+          <img src="assets/flowcharts/deepseek_flowchart_final.svg" alt="DeepSeek 技术路线流程图">
+          <div>
+            <span class="pill blue">DeepSeek</span>
+            <h3>开源规模化与稀疏专家体系</h3>
+            <p>覆盖 LLM、MoE、Coder、Math、VL、R1、V3/V3.2 和硬件友好注意力。</p>
+            <a href="content/html/deepseek_analysis.html">打开专题页</a>
+          </div>
+        </article>
+        <article class="roadmap-card">
+          <img src="assets/flowcharts/minimax_flowchart_final.svg" alt="MiniMax 技术路线流程图">
+          <div>
+            <span class="pill gold">MiniMax</span>
+            <h3>长上下文与真实环境 RL</h3>
+            <p>聚焦 Lightning Attention、CISPO、Forge RL，以及面向真实生产力的 M2.5。</p>
+            <a href="content/html/minimax_analysis.html">打开专题页</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="section-label">Downloads</p>
+        <h2>不再让浏览器打开裸 Markdown。</h2>
+        <p class="section-copy">论文下载中心已经改成正式 HTML 页面，按模型家族分区，直接提供阅读页与 PDF 入口。原始 Markdown 被归档到 `content/markdown`，适合在 GitHub 源码里查看。</p>
+        <div class="inline-actions">
+          <a class="button primary" href="downloads.html">进入下载中心</a>
+          <a class="button" href="content/markdown/paper-downloads.md">查看源 Markdown</a>
+        </div>
+      </div>
+      <div class="directory-panel">
+        <h3>新的目录结构</h3>
+        <pre><code>.
+├─ index.html
+├─ downloads.html
+├─ assets/
+│  ├─ images/
+│  ├─ flowcharts/
+│  └─ site.css
+└─ content/
+   ├─ markdown/
+   └─ html/</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>ChinaAI Roadmaps</strong>
+      <p>Technical roadmaps for China's open and open-weight LLM companies.</p>
+    </div>
+    <a href="https://github.com/Harzva/ChinaAI-Roadmaps">GitHub Repository</a>
+  </footer>
+</body>
+</html>
+
