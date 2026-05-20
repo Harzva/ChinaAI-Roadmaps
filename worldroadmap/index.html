@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>WorldRoadmap v5 · 全球 AI 模型地图</title>
+<link rel="stylesheet" href="src/styles.css"/>
+</head>
+<body>
+<div id="app">
+  <div class="map-wrap"><canvas id="stage"></canvas></div>
+  <section class="panel header"><div class="tag"><i></i>WorldRoadmap v5</div><h1>全球 AI 模型地图</h1><p>从国家、公司到模型族逐层探索：查看机构画像、团队信息、代表模型、论文卡片和开源生态关系。</p></section>
+  <div class="top-title">AI MODEL PLANET<small>THEME ATLAS · PAPER LINKS · MODEL CLOUDS</small></div>
+  <div class="stats"><div class="stat"><b id="sModels">0</b><span>模型 / 模型族</span></div><div class="stat"><b id="sOrgs">0</b><span>公司 / 实验室</span></div><div class="stat"><b id="sCountries">0</b><span>国家 / 地区</span></div><div class="stat"><b id="sOpen">0%</b><span>开源生态占比</span></div><div class="stat"><b id="sPapers">0</b><span>论文 / 卡片组</span></div></div>
+  <div class="controls"><button class="btn" id="homeBtn">全球视角</button><button class="btn" id="randomBtn">随机飞行</button><button class="btn" id="densityBtn">密度</button><button class="btn" id="flowBtn">流光</button><button class="btn" id="labelsBtn">标签</button><button class="btn" id="qualityBtn">性能</button><select class="theme-select" id="themeSelect" title="主题颜色"></select></div>
+  <aside class="panel left"><h3>Countries / 国家榜单</h3><input id="search" class="search" placeholder="搜索国家、公司、模型..."/><div class="list" id="countryList"></div></aside>
+  <aside class="panel right" id="detail"><h3>Selected / 当前选择</h3><h2>全球模型视角</h2><div class="badges"><span class="badge">拖拽平移</span><span class="badge">滚轮缩放</span><span class="badge">点击自动放大</span></div><p class="muted">v5 继续打磨了主题、标签密度、性能档位、同论文连线和详情侧栏。点击任意公司或模型开始探索。</p></aside>
+  <div class="center-caption"><b>模型星云 · 公司锚点 · 世界地图</b><span>每个发光点代表模型 / 模型族；点击公司或模型会自动放大并展示详细信息</span></div>
+  <nav class="bottom"><div class="chips" id="chips"></div><div class="legend" id="legend"></div></nav>
+  <div class="tooltip" id="tooltip"></div><div class="toast" id="toast"></div>
+  <div class="modal" id="personModal" aria-hidden="true"><div class="modal-backdrop" id="modalBackdrop"></div><div class="modal-card"><button class="modal-close" id="modalClose">×</button><img id="modalImg" alt="Founder portrait"/><h2 id="modalName"></h2><p id="modalBio"></p><a id="modalLink" target="_blank" rel="noopener">打开人物/公司资料</a></div></div>
+  <div class="shortcut-panel"><b>快捷键 / Shortcuts</b><span><kbd>H</kbd> 全球视角</span><span><kbd>R</kbd> 随机飞行</span><span><kbd>D</kbd> 密度星云</span><span><kbd>F</kbd> 流光关系</span><span><kbd>L</kbd> 标签显隐</span><span><kbd>P</kbd> 高画质/省电</span><span><kbd>/</kbd> 搜索</span></div>
+  <div class="hud"><b>V5</b><span>Company · Model · Paper Links</span></div>
+  <div class="mini">WorldRoadmap v5 · <span id="fpsMeter">-- FPS</span></div><div class="compass">Wheel Zoom · Drag Pan · Click Focus</div>
+</div>
+
+<script src="src/data.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>

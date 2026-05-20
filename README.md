@@ -12,6 +12,8 @@
     ·
     <a href="https://harzva.github.io/ChinaAI-Roadmaps/downloads.html">论文下载中心</a>
     ·
+    <a href="https://harzva.github.io/ChinaAI-Roadmaps/worldroadmap/">全球 AI 模型地图</a>
+    ·
     <a href="content/markdown/paper-downloads.md">Markdown 索引</a>
     ·
     <a href="content/html/analysis_page.html">专题归档</a>
@@ -31,6 +33,7 @@
 | 层级 | 你能看到什么 | 入口 |
 | --- | --- | --- |
 | 交互式站点 | 公司路线、模型分区、DeepSeek V4 技术分析 | [GitHub Pages](https://harzva.github.io/ChinaAI-Roadmaps/) |
+| 全球模型地图 | 国家、公司、模型族、论文卡片和开源生态关系 | [worldroadmap](https://harzva.github.io/ChinaAI-Roadmaps/worldroadmap/) |
 | 论文下载 | 45 个 PDF/报告入口与阅读页 | [downloads.html](https://harzva.github.io/ChinaAI-Roadmaps/downloads.html) |
 | 研究笔记 | Markdown 解析、旧版 HTML 专题、流程图素材 | [content/](content/) |
 
@@ -65,6 +68,7 @@ flowchart LR
 | --- | --- | --- |
 | React 源码 | [`app/`](app/) | 新版交互站点源码 |
 | Pages 入口 | [`index.html`](index.html) | 已构建的 GitHub Pages 首页 |
+| 全球模型地图 | [`worldroadmap/`](worldroadmap/) | 独立静态子页面，覆盖全球 AI 公司、模型族和论文关系 |
 | 下载中心 | [`downloads.html`](downloads.html) | 论文与报告入口 |
 | 技术路线图 | [`assets/flowcharts`](assets/flowcharts/) | GLM、Kimi、DeepSeek、MiniMax SVG |
 | Markdown 笔记 | [`content/markdown`](content/markdown/) | 论文解析与索引 |
