@@ -36,6 +36,11 @@
         background: rgba(7, 22, 28, 0.88);
       }
 
+      .resource-entry.career {
+        border-color: rgba(251, 191, 36, 0.42);
+        background: rgba(32, 22, 7, 0.88);
+      }
+
       .resource-entry:hover,
       .resource-entry:focus-visible {
         transform: translateY(-1px);
@@ -49,7 +54,7 @@
           right: 12px;
           bottom: calc(12px + env(safe-area-inset-bottom));
           left: 12px;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
         .resource-entry {
@@ -67,6 +72,7 @@
   <body>
     <nav class="resource-rail" aria-label="ChinaAI Roadmaps 资源入口">
       <a class="resource-entry primary" href="./developer-docs/" aria-label="打开 AI Provider 开发者文档">Dev Docs</a>
+      <a class="resource-entry career" href="https://harzva.github.io/Agent-Job-Interview/" aria-label="打开 Agent 岗位与面试题库">Jobs</a>
       <a class="resource-entry" href="./worldroadmap/" aria-label="打开全球 AI 模型地图">World Map</a>
     </nav>
     <div id="root"></div>
