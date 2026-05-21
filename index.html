@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>China AI Unicorn Roadmap - 中国AI独角兽技术路线图谱</title>
     <style>
-      .worldroadmap-entry {
+      .resource-rail {
         position: fixed;
         right: 18px;
         bottom: 18px;
         z-index: 2147483647;
+        display: grid;
+        gap: 8px;
+      }
+
+      .resource-entry {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         padding: 10px 14px;
         border: 1px solid rgba(103, 232, 249, 0.36);
@@ -25,8 +31,13 @@
         transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
       }
 
-      .worldroadmap-entry:hover,
-      .worldroadmap-entry:focus-visible {
+      .resource-entry.primary {
+        border-color: rgba(34, 197, 94, 0.40);
+        background: rgba(7, 22, 28, 0.88);
+      }
+
+      .resource-entry:hover,
+      .resource-entry:focus-visible {
         transform: translateY(-1px);
         border-color: rgba(103, 232, 249, 0.72);
         background: rgba(15, 23, 42, 0.92);
@@ -34,9 +45,14 @@
       }
 
       @media (max-width: 640px) {
-        .worldroadmap-entry {
+        .resource-rail {
           right: 12px;
           bottom: calc(12px + env(safe-area-inset-bottom));
+          left: 12px;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .resource-entry {
           padding: 9px 12px;
           font-size: 12px;
         }
@@ -49,7 +65,10 @@
     <link rel="stylesheet" crossorigin href="./assets/index-DSUjAftj.css">
   </head>
   <body>
-    <a class="worldroadmap-entry" href="./worldroadmap/" aria-label="打开全球 AI 模型地图">↗ 全球 AI 模型地图</a>
+    <nav class="resource-rail" aria-label="ChinaAI Roadmaps 资源入口">
+      <a class="resource-entry primary" href="./developer-docs/" aria-label="打开 AI Provider 开发者文档">Dev Docs</a>
+      <a class="resource-entry" href="./worldroadmap/" aria-label="打开全球 AI 模型地图">World Map</a>
+    </nav>
     <div id="root"></div>
   </body>
 </html>

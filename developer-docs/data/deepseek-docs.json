@@ -1,0 +1,2296 @@
+{
+  "generatedAt": "2026-05-21T12:53:04+08:00",
+  "total": 63,
+  "documents": [
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "https://api-docs.deepseek.com/",
+      "url": "https://api-docs.deepseek.com/",
+      "path": "",
+      "category": "overview",
+      "categoryName": "入口",
+      "summary": "Your Docusaurus site did not load properly. A very common reason is a wrong site baseUrl configuration . Current configured baseUrl = / (default value) We suggest trying baseUrl =",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Your First API Call"
+        },
+        {
+          "level": 2,
+          "text": "Integrate with Agent Tools ​"
+        },
+        {
+          "level": 2,
+          "text": "Invoke The Chat API ​"
+        }
+      ],
+      "codeSnippets": [
+        "curl https://api.deepseek.com/chat/completions \\ -H \"Content-Type: application/json\" \\ -H \"Authorization: Bearer ${DEEPSEEK_API_KEY}\" \\ -d '{ \"model\": \"deepseek-v4-pro\", \"messages\": [ {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, {\"role\": \"user\", \"content\": \"Hello!\"} ], \"thinking\": {\"type\": \"enabled\"}, \"reasoning_effort\": \"high\", \"stream\": false }'",
+        "# Please install OpenAI SDK first: `pip3 install openai` import os from openai import OpenAI client = OpenAI ( api_key = os . environ . get ( 'DEEPSEEK_API_KEY' ) , base_url = \"https://api.deepseek.com\" ) response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = [ { \"role\" : \"system\" , \"content\" : \"You are a helpful assistant\" } , { \"role\" : \"user\" , \"content\" : \"Hello\" } , ] , stream = False , reasoning_effort = \"high\" , extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } ) print ( response . choices [ 0 ] . message . content )",
+        "// Please install OpenAI SDK first: `npm install openai` import OpenAI from \"openai\" ; const openai = new OpenAI ( { baseURL : 'https://api.deepseek.com' , apiKey : process . env . DEEPSEEK_API_KEY , } ) ; async function main ( ) { const completion = await openai . chat . completions . create ( { messages : [ { role : \"system\" , content : \"You are a helpful assistant.\" } ] , model : \"deepseek-v4-pro\" , thinking : { \"type\" : \"enabled\" } , reasoning_effort : \"high\" , stream : false , } ) ; console . log ( completion . choices [ 0 ] . message . content ) ; } main ( ) ;"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api_samples / chat_curl",
+      "url": "https://api-docs.deepseek.com/api_samples/chat_curl",
+      "path": "/api_samples/chat_curl",
+      "category": "api_samples",
+      "categoryName": "示例代码",
+      "summary": "",
+      "headings": {
+        "level": 1,
+        "text": "chat_curl"
+      },
+      "codeSnippets": "curl https://api.deepseek.com/chat/completions \\ -H \"Content-Type: application/json\" \\ -H \"Authorization: Bearer ${DEEPSEEK_API_KEY}\" \\ -d '{ \"model\": \"deepseek-v4-pro\", \"messages\": [ {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, {\"role\": \"user\", \"content\": \"Hello!\"} ], \"thinking\": {\"type\": \"enabled\"}, \"reasoning_effort\": \"high\", \"stream\": false }'",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api_samples / chat_nodejs",
+      "url": "https://api-docs.deepseek.com/api_samples/chat_nodejs",
+      "path": "/api_samples/chat_nodejs",
+      "category": "api_samples",
+      "categoryName": "示例代码",
+      "summary": "",
+      "headings": {
+        "level": 1,
+        "text": "chat_nodejs"
+      },
+      "codeSnippets": "// Please install OpenAI SDK first: `npm install openai` import OpenAI from \"openai\" ; const openai = new OpenAI ( { baseURL : 'https://api.deepseek.com' , apiKey : process . env . DEEPSEEK_API_KEY , } ) ; async function main ( ) { const completion = await openai . chat . completions . create ( { messages : [ { role : \"system\" , content : \"You are a helpful assistant.\" } ] , model : \"deepseek-v4-pro\" , thinking : { \"type\" : \"enabled\" } , reasoning_effort : \"high\" , stream : false , } ) ; console . log ( completion . choices [ 0 ] . message . content ) ; } main ( ) ;",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api_samples / chat_python",
+      "url": "https://api-docs.deepseek.com/api_samples/chat_python",
+      "path": "/api_samples/chat_python",
+      "category": "api_samples",
+      "categoryName": "示例代码",
+      "summary": "",
+      "headings": {
+        "level": 1,
+        "text": "chat_python"
+      },
+      "codeSnippets": "# Please install OpenAI SDK first: `pip3 install openai` import os from openai import OpenAI client = OpenAI ( api_key = os . environ . get ( 'DEEPSEEK_API_KEY' ) , base_url = \"https://api.deepseek.com\" ) response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = [ { \"role\" : \"system\" , \"content\" : \"You are a helpful assistant\" } , { \"role\" : \"user\" , \"content\" : \"Hello\" } , ] , stream = False , reasoning_effort = \"high\" , extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } ) print ( response . choices [ 0 ] . message . content )",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api_samples / thinking_mode_api_example_non_streaming",
+      "url": "https://api-docs.deepseek.com/api_samples/thinking_mode_api_example_non_streaming",
+      "path": "/api_samples/thinking_mode_api_example_non_streaming",
+      "category": "api_samples",
+      "categoryName": "示例代码",
+      "summary": "",
+      "headings": {
+        "level": 1,
+        "text": "thinking_mode_api_example_non_streaming"
+      },
+      "codeSnippets": "from openai import OpenAI client = OpenAI ( api_key = \"<DeepSeek API Key>\" , base_url = \"https://api.deepseek.com\" ) # Turn 1 messages = [ { \"role\" : \"user\" , \"content\" : \"9.11 and 9.8, which is greater?\" } ] response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , reasoning_effort = \"high\" extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) reasoning_content = response . choices [ 0 ] . message . reasoning_content content = response . choices [ 0 ] . message . content # Turn 2 # The reasoning_content will be ignored by the API messages . append ( response . choices [ 0 ] . message ) messages . append ( { 'role' : 'user' , 'content' : \"How many Rs are there in the word 'strawberry'?\" } ) response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , reasoning_effort = \"high\" extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) # ...",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api_samples / thinking_mode_api_example_streaming",
+      "url": "https://api-docs.deepseek.com/api_samples/thinking_mode_api_example_streaming",
+      "path": "/api_samples/thinking_mode_api_example_streaming",
+      "category": "api_samples",
+      "categoryName": "示例代码",
+      "summary": "",
+      "headings": {
+        "level": 1,
+        "text": "thinking_mode_api_example_streaming"
+      },
+      "codeSnippets": "from openai import OpenAI client = OpenAI ( api_key = \"<DeepSeek API Key>\" , base_url = \"https://api.deepseek.com\" ) # Turn 1 messages = [ { \"role\" : \"user\" , \"content\" : \"9.11 and 9.8, which is greater?\" } ] response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , stream = True , reasoning_effort = \"high\" extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) reasoning_content = \"\" content = \"\" for chunk in response : if chunk . choices [ 0 ] . delta . reasoning_content : reasoning_content += chunk . choices [ 0 ] . delta . reasoning_content else : content += chunk . choices [ 0 ] . delta . content # Turn 2 # The reasoning_content will be ignored by the API messages . append ( { \"role\" : \"assistant\" , \"reasoning_content\" : reasoning_content , \"content\" : content } ) messages . append ( { 'role' : 'user' , 'content' : \"How many Rs are there in the word 'strawberry'?\" } ) response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , stream = True , reasoning_effort = \"high\" extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) # ...",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api_samples / thinking_mode_api_example_tool_call",
+      "url": "https://api-docs.deepseek.com/api_samples/thinking_mode_api_example_tool_call",
+      "path": "/api_samples/thinking_mode_api_example_tool_call",
+      "category": "api_samples",
+      "categoryName": "示例代码",
+      "summary": "",
+      "headings": {
+        "level": 1,
+        "text": "thinking_mode_api_example_tool_call"
+      },
+      "codeSnippets": "import os import json from openai import OpenAI from datetime import datetime # The definition of the tools tools = [ { \"type\" : \"function\" , \"function\" : { \"name\" : \"get_date\" , \"description\" : \"Get the current date\" , \"parameters\" : { \"type\" : \"object\" , \"properties\" : { } } , } } , { \"type\" : \"function\" , \"function\" : { \"name\" : \"get_weather\" , \"description\" : \"Get weather of a location, the user should supply the location and date.\" , \"parameters\" : { \"type\" : \"object\" , \"properties\" : { \"location\" : { \"type\" : \"string\" , \"description\" : \"The city name\" } , \"date\" : { \"type\" : \"string\" , \"description\" : \"The date in format YYYY-mm-dd\" } , } , \"required\" : [ \"location\" , \"date\" ] } , } } , ] # The mocked version of the tool calls def get_date_mock ( ) : return datetime . now ( ) . strftime ( \"%Y-%m-%d\" ) def get_weather_mock ( location , date ) : return \"Cloudy 7~13°C\" TOOL_CALL_MAP = { \"get_date\" : get_date_mock , \"get_weather\" : get_weather_mock } def run_turn ( turn , messages ) : sub_turn = 1 while True : response = client . chat . completions . create ( model = 'deepseek-v4-pro' , messages = messages , tools = tools , reasoning_effort = \"high\" , extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) messages . append ( response . choices [ 0 ] . message ) reasoning_content = response . choices [ 0 ] . message . reasoning_content content = response . choices [ 0 ] . message . content tool_calls = response . choices [ 0 ] . message . tool_calls print ( f\"Turn { turn } . { sub_turn } \\n { reasoning_content = } \\n { content = } \\n { tool_calls = } \" ) # If there is no tool calls, then the model should get a final answer and we need to stop the loop if tool_calls is None : break for tool in tool_calls : tool_function = TOOL_CALL_MAP [ tool . function . name ] tool_result = tool_function ( ** json . loads ( tool . function . arguments ) ) print ( f\"tool result for { tool . function . name } : { tool_result } \\n\" ) messages . append ( { \"role\" : \"tool\" , \"tool_call_id\" : tool . id , \"content\" : tool_result , } ) sub_turn += 1 print ( ) client = OpenAI ( api_key = os . environ . get ( 'DEEPSEEK_API_KEY' ) , base_url = os . environ . get ( 'DEEPSEEK_BASE_URL' ) , ) # The user starts a question turn = 1 messages = [ { \"role\" : \"user\" , \"content\" : \"How's the weather in Hangzhou Tomorrow\" } ] run_turn ( turn , messages ) # The user starts a new question turn = 2 messages . append ( { \"role\" : \"user\" , \"content\" : \"How's the weather in Guangzhou Tomorrow\" } ) run_turn ( turn , messages )",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api_samples / thinking_mode_api_example_tool_call_output",
+      "url": "https://api-docs.deepseek.com/api_samples/thinking_mode_api_example_tool_call_output",
+      "path": "/api_samples/thinking_mode_api_example_tool_call_output",
+      "category": "api_samples",
+      "categoryName": "示例代码",
+      "summary": "",
+      "headings": {
+        "level": 1,
+        "text": "thinking_mode_api_example_tool_call_output"
+      },
+      "codeSnippets": "Turn 1.1 reasoning_content=\"The user is asking about the weather in Hangzhou tomorrow. I need to get tomorrow's date first, then call the weather function.\" content=\"Let me check tomorrow's weather in Hangzhou for you. First, let me get tomorrow's date.\" tool_calls=[ChatCompletionMessageFunctionToolCall(id='call_00_kw66qNnNto11bSfJVIdlV5Oo', function=Function(arguments='{}', name='get_date'), type='function', index=0)] tool result for get_date: 2026-04-19 Turn 1.2 reasoning_content=\"Today is 2026-04-19, so tomorrow is 2026-04-20. Now I'll call the weather function for Hangzhou.\" content='' tool_calls=[ChatCompletionMessageFunctionToolCall(id='call_00_H2SCW6136vWJGq9SQlBuhVt4', function=Function(arguments='{\"location\": \"Hangzhou\", \"date\": \"2026-04-20\"}', name='get_weather'), type='function', index=0)] tool result for get_weather: Cloudy 7~13°C Turn 1.3 reasoning_content='The weather result is in. Let me share this with the user.' content=\"Here's the weather forecast for **Hangzhou tomorrow (April 20, 2026)**:\\n\\n- 🌤 **Condition:** Cloudy \\n- 🌡 **Temperature:** 7°C ~ 13°C (45°F ~ 55°F)\\n\\nIt'll be on the cooler side, so you might want to bring a light jacket if you're heading out! Let me know if you need anything else.\" tool_calls=None Turn 2.1 reasoning_content='The user is asking about the weather in Guangzhou tomorrow. Today is 2026-04-19, so tomorrow is 2026-04-20. I can directly call the weather function.' content='' tool_calls=[ChatCompletionMessageFunctionToolCall(id='call_00_8URkLt5NjmNkVKhDmMcNq9Mo', function=Function(arguments='{\"location\": \"Guangzhou\", \"date\": \"2026-04-20\"}', name='get_weather'), type='function', index=0)] tool result for get_weather: Cloudy 7~13°C Turn 2.2 reasoning_content='The weather result for Guangzhou is the same as Hangzhou. Let me share this with the user.' content=\"Here's the weather forecast for **Guangzhou tomorrow (April 20, 2026)**:\\n\\n- 🌤 **Condition:** Cloudy \\n- 🌡 **Temperature:** 7°C ~ 13°C (45°F ~ 55°F)\\n\\nIt'll be cool and cloudy, so a light jacket would be a good idea if you're going out. Let me know if there's anything else you'd like to know!\" tool_calls=None",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api / create-chat-completion",
+      "url": "https://api-docs.deepseek.com/api/create-chat-completion",
+      "path": "/api/create-chat-completion",
+      "category": "api",
+      "categoryName": "API 接口",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference Introduction Chat Create Chat Completion Completions Models Others News Other Resources FAQ Change Log API Reference Chat Create Chat Completion Create Chat Completion POST /chat/completions Creates a model response for t…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Create Chat Completion"
+        },
+        {
+          "level": 2,
+          "text": "/chat/completions"
+        },
+        {
+          "level": 2,
+          "text": "Request ​"
+        },
+        {
+          "level": 3,
+          "text": "Body"
+        },
+        {
+          "level": 2,
+          "text": "Responses ​"
+        }
+      ],
+      "codeSnippets": [
+        "{ \"id\": \"string\", \"choices\": [ { \"finish_reason\": \"stop\", \"index\": 0, \"message\": { \"content\": \"string\", \"reasoning_content\": \"string\", \"tool_calls\": [ { \"id\": \"string\", \"type\": \"function\", \"function\": { \"name\": \"string\", \"arguments\": \"string\" } } ], \"role\": \"assistant\" }, \"logprobs\": { \"content\": [ { \"token\": \"string\", \"logprob\": 0, \"bytes\": [ 0 ], \"top_logprobs\": [ { \"token\": \"string\", \"logprob\": 0, \"bytes\": [ 0 ] } ] } ], \"reasoning_content\": [ { \"token\": \"string\", \"logprob\": 0, \"bytes\": [ 0 ], \"top_logprobs\": [ { \"token\": \"string\", \"logprob\": 0, \"bytes\": [ 0 ] } ] } ] } } ], \"created\": 0, \"model\": \"string\", \"system_fingerprint\": \"string\", \"object\": \"chat.completion\", \"usage\": { \"completion_tokens\": 0, \"prompt_tokens\": 0, \"prompt_cache_hit_tokens\": 0, \"prompt_cache_miss_tokens\": 0, \"total_tokens\": 0, \"completion_tokens_details\": { \"reasoning_tokens\": 0 } } }",
+        "{ \"id\": \"930c60df-bf64-41c9-a88e-3ec75f81e00e\", \"choices\": [ { \"finish_reason\": \"stop\", \"index\": 0, \"message\": { \"content\": \"Hello! How can I help you today?\", \"role\": \"assistant\" } } ], \"created\": 1705651092, \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion\", \"usage\": { \"completion_tokens\": 10, \"prompt_tokens\": 16, \"total_tokens\": 26 } }",
+        "data: {\"id\": \"1f633d8bfc032625086f14113c411638\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\", \"role\": \"assistant\"}, \"finish_reason\": null, \"logprobs\": null}], \"created\": 1718345013, \"model\": \"deepseek-v4-pro\", \"system_fingerprint\": \"fp_a49d71b8a1\", \"object\": \"chat.completion.chunk\", \"usage\": null} data: {\"choices\": [{\"delta\": {\"content\": \"Hello\", \"role\": \"assistant\"}, \"finish_reason\": null, \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\"} data: {\"choices\": [{\"delta\": {\"content\": \"!\", \"role\": \"assistant\"}, \"finish_reason\": null, \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\"} data: {\"choices\": [{\"delta\": {\"content\": \" How\", \"role\": \"assistant\"}, \"finish_reason\": null, \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\"} data: {\"choices\": [{\"delta\": {\"content\": \" can\", \"role\": \"assistant\"}, \"finish_reason\": null, \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\"} data: {\"choices\": [{\"delta\": {\"content\": \" I\", \"role\": \"assistant\"}, \"finish_reason\": null, \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\"} data: {\"choices\": [{\"delta\": {\"content\": \" assist\", \"role\": \"assistant\"}, \"finish_reason\": null, \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\"} data: {\"choices\": [{\"delta\": {\"content\": \" you\", \"role\": \"assistant\"}, \"finish_reason\": null, \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\"} data: {\"choices\": [{\"delta\": {\"content\": \" today\", \"role\": \"assistant\"}, \"finish_reason\": null, \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\"} data: {\"choices\": [{\"delta\": {\"content\": \"?\", \"role\": \"assistant\"}, \"finish_reason\": null, \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\"} data: {\"choices\": [{\"delta\": {\"content\": \"\", \"role\": null}, \"finish_reason\": \"stop\", \"index\": 0, \"logprobs\": null}], \"created\": 1718345013, \"id\": \"1f633d8bfc032625086f14113c411638\", \"model\": \"deepseek-v4-pro\", \"object\": \"chat.completion.chunk\", \"system_fingerprint\": \"fp_a49d71b8a1\", \"usage\": {\"completion_tokens\": 9, \"prompt_tokens\": 17, \"total_tokens\": 26}} data: [DONE]"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api / create-completion",
+      "url": "https://api-docs.deepseek.com/api/create-completion",
+      "path": "/api/create-completion",
+      "category": "api",
+      "categoryName": "API 接口",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference Introduction Chat Completions Create FIM Completion (Beta) Models Others News Other Resources FAQ Change Log API Reference Completions Create FIM Completion (Beta) Create FIM Completion (Beta) POST /completions The FIM (F…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Create FIM Completion (Beta)"
+        },
+        {
+          "level": 2,
+          "text": "/completions"
+        },
+        {
+          "level": 2,
+          "text": "Request ​"
+        },
+        {
+          "level": 3,
+          "text": "Body"
+        },
+        {
+          "level": 2,
+          "text": "Responses ​"
+        }
+      ],
+      "codeSnippets": "{ \"id\": \"string\", \"choices\": [ { \"finish_reason\": \"stop\", \"index\": 0, \"logprobs\": { \"text_offset\": [ 0 ], \"token_logprobs\": [ 0 ], \"tokens\": [ \"string\" ], \"top_logprobs\": [ {} ] }, \"text\": \"string\" } ], \"created\": 0, \"model\": \"string\", \"system_fingerprint\": \"string\", \"object\": \"text_completion\", \"usage\": { \"completion_tokens\": 0, \"prompt_tokens\": 0, \"prompt_cache_hit_tokens\": 0, \"prompt_cache_miss_tokens\": 0, \"total_tokens\": 0, \"completion_tokens_details\": { \"reasoning_tokens\": 0 } } }",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api / deepseek-api",
+      "url": "https://api-docs.deepseek.com/api/deepseek-api",
+      "path": "/api/deepseek-api",
+      "category": "api",
+      "categoryName": "API 接口",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference Introduction Chat Completions Models Others News Other Resources FAQ Change Log API Reference Introduction Version: 1.0.0 DeepSeek API The DeepSeek API. To use the DeepSeek API, please create an API key first . Security S…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeepSeek API"
+        },
+        {
+          "level": 2,
+          "text": "Authentication ​"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        },
+        {
+          "level": 3,
+          "text": "Terms of Service"
+        },
+        {
+          "level": 3,
+          "text": "License"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api / get-user-balance",
+      "url": "https://api-docs.deepseek.com/api/get-user-balance",
+      "path": "/api/get-user-balance",
+      "category": "api",
+      "categoryName": "API 接口",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference Introduction Chat Completions Models Others Get User Balance News Other Resources FAQ Change Log API Reference Others Get User Balance Get User Balance GET /user/balance Get user current balance OK, returns user balance i…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Get User Balance"
+        },
+        {
+          "level": 2,
+          "text": "/user/balance"
+        },
+        {
+          "level": 2,
+          "text": "Responses ​"
+        }
+      ],
+      "codeSnippets": [
+        "{ \"is_available\": true, \"balance_infos\": [ { \"currency\": \"CNY\", \"total_balance\": \"110.00\", \"granted_balance\": \"10.00\", \"topped_up_balance\": \"100.00\" } ] }",
+        "{ \"is_available\": true, \"balance_infos\": [ { \"currency\": \"CNY\", \"total_balance\": \"110.00\", \"granted_balance\": \"10.00\", \"topped_up_balance\": \"100.00\" } ] }"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "api / list-models",
+      "url": "https://api-docs.deepseek.com/api/list-models",
+      "path": "/api/list-models",
+      "category": "api",
+      "categoryName": "API 接口",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference Introduction Chat Completions Models Lists Models Others News Other Resources FAQ Change Log API Reference Models Lists Models Lists Models GET /models Lists the currently available models, and provides basic information …",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Lists Models"
+        },
+        {
+          "level": 2,
+          "text": "/models"
+        },
+        {
+          "level": 2,
+          "text": "Responses ​"
+        }
+      ],
+      "codeSnippets": [
+        "{ \"object\": \"list\", \"data\": [ { \"id\": \"string\", \"object\": \"model\", \"owned_by\": \"string\" } ] }",
+        "{ \"object\": \"list\", \"data\": [ { \"id\": \"deepseek-v4-flash\", \"object\": \"model\", \"owned_by\": \"deepseek\" }, { \"id\": \"deepseek-v4-pro\", \"object\": \"model\", \"owned_by\": \"deepseek\" } ] }"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "faq",
+      "url": "https://api-docs.deepseek.com/faq",
+      "path": "/faq",
+      "category": "faq",
+      "categoryName": "FAQ",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log FAQ On this page FAQ Account ​ Cannot sign in to my account ​ If you see the message 「your account has been temporarily suspended」 while logging in，this indicates that your account has …",
+      "headings": [
+        {
+          "level": 1,
+          "text": "FAQ"
+        },
+        {
+          "level": 2,
+          "text": "Account ​"
+        },
+        {
+          "level": 3,
+          "text": "Cannot sign in to my account ​"
+        },
+        {
+          "level": 3,
+          "text": "Cannot register with my email ​"
+        },
+        {
+          "level": 3,
+          "text": "Deleting Account ​"
+        },
+        {
+          "level": 2,
+          "text": "Billing ​"
+        },
+        {
+          "level": 3,
+          "text": "How to Top Up? ​"
+        },
+        {
+          "level": 3,
+          "text": "Is there any expiration date for my balance? ​"
+        },
+        {
+          "level": 3,
+          "text": "Is a refund possible? ​"
+        },
+        {
+          "level": 3,
+          "text": "How to view usage by API Key ​"
+        },
+        {
+          "level": 3,
+          "text": "Incorrect Top-up Balance ​"
+        },
+        {
+          "level": 2,
+          "text": "API Call ​"
+        },
+        {
+          "level": 3,
+          "text": "Are there any rate limits when calling your API? Can I increase the limits for my account? ​"
+        },
+        {
+          "level": 3,
+          "text": "Why do I feel that your API's speed is slower than the web service? ​"
+        },
+        {
+          "level": 3,
+          "text": "Why are empty lines continuously returned when calling the API? ​"
+        },
+        {
+          "level": 3,
+          "text": "Does your API support LangChain? ​"
+        },
+        {
+          "level": 3,
+          "text": "How to calculate token usage offline? ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / anthropic_api",
+      "url": "https://api-docs.deepseek.com/guides/anthropic_api",
+      "path": "/guides/anthropic_api",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log API Guides Anthropic API On this page Anthropic API To meet the demand for using the Anthropic API ecosystem, our API has added support for the Anthropic API format, with the base_url b…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Anthropic API"
+        },
+        {
+          "level": 2,
+          "text": "Use DeepSeek in Claude Code ​"
+        },
+        {
+          "level": 2,
+          "text": "Invoke DeepSeek Model via Anthropic API ​"
+        },
+        {
+          "level": 2,
+          "text": "Anthropic API Compatibility Details ​"
+        },
+        {
+          "level": 3,
+          "text": "HTTP Header ​"
+        },
+        {
+          "level": 3,
+          "text": "Simple Fields ​"
+        },
+        {
+          "level": 3,
+          "text": "Tool Fields ​"
+        },
+        {
+          "level": 4,
+          "text": "tools ​"
+        },
+        {
+          "level": 4,
+          "text": "tool_choice ​"
+        },
+        {
+          "level": 3,
+          "text": "Message Fields ​"
+        }
+      ],
+      "codeSnippets": [
+        "export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic export ANTHROPIC_API_KEY=${YOUR_API_KEY}",
+        "import anthropic client = anthropic.Anthropic() message = client.messages.create( model=\"deepseek-v4-pro\", max_tokens=1000, system=\"You are a helpful assistant.\", messages=[ { \"role\": \"user\", \"content\": [ { \"type\": \"text\", \"text\": \"Hi, how are you?\" } ] } ] ) print(message.content)"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / chat_prefix_completion",
+      "url": "https://api-docs.deepseek.com/guides/chat_prefix_completion",
+      "path": "/guides/chat_prefix_completion",
+      "category": "guides",
+      "categoryName": "功能指南",
+      "summary": "doctype html>\n<html lang=\"en\" dir=\"ltr\" class=\"docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-... s prefix message for the model to complete the rest of the message.\"><meta data-rh=\"true\" property=\"og:description\" cont... s prefix message for the model to complete the rest of the message.\"><link data-rh=\"true\" rel=\"icon\" href=\"/img/favicon....",
+      "headings": null,
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "markdown",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / coding_agents",
+      "url": "https://api-docs.deepseek.com/guides/coding_agents",
+      "path": "/guides/coding_agents",
+      "category": "guides",
+      "categoryName": "功能指南",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform On this page Integrate with AI Tools This guide shows how to integrate DeepSeek models with popular AI coding tools, including Claude Code, OpenCode, and OpenClaw. Claude Code is an AI coding assistant that runs in the terminal. npm install -g @anthropic-ai/claude-code After installation, run the following command. If the version number is displayed, the installation is successful: claude --version 2. Configure Environment Variables ​ Linux / Mac users, run the following commands to configure env…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with AI Tools"
+        },
+        {
+          "level": 2,
+          "text": "Integrate with Claude Code ​"
+        },
+        {
+          "level": 4,
+          "text": "1. Install Claude Code ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure Environment Variables ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Enter the project directory and execute the claude command to get started. ​"
+        },
+        {
+          "level": 2,
+          "text": "Integrate with OpenCode ​"
+        },
+        {
+          "level": 4,
+          "text": "1. Install OpenCode ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Run and Configure ​"
+        },
+        {
+          "level": 2,
+          "text": "Integrate with OpenClaw ​"
+        },
+        {
+          "level": 4,
+          "text": "1. Install OpenClaw ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure the Default Model in OpenClaw ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Get Started ​"
+        }
+      ],
+      "codeSnippets": [
+        "export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic export ANTHROPIC_AUTH_TOKEN=<your DeepSeek API Key> export ANTHROPIC_MODEL=deepseek-v4-pro[1m] export ANTHROPIC_DEFAULT_OPUS_MODEL=deepseek-v4-pro[1m] export ANTHROPIC_DEFAULT_SONNET_MODEL=deepseek-v4-pro[1m] export ANTHROPIC_DEFAULT_HAIKU_MODEL=deepseek-v4-flash export CLAUDE_CODE_SUBAGENT_MODEL=deepseek-v4-flash export CLAUDE_CODE_EFFORT_LEVEL=max",
+        "$env:ANTHROPIC_BASE_URL=\"https://api.deepseek.com/anthropic\" $env:ANTHROPIC_AUTH_TOKEN=\"<your DeepSeek API Key>\" $env:ANTHROPIC_MODEL=\"deepseek-v4-pro[1m]\" $env:ANTHROPIC_DEFAULT_OPUS_MODEL=\"deepseek-v4-pro[1m]\" $env:ANTHROPIC_DEFAULT_SONNET_MODEL=\"deepseek-v4-pro[1m]\" $env:ANTHROPIC_DEFAULT_HAIKU_MODEL=\"deepseek-v4-flash\" $env:CLAUDE_CODE_SUBAGENT_MODEL=\"deepseek-v4-flash\" $env:CLAUDE_CODE_EFFORT_LEVEL=\"max\"",
+        "curl -fsSL https://openclaw.ai/install.sh | bash",
+        "iwr -useb https://openclaw.ai/install.ps1 | iex"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / fim_completion",
+      "url": "https://api-docs.deepseek.com/guides/fim_completion",
+      "path": "/guides/fim_completion",
+      "category": "guides",
+      "categoryName": "功能指南",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log API Guides FIM Completion (Beta) On this page FIM Completion (Beta) In FIM (Fill In the Middle) completion , users can provide a prefix and a suffix (optional), and the model will compl…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "FIM Completion (Beta)"
+        },
+        {
+          "level": 2,
+          "text": "Notice ​"
+        },
+        {
+          "level": 2,
+          "text": "Sample Code ​"
+        },
+        {
+          "level": 2,
+          "text": "Integration With Continue ​"
+        }
+      ],
+      "codeSnippets": "from openai import OpenAI client = OpenAI ( api_key = \"<your api key>\" , base_url = \"https://api.deepseek.com/beta\" , ) response = client . completions . create ( model = \"deepseek-v4-pro\" , prompt = \"def fib(a):\" , suffix = \" return fib(a-1) + fib(a-2)\" , max_tokens = 128 ) print ( response . choices [ 0 ] . text )",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / json_mode",
+      "url": "https://api-docs.deepseek.com/guides/json_mode",
+      "path": "/guides/json_mode",
+      "category": "guides",
+      "categoryName": "功能指南",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log API Guides JSON Output On this page JSON Output In many scenarios, users need the model to output in strict JSON format to achieve structured output, facilitating subsequent parsing. De…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "JSON Output"
+        },
+        {
+          "level": 2,
+          "text": "Notice ​"
+        },
+        {
+          "level": 2,
+          "text": "Sample Code ​"
+        }
+      ],
+      "codeSnippets": [
+        "import json from openai import OpenAI client = OpenAI ( api_key = \"<your api key>\" , base_url = \"https://api.deepseek.com\" , ) system_prompt = \"\"\" The user will provide some exam text. Please parse the \"question\" and \"answer\" and output them in JSON format. EXAMPLE INPUT: Which is the highest mountain in the world? Mount Everest. EXAMPLE JSON OUTPUT: { \"question\": \"Which is the highest mountain in the world?\", \"answer\": \"Mount Everest\" } \"\"\" user_prompt = \"Which is the longest river in the world? The Nile River.\" messages = [ { \"role\" : \"system\" , \"content\" : system_prompt } , { \"role\" : \"user\" , \"content\" : user_prompt } ] response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , response_format = { 'type' : 'json_object' } ) print ( json . loads ( response . choices [ 0 ] . message . content ) )",
+        "{ \"question\": \"Which is the longest river in the world?\", \"answer\": \"The Nile River\" }"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / kv_cache",
+      "url": "https://api-docs.deepseek.com/guides/kv_cache",
+      "path": "/guides/kv_cache",
+      "category": "guides",
+      "categoryName": "功能指南",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log API Guides Context Caching On this page Context Caching The DeepSeek API Context Caching on Disk Technology is enabled by default for all users, allowing them to benefit without needing…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Context Caching"
+        },
+        {
+          "level": 2,
+          "text": "Cache Persistence and Hit Rules ​"
+        },
+        {
+          "level": 3,
+          "text": "When cache prefixes are persisted: ​"
+        },
+        {
+          "level": 3,
+          "text": "Example 1: Multi-round Conversation ​"
+        },
+        {
+          "level": 3,
+          "text": "Example 2: Long Text Q&A ​"
+        },
+        {
+          "level": 2,
+          "text": "Checking Cache Hit Status ​"
+        },
+        {
+          "level": 2,
+          "text": "Hard Disk Cache and Output Randomness ​"
+        },
+        {
+          "level": 2,
+          "text": "Additional Notes ​"
+        }
+      ],
+      "codeSnippets": [
+        "messages: [ {\"role\": \"system\", \"content\": \"You are a helpful assistant\"}, {\"role\": \"user\", \"content\": \"What is the capital of China?\"} ]",
+        "messages: [ {\"role\": \"system\", \"content\": \"You are a helpful assistant\"}, {\"role\": \"user\", \"content\": \"What is the capital of China?\"}, {\"role\": \"assistant\", \"content\": \"The capital of China is Beijing.\"}, {\"role\": \"user\", \"content\": \"What is the capital of the United States?\"} ]",
+        "messages: [ {\"role\": \"system\", \"content\": \"You are an experienced financial report analyst...\"} {\"role\": \"user\", \"content\": \"<financial report content>\\n\\nPlease summarize the key information of this financial report.\"} ]",
+        "messages: [ {\"role\": \"system\", \"content\": \"You are an experienced financial report analyst...\"} {\"role\": \"user\", \"content\": \"<financial report content>\\n\\nPlease analyze the profitability of this financial report.\"} ]",
+        "messages: [ {\"role\": \"system\", \"content\": \"You are an experienced financial report analyst...\"} {\"role\": \"user\", \"content\": \"<financial report content>\\n\\nPlease analyze the ratio of the company's revenue to expenses.\"} ]"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / model",
+      "url": "https://api-docs.deepseek.com/guides/model",
+      "path": "/guides/model",
+      "category": "models",
+      "categoryName": "模型",
+      "summary": "抓取失败：Response status code does not indicate success: 404 (Not Found).",
+      "headings": [],
+      "codeSnippets": [],
+      "fetchError": "Response status code does not indicate success: 404 (Not Found).",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / multi_round_chat",
+      "url": "https://api-docs.deepseek.com/guides/multi_round_chat",
+      "path": "/guides/multi_round_chat",
+      "category": "guides",
+      "categoryName": "功能指南",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log API Guides Multi-round Conversation Multi-round Conversation This guide will introduce how to use the DeepSeek /chat/completions API for multi-turn conversations. The DeepSeek /chat/com…",
+      "headings": {
+        "level": 1,
+        "text": "Multi-round Conversation"
+      },
+      "codeSnippets": [
+        "from openai import OpenAI client = OpenAI ( api_key = \"<DeepSeek API Key>\" , base_url = \"https://api.deepseek.com\" ) # Round 1 messages = [ { \"role\" : \"user\" , \"content\" : \"What's the highest mountain in the world?\" } ] response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages ) messages . append ( response . choices [ 0 ] . message ) print ( f\"Messages Round 1: { messages } \" ) # Round 2 messages . append ( { \"role\" : \"user\" , \"content\" : \"What is the second?\" } ) response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages ) messages . append ( response . choices [ 0 ] . message ) print ( f\"Messages Round 2: { messages } \" )",
+        "[ {\"role\": \"user\", \"content\": \"What's the highest mountain in the world?\"} ]",
+        "[ {\"role\": \"user\", \"content\": \"What's the highest mountain in the world?\"}, {\"role\": \"assistant\", \"content\": \"The highest mountain in the world is Mount Everest.\"}, {\"role\": \"user\", \"content\": \"What is the second?\"} ]"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / thinking_mode",
+      "url": "https://api-docs.deepseek.com/guides/thinking_mode",
+      "path": "/guides/thinking_mode",
+      "category": "guides",
+      "categoryName": "功能指南",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log API Guides Thinking Mode On this page Thinking Mode The DeepSeek model supports the thinking mode: before outputting the final answer, the model will first output a chain-of-thought rea…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Thinking Mode"
+        },
+        {
+          "level": 2,
+          "text": "Thinking Mode Toggle and Effort Control ​"
+        },
+        {
+          "level": 2,
+          "text": "Input and Output Parameters ​"
+        },
+        {
+          "level": 2,
+          "text": "Multi-turn Conversation ​"
+        },
+        {
+          "level": 3,
+          "text": "Sample Code ​"
+        },
+        {
+          "level": 2,
+          "text": "Tool Calls ​"
+        },
+        {
+          "level": 3,
+          "text": "Sample Code ​"
+        }
+      ],
+      "codeSnippets": [
+        "response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , # ... reasoning_effort = \"high\" , extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } )",
+        "from openai import OpenAI client = OpenAI ( api_key = \"<DeepSeek API Key>\" , base_url = \"https://api.deepseek.com\" ) # Turn 1 messages = [ { \"role\" : \"user\" , \"content\" : \"9.11 and 9.8, which is greater?\" } ] response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , reasoning_effort = \"high\" extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) reasoning_content = response . choices [ 0 ] . message . reasoning_content content = response . choices [ 0 ] . message . content # Turn 2 # The reasoning_content will be ignored by the API messages . append ( response . choices [ 0 ] . message ) messages . append ( { 'role' : 'user' , 'content' : \"How many Rs are there in the word 'strawberry'?\" } ) response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , reasoning_effort = \"high\" extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) # ...",
+        "from openai import OpenAI client = OpenAI ( api_key = \"<DeepSeek API Key>\" , base_url = \"https://api.deepseek.com\" ) # Turn 1 messages = [ { \"role\" : \"user\" , \"content\" : \"9.11 and 9.8, which is greater?\" } ] response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , stream = True , reasoning_effort = \"high\" extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) reasoning_content = \"\" content = \"\" for chunk in response : if chunk . choices [ 0 ] . delta . reasoning_content : reasoning_content += chunk . choices [ 0 ] . delta . reasoning_content else : content += chunk . choices [ 0 ] . delta . content # Turn 2 # The reasoning_content will be ignored by the API messages . append ( { \"role\" : \"assistant\" , \"reasoning_content\" : reasoning_content , \"content\" : content } ) messages . append ( { 'role' : 'user' , 'content' : \"How many Rs are there in the word 'strawberry'?\" } ) response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , stream = True , reasoning_effort = \"high\" extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) # ...",
+        "import os import json from openai import OpenAI from datetime import datetime # The definition of the tools tools = [ { \"type\" : \"function\" , \"function\" : { \"name\" : \"get_date\" , \"description\" : \"Get the current date\" , \"parameters\" : { \"type\" : \"object\" , \"properties\" : { } } , } } , { \"type\" : \"function\" , \"function\" : { \"name\" : \"get_weather\" , \"description\" : \"Get weather of a location, the user should supply the location and date.\" , \"parameters\" : { \"type\" : \"object\" , \"properties\" : { \"location\" : { \"type\" : \"string\" , \"description\" : \"The city name\" } , \"date\" : { \"type\" : \"string\" , \"description\" : \"The date in format YYYY-mm-dd\" } , } , \"required\" : [ \"location\" , \"date\" ] } , } } , ] # The mocked version of the tool calls def get_date_mock ( ) : return datetime . now ( ) . strftime ( \"%Y-%m-%d\" ) def get_weather_mock ( location , date ) : return \"Cloudy 7~13°C\" TOOL_CALL_MAP = { \"get_date\" : get_date_mock , \"get_weather\" : get_weather_mock } def run_turn ( turn , messages ) : sub_turn = 1 while True : response = client . chat . completions . create ( model = 'deepseek-v4-pro' , messages = messages , tools = tools , reasoning_effort = \"high\" , extra_body = { \"thinking\" : { \"type\" : \"enabled\" } } , ) messages . append ( response . choices [ 0 ] . message ) reasoning_content = response . choices [ 0 ] . message . reasoning_content content = response . choices [ 0 ] . message . content tool_calls = response . choices [ 0 ] . message . tool_calls print ( f\"Turn { turn } . { sub_turn } \\n { reasoning_content = } \\n { content = } \\n { tool_calls = } \" ) # If there is no tool calls, then the model should get a final answer and we need to stop the loop if tool_calls is None : break for tool in tool_calls : tool_function = TOOL_CALL_MAP [ tool . function . name ] tool_result = tool_function ( ** json . loads ( tool . function . arguments ) ) print ( f\"tool result for { tool . function . name } : { tool_result } \\n\" ) messages . append ( { \"role\" : \"tool\" , \"tool_call_id\" : tool . id , \"content\" : tool_result , } ) sub_turn += 1 print ( ) client = OpenAI ( api_key = os . environ . get ( 'DEEPSEEK_API_KEY' ) , base_url = os . environ . get ( 'DEEPSEEK_BASE_URL' ) , ) # The user starts a question turn = 1 messages = [ { \"role\" : \"user\" , \"content\" : \"How's the weather in Hangzhou Tomorrow\" } ] run_turn ( turn , messages ) # The user starts a new question turn = 2 messages . append ( { \"role\" : \"user\" , \"content\" : \"How's the weather in Guangzhou Tomorrow\" } ) run_turn ( turn , messages )",
+        "messages.append(response.choices[0].message)",
+        "messages.append({ 'role': 'assistant', 'content': response.choices[0].message.content, 'reasoning_content': response.choices[0].message.reasoning_content, 'tool_calls': response.choices[0].message.tool_calls, })",
+        "Turn 1.1 reasoning_content=\"The user is asking about the weather in Hangzhou tomorrow. I need to get tomorrow's date first, then call the weather function.\" content=\"Let me check tomorrow's weather in Hangzhou for you. First, let me get tomorrow's date.\" tool_calls=[ChatCompletionMessageFunctionToolCall(id='call_00_kw66qNnNto11bSfJVIdlV5Oo', function=Function(arguments='{}', name='get_date'), type='function', index=0)] tool result for get_date: 2026-04-19 Turn 1.2 reasoning_content=\"Today is 2026-04-19, so tomorrow is 2026-04-20. Now I'll call the weather function for Hangzhou.\" content='' tool_calls=[ChatCompletionMessageFunctionToolCall(id='call_00_H2SCW6136vWJGq9SQlBuhVt4', function=Function(arguments='{\"location\": \"Hangzhou\", \"date\": \"2026-04-20\"}', name='get_weather'), type='function', index=0)] tool result for get_weather: Cloudy 7~13°C Turn 1.3 reasoning_content='The weather result is in. Let me share this with the user.' content=\"Here's the weather forecast for **Hangzhou tomorrow (April 20, 2026)**:\\n\\n- 🌤 **Condition:** Cloudy \\n- 🌡 **Temperature:** 7°C ~ 13°C (45°F ~ 55°F)\\n\\nIt'll be on the cooler side, so you might want to bring a light jacket if you're heading out! Let me know if you need anything else.\" tool_calls=None Turn 2.1 reasoning_content='The user is asking about the weather in Guangzhou tomorrow. Today is 2026-04-19, so tomorrow is 2026-04-20. I can directly call the weather function.' content='' tool_calls=[ChatCompletionMessageFunctionToolCall(id='call_00_8URkLt5NjmNkVKhDmMcNq9Mo', function=Function(arguments='{\"location\": \"Guangzhou\", \"date\": \"2026-04-20\"}', name='get_weather'), type='function', index=0)] tool result for get_weather: Cloudy 7~13°C Turn 2.2 reasoning_content='The weather result for Guangzhou is the same as Hangzhou. Let me share this with the user.' content=\"Here's the weather forecast for **Guangzhou tomorrow (April 20, 2026)**:\\n\\n- 🌤 **Condition:** Cloudy \\n- 🌡 **Temperature:** 7°C ~ 13°C (45°F ~ 55°F)\\n\\nIt'll be cool and cloudy, so a light jacket would be a good idea if you're going out. Let me know if there's anything else you'd like to know!\" tool_calls=None"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "guides / tool_calls",
+      "url": "https://api-docs.deepseek.com/guides/tool_calls",
+      "path": "/guides/tool_calls",
+      "category": "tool",
+      "categoryName": "工具",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log API Guides Tool Calls On this page Tool Calls Tool Calls allows the model to call external tools to enhance its capabilities. Here is an example of using Tool Calls to get the current w…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Tool Calls"
+        },
+        {
+          "level": 2,
+          "text": "Non-thinking Mode ​"
+        },
+        {
+          "level": 3,
+          "text": "Sample Code ​"
+        },
+        {
+          "level": 2,
+          "text": "Thinking Mode ​"
+        },
+        {
+          "level": 2,
+          "text": "strict Mode (Beta) ​"
+        },
+        {
+          "level": 3,
+          "text": "Support Json Schema Types In strict Mode ​"
+        },
+        {
+          "level": 4,
+          "text": "object ​"
+        },
+        {
+          "level": 4,
+          "text": "string ​"
+        },
+        {
+          "level": 4,
+          "text": "number/integer ​"
+        },
+        {
+          "level": 4,
+          "text": "array ​"
+        },
+        {
+          "level": 4,
+          "text": "enum ​"
+        },
+        {
+          "level": 4,
+          "text": "anyOf ​"
+        },
+        {
+          "level": 4,
+          "text": "$ref and $def ​"
+        }
+      ],
+      "codeSnippets": [
+        "from openai import OpenAI def send_messages ( messages ) : response = client . chat . completions . create ( model = \"deepseek-v4-pro\" , messages = messages , tools = tools ) return response . choices [ 0 ] . message client = OpenAI ( api_key = \"<your api key>\" , base_url = \"https://api.deepseek.com\" , ) tools = [ { \"type\" : \"function\" , \"function\" : { \"name\" : \"get_weather\" , \"description\" : \"Get weather of a location, the user should supply a location first.\" , \"parameters\" : { \"type\" : \"object\" , \"properties\" : { \"location\" : { \"type\" : \"string\" , \"description\" : \"The city and state, e.g. San Francisco, CA\" , } } , \"required\" : [ \"location\" ] } , } } , ] messages = [ { \"role\" : \"user\" , \"content\" : \"How's the weather in Hangzhou, Zhejiang?\" } ] message = send_messages ( messages ) print ( f\"User>\\t { messages [ 0 ] [ 'content' ] } \" ) tool = message . tool_calls [ 0 ] messages . append ( message ) messages . append ( { \"role\" : \"tool\" , \"tool_call_id\" : tool . id , \"content\" : \"24℃\" } ) message = send_messages ( messages ) print ( f\"Model>\\t { message . content } \" )",
+        "{ \"type\": \"function\", \"function\": { \"name\": \"get_weather\", \"strict\": true, \"description\": \"Get weather of a location, the user should supply a location first.\", \"parameters\": { \"type\": \"object\", \"properties\": { \"location\": { \"type\": \"string\", \"description\": \"The city and state, e.g. San Francisco, CA\", } }, \"required\": [\"location\"], \"additionalProperties\": false } } }",
+        "{ \"type\": \"object\", \"properties\": { \"name\": { \"type\": \"string\" }, \"age\": { \"type\": \"integer\" } }, \"required\": [\"name\", \"age\"], \"additionalProperties\": false }",
+        "{ \"type\": \"object\", \"properties\": { \"user_email\": { \"type\": \"string\", \"description\": \"The user's email address\", \"format\": \"email\" }, \"zip_code\": { \"type\": \"string\", \"description\": \"Six digit postal code\", \"pattern\": \"^\\\\d{6}$\" } } }",
+        "{ \"type\": \"object\", \"properties\": { \"score\": { \"type\": \"integer\", \"description\": \"A number from 1-5, which represents your rating, the higher, the better\", \"minimum\": 1, \"maximum\": 5 } }, \"required\": [\"score\"], \"additionalProperties\": false }",
+        "{ \"type\": \"object\", \"properties\": { \"keywords\": { \"type\": \"array\", \"description\": \"Five keywords of the article, sorted by importance\", \"items\": { \"type\": \"string\", \"description\": \"A concise and accurate keyword or phrase.\" } } }, \"required\": [\"keywords\"], \"additionalProperties\": false }",
+        "{ \"type\": \"object\", \"properties\": { \"order_status\": { \"type\": \"string\", \"description\": \"Ordering status\", \"enum\": [\"pending\", \"processing\", \"shipped\", \"cancelled\"] } } }",
+        "{ \"type\": \"object\", \"properties\": { \"account\": { \"anyOf\": [ { \"type\": \"string\", \"format\": \"email\", \"description\": \"可以是电子邮件地址\" }, { \"type\": \"string\", \"pattern\": \"^\\\\d{11}$\", \"description\": \"或11位手机号码\" } ] } } }"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "markdown-page",
+      "url": "https://api-docs.deepseek.com/markdown-page",
+      "path": "/markdown-page",
+      "category": "markdown-page",
+      "categoryName": "文档说明",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Markdown page example You don't need React to write simple standalone pages.",
+      "headings": {
+        "level": 1,
+        "text": "Markdown page example"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news0725",
+      "url": "https://api-docs.deepseek.com/news/news0725",
+      "path": "/news/news0725",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "doctype html>\n<html lang=\"en\" dir=\"ltr\" class=\"docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-... function(){function t(t){document.documentElement.setAttribute(\"data-theme\",t)}var e=function(){try{return new URLSearch... e:\"light\")}(),function(){try{const c=new URLSearchParams(window.location.search).entries()",
+      "headings": null,
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "markdown",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news0802",
+      "url": "https://api-docs.deepseek.com/news/news0802",
+      "path": "/news/news0802",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeepSeek API introduces Context Caching on Disk, cutting prices by an order of magnitude"
+        },
+        {
+          "level": 2,
+          "text": "How to Use DeepSeek API's Caching Service ​"
+        },
+        {
+          "level": 2,
+          "text": "Monitoring Cache Hits ​"
+        },
+        {
+          "level": 2,
+          "text": "Reducing Latency ​"
+        },
+        {
+          "level": 2,
+          "text": "Lowering Costs ​"
+        },
+        {
+          "level": 2,
+          "text": "Security Concerns ​"
+        },
+        {
+          "level": 2,
+          "text": "Why DeepSeek Leads with Disk Caching ​"
+        },
+        {
+          "level": 2,
+          "text": "DeepSeek API’s Concurrency and Rate Limits ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news0905",
+      "url": "https://api-docs.deepseek.com/news/news0905",
+      "path": "/news/news0905",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeepSeek-V2.5: A New Open-Source Model Combining General and Coding Capabilities"
+        },
+        {
+          "level": 2,
+          "text": "Version History ​"
+        },
+        {
+          "level": 2,
+          "text": "General Capabilities ​"
+        },
+        {
+          "level": 2,
+          "text": "Code Capabilities ​"
+        },
+        {
+          "level": 2,
+          "text": "Open-Source ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news1120",
+      "url": "https://api-docs.deepseek.com/news/news1120",
+      "path": "/news/news1120",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": {
+        "level": 1,
+        "text": "🚀 DeepSeek-R1-Lite-Preview is now live: unleashing supercharged reasoning power!"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news1210",
+      "url": "https://api-docs.deepseek.com/news/news1210",
+      "path": "/news/news1210",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": {
+        "level": 1,
+        "text": "🚀 DeepSeek V2.5: The Grand Finale 🎉"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news1226",
+      "url": "https://api-docs.deepseek.com/news/news1226",
+      "path": "/news/news1226",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "🚀 Introducing DeepSeek-V3"
+        },
+        {
+          "level": 2,
+          "text": "Biggest leap forward yet ​"
+        },
+        {
+          "level": 2,
+          "text": "🎉 What’s new in V3 ​"
+        },
+        {
+          "level": 2,
+          "text": "💰 API Pricing Update ​"
+        },
+        {
+          "level": 2,
+          "text": "Still the best value in the market! 🔥 ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news250115",
+      "url": "https://api-docs.deepseek.com/news/news250115",
+      "path": "/news/news250115",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Introducing DeepSeek App"
+        },
+        {
+          "level": 2,
+          "text": "Key Features of DeepSeek App: ​"
+        },
+        {
+          "level": 2,
+          "text": "Important Notice: ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news250120",
+      "url": "https://api-docs.deepseek.com/news/news250120",
+      "path": "/news/news250120",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": {
+        "level": 1,
+        "text": "DeepSeek-R1 Release"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news250325",
+      "url": "https://api-docs.deepseek.com/news/news250325",
+      "path": "/news/news250325",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "",
+      "headings": {
+        "level": 1,
+        "text": "DeepSeek-V3-0324 Release"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news250528",
+      "url": "https://api-docs.deepseek.com/news/news250528",
+      "path": "/news/news250528",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": {
+        "level": 1,
+        "text": "DeepSeek-R1-0528 Release"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news250821",
+      "url": "https://api-docs.deepseek.com/news/news250821",
+      "path": "/news/news250821",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeepSeek-V3.1 Release"
+        },
+        {
+          "level": 2,
+          "text": "API Update ⚙️ ​"
+        },
+        {
+          "level": 2,
+          "text": "Tools & Agents Upgrades 🧰 ​"
+        },
+        {
+          "level": 2,
+          "text": "Model Update 🤖 ​"
+        },
+        {
+          "level": 2,
+          "text": "Pricing Changes 💳 ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news250922",
+      "url": "https://api-docs.deepseek.com/news/news250922",
+      "path": "/news/news250922",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": {
+        "level": 1,
+        "text": "DeepSeek-V3.1-Terminus"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news250929",
+      "url": "https://api-docs.deepseek.com/news/news250929",
+      "path": "/news/news250929",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Introducing DeepSeek-V3.2-Exp"
+        },
+        {
+          "level": 2,
+          "text": "⚡️ Efficiency Gains ​"
+        },
+        {
+          "level": 2,
+          "text": "🧑‍💻 API Update ​"
+        },
+        {
+          "level": 2,
+          "text": "🛠 Open Source Release ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news251201",
+      "url": "https://api-docs.deepseek.com/news/news251201",
+      "path": "/news/news251201",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeepSeek-V3.2 Release"
+        },
+        {
+          "level": 1,
+          "text": "🏆 World-Leading Reasoning"
+        },
+        {
+          "level": 1,
+          "text": "🤖 Thinking in Tool-Use"
+        },
+        {
+          "level": 1,
+          "text": "💻 API Update"
+        },
+        {
+          "level": 1,
+          "text": "🛠 Open Source Release"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "news / news260424",
+      "url": "https://api-docs.deepseek.com/news/news260424",
+      "path": "/news/news260424",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News DeepSeek-V4 Preview Release 2026/04/24 DeepSeek-V3.2 Release 2025/12/01 DeepSeek-V3.2-Exp Release 2025/09/29 DeepSeek V3.1 Update 2025/09/22 DeepSeek V3.1 Release 2025/08/21 DeepSeek-R1-0528 Release 2025/05/28 DeepSe…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeepSeek V4 Preview Release"
+        },
+        {
+          "level": 3,
+          "text": "DeepSeek-V4-Pro ​"
+        },
+        {
+          "level": 3,
+          "text": "DeepSeek-V4-Flash ​"
+        },
+        {
+          "level": 3,
+          "text": "Structural Innovation & Ultra-High Context Efficiency ​"
+        },
+        {
+          "level": 3,
+          "text": "Dedicated Optimizations for Agent Capabilities ​"
+        },
+        {
+          "level": 3,
+          "text": "API is Available Today! ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "prompt-library",
+      "url": "https://api-docs.deepseek.com/prompt-library",
+      "path": "/prompt-library",
+      "category": "prompt-library",
+      "categoryName": "提示词库",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform 提示库 探索 DeepSeek 提示词样例，挖掘更多可能",
+      "headings": {
+        "level": 1,
+        "text": "提示库"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "PromptLibrary",
+      "url": "https://api-docs.deepseek.com/PromptLibrary",
+      "path": "/PromptLibrary",
+      "category": "prompt-library",
+      "categoryName": "提示词库",
+      "summary": "探索 DeepSeek 提示词样例，挖掘更多可能",
+      "headings": {
+        "level": 1,
+        "text": "提示库"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / astrbot",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/astrbot",
+      "path": "/quick_start/agent_integrations/astrbot",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with AstrBot"
+        },
+        {
+          "level": 4,
+          "text": "1. Install AstrBot ​"
+        },
+        {
+          "level": 5,
+          "text": "Install AstrBot via uv ​"
+        },
+        {
+          "level": 5,
+          "text": "Install AstrBot via Docker ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure the Default Model in AstrBot ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Get Started ​"
+        }
+      ],
+      "codeSnippets": [
+        "curl -LsSf https://docs.astrbot.app/install.sh | bash",
+        "iwr -useb https://docs.astrbot.app/install.ps1 | iex",
+        "astrbot init # Run this only once to initialize the environment. This command installs AstrBot into the current terminal directory. astrbot run # Start AstrBot. This command checks whether AstrBot is installed in the current directory; if not, it prompts you to initialize it with `astrbot init`.",
+        "git clone https://github.com/AstrBotDevs/AstrBot --depth 1 cd AstrBot",
+        "http://localhost:6185 # Or http://<server-ip>:6185 if AstrBot runs on a server"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / claude_code",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/claude_code",
+      "path": "/quick_start/agent_integrations/claude_code",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with Claude Code"
+        },
+        {
+          "level": 2,
+          "text": "Migrate from Existing Installation to DeepSeek ​"
+        },
+        {
+          "level": 2,
+          "text": "Install Claude Code from Scratch ​"
+        },
+        {
+          "level": 4,
+          "text": "1. Install Claude Code ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure Environment Variables ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Enter the project directory and execute the claude command to get started. ​"
+        }
+      ],
+      "codeSnippets": [
+        "export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic export ANTHROPIC_AUTH_TOKEN=<your DeepSeek API Key> export ANTHROPIC_MODEL=deepseek-v4-pro[1m] export ANTHROPIC_DEFAULT_OPUS_MODEL=deepseek-v4-pro[1m] export ANTHROPIC_DEFAULT_SONNET_MODEL=deepseek-v4-pro[1m] export ANTHROPIC_DEFAULT_HAIKU_MODEL=deepseek-v4-flash export CLAUDE_CODE_SUBAGENT_MODEL=deepseek-v4-flash export CLAUDE_CODE_EFFORT_LEVEL=max",
+        "$env:ANTHROPIC_BASE_URL=\"https://api.deepseek.com/anthropic\" $env:ANTHROPIC_AUTH_TOKEN=\"<your DeepSeek API Key>\" $env:ANTHROPIC_MODEL=\"deepseek-v4-pro[1m]\" $env:ANTHROPIC_DEFAULT_OPUS_MODEL=\"deepseek-v4-pro[1m]\" $env:ANTHROPIC_DEFAULT_SONNET_MODEL=\"deepseek-v4-pro[1m]\" $env:ANTHROPIC_DEFAULT_HAIKU_MODEL=\"deepseek-v4-flash\" $env:CLAUDE_CODE_SUBAGENT_MODEL=\"deepseek-v4-flash\" $env:CLAUDE_CODE_EFFORT_LEVEL=\"max\"",
+        "export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic export ANTHROPIC_AUTH_TOKEN=<your DeepSeek API Key> export ANTHROPIC_MODEL=deepseek-v4-pro[1m] export ANTHROPIC_DEFAULT_OPUS_MODEL=deepseek-v4-pro[1m] export ANTHROPIC_DEFAULT_SONNET_MODEL=deepseek-v4-pro[1m] export ANTHROPIC_DEFAULT_HAIKU_MODEL=deepseek-v4-flash export CLAUDE_CODE_SUBAGENT_MODEL=deepseek-v4-flash export CLAUDE_CODE_EFFORT_LEVEL=max",
+        "$env:ANTHROPIC_BASE_URL=\"https://api.deepseek.com/anthropic\" $env:ANTHROPIC_AUTH_TOKEN=\"<your DeepSeek API Key>\" $env:ANTHROPIC_MODEL=\"deepseek-v4-pro[1m]\" $env:ANTHROPIC_DEFAULT_OPUS_MODEL=\"deepseek-v4-pro[1m]\" $env:ANTHROPIC_DEFAULT_SONNET_MODEL=\"deepseek-v4-pro[1m]\" $env:ANTHROPIC_DEFAULT_HAIKU_MODEL=\"deepseek-v4-flash\" $env:CLAUDE_CODE_SUBAGENT_MODEL=\"deepseek-v4-flash\" $env:CLAUDE_CODE_EFFORT_LEVEL=\"max\""
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / copilot_cli",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/copilot_cli",
+      "path": "/quick_start/agent_integrations/copilot_cli",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with GitHub Copilot CLI"
+        },
+        {
+          "level": 4,
+          "text": "1. Install GitHub Copilot CLI ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Get a DeepSeek API Key ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Configure Environment Variables ​"
+        },
+        {
+          "level": 4,
+          "text": "4. Start Copilot CLI ​"
+        },
+        {
+          "level": 4,
+          "text": "Optional: Token Limits ​"
+        },
+        {
+          "level": 4,
+          "text": "Optional: Offline Mode ​"
+        },
+        {
+          "level": 4,
+          "text": "Resources ​"
+        }
+      ],
+      "codeSnippets": [
+        "export COPILOT_PROVIDER_TYPE=anthropic export COPILOT_PROVIDER_BASE_URL=https://api.deepseek.com/anthropic export COPILOT_PROVIDER_API_KEY=sk-your-deepseek-api-key export COPILOT_MODEL=deepseek-v4-pro",
+        "$env:COPILOT_PROVIDER_TYPE=\"anthropic\" $env:COPILOT_PROVIDER_BASE_URL=\"https://api.deepseek.com/anthropic\" $env:COPILOT_PROVIDER_API_KEY=\"sk-your-deepseek-api-key\" $env:COPILOT_MODEL=\"deepseek-v4-pro\"",
+        "export COPILOT_PROVIDER_MAX_PROMPT_TOKENS=840000 export COPILOT_PROVIDER_MAX_OUTPUT_TOKENS=128000",
+        "$env:COPILOT_PROVIDER_MAX_PROMPT_TOKENS=\"840000\" $env:COPILOT_PROVIDER_MAX_OUTPUT_TOKENS=\"128000\""
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / crush",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/crush",
+      "path": "/quick_start/agent_integrations/crush",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with Crush"
+        },
+        {
+          "level": 4,
+          "text": "1. Install Crush ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure DeepSeek Provider ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Run and Select Model ​"
+        }
+      ],
+      "codeSnippets": [
+        "{ \"$schema\": \"https://charm.land/crush.json\", \"providers\": { \"deepseek\": { \"type\": \"openai-compat\", \"base_url\": \"https://api.deepseek.com\", \"api_key\": \"$DEEPSEEK_API_KEY\", \"models\": [ { \"id\": \"deepseek-v4-pro\", \"name\": \"DeepSeek-V4-Pro\", \"context_window\": 1048576, \"default_max_tokens\": 32768, \"can_reason\": true }, { \"id\": \"deepseek-v4-flash\", \"name\": \"DeepSeek-V4-Flash\", \"context_window\": 1048576, \"default_max_tokens\": 32768, \"can_reason\": true } ] } } }",
+        "export DEEPSEEK_API_KEY=\"<your DeepSeek API Key>\"",
+        "$env:DEEPSEEK_API_KEY=\"<your DeepSeek API Key>\""
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / deepcode",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/deepcode",
+      "path": "/quick_start/agent_integrations/deepcode",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with Deep Code"
+        },
+        {
+          "level": 4,
+          "text": "1. Install Deep Code ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure Deep Code \u0000​"
+        },
+        {
+          "level": 4,
+          "text": "3. Enter a project directory and launch Deep Code ​"
+        },
+        {
+          "level": 4,
+          "text": "Key Shortcuts ​"
+        },
+        {
+          "level": 4,
+          "text": "Using Agent Skills ​"
+        }
+      ],
+      "codeSnippets": "{ \"env\": { \"MODEL\": \"deepseek-v4-pro\", \"BASE_URL\": \"https://api.deepseek.com\", \"API_KEY\": \"sk-...\" }, \"thinkingEnabled\": true, \"reasoningEffort\": \"max\" }",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / github_copilot",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/github_copilot",
+      "path": "/quick_start/agent_integrations/github_copilot",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with GitHub Copilot"
+        },
+        {
+          "level": 4,
+          "text": "1. Install the Extension ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Get a DeepSeek API Key ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Configure the API Key in VS Code ​"
+        },
+        {
+          "level": 4,
+          "text": "4. Select the Model and Start Chatting ​"
+        },
+        {
+          "level": 4,
+          "text": "Optional: Configure Thinking Effort ​"
+        },
+        {
+          "level": 4,
+          "text": "Optional: Vision Support ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / hermes",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/hermes",
+      "path": "/quick_start/agent_integrations/hermes",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with Hermes Agent"
+        },
+        {
+          "level": 4,
+          "text": "1. Install Hermes ​"
+        },
+        {
+          "level": 5,
+          "text": "Quick Install ​"
+        },
+        {
+          "level": 6,
+          "text": "Linux / macOS / WSL2 ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Run and Configure ​"
+        }
+      ],
+      "codeSnippets": "curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash",
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / kilo_code",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/kilo_code",
+      "path": "/quick_start/agent_integrations/kilo_code",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with Kilo Code"
+        },
+        {
+          "level": 4,
+          "text": "1. Install Kilo Code CLI ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Run Kilo Code ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Connect the DeepSeek Provider ​"
+        },
+        {
+          "level": 4,
+          "text": "4. Select a DeepSeek Model ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / langcli",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/langcli",
+      "path": "/quick_start/agent_integrations/langcli",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with Langcli"
+        },
+        {
+          "level": 4,
+          "text": "1. Installation ​"
+        },
+        {
+          "level": 5,
+          "text": "Quick Install (Recommended) ​"
+        },
+        {
+          "level": 5,
+          "text": "Manual Installation ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Quick Start ​"
+        },
+        {
+          "level": 5,
+          "text": "API Key Preparation ​"
+        },
+        {
+          "level": 4,
+          "text": "Running ​"
+        }
+      ],
+      "codeSnippets": [
+        "bash -c \"$(curl -fsSL https://assets.langcli.com/installation/install-langcli.sh)\"",
+        "cmd /c \"curl -fsSL -o %TEMP%\\install-langcli.bat https://assets.langcli.com/installation/install-langcli.bat && %TEMP%\\install-langcli.bat\"",
+        "# Start Langcli (interactive) langcli # Then, in the session: hi"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / nanobot",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/nanobot",
+      "path": "/quick_start/agent_integrations/nanobot",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrating nanobot"
+        },
+        {
+          "level": 4,
+          "text": "1. Install nanobot ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure nanobot ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Get Started ​"
+        }
+      ],
+      "codeSnippets": [
+        "$env:PATH = \"$env:USERPROFILE\\.local\\bin;$env:PATH\"",
+        "{ \"agents\": { \"defaults\": { \"model\": \"deepseek-v4-pro\", \"provider\": \"deepseek\", } }, \"providers\": { \"deepseek\": { \"apiKey\": \"<your DeepSeek API Key>\", \"apiBase\": \"https://api.deepseek.com/v1\", }, }, }"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / oh_my_pi",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/oh_my_pi",
+      "path": "/quick_start/agent_integrations/oh_my_pi",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Using DeepSeek with Oh My Pi"
+        },
+        {
+          "level": 2,
+          "text": "Prerequisites ​"
+        },
+        {
+          "level": 2,
+          "text": "Configuration ​"
+        },
+        {
+          "level": 2,
+          "text": "Configuration notes ​"
+        },
+        {
+          "level": 3,
+          "text": "Basics ​"
+        },
+        {
+          "level": 3,
+          "text": "Thinking mode ​"
+        },
+        {
+          "level": 3,
+          "text": "Three critical compat fields ​"
+        },
+        {
+          "level": 2,
+          "text": "Usage ​"
+        },
+        {
+          "level": 2,
+          "text": "Known issues ​"
+        }
+      ],
+      "codeSnippets": [
+        "providers : deepseek : baseUrl : https : //api.deepseek.com api : openai - completions apiKey : DEEPSEEK_API_KEY authHeader : true models : - id : deepseek - v4 - pro name : DeepSeek V4 Pro reasoning : true thinking : minLevel : high maxLevel : xhigh mode : effort input : [ text ] contextWindow : 1000000 maxTokens : 384000 compat : supportsDeveloperRole : false supportsReasoningEffort : true maxTokensField : max_tokens reasoningEffortMap : high : high xhigh : max supportsToolChoice : false requiresReasoningContentForToolCalls : true requiresAssistantContentForToolCalls : true extraBody : thinking : type : enabled - id : deepseek - v4 - flash name : DeepSeek V4 Flash reasoning : true thinking : minLevel : high maxLevel : xhigh mode : effort input : [ text ] contextWindow : 1000000 maxTokens : 384000 compat : supportsDeveloperRole : false supportsReasoningEffort : true maxTokensField : max_tokens reasoningEffortMap : high : high xhigh : max supportsToolChoice : false requiresReasoningContentForToolCalls : true requiresAssistantContentForToolCalls : true extraBody : thinking : type : enabled",
+        "cd /path/to/your-project omp --model deepseek/deepseek-v4-pro"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / openclaw",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/openclaw",
+      "path": "/quick_start/agent_integrations/openclaw",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with OpenClaw"
+        },
+        {
+          "level": 2,
+          "text": "Migrate from Existing Installation to DeepSeek ​"
+        },
+        {
+          "level": 2,
+          "text": "Install OpenClaw from Scratch ​"
+        },
+        {
+          "level": 4,
+          "text": "1. Install OpenClaw ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure the Default Model in OpenClaw ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Get Started ​"
+        }
+      ],
+      "codeSnippets": [
+        "curl -fsSL https://openclaw.ai/install.sh | bash",
+        "iwr -useb https://openclaw.ai/install.ps1 | iex"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / opencode",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/opencode",
+      "path": "/quick_start/agent_integrations/opencode",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with OpenCode"
+        },
+        {
+          "level": 2,
+          "text": "Migrate from Existing Installation to DeepSeek ​"
+        },
+        {
+          "level": 2,
+          "text": "Install OpenCode from Scratch ​"
+        },
+        {
+          "level": 4,
+          "text": "1. Install OpenCode ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Run and Configure ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / pi_mono",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/pi_mono",
+      "path": "/quick_start/agent_integrations/pi_mono",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with Pi"
+        },
+        {
+          "level": 4,
+          "text": "1. Install Pi ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure DeepSeek Provider ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Run and Select Model ​"
+        }
+      ],
+      "codeSnippets": [
+        "npm install -g @mariozechner/pi-coding-agent",
+        "curl -fsSL https://pi.dev/install.sh | sh",
+        "{ \"providers\": { \"deepseek\": { \"baseUrl\": \"https://api.deepseek.com\", \"api\": \"openai-completions\", \"apiKey\": \"$DEEPSEEK_API_KEY\", \"models\": [ { \"id\": \"deepseek-v4-pro\", \"name\": \"DeepSeek V4 Pro\", \"contextWindow\": 1000000, \"maxTokens\": 384000, \"input\": [\"text\"], \"reasoning\": true, \"cost\": { \"input\": 1.74, \"output\": 3.48, \"cacheRead\": 0.145, \"cacheWrite\": 0 }, \"compat\": { \"requiresReasoningContentOnAssistantMessages\": true, \"thinkingFormat\": \"deepseek\", \"reasoningEffortMap\": { \"minimal\": \"high\", \"low\": \"high\", \"medium\": \"high\", \"high\": \"high\", \"xhigh\": \"max\" } } }, { \"id\": \"deepseek-v4-flash\", \"name\": \"DeepSeek V4 Flash\", \"contextWindow\": 1000000, \"maxTokens\": 384000, \"input\": [\"text\"], \"reasoning\": true, \"cost\": { \"input\": 0.14, \"output\": 0.28, \"cacheRead\": 0.028, \"cacheWrite\": 0 }, \"compat\": { \"requiresReasoningContentOnAssistantMessages\": true, \"thinkingFormat\": \"deepseek\", \"reasoningEffortMap\": { \"minimal\": \"high\", \"low\": \"high\", \"medium\": \"high\", \"high\": \"high\", \"xhigh\": \"max\" } } } ] } } }",
+        "export DEEPSEEK_API_KEY=\"<your DeepSeek API Key>\"",
+        "$env:DEEPSEEK_API_KEY=\"<your DeepSeek API Key>\""
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / reasonix",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/reasonix",
+      "path": "/quick_start/agent_integrations/reasonix",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with Reasonix"
+        },
+        {
+          "level": 4,
+          "text": "1. Install Node.js ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Get a DeepSeek API Key ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Enter the project directory and run npx reasonix code to get started. ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / agent_integrations / workbuddy",
+      "url": "https://api-docs.deepseek.com/quick_start/agent_integrations/workbuddy",
+      "path": "/quick_start/agent_integrations/workbuddy",
+      "category": "integration",
+      "categoryName": "集成",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations Claude Code GitHub Copilot GitHub Copilot CLI Kilo Code WorkBuddy/CodeBuddy OpenCode Oh My Pi OpenClaw AstrBot Deep Code Hermes nanobot Crush Pi Reasonix Langcli Contribute Your Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Integrate with WorkBuddy/CodeBuddy"
+        },
+        {
+          "level": 4,
+          "text": "1. Install WorkBuddy/CodeBuddy ​"
+        },
+        {
+          "level": 4,
+          "text": "2. Configure Local Models ​"
+        },
+        {
+          "level": 4,
+          "text": "3. Restart and Select the Model ​"
+        },
+        {
+          "level": 4,
+          "text": "4. Optional: Verify the API Key ​"
+        },
+        {
+          "level": 4,
+          "text": "Troubleshooting ​"
+        }
+      ],
+      "codeSnippets": [
+        "C:\\Users\\<your-username>\\.codebuddy\\models.json",
+        "setx DEEPSEEK_API_KEY \"<your DeepSeek API Key>\"",
+        "{ \"models\": [ { \"id\": \"deepseek-v4-pro\", \"name\": \"DeepSeek V4 Pro\", \"vendor\": \"DeepSeek\", \"url\": \"https://api.deepseek.com/v1/chat/completions\", \"apiKey\": \"${DEEPSEEK_API_KEY}\", \"maxInputTokens\": 128000, \"maxOutputTokens\": 8192, \"supportsToolCall\": true, \"supportsImages\": false, \"relatedModels\": { \"lite\": \"deepseek-v4-flash\", \"reasoning\": \"deepseek-v4-pro\" } }, { \"id\": \"deepseek-v4-flash\", \"name\": \"DeepSeek V4 Flash\", \"vendor\": \"DeepSeek\", \"url\": \"https://api.deepseek.com/v1/chat/completions\", \"apiKey\": \"${DEEPSEEK_API_KEY}\", \"maxInputTokens\": 128000, \"maxOutputTokens\": 8192, \"supportsToolCall\": true, \"supportsImages\": false } ], \"availableModels\": [ \"deepseek-v4-pro\", \"deepseek-v4-flash\" ] }",
+        "$env:DEEPSEEK_API_KEY=\"<your DeepSeek API Key>\" curl https://api.deepseek.com/v1/chat/completions ` -H \"Content-Type: application/json\" ` -H \"Authorization: Bearer $env:DEEPSEEK_API_KEY\" ` -d '{\"model\":\"deepseek-v4-flash\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"stream\":false}'"
+      ],
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / error_codes",
+      "url": "https://api-docs.deepseek.com/quick_start/error_codes",
+      "path": "/quick_start/error_codes",
+      "category": "error",
+      "categoryName": "错误处理",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log Quick Start Error Codes Error Codes When calling DeepSeek API, you may encounter errors. Here list the causes and solutions.",
+      "headings": {
+        "level": 1,
+        "text": "Error Codes"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "path": "/quick_start/pricing",
+      "category": "pricing",
+      "categoryName": "计费",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log Quick Start Models & Pricing On this page Models & Pricing The prices listed below are in units of per 1M tokens. A token, the smallest unit of text that the model recognizes, can be a …",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Models & Pricing"
+        },
+        {
+          "level": 2,
+          "text": "Model Details ​"
+        },
+        {
+          "level": 2,
+          "text": "Deduction Rules ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / rate_limit",
+      "url": "https://api-docs.deepseek.com/quick_start/rate_limit",
+      "path": "/quick_start/rate_limit",
+      "category": "pricing",
+      "categoryName": "计费",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log Quick Start Rate Limit Rate Limit DeepSeek API dynamically limits user concurrency based on server load. When you reach the concurrency limit, you will immediately receive an HTTP 429 r…",
+      "headings": {
+        "level": 1,
+        "text": "Rate Limit"
+      },
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "quick_start / token_usage",
+      "url": "https://api-docs.deepseek.com/quick_start/token_usage",
+      "path": "/quick_start/token_usage",
+      "category": "quick_start",
+      "categoryName": "快速开始",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log Quick Start Token & Token Usage On this page Token & Token Usage Tokens are the basic units used by models to represent natural language text, and also the units we use for billing. The…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Token & Token Usage"
+        },
+        {
+          "level": 2,
+          "text": "Calculate token usage offline ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "home": "https://api-docs.deepseek.com",
+      "title": "updates",
+      "url": "https://api-docs.deepseek.com/updates",
+      "path": "/updates",
+      "category": "news",
+      "categoryName": "更新动态",
+      "summary": "DeepSeek API Docs English English 中文（中国） DeepSeek Platform Quick Start Your First API Call Models & Pricing Token & Token Usage Rate Limit Error Codes Agent Integrations API Guides Thinking Mode Multi-round Conversation Chat Prefix Completion (Beta) FIM Completion (Beta) JSON Output Tool Calls Context Caching Anthropic API API Reference News Other Resources FAQ Change Log Change Log On this page Change Log Date: 2026-04-24 ​ DeepSeek-V4 ​ The DeepSeek API now supports V4-Pro and V4-Flash, available via both the OpenAI ChatCompletions interface and the An…",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Change Log"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2026-04-24 ​"
+        },
+        {
+          "level": 3,
+          "text": "DeepSeek-V4 ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2025-12-01 ​"
+        },
+        {
+          "level": 3,
+          "text": "DeepSeek-V3.2 ​"
+        },
+        {
+          "level": 3,
+          "text": "DeepSeek-V3.2-Speciale ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2025-09-29 ​"
+        },
+        {
+          "level": 3,
+          "text": "DeepSeek-V3.2-Exp ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2025-09-22 ​"
+        },
+        {
+          "level": 3,
+          "text": "DeepSeek-V3.1-Terminus ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2025-08-21 ​"
+        },
+        {
+          "level": 3,
+          "text": "DeepSeek-V3.1 ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2025-05-28 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-reasoner ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2025-03-24 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-chat ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2025-01-20 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-reasoner ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2024-12-26 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-chat ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2024-12-10 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-chat ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2024-09-05 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-coder & deepseek-chat Upgraded to DeepSeek V2.5 Model ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2024-08-02 ​"
+        },
+        {
+          "level": 3,
+          "text": "API Launches Context Caching on Disk Technology ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2024-07-25 ​"
+        },
+        {
+          "level": 3,
+          "text": "New API Features ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2024-07-24 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-coder ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2024-06-28 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-chat ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2024-06-14 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-coder ​"
+        },
+        {
+          "level": 2,
+          "text": "Date: 2024-05-17 ​"
+        },
+        {
+          "level": 3,
+          "text": "deepseek-chat ​"
+        }
+      ],
+      "codeSnippets": null,
+      "source": "https://api-docs.deepseek.com",
+      "sourceType": "web",
+      "contentType": "text/html"
+    }
+  ]
+}

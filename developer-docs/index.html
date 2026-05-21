@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Provider Developer Docs - ChinaAI Roadmaps</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <nav class="site-links" aria-label="ChinaAI Roadmaps 站点导航">
+        <a href="../">ChinaAI 首页</a>
+        <a href="../worldroadmap/">全球模型地图</a>
+        <a href="../downloads.html">论文下载中心</a>
+      </nav>
+      <p class="eyebrow">Developer Docs • Provider Adapter Lab</p>
+      <h1>AI Provider 开发者文档知识地图</h1>
+      <p>把 DeepSeek、Kimi、GLM、Xiaomi MiMo 的公开开发文档整理成可搜索、可对照、可落地的工程路线：从协议、tool call、流式、批处理、错误治理一路走到多 Provider Adapter 实现。</p>
+      <div class="meta">
+        <strong>来源：</strong>
+        <span id="providerHint">当前展示：全部供应商</span>
+        |
+        <span id="generatedNote">离线数据初始化中…</span>
+        |
+        <button id="open-folder">打开数据快照</button>
+      </div>
+      <div class="hero-badges">
+        <span class="hero-badge">GitHub Pages 可直接访问</span>
+        <div id="activeFilterBadge" class="filter-state-strip"></div>
+        <span class="hero-badge">目标：多 Provider Adapter 落地</span>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="搜索标题、字段、章节、路径、关键字..." />
+      <select id="providerSelect" aria-label="供应商选择">
+        <option value="all">全部 Provider</option>
+      </select>
+      <select id="sortSelect" aria-label="排序">
+        <option value="category">按分类</option>
+        <option value="title">按标题</option>
+        <option value="difficulty">按学习密度</option>
+        <option value="snippets">按代码示例</option>
+      </select>
+      <select id="topicSelect" aria-label="主题筛选">
+        <option value="all">按主题：全部</option>
+      </select>
+      <button id="focusMode">只看高价值</button>
+      <button id="resetFilters">重置筛选</button>
+      <button id="toggleMode">切换：精简 / 全文摘要</button>
+      <span id="count"></span>
+    </section>
+    <section class="provider-strip">
+      <div id="providerPills" class="chips provider-pills" aria-label="供应商筛选"></div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card">
+        <h3>文档总量</h3>
+        <p id="statTotal">0</p>
+      </article>
+      <article class="stat-card">
+        <h3>有代码示例</h3>
+        <p id="statCode">0</p>
+      </article>
+      <article class="stat-card">
+        <h3>专题数量</h3>
+        <p id="statTopics">0</p>
+      </article>
+      <article class="stat-card">
+        <h3>最后抓取</h3>
+        <p id="statUpdated">-</p>
+      </article>
+    </section>
+
+    <section class="insights">
+      <article class="panel">
+        <h2>学习总览</h2>
+        <p id="learningPulse" class="learning-pulse">正在生成学习速览...</p>
+        <div id="learningKpis" class="kpi-strip"></div>
+      </article>
+      <article class="panel">
+        <h2>推荐起点（先学这几篇）</h2>
+        <div id="learningTracks" class="track-grid"></div>
+      </article>
+    </section>
+
+    <section class="visuals">
+      <article class="panel">
+        <h2>学习路径（可视化）</h2>
+        <div id="topicBars" class="topic-bars"></div>
+      </article>
+      <article class="panel">
+        <h2>分类覆盖</h2>
+        <div id="categoryBars" class="category-bars"></div>
+      </article>
+    </section>
+
+    <section class="visuals visual-grid-2">
+      <article class="panel">
+        <h2>分类-专题关系矩阵</h2>
+        <div id="topicCategoryMatrix" class="topic-matrix"></div>
+      </article>
+      <article class="panel">
+        <h2>高频关键词</h2>
+        <div id="keywordCloud" class="keyword-cloud"></div>
+      </article>
+    </section>
+
+    <section class="visuals">
+      <article class="panel visual-full">
+        <h2>DeepSeek 文档适配链路图</h2>
+        <div class="chain-diagram">
+          <div class="chain-node">
+            <span>需求输入</span>
+            <small>应用侧输入问题、上下文和目标</small>
+          </div>
+          <span class="chain-arrow">→</span>
+          <div class="chain-node">
+            <span>模型决策</span>
+            <small>tool call / reasoning / stream 触发点</small>
+          </div>
+          <span class="chain-arrow">→</span>
+          <div class="chain-node">
+            <span>Tool 适配层</span>
+            <small>参数校验 & 协议翻译</small>
+          </div>
+          <span class="chain-arrow">→</span>
+          <div class="chain-node">
+            <span>Harness</span>
+            <small>动作执行 + Evidence 记录</small>
+          </div>
+          <span class="chain-arrow">→</span>
+          <div class="chain-node">
+            <span>Runtime</span>
+            <small>文件/命令/网络/进程</small>
+          </div>
+          <span class="chain-arrow">→</span>
+          <div class="chain-node">
+            <span>复盘与迭代</span>
+            <small>日志、失败归因、下一轮决策</small>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="visuals">
+      <article class="panel">
+        <h2>适配器落地清单</h2>
+        <p class="panel-subtitle">让“读文档”直接进入“可编码动作”。每个里程碑都对应可执行的检查项。</p>
+        <div id="implementationChecklist" class="checklist-grid"></div>
+      </article>
+      <article class="panel">
+        <h2>供应商深度对照（学习建议）</h2>
+        <p class="panel-subtitle">从当前筛选结果出发，按“协议、工具调用、流式、批处理、错误治理、鉴权、限流”维度做多 Provider 对比。</p>
+        <div id="providerDeepDive" class="provider-deep-grid"></div>
+      </article>
+    </section>
+
+    <section class="visuals">
+      <article class="panel visual-full lesson-panel">
+        <h2>Adapter 开发法教程（干货版）</h2>
+        <p class="panel-subtitle">把官方文档翻译成工程动作：Provider Adapter、Tool Call、Streaming、Batch/File、Error/Ops 五条主线。每张卡都给出交付物、坑点和建议先读文档。</p>
+        <div id="adapterLessons" class="lesson-grid"></div>
+      </article>
+    </section>
+
+    <section class="visuals">
+      <article class="panel visual-full stage-course-panel">
+        <div class="stage-course-title">
+          <div>
+            <p class="panel-kicker">DeepSeek Stage 1 · Reviewed Course Pack</p>
+            <h2>DeepSeek 第一阶段 57 篇课程整理</h2>
+            <p class="panel-subtitle">回答你刚才的问题：57 篇不是 57 个本地 md 文件，而是一组从官网 HTML 抽取后保存的结构化 JSON record。ccmimo 已经帮忙做了第一版课程整理，Codex 已复核并修正为可进教程的版本。</p>
+          </div>
+          <div id="stageOneArtifacts" class="stage-artifacts"></div>
+        </div>
+        <div id="stageOneCourse" class="stage-course-grid"></div>
+      </article>
+    </section>
+
+    <section class="visuals">
+      <article class="panel visual-full">
+        <h2>多 Provider 开发法深度图（从文档到可执行）</h2>
+        <p class="panel-subtitle">按“先读协议、再搭工具、再跑闭环”给出每家供应商的最实用学习顺序。</p>
+        <div id="providerPlaybook" class="provider-playbook-grid"></div>
+      </article>
+    </section>
+
+    <section class="visuals">
+      <article class="panel">
+        <h2>今日学习建议</h2>
+        <p id="dailyGuidance" class="path-note">
+          学完协议与工具调用的入门页后，建议先跑通 one-shot 场景，再接入 tool_call 的完整循环。
+        </p>
+      </article>
+    </section>
+
+    <section class="visuals">
+      <article class="panel visual-full">
+        <h2>学习路线可视化（状态条）</h2>
+        <div id="roadmapLegend" class="roadmap-legend"></div>
+        <div id="roadmap" class="roadmap-flow"></div>
+      </article>
+    </section>
+
+    <section class="visuals">
+      <article class="panel visual-full">
+        <h2>开发法逐步分析（从文档到可执行）</h2>
+        <p class="path-note">每一行文档都对应一个可执行动作。点击卡片，可快速把当前阶段聚焦到左侧列表。</p>
+        <div id="methodFlow" class="method-flow"></div>
+      </article>
+    </section>
+
+    <main class="layout">
+      <aside class="left">
+        <h2>学习路径说明</h2>
+        <div id="pathStory" class="path-story"></div>
+
+        <h2>学习路径</h2>
+        <div id="pathList" class="path-list"></div>
+
+        <h2>分类</h2>
+        <div id="categoryPills" class="chips"></div>
+      </aside>
+
+      <section class="center">
+        <h2>文档列表</h2>
+        <div id="docList" class="doc-grid"></div>
+      </section>
+
+      <aside class="right">
+        <h2>文档详情（点击左侧卡片查看）</h2>
+        <article id="docDetail" class="detail">
+          <p class="placeholder">尚未选择文档。点开左侧任意一条开始学习。</p>
+        </article>
+      </aside>
+
+      <aside class="pinned-tasks">
+        <h2>Pinned Task · 今日学习打卡</h2>
+        <p class="pinned-subtitle">每一天只要打卡 3 个任务，就等于把“开发法 → 文档 → 实践”跑通一遍。</p>
+        <div class="pinned-header">
+          <div id="todayStamp" class="pinned-meta">今日：加载中...</div>
+          <div id="pinnedStatus" class="pinned-meta">待打卡任务：5 / 5</div>
+        </div>
+        <div id="pinnedMethod" class="pinned-meta pinned-method">今日开发法：先定边界，再做闭环。</div>
+        <button id="clearPinned" class="task-quick" type="button">清空今日打卡</button>
+        <div class="pinned-progress">
+          <span>今日进度</span>
+          <div class="roadmap-progress"><span id="pinnedProgressFill"></span></div>
+          <strong id="pinnedProgressText">0 / 0</strong>
+          <div class="pinned-progress-meta">
+            <span id="pinnedProgressHint" class="pinned-hint">学习建议：先从 Step 1 开始，形成「问题定义」与「动作边界」。</span>
+            <span id="pinnedProgressUncovered" class="pinned-uncovered">未覆盖项：0</span>
+          </div>
+        </div>
+        <div id="pinnedFocusHint" class="pinned-focus-hint">当前焦点：无</div>
+        <div id="pinnedTaskList" class="pinned-task-list"></div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>说明：这是 ChinaAI Roadmaps 的开发者文档子站，支持全文检索、专题聚类与学习路径驱动的适配器落地演练。当前数据源由脚本聚合至 <code>data/providers-docs.json</code>（DeepSeek / Kimi / GLM / Xiaomi MiMo）。</p>
+    </footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
