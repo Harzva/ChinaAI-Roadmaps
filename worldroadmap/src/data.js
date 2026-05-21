@@ -19,20 +19,20 @@ const FILTERS=['All','Open','General','Reasoning','Code','Multimodal','Image','V
 const CJK_COUNTRY={'United States':'美国','China':'中国','United Kingdom':'英国','France':'法国','Germany':'德国','India':'印度','Canada':'加拿大','Japan':'日本','South Korea':'韩国','Singapore':'新加坡','Israel':'以色列','United Arab Emirates':'阿联酋','Saudi Arabia':'沙特','Russia':'俄罗斯','Finland':'芬兰','Spain':'西班牙','Switzerland':'瑞士','Brazil':'巴西','Australia':'澳大利亚','Tunisia':'突尼斯'};
 
 
-const IMG=(file)=>`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=420`;
+const IMG=(file)=>`assets/founders/${file}`;
 const ORG_META={
-  'OpenAI':{website:'https://openai.com/',founders:[{name:'Sam Altman',role:'Co-founder / CEO',image:IMG('Sam Altman November 2022.jpg'),url:'https://en.wikipedia.org/wiki/Sam_Altman'},{name:'Greg Brockman',role:'Co-founder / President',image:null,url:'https://blog.gregbrockman.com/'},{name:'Ilya Sutskever',role:'Co-founder / former Chief Scientist',image:null,url:'https://en.wikipedia.org/wiki/Ilya_Sutskever'}]},
-  'Anthropic':{website:'https://www.anthropic.com/',founders:[{name:'Dario Amodei',role:'Co-founder / CEO',image:IMG('Dario Amodei at TechCrunch Disrupt 2023 01 (cropped).jpg'),url:'https://www.darioamodei.com/'},{name:'Daniela Amodei',role:'Co-founder / President',image:null,url:'https://www.anthropic.com/'}]},
-  'Google DeepMind':{website:'https://deepmind.google/',founders:[{name:'Demis Hassabis',role:'DeepMind co-founder / CEO',image:null,url:'https://deepmind.google/about/'},{name:'Larry Page & Sergey Brin',role:'Google founders',image:IMG('Google page brin.jpg'),url:'https://about.google/'}]},
-  'Meta AI':{website:'https://ai.meta.com/',founders:[{name:'Mark Zuckerberg',role:'Meta founder / CEO',image:IMG('MarkZuckerberg.jpg'),url:'https://about.meta.com/'}]},
-  'xAI':{website:'https://x.ai/',founders:[{name:'Elon Musk',role:'Founder',image:IMG('Elon Musk Royal Society.jpg'),url:'https://x.ai/'}]},
-  'Mistral AI':{website:'https://mistral.ai/',founders:[{name:'Arthur Mensch',role:'Co-founder / CEO',image:IMG('Arthur Mensch.jpg'),url:'https://mistral.ai/about'},{name:'Guillaume Lample',role:'Co-founder',image:null,url:'https://mistral.ai/about'},{name:'Timothée Lacroix',role:'Co-founder',image:null,url:'https://mistral.ai/about'}]},
+  'OpenAI':{website:'https://openai.com/',founders:[{name:'Sam Altman',role:'Co-founder / CEO',image:IMG('sam-altman.jpg'),url:'https://en.wikipedia.org/wiki/Sam_Altman'},{name:'Greg Brockman',role:'Co-founder / President',image:IMG('greg-brockman.jpg'),url:'https://blog.gregbrockman.com/'},{name:'Ilya Sutskever',role:'Co-founder / former Chief Scientist',image:IMG('ilya-sutskever.jpg'),url:'https://en.wikipedia.org/wiki/Ilya_Sutskever'}]},
+  'Anthropic':{website:'https://www.anthropic.com/',founders:[{name:'Dario Amodei',role:'Co-founder / CEO',image:IMG('dario-amodei.jpg'),url:'https://www.darioamodei.com/'},{name:'Daniela Amodei',role:'Co-founder / President',image:IMG('daniela-amodei.svg'),url:'https://www.anthropic.com/'}]},
+  'Google DeepMind':{website:'https://deepmind.google/',founders:[{name:'Demis Hassabis',role:'DeepMind co-founder / CEO',image:null,url:'https://deepmind.google/about/'},{name:'Larry Page & Sergey Brin',role:'Google founders',image:IMG('larry-page-sergey-brin.jpg'),url:'https://about.google/'}]},
+  'Meta AI':{website:'https://ai.meta.com/',founders:[{name:'Mark Zuckerberg',role:'Meta founder / CEO',image:IMG('mark-zuckerberg.jpg'),url:'https://about.meta.com/'}]},
+  'xAI':{website:'https://x.ai/',founders:[{name:'Elon Musk',role:'Founder',image:IMG('elon-musk.jpg'),url:'https://x.ai/'}]},
+  'Mistral AI':{website:'https://mistral.ai/',founders:[{name:'Arthur Mensch',role:'Co-founder / CEO',image:IMG('arthur-mensch.jpg'),url:'https://mistral.ai/about'},{name:'Guillaume Lample',role:'Co-founder',image:IMG('guillaume-lample.svg'),url:'https://mistral.ai/about'},{name:'Timothée Lacroix',role:'Co-founder',image:IMG('timothee-lacroix.svg'),url:'https://mistral.ai/about'}]},
   'Hugging Face':{website:'https://huggingface.co/',founders:[{name:'Clément Delangue',role:'Co-founder / CEO',image:null,url:'https://huggingface.co/'},{name:'Julien Chaumond',role:'Co-founder / CTO',image:null,url:'https://huggingface.co/'},{name:'Thomas Wolf',role:'Co-founder / CSO',image:null,url:'https://huggingface.co/'}]},
-  'Alibaba Qwen':{website:'https://qwen.ai/',founders:[{name:'Alibaba Cloud / Qwen Team',role:'Model team',image:null,url:'https://qwen.ai/'}]},
-  'DeepSeek':{website:'https://www.deepseek.com/',founders:[{name:'Liang Wenfeng',role:'Founder',image:null,url:'https://www.deepseek.com/'}]},
-  'Moonshot AI':{website:'https://www.moonshot.cn/',founders:[{name:'Yang Zhilin',role:'Co-founder / CEO',image:null,url:'https://www.moonshot.cn/'}]},
-  'MiniMax':{website:'https://www.minimaxi.com/',founders:[{name:'Yan Junjie',role:'Founder / CEO',image:null,url:'https://www.minimaxi.com/'}]},
-  'Zhipu AI':{website:'https://www.zhipuai.cn/',founders:[{name:'Zhipu AI Team',role:'Company / lab team',image:null,url:'https://www.zhipuai.cn/'}]},
+  'Alibaba Qwen':{website:'https://qwen.ai/',founders:[{name:'Alibaba Cloud / Qwen Team',role:'Model team',image:IMG('qwen-team.svg'),url:'https://qwen.ai/'}]},
+  'DeepSeek':{website:'https://www.deepseek.com/',founders:[{name:'Liang Wenfeng',role:'Founder',image:IMG('liang-wenfeng.svg'),url:'https://www.deepseek.com/'}]},
+  'Moonshot AI':{website:'https://www.moonshot.cn/',founders:[{name:'Yang Zhilin',role:'Co-founder / CEO',image:IMG('yang-zhilin.svg'),url:'https://www.moonshot.cn/'}]},
+  'MiniMax':{website:'https://www.minimaxi.com/',founders:[{name:'Yan Junjie',role:'Founder / CEO',image:IMG('yan-junjie.svg'),url:'https://www.minimaxi.com/'}]},
+  'Zhipu AI':{website:'https://www.zhipuai.cn/',founders:[{name:'Zhipu AI Team',role:'Company / lab team',image:IMG('zhipu-team.svg'),url:'https://www.zhipuai.cn/'}]},
   'Stability AI':{website:'https://stability.ai/',founders:[{name:'Stability AI',role:'Company',image:null,url:'https://stability.ai/'}]},
   'Cohere':{website:'https://cohere.com/',founders:[{name:'Aidan Gomez',role:'Co-founder / CEO',image:null,url:'https://cohere.com/'}]},
   'Sakana AI':{website:'https://sakana.ai/',founders:[{name:'David Ha',role:'Co-founder / CEO',image:null,url:'https://sakana.ai/'},{name:'Llion Jones',role:'Co-founder / CTO',image:null,url:'https://sakana.ai/'}]},
