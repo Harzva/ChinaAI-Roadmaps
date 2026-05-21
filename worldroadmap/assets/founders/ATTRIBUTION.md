@@ -19,4 +19,6 @@ This folder keeps founder/team card media local so the WorldRoadmap page does no
 
 The SVG files are local initials/team placeholders, not photographs. They are used only where a stable, openly reusable portrait was not available during this pass.
 
-Targets still using placeholders: Daniela Amodei, Guillaume Lample, Timothee Lacroix, Liang Wenfeng, Yang Zhilin, Yan Junjie, Alibaba Cloud / Qwen Team, and Zhipu AI Team.
+`pack-v2/*.svg` was copied from `ai_founder_portrait_pack_v2/assets/placeholders/` and provides person/team-specific safe cards for the full WorldRoadmap company set. The pack metadata intentionally keeps most real photos behind manual review, so these SVGs should stay as the default until a source has been checked for identity, copyright, and reuse terms.
+
+When a real photo is approved later, add it as a local file in this folder, update `worldroadmap/src/data.js`, and add the corresponding source/license row above.
