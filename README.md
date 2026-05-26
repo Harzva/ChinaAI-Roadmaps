@@ -81,7 +81,7 @@ flowchart LR
 | React 源码 | [`app/`](app/) | 新版交互站点源码 |
 | Pages 入口 | [`index.html`](index.html) | 已构建的 GitHub Pages 首页 |
 | 开发者文档 | [`developer-docs/`](developer-docs/) | 独立静态子页面，聚合多 Provider API 文档并输出 Adapter 落地路线 |
-| Provider API CLI | [`provider-api-cli/`](provider-api-cli/) | 独立工具仓库的精选静态文档镜像，源码维护在 [`Harzva/provider-api-cli-suite`](https://github.com/Harzva/provider-api-cli-suite) |
+| Provider API CLI | [`provider-api-cli/`](provider-api-cli/) | 独立工具仓库的精选静态文档镜像，源码维护在 [`Harzva/deepseek-cli`](https://github.com/Harzva/deepseek-cli) |
 | 岗位与面试 | [Agent-Job-Interview](https://harzva.github.io/Agent-Job-Interview/) | 外部 GitHub Pages 站点，承接岗位画像、面试题库和 Agent 实战训练 |
 | 全球模型地图 | [`worldroadmap/`](worldroadmap/) | 独立静态子页面，覆盖全球 AI 公司、模型族和论文关系 |
 | 下载中心 | [`downloads.html`](downloads.html) | 论文与报告入口 |

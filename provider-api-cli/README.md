@@ -3,7 +3,7 @@
 This folder is a curated static mirror for ChinaAI Roadmaps.
 
 Source package: `D:/study/code/0ai/产品/02-chinaAI&JOB/chinaAI/provider-api-cli-suite/html-docs`
-GitHub repository: https://github.com/Harzva/provider-api-cli-suite
+GitHub repository: https://github.com/Harzva/deepseek-cli
 
 Included pages:
 
