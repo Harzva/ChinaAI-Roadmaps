@@ -120,10 +120,10 @@ const companies = [
     color: '#ffb84d',
     colorName: 'amber',
     icon: Sparkles,
-    models: 'M1 / M2.5',
-    specialty: 'Lightning Attention + 真实RL',
-    params: '456\u4ebf',
-    desc: '真实生产力工具，1美元/小时的智能',
+    models: 'M1 / M2.5 / M3',
+    specialty: 'MSA + 1M上下文 + 原生多模态',
+    params: '1M ctx',
+    desc: 'M3面向Coding Frontier、长程Agent和MiniMax Code',
     borderColor: 'rgba(255,184,77,0.3)',
     bgGlow: 'rgba(255,184,77,0.06)'},
   {
@@ -177,6 +177,7 @@ const timelineData = [
     events: [
       { year: '2025', version: 'M1', params: '456\u4ebf' },
       { year: '2026', version: 'M2.5', params: '' },
+      { year: '2026', version: 'M3', params: '1M ctx' },
     ]},
   {
     company: 'MiMo',
@@ -194,12 +195,12 @@ const timelineData = [
 /*  Comparison Table Data                          */
 /* ─────────────────────────────────────────────── */
 const comparisonDimensions = [
-  { dim: '\u67b6\u6784', deepseek: 'MoE', kimi: 'MoE', glm: 'MoE+DSA', minimax: 'MoE+Lightning', mimo: 'MoE+MTP' },
-  { dim: '\u4f18\u5316\u5668', deepseek: 'Muon+AdamW', kimi: 'Muon+MuonClip', glm: '\u5f02\u6b65RL', minimax: 'CISPO+Forge', mimo: 'AdamW+RL' },
+  { dim: '\u67b6\u6784', deepseek: 'MoE', kimi: 'MoE', glm: 'MoE+DSA', minimax: 'MSA+Native MM', mimo: 'MoE+MTP' },
+  { dim: '\u4f18\u5316\u5668', deepseek: 'Muon+AdamW', kimi: 'Muon+MuonClip', glm: '\u5f02\u6b65RL', minimax: 'CISPO+交互RL', mimo: 'AdamW+RL' },
   { dim: '\u4e0a\u4e0b\u6587', deepseek: '1M', kimi: '256K', glm: '128K', minimax: '1M', mimo: '256K' },
-  { dim: '\u591a\u6a21\u6001', deepseek: 'V4-Pro+VL', kimi: 'K2.5V', glm: 'GLM-4V', minimax: '\u89c4\u5212\u4e2d', mimo: 'MiMo-VL' },
-  { dim: 'Agent', deepseek: 'SWE 80.6', kimi: 'Agentic Intelligence', glm: 'All Tools', minimax: '\u771f\u5b9e\u73af\u5883RL', mimo: 'SWE 57.2' },
-  { dim: '\u5f00\u6e90', deepseek: '\u5168\u5f00\u6e90', kimi: '\u5f00\u6e90', glm: '\u5f00\u6e90', minimax: '\u5f00\u653e\u6743\u91cd', mimo: '✅ MIT' },
+  { dim: '\u591a\u6a21\u6001', deepseek: 'V4-Pro+VL', kimi: 'K2.5V', glm: 'GLM-4V', minimax: '\u539f\u751f\u56fe\u50cf/\u89c6\u9891', mimo: 'MiMo-VL' },
+  { dim: 'Agent', deepseek: 'SWE 80.6', kimi: 'Agentic Intelligence', glm: 'All Tools', minimax: 'MiniMax Code', mimo: 'SWE 57.2' },
+  { dim: '\u5f00\u6e90', deepseek: '\u5168\u5f00\u6e90', kimi: '\u5f00\u6e90', glm: '\u5f00\u6e90', minimax: '\u5f00\u653e\u6743\u91cd/M3', mimo: '✅ MIT' },
   { dim: '\u6210\u672c', deepseek: '\u6781\u4f4e', kimi: '\u4f4e', glm: '\u4f4e', minimax: '\u6781\u4f4e(1$/hr)', mimo: '\u6781\u4f4e(1$/hr)' },
 ]
 
@@ -238,8 +239,8 @@ const advantages = [
   {
     company: 'MiniMax',
     color: '#ffb84d',
-    title: '\u771f\u5b9e\u751f\u4ea7\u529b\u5de5\u5177',
-    desc: '1\u7f8e\u5143/\u5c0f\u65f6\u7684\u667a\u80fd\uff0cLightning Attention\u8ba9\u6548\u7387\u4e0e\u6210\u672c\u8fbe\u5230\u6781\u81f4\u5e73\u8861',
+    title: 'Frontier Agent \u4e09\u4ef6\u5957',
+    desc: 'M3\u628aCoding Frontier\u30011M MSA\u4e0a\u4e0b\u6587\u548c\u539f\u751f\u591a\u6a21\u6001\u7ec4\u5408\u5230\u540c\u4e00\u5f00\u653e\u6743\u91cd\u8def\u7ebf',
     icon: Monitor},
 ]
 
@@ -250,7 +251,7 @@ const papersData = [
   { company: 'DeepSeek', color: '#3D8BFF', papers: 12, status: '\u5168\u5f00\u6e90' },
   { company: 'Kimi', color: '#FF5252', papers: 6, status: '\u5f00\u6e90' },
   { company: 'GLM', color: '#4ECDC4', papers: 7, status: '\u5f00\u6e90' },
-  { company: 'MiniMax', color: '#ffb84d', papers: 3, status: '\u5f00\u653e\u6743\u91cd' },
+  { company: 'MiniMax', color: '#ffb84d', papers: 4, status: 'M3\u5f00\u653e\u6743\u91cd' },
 ]
 
 /* ─────────────────────────────────────────────── */
@@ -283,8 +284,8 @@ const wuxiaData = [
     school: '\u900d\u9065\u6d3e',
     color: '#ffb84d',
     icon: Scroll,
-    trait: '\u8f7b\u91cf\u5316\u8eab\u6cd5\uff0c\u771f\u5b9e\u73af\u5883\u7ec3\u5251',
-    desc: '\u900d\u9065\u6d3e\u8eab\u6cd5\u8f7b\u7075\uff0c\u4ee5Lightning Attention\u5feb\u82e5\u95ea\u7535\uff0c\u5728\u771f\u5b9e\u73af\u5883\u4e2d\u7ec3\u5251\u6210\u957f\uff0c1\u7f8e\u5143/\u5c0f\u65f6\u8ba9\u667a\u80fd\u5982\u6c34\u822c\u81ea\u7136\u6d41\u6dcc\u3002'},
+    trait: 'MSA\u957f\u7a0b\u8eab\u6cd5\uff0c\u591a\u6a21\u6001\u5f00\u773c',
+    desc: '\u900d\u9065\u6d3e\u8eab\u6cd5\u8f7b\u7075\uff0cM3\u4ee5MSA\u7a7f\u8fc71M\u957f\u4e0a\u4e0b\u6587\uff0c\u53c8\u80fd\u770b\u56fe\u770b\u89c6\u9891\u3001\u64cd\u4f5c\u684c\u9762\uff0c\u628a\u7f16\u7a0b\u3001\u591a\u6a21\u6001\u548cAgent\u95ed\u73af\u5408\u5728\u4e00\u6761\u8def\u7ebf\u4e0a\u3002'},
   {
     company: 'MiMo',
     school: '\u660e\u6559\u6d3e',
@@ -587,7 +588,7 @@ export default function ChinaAIOverview() {
                     { name: 'DeepSeek V4', value: item.deepseek, color: '#3D8BFF' },
                     { name: 'Kimi K2', value: item.kimi, color: '#FF5252' },
                     { name: 'GLM-5', value: item.glm, color: '#4ECDC4' },
-                    { name: 'MiniMax M2.5', value: item.minimax, color: '#ffb84d' },
+                    { name: 'MiniMax M3', value: item.minimax, color: '#ffb84d' },
                   ].map((entry) => (
                     <div key={entry.name} className="flex items-center justify-between">
                       <span className="text-[12px] text-[#8B9EB0]">{entry.name}</span>
@@ -902,7 +903,7 @@ export default function ChinaAIOverview() {
           className="relative z-10 mt-6 text-center max-w-[700px]"
         >
           <p className="text-[18px] md:text-[22px] text-[#8B9EB0] font-body leading-[1.7]">
-            DeepSeek · Kimi · GLM · MiniMax — 四大国产AI公司技术路线深度对比
+            DeepSeek · Kimi · GLM · MiniMax · MiMo — 五大国产AI公司技术路线深度对比
           </p>
         </motion.div>
 

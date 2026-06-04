@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import {
-  Zap, Cpu, Brain, Target, TrendingUp, Code2, GitBranch,
+  Zap, Cpu, Target, TrendingUp, Code2, GitBranch,
   Layers, Sparkles, Lightbulb, BookOpen, ArrowRight,
   BarChart3, Gauge, DollarSign, Bot, Workflow, Rocket,
   Monitor, Flame, CheckCircle, Download, ExternalLink,
-  Link,
+  Eye, Network,
 } from "lucide-react";
 import { useState } from "react";
+import { Link as RouterLink } from "react-router";
 
 /* ───────── Section Reveal ───────── */
 const Section = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
@@ -25,44 +26,62 @@ const Section = ({ children, className = "" }: { children: React.ReactNode; clas
 const timeline = [
   { year: "2025", model: "M1", params: "45.6B", type: "Dense", label: "开山之作" },
   { year: "2026", model: "M2.5", params: "456B", type: "MoE (56专家)", label: "成本革命" },
+  { year: "2026", model: "M3", params: "1M ctx", type: "MSA + 原生多模态", label: "Frontier 三件套" },
 ];
 
 const navCards = [
   {
-    icon: Zap,
-    title: "Lightning Attention",
-    desc: "闪电注意力",
-    detail: "替代FlashAttention，训练快15%，推理快20%+",
+    icon: Network,
+    title: "MSA",
+    desc: "MiniMax Sparse Attention",
+    detail: "1M上下文下每token计算量降至上代1/20，prefill/decode显著加速",
     color: "text-amber-400",
     bg: "bg-amber-400/10",
   },
   {
-    icon: Brain,
-    title: "Forge RL",
-    desc: "真实环境强化学习",
-    detail: "不在游戏里练，在真实代码环境里练",
+    icon: Code2,
+    title: "Coding Frontier+",
+    desc: "长程软件工程",
+    detail: "覆盖代码仓库、终端、测试、工具调用和多轮反馈的真实Agent任务",
     color: "text-amber-400",
     bg: "bg-amber-400/10",
   },
   {
-    icon: Target,
-    title: "CISPO",
-    desc: "置信区间策略优化",
-    detail: "RL训练更稳定，不容易崩溃",
+    icon: Eye,
+    title: "Native Multimodal",
+    desc: "原生多模态",
+    detail: "从训练早期混合图像、视频与文本，服务论文复现、代码审查和桌面操作",
     color: "text-amber-400",
     bg: "bg-amber-400/10",
   },
   {
     icon: Bot,
-    title: "ROPET",
-    desc: "智能体框架",
-    detail: "读→观察→计划→执行→训练，闭环自进化",
+    title: "MiniMax Code",
+    desc: "配套代码智能体",
+    detail: "围绕M3训练和更新，对标Claude Code / Codex式长程开发体验",
     color: "text-amber-400",
     bg: "bg-amber-400/10",
   },
 ];
 
 const tabData = [
+  {
+    title: "M3三件套",
+    icon: Rocket,
+    specs: [
+      { label: "模型", value: "MiniMax-M3" },
+      { label: "上下文窗口", value: "1M tokens" },
+      { label: "核心注意力", value: "MSA" },
+      { label: "开放状态", value: "Open-weight / 开源进程" },
+    ],
+    details: [
+      "官方定位为同时具备Coding Frontier+、1M上下文窗口和原生多模态的开放权重模型",
+      "MSA通过更精细的KV分块与KV outer gather Q降低百万上下文下的计算和访存成本",
+      "支持图像、视频输入与桌面操作，适合论文复现、设计稿理解、代码审查和长程Agent任务",
+      "MiniMax Code与M3同步更新，面向仓库级开发、测试、修复和多轮反馈闭环",
+      "API与Token Plan已上线；官方GitHub/Hugging Face资源处于持续释放阶段",
+    ],
+  },
   {
     title: "M1架构",
     icon: Cpu,
@@ -118,36 +137,36 @@ const tabData = [
 ];
 
 const comparisonData = [
-  { feature: "计算复杂度", flash: "O(n²)", lightning: "O(n)" },
-  { feature: "内存访问模式", flash: "多次HBM访问", lightning: "线性扫描，减少HBM" },
-  { feature: "训练速度提升", flash: "基准", lightning: "+15%" },
-  { feature: "推理速度提升", flash: "基准", lightning: "+20%+" },
-  { feature: "长序列扩展性", flash: "受限于内存带宽", lightning: "线性扩展" },
-  { feature: "硬件友好性", flash: "依赖特定GPU", lightning: "通用性更强" },
+  { feature: "百万上下文计算量", flash: "全注意力成本接近平方增长", lightning: "每token计算量约为上代1/20" },
+  { feature: "KV覆盖方式", flash: "固定窗口或粗粒度稀疏容易漏关键依赖", lightning: "更精确KV分块，提高有效上下文覆盖" },
+  { feature: "访存模式", flash: "稀疏后可能随机读取、重复加载KV块", lightning: "KV outer gather Q，每块KV尽量只读一次" },
+  { feature: "Prefill阶段", flash: "长输入成本高", lightning: "官方披露超过9倍加速" },
+  { feature: "Decode阶段", flash: "长程任务延迟高", lightning: "官方披露超过15倍加速" },
+  { feature: "Agent适配", flash: "适合短轮次或中等上下文", lightning: "适合仓库级、日志级、论文级长程记忆" },
 ];
 
 const benchmarkData = [
-  { label: "SWE-Bench", value: "大幅领先", compare: "Claude Sonnet 4.6", icon: Code2 },
-  { label: "真实编程任务", value: "SOTA", compare: "业界最佳", icon: Terminal },
-  { label: "推理成本", value: "$1/hr", compare: "GPU成本", icon: DollarSign },
+  { label: "SWE-Bench Pro", value: "59.0%", compare: "官方M3数据", icon: Code2 },
+  { label: "Terminal-Bench 2.1", value: "66.0%", compare: "官方M3数据", icon: Terminal },
+  { label: "BrowseComp", value: "83.5%", compare: "官方M3数据", icon: Eye },
   { label: "上下文长度", value: "1M", compare: "tokens", icon: Layers },
 ];
 
 const insights = [
   {
     icon: DollarSign,
-    title: "成本是AI民主化的唯一标准",
-    desc: "MiniMax将推理成本压至1美元/小时，证明了高性能与低成本可以兼得，打破了\"大模型=大算力=高成本\"的迷思。",
+    title: "M3把长上下文成本问题前置",
+    desc: "MSA不是只把窗口写成1M，而是把稀疏选择、KV分块和GPU访存路径一起优化，让长程Agent更接近可日常使用。",
   },
   {
     icon: Target,
-    title: "不卷AGI，只搞生产力",
-    desc: "在追逐通用人工智能的浪潮中，MiniMax选择聚焦实际生产力场景——编程、工具使用、代码生成，务实路线反而取得突破性成果。",
+    title: "Frontier能力开始组合出现",
+    desc: "M3的重点不是单项榜单，而是Coding、1M上下文和原生多模态在同一模型内协同，面向真实软件工程现场。",
   },
   {
     icon: Rocket,
-    title: "真实环境RL > 模拟环境RL",
-    desc: "Forge RL直接在真实代码环境中训练，而非游戏或模拟器。这种\"在实战中练\"的方式，让模型真正掌握工具使用与复杂任务执行。",
+    title: "MiniMax Code是模型路线的落点",
+    desc: "M3不是单纯聊天模型，配套MiniMax Code说明其目标是长程开发任务：读仓库、跑测试、修复错误、复盘并继续执行。",
   },
 ];
 
@@ -210,12 +229,12 @@ export default function Minimax() {
             </h1>
 
             <p className="text-xl sm:text-2xl lg:text-3xl text-slate-300 mb-4 font-heading">
-              1美元/小时的AI生产力
+              Coding Frontier · 1M MSA · 原生多模态
             </p>
 
             <p className="text-base sm:text-lg text-[#8B9EB0] max-w-2xl mx-auto mb-8">
-              不卷AGI，只搞生产力。MiniMax用Lightning Attention、Forge RL和CISPO，
-              证明了高性能AI工具可以是每个人的日常生产力助手。
+              MiniMax M3 把长程编程能力、百万级上下文和原生多模态合并到同一开放权重路线中，
+              并通过 MiniMax Code 落到真实软件工程智能体场景。
             </p>
 
             {/* Timeline */}
@@ -253,7 +272,7 @@ export default function Minimax() {
               { icon: Cpu, value: "45.6B", label: "总参数 (M1 Dense)" },
               { icon: Layers, value: "456B", label: "总参数 (M2.5 MoE)" },
               { icon: BookOpen, value: "1M", label: "上下文窗口 (tokens)" },
-              { icon: DollarSign, value: "$1/hr", label: "推理成本" },
+              { icon: Network, value: "MSA", label: "M3 稀疏注意力" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -372,12 +391,12 @@ export default function Minimax() {
         </div>
       </Section>
 
-      {/* ─── Lightning vs FlashAttention ─── */}
+      {/* ─── MSA vs Traditional Attention ─── */}
       <Section className="px-6 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-10">
             <Flame className="w-5 h-5 text-amber-400" />
-            <span className="section-label text-amber-400">Lightning Attention vs FlashAttention</span>
+            <span className="section-label text-amber-400">MSA vs 传统长上下文注意力</span>
           </div>
 
           <div className="liquid-glass rounded-xl border border-white/5 overflow-hidden">
@@ -386,8 +405,8 @@ export default function Minimax() {
                 <thead>
                   <tr className="border-b border-white/10">
                     <th className="text-left py-3 px-4 text-[#8B9EB0] font-medium">特性</th>
-                    <th className="text-left py-3 px-4 text-[#8B9EB0] font-medium">FlashAttention</th>
-                    <th className="text-left py-3 px-4 text-amber-400 font-medium">Lightning Attention</th>
+                    <th className="text-left py-3 px-4 text-[#8B9EB0] font-medium">传统方案风险</th>
+                    <th className="text-left py-3 px-4 text-amber-400 font-medium">MiniMax MSA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -482,10 +501,11 @@ export default function Minimax() {
         <motion.h2 variants={fadeIn} whileInView="visible" initial="hidden" viewport={{ once: true }} custom={0}
           className="font-heading text-[32px] font-semibold text-white mb-8">📚 技术报告与开源资源</motion.h2>
         <div className="mb-4 p-4 rounded-xl bg-[rgba(255,184,77,0.08)] border border-[rgba(255,184,77,0.15)]">
-          <p className="text-[#ffb84d] font-body text-[14px]">MiniMax论文开放权重，GitHub仓库包含模型和工具</p>
+          <p className="text-[#ffb84d] font-body text-[14px]">MiniMax M3 已发布，开放权重与开源资源按官方节奏在 GitHub / Hugging Face 释放</p>
         </div>
         <div className="space-y-4">
           {[
+            { title: 'MiniMax M3 Official Report', url: 'https://www.minimax.io/blog/minimax-m3', desc: 'M3官方报告：Coding Frontier+、1M上下文窗口、MiniMax Sparse Attention、原生多模态与MiniMax Code更新。', tags: ['M3', 'MSA', 'Frontier Agent'], color: '#ffb84d', isBlog: true },
             { title: 'MiniMax-01: Scaling Foundation Models with Lightning Attention', arxiv: '2501.08313', pdfUrl: 'https://arxiv.org/pdf/2501.08313', absUrl: 'https://arxiv.org/abs/2501.08313', github: 'https://github.com/MiniMax-AI', desc: 'MiniMax-01（M1）技术报告：456亿参数、Lightning Attention（比FlashAttention快15%训练/20%+推理）、CISPO优化器、Forge RL真实环境强化学习。', tags: ['MiniMax-01', 'Lightning Attention', 'M1'], color: '#ffb84d' },
             { title: 'MiniMax M2.5 Technical Report', url: 'https://www.minimax.io/news/minimax-m2-5', desc: 'M2.5技术报告：456B总参数/45.6B激活MoE架构、56专家、CISPO优化器、真实编程任务SOTA、本地部署支持（ollama）。', tags: ['M2.5', 'MoE', '编程'], color: '#ffb84d', isBlog: true },
           ].map((p, i) => (
@@ -516,7 +536,7 @@ export default function Minimax() {
               <div className="flex items-center gap-3 flex-wrap">
                 {p.tags.map((tag) => <span key={tag} className="data-tag">{tag}</span>)}
                 <div className="ml-auto">
-                  <a href="https://github.com/MiniMax-AI" target="_blank" rel="noopener noreferrer" className="text-[12px] text-[#8B9EB0] hover:text-white transition-colors">GitHub</a>
+                  <a href="https://github.com/MiniMax-AI/MiniMax-M3" target="_blank" rel="noopener noreferrer" className="text-[12px] text-[#8B9EB0] hover:text-white transition-colors">M3 GitHub</a>
                 </div>
               </div>
             </motion.div>
@@ -529,7 +549,7 @@ export default function Minimax() {
         <motion.h2 variants={fadeIn} whileInView="visible" initial="hidden" viewport={{ once: true }} custom={0}
           className="font-heading text-[32px] font-semibold text-white mb-8">📂 MiniMax 子站导航</motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <Link to="/minimax/architecture" className="block liquid-glass rounded-2xl p-5 hover:scale-[1.02] transition-transform duration-300 cursor-pointer group" style={{ borderTop: '3px solid #ffb84d' }}>
+          <RouterLink to="/minimax/architecture" className="block liquid-glass rounded-2xl p-5 hover:scale-[1.02] transition-transform duration-300 cursor-pointer group" style={{ borderTop: '3px solid #ffb84d' }}>
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-[#ffb84d15]"><Cpu size={18} className="text-[#ffb84d]" /></div>
@@ -537,9 +557,9 @@ export default function Minimax() {
               </div>
               <ArrowRight size={16} className="text-[#8B9EB0] group-hover:text-[#ffb84d] group-hover:translate-x-1 transition-all" />
             </div>
-            <p className="font-body text-[13px] text-[#8B9EB0]">Lightning Attention · MoE · ROPET · CISPO</p>
-          </Link>
-          <Link to="/minimax/benchmarks" className="block liquid-glass rounded-2xl p-5 hover:scale-[1.02] transition-transform duration-300 cursor-pointer group" style={{ borderTop: '3px solid #ffb84d' }}>
+            <p className="font-body text-[13px] text-[#8B9EB0]">MSA · 1M Context · Native Multimodal · MiniMax Code</p>
+          </RouterLink>
+          <RouterLink to="/minimax/benchmarks" className="block liquid-glass rounded-2xl p-5 hover:scale-[1.02] transition-transform duration-300 cursor-pointer group" style={{ borderTop: '3px solid #ffb84d' }}>
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-[#ffb84d15]"><BarChart3 size={18} className="text-[#ffb84d]" /></div>
@@ -547,8 +567,8 @@ export default function Minimax() {
               </div>
               <ArrowRight size={16} className="text-[#8B9EB0] group-hover:text-[#ffb84d] group-hover:translate-x-1 transition-all" />
             </div>
-            <p className="font-body text-[13px] text-[#8B9EB0]">MMLU · HumanEval · 性价比 · 真实RL优势</p>
-          </Link>
+            <p className="font-body text-[13px] text-[#8B9EB0]">SWE-Bench Pro · Terminal-Bench · BrowseComp · Agent Evals</p>
+          </RouterLink>
         </div>
       </section>
 
@@ -590,13 +610,13 @@ export default function Minimax() {
           <div className="flex items-center gap-2">
             <Zap className="w-4 h-4 text-amber-400" />
             <span className="text-sm text-[#8B9EB0]">
-              数据来源: MiniMax 技术报告 / ChinaAI-Roadmaps
+              数据来源: MiniMax M3 官方报告 / ChinaAI-Roadmaps
             </span>
           </div>
           <div className="flex items-center gap-4 text-xs text-[#8B9EB0]">
             <span className="data-tag text-amber-400/70">M1: 2025</span>
             <span className="data-tag text-amber-400/70">M2.5: 2026</span>
-            <span className="data-tag text-amber-400/70">成本: $1/hr</span>
+            <span className="data-tag text-amber-400/70">M3: 2026</span>
           </div>
         </div>
       </section>

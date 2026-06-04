@@ -35,23 +35,32 @@ const GlassCard = ({ children, className = '' }: { children: React.ReactNode; cl
 
 interface BenchmarkRow {
   name: string;
-  m1: number;
-  m25: number;
-  gpt4o: number;
-  claude35: number;
+  m3: number;
+  reference: string;
   unit: string;
+  note: string;
 }
+
+type SortConfig = { key: keyof BenchmarkRow; direction: 'asc' | 'desc' } | null;
+
+const SortIcon = ({ columnKey, sortConfig }: { columnKey: keyof BenchmarkRow; sortConfig: SortConfig }) => {
+  if (sortConfig?.key !== columnKey) return <ChevronDown className="w-3 h-3 text-white/20" />;
+  return sortConfig.direction === 'asc'
+    ? <ChevronUp className="w-3 h-3 text-[#ffb84d]" />
+    : <ChevronDown className="w-3 h-3 text-[#ffb84d]" />;
+};
 
 const MiniMaxBenchmarks = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  const [sortConfig, setSortConfig] = useState<{ key: keyof BenchmarkRow; direction: 'asc' | 'desc' } | null>(null);
+  const [sortConfig, setSortConfig] = useState<SortConfig>(null);
 
   const benchmarks: BenchmarkRow[] = [
-    { name: 'MMLU', m1: 72.5, m25: 78.2, gpt4o: 87.2, claude35: 88.7, unit: '%' },
-    { name: 'HumanEval', m1: 68.5, m25: 75.2, gpt4o: 90.2, claude35: 92.0, unit: '%' },
-    { name: 'MBPP', m1: 65.2, m25: 72.8, gpt4o: 86.5, claude35: 87.3, unit: '%' },
-    { name: 'GSM8K', m1: 82.1, m25: 88.5, gpt4o: 95.3, claude35: 96.4, unit: '%' },
+    { name: 'SWE-Bench Pro', m3: 59.0, reference: '复杂代码修复', unit: '%', note: '官方披露 M3 在该项超过 GPT-5.5 与 Gemini 3.1 Pro，接近 Claude Opus 4.7。' },
+    { name: 'Terminal-Bench 2.1', m3: 66.0, reference: '终端任务', unit: '%', note: '衡量模型在 shell、项目环境和命令执行链路中的问题解决能力。' },
+    { name: 'BrowseComp', m3: 83.5, reference: '网页检索', unit: '%', note: '官方表格中高于 Claude Opus 4.7 的 79.3。' },
+    { name: 'KernelBench Hard', m3: 28.8, reference: 'CUDA/Triton优化', unit: '%', note: '对应长程内核优化场景，官方案例给出 24 小时、1959 次工具调用的闭环优化。' },
+    { name: 'MCP Atlas', m3: 74.2, reference: '工具/协议任务', unit: '%', note: '体现 Agent 调用外部工具和协议接口的稳定性。' },
   ];
 
   const sortedBenchmarks = [...benchmarks].sort((a, b) => {
@@ -72,21 +81,9 @@ const MiniMaxBenchmarks = () => {
     }
   };
 
-  const SortIcon = ({ columnKey }: { columnKey: keyof BenchmarkRow }) => {
-    if (sortConfig?.key !== columnKey) return <ChevronDown className="w-3 h-3 text-white/20" />;
-    return sortConfig.direction === 'asc'
-      ? <ChevronUp className="w-3 h-3 text-[#ffb84d]" />
-      : <ChevronDown className="w-3 h-3 text-[#ffb84d]" />;
-  };
+  const maxValue = Math.max(...benchmarks.map((row) => row.m3));
 
-  const maxValues = benchmarks.reduce((acc, row) => ({
-    m1: Math.max(acc.m1, row.m1),
-    m25: Math.max(acc.m25, row.m25),
-    gpt4o: Math.max(acc.gpt4o, row.gpt4o),
-    claude35: Math.max(acc.claude35, row.claude35),
-  }), { m1: 0, m25: 0, gpt4o: 0, claude35: 0 });
-
-  const getBarWidth = (val: number, max: number) => `${(val / max) * 100}%`;
+  const getBarWidth = (val: number) => `${(val / maxValue) * 100}%`;
 
   return (
     <div className="min-h-screen bg-[#050B14] text-white font-body">
@@ -121,7 +118,7 @@ const MiniMaxBenchmarks = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto font-body"
           >
-            全面评测 M1 与 M2.5 在主流 Benchmark 上的表现
+            M3 在 Coding、终端、搜索、工具协议和内核优化上的官方 Benchmark
           </motion.p>
         </div>
       </section>
@@ -131,7 +128,7 @@ const MiniMaxBenchmarks = () => {
         <section>
           <SectionTitle index={1}>Benchmark 对比</SectionTitle>
           <motion.p custom={2} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-white/60 mb-8 max-w-3xl">
-            以下数据展示了 MiniMax M1 和 M2.5 在主流学术 Benchmark 上与 GPT-4o 和 Claude-3.5 的性能对比。M2.5 在各项任务上均有显著提升。
+            M3 的评测重点从单轮问答转向长程 Agent：代码仓库修复、终端执行、网页检索、工具协议和底层内核优化。下表保留官方披露指标，并把每项指标映射到实际开发场景。
           </motion.p>
 
           <motion.div custom={3} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -142,75 +139,45 @@ const MiniMaxBenchmarks = () => {
                     <tr className="border-b border-white/10">
                       <th className="text-left py-4 px-4">
                         <button onClick={() => handleSort('name')} className="flex items-center gap-1 text-white/50 font-medium hover:text-white/80 transition-colors">
-                          Benchmark <SortIcon columnKey="name" />
+                          Benchmark <SortIcon columnKey="name" sortConfig={sortConfig} />
                         </button>
                       </th>
                       <th className="text-center py-4 px-4">
-                        <button onClick={() => handleSort('m1')} className="flex items-center gap-1 mx-auto text-[#ffb84d] font-heading font-semibold hover:text-[#ffcc80] transition-colors">
-                          M1 <SortIcon columnKey="m1" />
-                        </button>
-                      </th>
-                      <th className="text-center py-4 px-4">
-                        <button onClick={() => handleSort('m25')} className="flex items-center gap-1 mx-auto text-[#ffb84d] font-heading font-semibold hover:text-[#ffcc80] transition-colors">
-                          M2.5 <SortIcon columnKey="m25" />
+                        <button onClick={() => handleSort('m3')} className="flex items-center gap-1 mx-auto text-[#ffb84d] font-heading font-semibold hover:text-[#ffcc80] transition-colors">
+                          MiniMax M3 <SortIcon columnKey="m3" sortConfig={sortConfig} />
                           <span className="ml-1 text-[10px] px-1.5 py-0.5 rounded bg-[#ffb84d]/20 text-[#ffb84d]">NEW</span>
                         </button>
                       </th>
                       <th className="text-center py-4 px-4">
-                        <button onClick={() => handleSort('gpt4o')} className="flex items-center gap-1 mx-auto text-white/70 font-heading font-semibold hover:text-white/90 transition-colors">
-                          GPT-4o <SortIcon columnKey="gpt4o" />
+                        <button onClick={() => handleSort('reference')} className="flex items-center gap-1 mx-auto text-white/70 font-heading font-semibold hover:text-white/90 transition-colors">
+                          场景 <SortIcon columnKey="reference" sortConfig={sortConfig} />
                         </button>
                       </th>
-                      <th className="text-center py-4 px-4">
-                        <button onClick={() => handleSort('claude35')} className="flex items-center gap-1 mx-auto text-white/70 font-heading font-semibold hover:text-white/90 transition-colors">
-                          Claude-3.5 <SortIcon columnKey="claude35" />
-                        </button>
-                      </th>
+                      <th className="text-left py-4 px-4 text-white/50 font-medium">解读</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {sortedBenchmarks.map((row, _idx) => (
+                    {sortedBenchmarks.map((row) => (
                       <tr key={row.name} className="border-b border-white/5 last:border-0 hover:bg-white/[0.02] transition-colors">
                         <td className="py-5 px-4">
                           <div className="font-medium text-white">{row.name}</div>
                           <div className="text-white/30 text-xs mt-0.5">
-                            {row.name === 'MMLU' && '多学科知识理解'}
-                            {row.name === 'HumanEval' && '代码生成能力'}
-                            {row.name === 'MBPP' && '编程问题解决'}
-                            {row.name === 'GSM8K' && '数学推理'}
+                            Agent / Coding Evaluation
                           </div>
                         </td>
                         <td className="py-5 px-4">
                           <div className="text-center">
-                            <span className="font-mono font-bold text-white/80">{row.m1}{row.unit}</span>
+                            <span className="font-mono font-bold text-[#ffb84d]">{row.m3}{row.unit}</span>
                             <div className="w-full h-1.5 rounded-full bg-white/10 mt-2 overflow-hidden">
-                              <div className="h-full rounded-full bg-white/30 transition-all" style={{ width: getBarWidth(row.m1, maxValues.m1) }} />
+                              <div className="h-full rounded-full bg-[#ffb84d] transition-all" style={{ width: getBarWidth(row.m3) }} />
                             </div>
                           </div>
                         </td>
                         <td className="py-5 px-4">
-                          <div className="text-center">
-                            <span className="font-mono font-bold text-[#ffb84d]">{row.m25}{row.unit}</span>
-                            <div className="w-full h-1.5 rounded-full bg-white/10 mt-2 overflow-hidden">
-                              <div className="h-full rounded-full bg-[#ffb84d] transition-all" style={{ width: getBarWidth(row.m25, maxValues.m25) }} />
-                            </div>
-                          </div>
+                          <span className="text-white/70 text-sm">{row.reference}</span>
                         </td>
-                        <td className="py-5 px-4">
-                          <div className="text-center">
-                            <span className="font-mono font-bold text-white/80">{row.gpt4o}{row.unit}</span>
-                            <div className="w-full h-1.5 rounded-full bg-white/10 mt-2 overflow-hidden">
-                              <div className="h-full rounded-full bg-white/30 transition-all" style={{ width: getBarWidth(row.gpt4o, maxValues.gpt4o) }} />
-                            </div>
-                          </div>
-                        </td>
-                        <td className="py-5 px-4">
-                          <div className="text-center">
-                            <span className="font-mono font-bold text-white/80">{row.claude35}{row.unit}</span>
-                            <div className="w-full h-1.5 rounded-full bg-white/10 mt-2 overflow-hidden">
-                              <div className="h-full rounded-full bg-white/30 transition-all" style={{ width: getBarWidth(row.claude35, maxValues.claude35) }} />
-                            </div>
-                          </div>
+                        <td className="py-5 px-4 text-white/50 text-xs leading-relaxed max-w-[320px]">
+                          {row.note}
                         </td>
                       </tr>
                     ))}
@@ -223,10 +190,10 @@ const MiniMaxBenchmarks = () => {
           {/* Stats Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
             {[
-              { label: 'MMLU 提升', value: '+5.7%', desc: '知识理解', icon: BarChart3 },
-              { label: 'HumanEval 提升', value: '+6.7%', desc: '代码能力', icon: Cpu },
-              { label: 'MBPP 提升', value: '+7.6%', desc: '编程解题', icon: Activity },
-              { label: 'GSM8K 提升', value: '+6.4%', desc: '数学推理', icon: TrendingUp },
+              { label: 'SWE-Bench Pro', value: '59.0%', desc: '复杂代码修复', icon: BarChart3 },
+              { label: 'Terminal-Bench', value: '66.0%', desc: '终端任务', icon: Cpu },
+              { label: 'BrowseComp', value: '83.5%', desc: '网页检索', icon: Activity },
+              { label: 'Claw-Eval', value: 'Top', desc: '端到端Agent', icon: TrendingUp },
             ].map((stat, _idx) => (
               <motion.div
                 key={stat.label}
@@ -250,7 +217,7 @@ const MiniMaxBenchmarks = () => {
         <section>
           <SectionTitle index={2}>性价比突出</SectionTitle>
           <motion.p custom={3} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-white/60 mb-8 max-w-3xl">
-            MiniMax M2.5 在保持强大性能的同时，推理成本极具竞争力，是企业和开发者的性价比之选。
+            M3 的成本重点不只是单价，而是长程 Agent 在读仓库、扫日志、跑测试和多轮修复时会消耗大量 token。1M 上下文和 MSA 的组合，让长上下文成本可控。
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -260,9 +227,9 @@ const MiniMaxBenchmarks = () => {
                 <div className="w-14 h-14 rounded-2xl bg-[#ffb84d]/20 flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="w-7 h-7 text-[#ffb84d]" />
                 </div>
-                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">$1/hr</div>
-                <div className="text-white/50 text-sm mb-2">GPU 推理成本</div>
-                <p className="text-white/40 text-xs">业界最具竞争力的推理定价</p>
+                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">1M</div>
+                <div className="text-white/50 text-sm mb-2">上下文窗口</div>
+                <p className="text-white/40 text-xs">长仓库、长日志、长论文同线程处理</p>
               </GlassCard>
             </motion.div>
             <motion.div custom={4} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -271,9 +238,9 @@ const MiniMaxBenchmarks = () => {
                 <div className="w-14 h-14 rounded-2xl bg-[#ffb84d]/20 flex items-center justify-center mx-auto mb-4">
                   <Trophy className="w-7 h-7 text-[#ffb84d]" />
                 </div>
-                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">Top 3</div>
-                <div className="text-white/50 text-sm mb-2">性能/成本比</div>
-                <p className="text-white/40 text-xs">同等价格下性能最优</p>
+                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">1/20</div>
+                <div className="text-white/50 text-sm mb-2">每token计算量</div>
+                <p className="text-white/40 text-xs">官方披露的百万上下文优化指标</p>
               </GlassCard>
             </motion.div>
             <motion.div custom={5} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -282,9 +249,9 @@ const MiniMaxBenchmarks = () => {
                 <div className="w-14 h-14 rounded-2xl bg-[#ffb84d]/20 flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-7 h-7 text-[#ffb84d]" />
                 </div>
-                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">10×</div>
-                <div className="text-white/50 text-sm mb-2">成本优势</div>
-                <p className="text-white/40 text-xs">相比同等性能模型</p>
+                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">100T+</div>
+                <div className="text-white/50 text-sm mb-2">多模态数据管线</div>
+                <p className="text-white/40 text-xs">官方披露的训练数据扩展量级</p>
               </GlassCard>
             </motion.div>
           </div>
@@ -293,14 +260,14 @@ const MiniMaxBenchmarks = () => {
             <GlassCard>
               <h4 className="font-heading font-semibold mb-4 flex items-center gap-2">
                 <Star className="w-5 h-5 text-[#ffb84d]" />
-                为什么 MiniMax 性价比最优？
+                为什么 M3 更适合长程 Agent？
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  { title: 'MoE 架构降本', desc: '45.6B 激活参数实现 456B 总参数的表达能力，推理成本仅为稠密模型的 10%' },
-                  { title: 'Lightning Attention', desc: '推理速度快 20%+，同样的硬件资源可以服务更多请求' },
-                  { title: '自研推理引擎', desc: '专为 MiniMax 模型优化的推理框架，极致的内存和计算效率' },
-                  { title: '弹性扩缩容', desc: '智能调度系统根据负载自动扩缩容，避免资源浪费' },
+                  { title: 'MSA 长上下文', desc: '百万级上下文下减少不必要注意力连接，同时优化KV块读取路径' },
+                  { title: '原生多模态', desc: '图片、视频、论文图表和桌面状态不再只是外接插件，而是进入统一训练空间' },
+                  { title: 'MiniMax Code', desc: '模型能力直接服务仓库级开发、测试、调试和多轮任务修正' },
+                  { title: '交互式训练', desc: '通过用户模拟器学习需求补充、方案讨论、反馈修正和任务切换' },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/5">
                     <ArrowUpRight className="w-4 h-4 text-[#ffb84d] flex-shrink-0 mt-0.5" />
@@ -319,7 +286,7 @@ const MiniMaxBenchmarks = () => {
         <section>
           <SectionTitle index={3}>真实环境 RL 优势</SectionTitle>
           <motion.p custom={4} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-white/60 mb-8 max-w-3xl">
-            MiniMax 采用真实编程环境进行强化学习训练，而非模拟环境。这一策略使模型在真实世界任务中表现更优。
+            M3 的评测和案例强调长时间闭环：不是一次性回答，而是持续计划、执行、验证、修正。官方披露的内核优化与论文复现案例正对应这种工作模式。
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -332,7 +299,7 @@ const MiniMaxBenchmarks = () => {
                   <h3 className="font-heading text-lg font-semibold">真实环境训练</h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-4">
-                  MiniMax 的 RL 训练在真实的编程环境中进行，模型可以直接执行代码、观察运行结果、调试错误。这种「真枪实弹」的训练方式让模型学会了处理真实世界中的各种边界情况和意外错误。
+                  官方案例中，M3 在 FP8 GEMM 优化任务中从不可用的 Triton 骨架开始，持续约 24 小时执行 benchmark 和工具调用，最终将 Hopper FP8 硬件峰值利用率推进到 71.3%。
                 </p>
                 <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
                   <div className="flex items-center gap-2 mb-2">
@@ -340,7 +307,7 @@ const MiniMaxBenchmarks = () => {
                     <span className="text-green-400 font-medium text-sm">真实任务优势</span>
                   </div>
                   <p className="text-white/60 text-xs">
-                    在真实编程任务上，MiniMax M2.5 的表现优于在模拟环境训练的同等规模模型，特别是在处理复杂错误和边界情况时。
+                    长程任务的关键是能否保持上下文、定位失败原因、继续实验并接受反馈。M3 的 MSA 与交互式训练正服务这一点。
                   </p>
                 </div>
               </GlassCard>
@@ -357,21 +324,21 @@ const MiniMaxBenchmarks = () => {
                   <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="w-2 h-2 rounded-full bg-red-400" />
-                      <span className="text-red-400 font-medium text-sm">模拟环境训练</span>
+                      <span className="text-red-400 font-medium text-sm">单轮代码生成</span>
                     </div>
-                    <p className="text-white/50 text-xs">在预设场景中学习，遇到真实错误时容易「不知所措」</p>
+                    <p className="text-white/50 text-xs">一次输出很难覆盖仓库结构、测试反馈、日志和用户变更</p>
                   </div>
                   <div className="p-3 rounded-lg bg-green-500/10 border border-green-500/20">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="w-2 h-2 rounded-full bg-green-400" />
-                      <span className="text-green-400 font-medium text-sm">真实环境训练（MiniMax）</span>
+                      <span className="text-green-400 font-medium text-sm">长程Agent闭环（M3）</span>
                     </div>
-                    <p className="text-white/50 text-xs">在真实 IDE 中编程，直面真实错误，学会真正解决问题</p>
+                    <p className="text-white/50 text-xs">持续读取、执行、验证和修正，更接近真实开发协作</p>
                   </div>
                 </div>
                 <div className="mt-4 p-3 rounded-lg bg-[#ffb84d]/10 border border-[#ffb84d]/20 text-center">
-                  <div className="text-2xl font-bold text-[#ffb84d] font-heading">+15%</div>
-                  <div className="text-white/50 text-xs mt-1">真实任务表现提升</div>
+                  <div className="text-2xl font-bold text-[#ffb84d] font-heading">71.3%</div>
+                  <div className="text-white/50 text-xs mt-1">官方案例中的FP8峰值利用率</div>
                 </div>
               </GlassCard>
             </motion.div>

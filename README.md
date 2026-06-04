@@ -53,7 +53,7 @@
 | GLM / 智谱 | 统一预训练、工具调用、WebGLM、多模态、GLM-5 | [GLM 专题](content/html/glm_analysis.html) |
 | Kimi / Moonshot | Muon、长上下文、K2、K2.5、Agentic Intelligence | [Kimi 专题](content/html/kimi_analysis.html) |
 | DeepSeek | MoE、Coder、Math、VL、R1、V3/V4、训练与推理效率 | [DeepSeek 专题](content/html/deepseek_analysis.html) |
-| MiniMax | Lightning Attention、CISPO、Forge RL、真实环境 RL | [MiniMax 专题](content/html/minimax_analysis.html) |
+| MiniMax | MiniMax M3、MSA、1M 上下文、原生多模态、MiniMax Code | [MiniMax 专题](content/html/minimax_analysis.html) |
 
 ## 推荐阅读路径
 

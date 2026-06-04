@@ -67,5 +67,6 @@
 | MiniMax-01: Scaling Foundation Models with Lightning Attention | 2025 | [abs](https://arxiv.org/abs/2501.08313) | [pdf](https://arxiv.org/pdf/2501.08313) |
 | MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention | 2025 | [abs](https://arxiv.org/abs/2506.13585) | [pdf](https://arxiv.org/pdf/2506.13585) |
 | MiniMax M2.5: Built for Real-World Productivity | 2026 | [official report](https://www.minimax.io/news/minimax-m25) | [model page](https://www.minimax.io/models/text) |
+| MiniMax M3: Coding Frontier, 1M Context, Native Multimodality | 2026 | [official report](https://www.minimax.io/blog/minimax-m3) | [model page](https://www.minimax.io/models/text/m3) |
 
 

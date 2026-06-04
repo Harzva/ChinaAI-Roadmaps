@@ -90,11 +90,11 @@ const companies: CompanyCardData[] = [
   {
     color: '#f59e0b',
     title: 'MiniMax',
-    subtitle: '真实生产力的轻量AI',
-    stats: '456亿 参数 · Lightning · 1美元/时',
-    features: ['Lightning Attention', 'CISPO优化', '真实RL', '生产力工具'],
+    subtitle: 'Frontier Agent 三件套',
+    stats: 'M3 · 1M上下文 · MSA',
+    features: ['MiniMax M3', 'MSA稀疏注意力', '原生多模态', 'MiniMax Code'],
     link: '/minimax',
-    tags: ['开源', '生产力'],
+    tags: ['开放权重', 'Agent'],
     icon: <Sparkles className="w-6 h-6" />,
   },
   {
@@ -111,12 +111,12 @@ const companies: CompanyCardData[] = [
 
 /* ══════════════ comparison data ══════════════ */
 const comparisonRows = [
-  { dim: '架构',       ds: 'MoE (1.6T/384专家)', kimi: 'Dense (1T)',      glm: 'GLM (355B)',         mm: 'Lightning (456亿)' },
-  { dim: '优化器',     ds: 'Muon / AdamW',       kimi: 'Muon / MuonClip', glm: 'Adam / AdamW',       mm: 'CISPO / AdamW' },
-  { dim: '上下文',     ds: '1,024K tokens',      kimi: '256K tokens',     glm: '128K tokens',        mm: '256K tokens' },
-  { dim: '多模态',     ds: '✅ Janus Pro',       kimi: '✅ 视觉原语',      glm: '✅ All Tools',       mm: '✅ 视频/语音' },
-  { dim: 'Agent',      ds: '🔶 基础能力',         kimi: '✅ Agentic AI',   glm: '✅ AutoGLM',         mm: '🔶 基础能力' },
-  { dim: '开源',       ds: '✅ 全开源',           kimi: '❌ 闭源',         glm: '✅ 开源',           mm: '❌ 闭源' },
+  { dim: '架构',       ds: 'MoE (1.6T/384专家)', kimi: 'Dense (1T)',      glm: 'GLM (355B)',         mm: 'MSA + 原生多模态' },
+  { dim: '优化器',     ds: 'Muon / AdamW',       kimi: 'Muon / MuonClip', glm: 'Adam / AdamW',       mm: 'CISPO / 交互式RL' },
+  { dim: '上下文',     ds: '1,024K tokens',      kimi: '256K tokens',     glm: '128K tokens',        mm: '1M tokens' },
+  { dim: '多模态',     ds: '✅ Janus Pro',       kimi: '✅ 视觉原语',      glm: '✅ All Tools',       mm: '✅ 原生图像/视频' },
+  { dim: 'Agent',      ds: '🔶 基础能力',         kimi: '✅ Agentic AI',   glm: '✅ AutoGLM',         mm: '✅ MiniMax Code' },
+  { dim: '开源',       ds: '✅ 全开源',           kimi: '❌ 闭源',         glm: '✅ 开源',           mm: '✅ 开放权重' },
   { dim: '特色',       ds: '极致性价比',          kimi: 'Agent智能',        glm: '统一预训练框架',      mm: '真实生产力' },
 ]
 
@@ -523,7 +523,7 @@ export default function Home() {
               从 <span className="text-[#3D8BFF] font-medium">DeepSeek</span> 的极致性价比到{' '}
               <span className="text-[#FF6B6B] font-medium">Kimi</span> 的 Agentic Intelligence，
               从 <span className="text-[#22c55e] font-medium">GLM</span> 的统一预训练到{' '}
-              <span className="text-[#f59e0b] font-medium">MiniMax</span> 的真实生产力——
+              <span className="text-[#f59e0b] font-medium">MiniMax M3</span> 的 Frontier Agent 三件套——
               中国AI正在走出一条独特的技术路线。
             </p>
 

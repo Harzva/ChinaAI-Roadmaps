@@ -12,7 +12,10 @@ import {
   Target,
   BarChart3,
   Sparkles,
-  CircleDot
+  CircleDot,
+  Eye,
+  Code2,
+  Network
 } from 'lucide-react';
 import ParticleCanvas from '@/components/ParticleCanvas';
 
@@ -37,12 +40,12 @@ const GlassCard = ({ children, className = '' }: { children: React.ReactNode; cl
 const MiniMaxArchitecture = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  const [activeTab, setActiveTab] = useState<'lightning' | 'flash' | 'standard'>('lightning');
+  const [activeTab, setActiveTab] = useState<'msa' | 'moba' | 'full'>('msa');
 
   const attentionData = {
-    lightning: { name: 'Lightning Attention', train: '-15%', infer: '-20%+', mem: 'Low', score: 9.5 },
-    flash: { name: 'FlashAttention', train: 'Baseline', infer: 'Baseline', mem: 'Medium', score: 8.0 },
-    standard: { name: '标准 Attention', train: '+30%', infer: '+50%', mem: 'High', score: 5.0 },
+    msa: { name: 'MSA', train: '1/20 compute', infer: '9×/15×+', mem: 'Sparse', score: 9.6 },
+    moba: { name: 'MoBA/DSA类动态稀疏', train: 'Block sparse', infer: 'Dynamic', mem: 'Medium', score: 8.5 },
+    full: { name: '全注意力', train: 'O(n²)', infer: 'High latency', mem: 'High', score: 5.0 },
   };
 
   const ropetSteps = [
@@ -86,29 +89,29 @@ const MiniMaxArchitecture = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto font-body"
           >
-            Lightning Attention · MoE架构 · ROPET Agent框架
+            MSA稀疏注意力 · 1M上下文 · 原生多模态 · MiniMax Code
           </motion.p>
         </div>
       </section>
 
       <div className="max-w-6xl mx-auto px-4 pb-24 space-y-24">
-        {/* ========== Lightning Attention ========== */}
+        {/* ========== MiniMax Sparse Attention ========== */}
         <section>
-          <SectionTitle index={1}>Lightning Attention</SectionTitle>
+          <SectionTitle index={1}>MiniMax Sparse Attention</SectionTitle>
           <motion.p custom={2} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-white/60 mb-8 max-w-3xl">
-            Lightning Attention 是 MiniMax 自研的新一代注意力机制，从根本上替代了 FlashAttention，在训练和推理阶段均实现了显著的性能提升。
+            M3 的核心注意力路线是 MSA（MiniMax Sparse Attention）。它把 1M 上下文的难题拆成两部分：先用动态稀疏找到关键 KV，再用更适合 GPU 的访存顺序把剩余连接算快。
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <GlassCard>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-[#ffb84d]/20 flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-[#ffb84d]" />
+                  <Network className="w-5 h-5 text-[#ffb84d]" />
                 </div>
                 <h3 className="font-heading text-lg font-semibold">核心原理</h3>
               </div>
               <p className="text-white/60 text-sm leading-relaxed">
-                Lightning Attention 通过重新设计注意力计算管线，消除了 FlashAttention 中冗余的内存读写操作。采用分块感知计算策略，使注意力头的计算与通信充分重叠，从而实现了接近理论峰值的硬件利用率。
+                MSA 通过更精细的 KV 分块提升有效上下文覆盖，同时采用 KV outer gather Q 的算子组织方式，使每个 KV 块尽量只读一次，降低随机访存和重复加载带来的实际延迟。
               </p>
             </GlassCard>
             <GlassCard>
@@ -116,16 +119,16 @@ const MiniMaxArchitecture = () => {
                 <div className="w-10 h-10 rounded-xl bg-[#ffb84d]/20 flex items-center justify-center">
                   <BarChart3 className="w-5 h-5 text-[#ffb84d]" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold">实际效果</h3>
+                <h3 className="font-heading text-lg font-semibold">官方披露效果</h3>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 rounded-xl bg-[#ffb84d]/10 border border-[#ffb84d]/20">
-                  <div className="text-3xl font-bold text-[#ffb84d] font-heading">-15%</div>
-                  <div className="text-white/50 text-sm mt-1">训练时间</div>
+                  <div className="text-3xl font-bold text-[#ffb84d] font-heading">1/20</div>
+                  <div className="text-white/50 text-sm mt-1">1M下每token计算量</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-[#ffb84d]/10 border border-[#ffb84d]/20">
-                  <div className="text-3xl font-bold text-[#ffb84d] font-heading">-20%+</div>
-                  <div className="text-white/50 text-sm mt-1">推理延迟</div>
+                  <div className="text-3xl font-bold text-[#ffb84d] font-heading">9×/15×</div>
+                  <div className="text-white/50 text-sm mt-1">prefill / decode加速</div>
                 </div>
               </div>
             </GlassCard>
@@ -139,7 +142,7 @@ const MiniMaxArchitecture = () => {
                 注意力机制对比
               </h3>
               <div className="flex gap-2 mb-6 flex-wrap">
-                {(['lightning', 'flash', 'standard'] as const).map((key) => (
+                {(['msa', 'moba', 'full'] as const).map((key) => (
                   <button
                     key={key}
                     onClick={() => setActiveTab(key)}
@@ -158,8 +161,8 @@ const MiniMaxArchitecture = () => {
                   <thead>
                     <tr className="border-b border-white/10">
                       <th className="text-left py-3 px-4 text-white/50 font-medium">指标</th>
-                      {(['lightning', 'flash', 'standard'] as const).map((key) => (
-                        <th key={key} className={`text-center py-3 px-4 font-heading font-semibold ${key === 'lightning' ? 'text-[#ffb84d]' : 'text-white/70'}`}>
+                      {(['msa', 'moba', 'full'] as const).map((key) => (
+                        <th key={key} className={`text-center py-3 px-4 font-heading font-semibold ${key === 'msa' ? 'text-[#ffb84d]' : 'text-white/70'}`}>
                           {attentionData[key].name}
                         </th>
                       ))}
@@ -167,20 +170,20 @@ const MiniMaxArchitecture = () => {
                   </thead>
                   <tbody>
                     <tr className="border-b border-white/5">
-                      <td className="py-3 px-4 text-white/60">训练速度</td>
-                      <td className="py-3 px-4 text-center text-[#ffb84d] font-mono font-semibold">快 15%</td>
-                      <td className="py-3 px-4 text-center text-white/60 font-mono">Baseline</td>
-                      <td className="py-3 px-4 text-center text-white/60 font-mono">慢 30%</td>
+                      <td className="py-3 px-4 text-white/60">百万上下文成本</td>
+                      <td className="py-3 px-4 text-center text-[#ffb84d] font-mono font-semibold">1/20 compute</td>
+                      <td className="py-3 px-4 text-center text-white/60 font-mono">动态稀疏</td>
+                      <td className="py-3 px-4 text-center text-white/60 font-mono">O(n²)</td>
                     </tr>
                     <tr className="border-b border-white/5">
-                      <td className="py-3 px-4 text-white/60">推理速度</td>
-                      <td className="py-3 px-4 text-center text-[#ffb84d] font-mono font-semibold">快 20%+</td>
-                      <td className="py-3 px-4 text-center text-white/60 font-mono">Baseline</td>
-                      <td className="py-3 px-4 text-center text-white/60 font-mono">慢 50%</td>
+                      <td className="py-3 px-4 text-white/60">Prefill / Decode</td>
+                      <td className="py-3 px-4 text-center text-[#ffb84d] font-mono font-semibold">9× / 15×+</td>
+                      <td className="py-3 px-4 text-center text-white/60 font-mono">取决于块命中</td>
+                      <td className="py-3 px-4 text-center text-white/60 font-mono">长输入高延迟</td>
                     </tr>
                     <tr className="border-b border-white/5">
-                      <td className="py-3 px-4 text-white/60">内存占用</td>
-                      <td className="py-3 px-4 text-center text-green-400 font-mono">Low</td>
+                      <td className="py-3 px-4 text-white/60">KV读取</td>
+                      <td className="py-3 px-4 text-center text-green-400 font-mono">连续、低重复</td>
                       <td className="py-3 px-4 text-center text-yellow-400 font-mono">Medium</td>
                       <td className="py-3 px-4 text-center text-red-400 font-mono">High</td>
                     </tr>
@@ -188,7 +191,7 @@ const MiniMaxArchitecture = () => {
                       <td className="py-3 px-4 text-white/60">综合评分</td>
                       <td className="py-3 px-4 text-center">
                         <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-[#ffb84d]/20 text-[#ffb84d] font-mono font-bold">
-                          9.5
+                          9.6
                         </span>
                       </td>
                       <td className="py-3 px-4 text-center">
@@ -209,42 +212,42 @@ const MiniMaxArchitecture = () => {
           </motion.div>
         </section>
 
-        {/* ========== MoE 架构 ========== */}
+        {/* ========== M3 Frontier Agent 三件套 ========== */}
         <section>
-          <SectionTitle index={2}>MoE 架构（M2.5）</SectionTitle>
+          <SectionTitle index={2}>M3 Frontier Agent 三件套</SectionTitle>
           <motion.p custom={3} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-white/60 mb-8 max-w-3xl">
-            MiniMax M2.5 采用稀疏 Mixture-of-Experts（MoE）架构，在保持强大表达能力的同时，实现了高效的推理计算。
+            M3 的定位不是单项模型升级，而是把 Coding Frontier+、1M 上下文窗口、原生多模态三类能力放在同一个开放权重模型中协同工作。
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <motion.div custom={3} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <GlassCard className="text-center h-full">
                 <div className="w-14 h-14 rounded-2xl bg-[#ffb84d]/20 flex items-center justify-center mx-auto mb-4">
-                  <Layers className="w-7 h-7 text-[#ffb84d]" />
+                  <Code2 className="w-7 h-7 text-[#ffb84d]" />
                 </div>
-                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">456B</div>
-                <div className="text-white/50 text-sm">总参数量</div>
-                <p className="text-white/40 text-xs mt-2">总专家参数规模</p>
+                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">Coding</div>
+                <div className="text-white/50 text-sm">Frontier+</div>
+                <p className="text-white/40 text-xs mt-2">面向仓库级修复、终端操作和长期工具轨迹</p>
               </GlassCard>
             </motion.div>
             <motion.div custom={4} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <GlassCard className="text-center h-full">
                 <div className="w-14 h-14 rounded-2xl bg-[#ffb84d]/20 flex items-center justify-center mx-auto mb-4">
-                  <Cpu className="w-7 h-7 text-[#ffb84d]" />
+                  <Layers className="w-7 h-7 text-[#ffb84d]" />
                 </div>
-                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">45.6B</div>
-                <div className="text-white/50 text-sm">激活参数量</div>
-                <p className="text-white/40 text-xs mt-2">每次前向传播仅需 10% 参数</p>
+                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">1M</div>
+                <div className="text-white/50 text-sm">上下文窗口</div>
+                <p className="text-white/40 text-xs mt-2">MSA 支撑长日志、长仓库、长论文级记忆</p>
               </GlassCard>
             </motion.div>
             <motion.div custom={5} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <GlassCard className="text-center h-full">
                 <div className="w-14 h-14 rounded-2xl bg-[#ffb84d]/20 flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-7 h-7 text-[#ffb84d]" />
+                  <Eye className="w-7 h-7 text-[#ffb84d]" />
                 </div>
-                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">56</div>
-                <div className="text-white/50 text-sm">专家数量</div>
-                <p className="text-white/40 text-xs mt-2">路由选择 Top-K 专家激活</p>
+                <div className="text-4xl font-bold text-[#ffb84d] font-heading mb-1">Native</div>
+                <div className="text-white/50 text-sm">多模态</div>
+                <p className="text-white/40 text-xs mt-2">图像、视频、桌面状态进入同一语义空间</p>
               </GlassCard>
             </motion.div>
           </div>
@@ -258,7 +261,7 @@ const MiniMaxArchitecture = () => {
                 <div>
                   <h4 className="font-heading font-semibold mb-2">MoE 架构优势</h4>
                   <p className="text-white/60 text-sm leading-relaxed">
-                    MoE（混合专家）架构通过将模型参数划分为多个专家子网络，每次推理仅激活部分专家，实现了「大模型性能，小模型成本」的效果。MiniMax M2.5 的 456B 总参数中只有 45.6B 被激活，推理成本降低约 90%，同时在复杂任务上保持了与稠密大模型相当的性能水平。
+                    对 Coding Agent 来说，这三项能力不能拆开看：长程开发需要 1M 级上下文承接仓库、日志和多轮反馈；多模态负责理解截图、论文图表和桌面界面；Coding 能力决定工具调用、测试修复和最终提交质量。
                   </p>
                 </div>
               </div>
@@ -268,9 +271,9 @@ const MiniMaxArchitecture = () => {
 
         {/* ========== ROPET Agent 框架 ========== */}
         <section>
-          <SectionTitle index={3}>ROPET Agent 框架</SectionTitle>
+          <SectionTitle index={3}>MiniMax Code 与 Agent 闭环</SectionTitle>
           <motion.p custom={4} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-white/60 mb-8 max-w-3xl">
-            ROPET 是 MiniMax 专为 Agent 智能体设计的循环决策框架，覆盖从信息读取到策略优化的完整闭环。
+            M3 同步更新了 MiniMax Code。它把模型能力落到开发者日常：读项目、计划修改、执行命令、查看报错、继续修复，并在长上下文中保留完整任务轨迹。
           </motion.p>
 
           <div className="flex flex-col md:flex-row gap-4 mb-10">
@@ -313,7 +316,7 @@ const MiniMaxArchitecture = () => {
                 循环强化学习
               </h4>
               <p className="text-white/60 text-sm leading-relaxed">
-                ROPET 的核心创新在于最后一个环节 Train：每次 Agent 任务执行完成后，系统会自动收集执行轨迹和结果反馈，通过强化学习（RL）持续优化策略网络。这意味着 Agent 不是静态的，而是会随着使用不断进化，越用越聪明。这种「执行-反馈-优化」的闭环机制，使 MiniMax Agent 在复杂多步任务中表现出强大的自适应能力。
+                MiniMax Code 的关键不在单次生成代码，而在长时间闭环：读取上下文、观察环境、规划下一步、执行工具调用，再根据测试和用户反馈修正。M3 的长上下文和多模态能力正是为这种闭环提供底座。
               </p>
             </GlassCard>
           </motion.div>
@@ -321,9 +324,9 @@ const MiniMaxArchitecture = () => {
 
         {/* ========== CISPO 优化器 ========== */}
         <section>
-          <SectionTitle index={4}>CISPO 优化器</SectionTitle>
+          <SectionTitle index={4}>从 CISPO / Forge RL 到交互式训练</SectionTitle>
           <motion.p custom={5} variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-white/60 mb-8 max-w-3xl">
-            CISPO（Confidence Interval Policy Optimization）是 MiniMax 自研的 RL 训练稳定器，专门解决大规模语言模型强化训练中的不稳定性问题。
+            M1/M2.5 阶段的 CISPO 与 Forge RL 让 MiniMax 聚焦真实环境强化学习；M3 进一步强调交互式用户模拟器，让模型学习多轮协作、需求补充、失败修正和长程任务切换。
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -336,7 +339,7 @@ const MiniMaxArchitecture = () => {
                   <h3 className="font-heading text-lg font-semibold">置信区间策略优化</h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-4">
-                  CISPO 引入统计置信区间来控制策略更新的幅度，避免传统 PPO 算法中因单步更新过大导致的训练崩溃。通过动态调整学习率和策略约束，CISPO 确保每次更新都在「安全区间」内进行。
+                  CISPO 引入统计置信区间来控制策略更新幅度，Forge RL 负责大规模真实环境训练。M3 在此基础上强化交互式训练，让模型面对更接近真实开发协作的多轮任务。
                 </p>
                 <div className="space-y-2">
                   {['训练稳定性提升 3×', '消除奖励黑客问题', '支持长程 RL 训练'].map((item) => (
@@ -357,12 +360,12 @@ const MiniMaxArchitecture = () => {
                   <h3 className="font-heading text-lg font-semibold">RL 训练稳定器</h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed mb-4">
-                  传统 RLHF 训练常常面临奖励坍塌、模式崩溃等问题。CISPO 通过置信区间的统计约束，为策略梯度提供了"安全护栏"，使得模型能够在探索新策略和利用已知策略之间找到最优平衡点。
+                  Coding Agent 的训练目标正在从「一次生成正确代码」转向「持续完成长期协作任务」。这需要模型能记住前文状态、评估工具失败、接受反馈并重新规划。
                 </p>
                 <div className="p-4 rounded-xl bg-[#ffb84d]/10 border border-[#ffb84d]/20">
                   <div className="text-xs text-[#ffb84d] font-mono mb-1">核心公式思路</div>
                   <div className="text-sm text-white/80 font-mono">
-                    update = clip(∇policy, lower_CI, upper_CI)
+                    loop = plan → execute → verify → revise
                   </div>
                 </div>
               </GlassCard>
@@ -378,10 +381,10 @@ const MiniMaxArchitecture = () => {
               <GlassCard className="border-l-4 border-l-[#ffb84d]">
                 <div className="flex items-center gap-3 mb-3">
                   <Lightbulb className="w-6 h-6 text-[#ffb84d]" />
-                  <h3 className="font-heading text-lg font-semibold">Lightning Attention = 闪电</h3>
+                  <h3 className="font-heading text-lg font-semibold">MSA = 给长上下文装索引</h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  Flash Attention 已经够快了，但 Lightning Attention 比它更快——就像闪电比闪光灯更快一样！这个名字取得很形象：Flash（闪光）是肉眼可见的，但 Lightning（闪电）是自然界真正的速度之王。Lightning Attention 在训练时快 15%，推理时快 20% 以上。
+                  1M 上下文不是把书全摊在桌上让模型逐页看，而是先快速定位哪些 KV 块可能相关，再对关键部分精算。MSA 的价值就是让模型在很长的材料里更快找到真正要看的位置。
                 </p>
               </GlassCard>
             </motion.div>
@@ -389,10 +392,10 @@ const MiniMaxArchitecture = () => {
               <GlassCard className="border-l-4 border-l-[#ffb84d]">
                 <div className="flex items-center gap-3 mb-3">
                   <Cpu className="w-6 h-6 text-[#ffb84d]" />
-                  <h3 className="font-heading text-lg font-semibold">ROPET = 机器人五环</h3>
+                  <h3 className="font-heading text-lg font-semibold">MiniMax Code = 长程开发同事</h3>
                 </div>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  ROPET 的五个步骤（Read→Observe→Plan→Execute→Train）就像奥运五环一样环环相扣。Read 是「读题」，Observe 是「审题」，Plan 是「列计划」，Execute 是「动手做」，Train 是「复盘学习」。每完成一圈，Agent 就变聪明一点，这就是智能体的自我进化！
+                  它不是只回答“这段代码怎么写”，而是围绕一个项目持续工作：读仓库、理解报错、改文件、跑测试、复盘失败，再继续下一轮。这正是 M3 三件套要服务的场景。
                 </p>
               </GlassCard>
             </motion.div>

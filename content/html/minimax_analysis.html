@@ -23,25 +23,31 @@
     <p>模型基于 MiniMax‑Text‑01，采用混合专家 (MoE) 架构与 lightning attention 结合，总参数约 456 亿，每 token 激活 45.9 亿。M1 原生支持 100 万 token 上下文，并使用 CISPO 算法在数学推理和软件工程环境中进行 RL 训练【132075084091887†L411-L437】。</p>
     <h2>MiniMax‑M2.5（2026）</h2>
     <p>通过在数十万真实工作环境中强化学习训练，M2.5 在编码、搜索和办公任务上取得领先成绩。它在 SWE‑Bench Verified、Multi‑SWE‑Bench 和 BrowseComp 等基准上超过前代模型，并以低成本提供高效率推理【195727672155230†L110-L120】【195727672155230†L123-L127】。</p>
+    <h2>MiniMax M3（2026）</h2>
+    <p>M3 官方定位为同时具备 Coding Frontier+、1M 上下文窗口和原生多模态的开放权重路线模型，配套更新 MiniMax Code。其 MiniMax Sparse Attention（MSA）通过更精确的 KV 分块和 KV outer gather Q 优化百万上下文计算，官方披露在 100 万上下文下每 token 计算量约为上代模型的 1/20，prefill 超过 9 倍加速，decode 超过 15 倍加速。</p>
+    <p>M3 支持图像、视频输入与桌面操作，适合论文复现、代码审查和复杂 GUI 场景。官方资料入口包括 <a href="https://www.minimax.io/models/text/m3">M3 模型页</a>、<a href="https://www.minimax.io/blog/minimax-m3">M3 技术报告</a> 和 <a href="https://github.com/MiniMax-AI/MiniMax-M3">M3 GitHub</a>。</p>
     <h2>时间线</h2>
     <img src="../../assets/images/minimax_timeline.png" alt="MiniMax 时间线">
 
     <h2>技术路线分析</h2>
-    <p>MiniMax 系列的技术路线可以归纳为两个阶段：</p>
+    <p>MiniMax 系列的技术路线可以归纳为三个阶段：</p>
     <h3>阶段 1：极长上下文与仿真 RL（M1）</h3>
     <p>M1 通过混合专家架构与 lightning attention 实现 100 万 token 的上下文长度，并在数学推理和软件工程等模拟环境中使用 CISPO 算法进行 RL 训练，从而验证了长上下文模型的可行性【132075084091887†L411-L437】。</p>
     <h3>阶段 2：真实环境 RL 与生产力优化（M2.5）</h3>
     <p>M2.5 将强化学习推广至真实工作场景，模型在数十万真实环境中学习编码、搜索、工具调用和办公任务，并通过 Forge RL 框架提升训练效率。其在 SWE‑Bench Verified、Multi‑SWE‑Bench、BrowseComp 等基准上的表现和极低的推理成本表明该模型正在朝着实际生产力工具迈进【195727672155230†L110-L120】【195727672155230†L123-L127】【195727672155230†L261-L291】。</p>
 
+    <h3>阶段 3：Frontier Agent 三件套（M3）</h3>
+    <p>M3 把 MiniMax 的路线推进到长程 Agent：Coding Frontier+ 负责执行质量，MSA 支撑 1M 上下文工作记忆，原生多模态让模型处理截图、图表、视频和桌面状态。配套 MiniMax Code 说明其目标不是单轮聊天，而是仓库级开发、测试、调试和持续修复。</p>
     <h3>流程图</h3>
     <p>下图用英文标签概括 MiniMax 路线的两个阶段，帮助直观理解从仿真 RL 到真实环境 RL 的过渡：</p>
     <img src="../../assets/flowcharts/minimax_flowchart_final.svg" alt="MiniMax 技术路线流程图">
     <h2>论文索引</h2>
-    <p>下表列出两篇论文的 Markdown 分析（内含至少十对问答）及对应的 HTML 页面。</p>
+    <p>下表列出 MiniMax 系列资料的 Markdown 分析及对应 HTML 页面。</p>
     <table>
         <tr><th>名称</th><th>Markdown 分析</th><th>HTML 页面</th></tr>
         <tr><td>MiniMax‑M1</td><td><a href="../markdown/minimax_m1.md">minimax_m1.md</a></td><td><a href="minimax_m1.html">minimax_m1.html</a></td></tr>
         <tr><td>MiniMax‑M2.5</td><td><a href="../markdown/minimax_m2_5.md">minimax_m2_5.md</a></td><td><a href="minimax_m2_5.html">minimax_m2_5.html</a></td></tr>
+        <tr><td>MiniMax M3</td><td><a href="../markdown/minimax_m3.md">minimax_m3.md</a></td><td><a href="minimax_m3.html">minimax_m3.html</a></td></tr>
     </table>
 </body>
 </html>
