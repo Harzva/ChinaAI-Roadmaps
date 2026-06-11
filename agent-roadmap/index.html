@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent Roadmap · Agent 编程与 Token Economy 生态地图</title>
+    <meta name="description" content="Agent Roadmap: TUI agents, IDE agents, Work agents, agent frameworks, token economy and MiWork opportunity." />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./data/agents.js"></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+    <header class="hero" id="top">
+      <nav class="topbar" aria-label="Agent Roadmap navigation">
+        <a class="brand" href="../">ChinaAI Roadmaps</a>
+        <div class="toplinks">
+          <a href="../worldroadmap/">World Map</a>
+          <a href="../developer-docs/">Dev Docs</a>
+          <a href="#miwork">MiWork</a>
+          <a href="./paper/agent-roadmap-review.tex">Paper</a>
+        </div>
+      </nav>
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Agent Roadmap v2 · AI Coding Agents · Work Agents · Token Economy</p>
+          <h1>全球 Agent 编程与 Token 经济生态地图</h1>
+          <p class="subtitle-en">A research atlas for terminal agents, IDE agents, autonomous work agents, and token-efficient agent infrastructure.</p>
+          <p class="subtitle-cn">面向 AgentWork / MiWork 的全球 Agent 编程、上下文压缩、多 Agent 工作流与 Token Economy 研究页面。</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#atlas">Explore Atlas</a>
+            <a class="secondary-action" href="#miwork">MiWork Opportunity</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-title">Research Scope</div>
+          <div class="mini-map" id="miniMap"></div>
+        </div>
+      </section>
+      <section class="stats" id="stats"></section>
+      <section class="insights" id="insights"></section>
+    </header>
+
+    <main>
+      <section class="section" id="atlas">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive Atlas</p>
+          <h2>产品分类地图 / Product Taxonomy</h2>
+          <p>按交互入口、成熟度、模型目标、Token 策略和 MiWork 相关性筛选。卡片详情侧栏用于研究分析，Matrix View 用于横向对比。</p>
+        </div>
+        <div class="control-shell">
+          <label class="search-wrap" aria-label="Search agents">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="Claude / token / memory / DeepSeek / MCP / Work ..." />
+          </label>
+          <div class="select-grid">
+            <select id="categoryFilter" aria-label="Category filter"></select>
+            <select id="interfaceFilter" aria-label="Interface filter"></select>
+            <select id="maturityFilter" aria-label="Maturity filter"></select>
+            <select id="modelFilter" aria-label="Model filter"></select>
+            <select id="miworkFilter" aria-label="MiWork relevance filter"></select>
+            <select id="tokenFilter" aria-label="Token focus filter"></select>
+          </div>
+          <div class="view-toggle" role="group" aria-label="View toggle">
+            <button id="cardViewBtn" class="toggle active" type="button">Card View</button>
+            <button id="matrixViewBtn" class="toggle" type="button">Matrix View</button>
+          </div>
+        </div>
+        <div class="taxonomy-strip" id="taxonomyStrip"></div>
+        <div class="content-layout">
+          <section class="cards-grid" id="cardsGrid"></section>
+          <section class="matrix-wrap hidden" id="matrixWrap">
+            <table class="matrix-table">
+              <thead>
+                <tr><th>Name</th><th>Category</th><th>Model</th><th>Token</th><th>MiWork</th></tr>
+              </thead>
+              <tbody id="matrixBody"></tbody>
+            </table>
+          </section>
+          <aside class="detail-panel" id="detailPanel" aria-live="polite">
+            <button class="detail-close" id="detailClose" type="button">×</button>
+            <p class="eyebrow">Selected</p>
+            <h3 id="detailTitle">选择一个项目</h3>
+            <p id="detailSummary">点击任意卡片查看分类、模型目标、Token 策略、优缺点和 MiWork 启发。</p>
+            <div id="detailMeta" class="detail-meta"></div>
+            <div id="detailLists"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section economy" id="economy">
+        <div class="section-heading">
+          <p class="eyebrow">Agent Acceleration & Token Economy</p>
+          <h2>Agent 加速与 Token 经济层</h2>
+          <p>把完整 Agent、插件 / Middleware、Skill / Rule / Prompt Layer、底层 Framework 分开看，便于判断哪些适合成为 MiWork 的基础设施。</p>
+        </div>
+        <div class="radar" id="tokenRadar"></div>
+      </section>
+
+      <section class="section miwork" id="miwork">
+        <div class="section-heading">
+          <p class="eyebrow">MiWork Opportunity</p>
+          <h2>MiWork = Mimo-specific Agent Runtime + Token Compression + Work Agent Workflow</h2>
+          <p id="miworkWhy"></p>
+        </div>
+        <div class="miwork-grid">
+          <article class="roadmap-card"><h3>MVP Roadmap</h3><ol id="miworkPhases"></ol></article>
+          <article class="roadmap-card"><h3>Technical Modules</h3><div class="pill-list" id="miworkModules"></div></article>
+          <article class="roadmap-card"><h3>Risks</h3><div class="pill-list risk" id="miworkRisks"></div></article>
+          <article class="roadmap-card"><h3>Opportunities</h3><div class="pill-list opportunity" id="miworkOpportunities"></div></article>
+        </div>
+      </section>
+
+      <section class="section paper-callout" id="paper">
+        <div>
+          <p class="eyebrow">arXiv Draft Scaffold</p>
+          <h2>Agent Coding and Token Economy Survey</h2>
+          <p>论文草稿位于 <code>paper/agent-roadmap-review.tex</code>，已包含 taxonomy、formal definitions、related work、benchmark taxonomy、MiWork case study 与 BibTeX 引用。</p>
+        </div>
+        <a class="primary-action" href="./paper/agent-roadmap-review.tex">Open LaTeX</a>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Mobile category navigation">
+      <a href="#top">Top</a>
+      <a href="#atlas">Atlas</a>
+      <a href="#economy">Token</a>
+      <a href="#miwork">MiWork</a>
+    </nav>
+  </body>
+</html>
