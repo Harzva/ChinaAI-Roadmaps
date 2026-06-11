@@ -7,6 +7,7 @@
     <meta name="description" content="Agent Roadmap: TUI agents, IDE agents, Work agents, agent frameworks, token economy and MiWork opportunity." />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./data/agents.js"></script>
+    <script src="./data/sources.js"></script>
     <script src="./app.js" defer></script>
   </head>
   <body>
@@ -62,9 +63,11 @@
             <select id="miworkFilter" aria-label="MiWork relevance filter"></select>
             <select id="tokenFilter" aria-label="Token focus filter"></select>
           </div>
-          <div class="view-toggle" role="group" aria-label="View toggle">
+          <div class="view-toggle" role="group" aria-label="View and export tools">
             <button id="cardViewBtn" class="toggle active" type="button">Card View</button>
             <button id="matrixViewBtn" class="toggle" type="button">Matrix View</button>
+            <button id="exportJsonBtn" class="toggle" type="button">Export JSON</button>
+            <button id="exportCsvBtn" class="toggle" type="button">Export CSV</button>
           </div>
         </div>
         <div class="taxonomy-strip" id="taxonomyStrip"></div>
@@ -82,7 +85,7 @@
             <button class="detail-close" id="detailClose" type="button">×</button>
             <p class="eyebrow">Selected</p>
             <h3 id="detailTitle">选择一个项目</h3>
-            <p id="detailSummary">点击任意卡片查看分类、模型目标、Token 策略、优缺点和 MiWork 启发。</p>
+            <p id="detailSummary">点击任意卡片查看分类、模型目标、Token 策略、优缺点、citation sources 和 MiWork 启发。</p>
             <div id="detailMeta" class="detail-meta"></div>
             <div id="detailLists"></div>
           </aside>
@@ -104,6 +107,10 @@
           <h2>MiWork = Mimo-specific Agent Runtime + Token Compression + Work Agent Workflow</h2>
           <p id="miworkWhy"></p>
         </div>
+        <figure class="architecture-figure">
+          <img src="./assets/miwork-architecture.svg" alt="MiWork architecture diagram: user task, planner, context layer, worker agents, reviewer and PR automation" />
+          <figcaption>MiWork architecture: Mimo-specific runtime, context compression, memory, multi-agent execution and PR automation.</figcaption>
+        </figure>
         <div class="miwork-grid">
           <article class="roadmap-card"><h3>MVP Roadmap</h3><ol id="miworkPhases"></ol></article>
           <article class="roadmap-card"><h3>Technical Modules</h3><div class="pill-list" id="miworkModules"></div></article>
