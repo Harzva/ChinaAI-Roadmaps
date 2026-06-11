@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+  <title id="title">MiWork Architecture Diagram</title>
+  <desc id="desc">Mimo-specific Agent Runtime, Context Compression Layer, Memory Layer, Multi-Agent Worktree Execution, Review and PR Automation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#071324"/><stop offset="1" stop-color="#03040d"/></linearGradient>
+    <linearGradient id="cyan" x1="0" x2="1"><stop offset="0" stop-color="#68e9ff"/><stop offset="1" stop-color="#bda2ff"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      text{font-family:Inter,Arial,'Noto Sans SC',sans-serif;fill:#f8fbff}.small{fill:#9fa9c7;font-size:18px}.label{font-size:24px;font-weight:800}.title{font-size:46px;font-weight:900;letter-spacing:-1px}.box{fill:rgba(255,255,255,.06);stroke:rgba(211,231,255,.22);stroke-width:1.5}.accent{stroke:#68e9ff;stroke-width:2}.arrow{stroke:#68e9ff;stroke-width:2.4;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#68e9ff"/></marker>
+  </defs>
+  <rect width="1400" height="720" rx="28" fill="url(#bg)"/>
+  <circle cx="170" cy="90" r="180" fill="#68e9ff" opacity=".12" filter="url(#glow)"/>
+  <circle cx="1190" cy="160" r="220" fill="#ff6bd3" opacity=".11" filter="url(#glow)"/>
+  <text class="title" x="64" y="76">MiWork Architecture</text>
+  <text class="small" x="66" y="108">Mimo-specific Agent Runtime + Token Compression + Work Agent Workflow</text>
+
+  <rect class="box accent" x="70" y="178" width="210" height="108" rx="22"/>
+  <text class="label" x="100" y="226">User Task</text>
+  <text class="small" x="100" y="256">PRD · issue · bug · feature</text>
+
+  <rect class="box" x="360" y="150" width="250" height="160" rx="24"/>
+  <text class="label" x="394" y="204">Planner Agent</text>
+  <text class="small" x="394" y="236">task breakdown</text>
+  <text class="small" x="394" y="264">acceptance criteria</text>
+
+  <rect class="box" x="690" y="120" width="290" height="220" rx="24"/>
+  <text class="label" x="724" y="172">Context Economy</text>
+  <text class="small" x="724" y="207">RepoMap · Symbol Graph</text>
+  <text class="small" x="724" y="235">AST Cache · Semantic Cache</text>
+  <text class="small" x="724" y="263">Memory · Cost Monitor</text>
+  <text class="small" x="724" y="291">MCP Connectors</text>
+
+  <rect class="box" x="1060" y="150" width="260" height="160" rx="24"/>
+  <text class="label" x="1094" y="204">Mimo Runtime</text>
+  <text class="small" x="1094" y="236">model-specific prompts</text>
+  <text class="small" x="1094" y="264">routing · verification</text>
+
+  <rect class="box" x="250" y="430" width="250" height="158" rx="24"/>
+  <text class="label" x="284" y="482">Worker Agents</text>
+  <text class="small" x="284" y="514">isolated worktrees</text>
+  <text class="small" x="284" y="542">implementation · tests</text>
+
+  <rect class="box" x="575" y="430" width="250" height="158" rx="24"/>
+  <text class="label" x="610" y="482">Reviewer Agent</text>
+  <text class="small" x="610" y="514">diff review</text>
+  <text class="small" x="610" y="542">test evidence · risk report</text>
+
+  <rect class="box accent" x="900" y="430" width="250" height="158" rx="24"/>
+  <text class="label" x="935" y="482">PR Agent</text>
+  <text class="small" x="935" y="514">commit · PR · summary</text>
+  <text class="small" x="935" y="542">rollback · audit trail</text>
+
+  <path class="arrow" d="M280 232 L360 232"/>
+  <path class="arrow" d="M610 232 L690 232"/>
+  <path class="arrow" d="M980 232 L1060 232"/>
+  <path class="arrow" d="M485 310 C475 370 415 390 375 430"/>
+  <path class="arrow" d="M835 340 C800 386 760 405 700 430"/>
+  <path class="arrow" d="M1190 310 C1185 386 1110 405 1025 430"/>
+  <path class="arrow" d="M500 508 L575 508"/>
+  <path class="arrow" d="M825 508 L900 508"/>
+  <text class="small" x="65" y="668">Design principle: make every token auditable, every context choice explainable, and every agent output reviewable.</text>
+</svg>
