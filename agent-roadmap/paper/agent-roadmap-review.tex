@@ -9,7 +9,7 @@
 
 \title{Agent Coding and Token Economy: A Survey of TUI Agents, IDE Agents, Work Agents, and Context Optimization Infrastructure}
 \author{Agent Roadmap Research Draft}
-\date{Draft v0.2 --- June 2026}
+\date{Draft v0.3 --- June 2026}
 
 \begin{document}
 \maketitle
@@ -19,12 +19,12 @@ AI coding agents have moved from inline code completion toward terminal-native d
 \end{abstract}
 
 \section{Introduction}
-Large language models (LLMs) have transformed software engineering tools from autocomplete systems into agentic systems that can inspect repositories, call tools, run tests, edit files, and coordinate multi-step plans. The visible product surface now includes terminal coding agents such as Claude Code and Aider, IDE agents such as Cursor, Trae, Qoder and Cline, and work agents such as Devin, Kimi Work and Qoder Work. These tools differ not only in user interface but also in context strategy, memory design, model targeting, and degree of autonomy.
+Large language models (LLMs) have transformed software engineering tools from autocomplete systems into agentic systems that can inspect repositories, call tools, run tests, edit files, and coordinate multi-step plans. The visible product surface now includes terminal coding agents such as Claude Code and Aider, IDE agents such as Cursor, Trae, Qoder and Cline, and work agents such as Devin, Kimi Work, Jules and Qoder Work. These tools differ not only in user interface but also in context strategy, memory design, model targeting, and degree of autonomy.
 
 A central theme of this survey is that agent performance is increasingly constrained by context and token economics. The question is no longer only which model can write better code; it is also which runtime can deliver the right context at the right time, avoid redundant tool outputs, preserve useful memory, coordinate parallel workers, and verify generated claims.
 
 \section{Background}
-A coding agent can be described as an LLM-driven process that observes a software environment, reasons over user goals, acts through tools, and produces reviewable artifacts. In practice, agents combine prompts, file-system tools, shell execution, Git integration, repository indexing, and external services through protocols such as MCP.
+A coding agent can be described as an LLM-driven process that observes a software environment, reasons over user goals, acts through tools, and produces reviewable artifacts. In practice, agents combine prompts, file-system tools, shell execution, Git integration, repository indexing, and external services through protocols such as MCP \cite{mcp}.
 
 \section{Formal Definitions}
 \textbf{Definition 1: Coding Agent.} A coding agent is a software system that maps a natural-language software task and an environment state to a sequence of tool-mediated actions and reviewable software artifacts.
@@ -47,10 +47,10 @@ Category & Interface & Unit of Work & Examples \\
 \midrule
 TUI Agent & Terminal & Diff / command loop & Claude Code, Aider \\
 IDE Agent & Editor & File / feature & Cursor, Trae, Qoder \\
-Work Agent & Web / Desktop & Task / PR & Devin, Kimi Work \\
+Work Agent & Web / Desktop & Task / PR & Devin, Jules, Kimi Work \\
 Framework & Library & Runtime graph & LangGraph, AutoGen \\
 Middleware & Proxy / MCP & Context route & Entroly, LeanCTX \\
-Memory Layer & CLI / MCP & Recall & ICM, Obsidian memory \\
+Memory Layer & CLI / MCP & Recall & ICM, Mem0, Letta \\
 Skill & Rule / prompt & Behavior & SKILL.md, Cursor Rules \\
 Parallel Infra & Git / AST & Coordination & Grit, worktrees \\
 \bottomrule
@@ -60,16 +60,16 @@ Parallel Infra & Git / AST & Coordination & Grit, worktrees \\
 \end{table}
 
 \section{TUI Agents}
-Terminal agents expose AI coding as a developer shell. They are effective because they sit close to Git, shells, test runners, package managers, and repository files. Claude Code popularized a terminal-native agent workflow with tool approvals, skills and subagents. Aider provides a mature open-source pair-programming workflow with explicit file context and Git commits. OpenCode and model-specific agents such as Qwen Code or DeepSeek-oriented TUIs show that the terminal surface is becoming a model runtime rather than a mere chat interface.
+Terminal agents expose AI coding as a developer shell. They are effective because they sit close to Git, shells, test runners, package managers, and repository files. Claude Code popularized a terminal-native agent workflow with tool approvals, skills and subagents \cite{anthropic_claude_code}. Aider provides a mature open-source pair-programming workflow with explicit file context and Git commits \cite{aider}. OpenCode and model-specific agents such as Qwen Code or DeepSeek-oriented TUIs show that the terminal surface is becoming a model runtime rather than a mere chat interface.
 
 \section{IDE Agents}
-IDE agents integrate AI into the editor surface. Cursor, Trae, Qoder, Zed, Cline and Roo Code differ in autonomy and model strategy. The IDE surface provides code navigation, inline diffs, diagnostics, and human review loops. However, the market is crowded and differentiation increasingly depends on context engineering, project memory, workflow automation and ecosystem integration.
+IDE agents integrate AI into the editor surface. Cursor, Trae, Qoder, Zed, Cline and Roo Code differ in autonomy and model strategy. The IDE surface provides code navigation, inline diffs, diagnostics, and human review loops. However, the market is crowded and differentiation increasingly depends on context engineering, project memory, workflow automation and ecosystem integration \cite{cline,qoder,trae}.
 
 \section{Work Agents}
-Work agents operate on larger units: tickets, feature requests, refactors, bug fixes, research tasks or pull requests. They typically use a planner-worker-reviewer loop. Devin, Kimi Work, Qoder Work and Factory-like systems suggest a transition from \emph{assistant} to \emph{AI engineering unit}. The work-agent layer is the most relevant comparison point for MiWork.
+Work agents operate on larger units: tickets, feature requests, refactors, bug fixes, research tasks or pull requests. They typically use a planner-worker-reviewer loop. Devin, Google Jules, GitHub Copilot Coding Agent, Kimi Work and Qoder Work suggest a transition from \emph{assistant} to \emph{AI engineering unit} \cite{devin,kimi_work,github_copilot,jules}. The work-agent layer is the most relevant comparison point for MiWork.
 
 \section{Token Economy and Context Optimization}
-Token economy includes command-output filtering, context compression, retrieval, memory, cache alignment, and hallucination verification. Tools such as rtk and Lowfat reduce shell-output tokens. Entroly and LeanCTX operate as context control planes. CodeAgents proposes codified multi-agent reasoning for token-efficient planning, while SupervisorAgent explores runtime supervision to reduce wasted reasoning.
+Token economy includes command-output filtering, context compression, retrieval, memory, cache alignment, and hallucination verification. Tools such as rtk and Lowfat reduce shell-output tokens \cite{rtk,lowfat}. Entroly and LeanCTX operate as context control planes \cite{entroly}. CodeAgents proposes codified multi-agent reasoning for token-efficient planning \cite{codeagents2025}, while SupervisorAgent explores runtime supervision to reduce wasted reasoning \cite{supervisoragent2026}.
 
 \begin{figure}[h]
 \centering
@@ -92,19 +92,31 @@ Token economy includes command-output filtering, context compression, retrieval,
 \end{figure}
 
 \section{Agent Memory and Multi-Agent Coordination}
-Memory systems such as ICM, Claude Code memory setups and MCP memory servers externalize recurring project facts. Multi-agent coordination systems such as Grit reduce wasted work through worktree isolation and function-level locks. These components are essential when a work agent scales from a single coding loop to multiple parallel workers.
+Memory systems such as ICM, Mem0, Letta, Claude Code memory setups and MCP memory servers externalize recurring project facts \cite{icm,mem0,letta}. Multi-agent coordination systems such as Grit reduce wasted work through worktree isolation and function-level locks \cite{grit}. These components are essential when a work agent scales from a single coding loop to multiple parallel workers.
 
 \section{Benchmark Taxonomy}
-A useful benchmark suite for agent systems should include several dimensions:
-\begin{itemize}[leftmargin=*]
-  \item \textbf{Task success}: bug fix, feature implementation, test repair.
-  \item \textbf{Cost}: input tokens, output tokens, tool calls, wall-clock time.
-  \item \textbf{Reviewability}: diff quality, PR summary, test evidence.
-  \item \textbf{Context quality}: relevance, omission risk, hallucination rate.
-  \item \textbf{Coordination}: conflict rate, duplicated work, merge success.
-  \item \textbf{UX}: user trust, interruptibility, progress visibility.
-\end{itemize}
-Existing benchmarks such as SWE-bench are important but insufficient for token economy; future benchmarks should report cost, context selection quality and reviewability alongside correctness.
+A useful benchmark suite for agent systems should include task success, token cost, latency, reviewability, context quality, coordination and UX. Table~\ref{tab:benchmarks} summarizes representative benchmarks.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{llll}
+\toprule
+Benchmark & Domain & Signal & Limitation \\
+\midrule
+HumanEval & Code generation & Pass@k & Short functions \\
+SWE-bench & GitHub issues & Patch success & Issue-style tasks \\
+GAIA & General agents & Tool reasoning & Not SWE-specific \\
+WebArena & Web agents & Browser tasks & Web-only \\
+Web-Bench & Web projects & Sequential features & New benchmark \\
+SWE-Skills-Bench & SWE skills & Skill utility & Narrow intervention \\
+\bottomrule
+\end{tabular}
+\caption{Benchmark taxonomy for coding agents and agent infrastructure.}
+\label{tab:benchmarks}
+\end{table}
+
+Existing benchmarks such as SWE-bench are important but insufficient for token economy; future benchmarks should report cost, context selection quality and reviewability alongside correctness \cite{swebench,webbench,swe_skills_bench,webarena,gaia,humaneval}.
 
 \section{UI / UX Considerations}
 Agent UX is not cosmetic. It defines user trust, task handoff, approval boundaries and error recovery. A research atlas should expose taxonomy, evidence and comparison views. A work agent should show plans, progress, diffs, tests, cost and residual risks. For MiWork, UI should communicate not just what the agent did but also which context was used and why.
@@ -116,8 +128,31 @@ MiWork = Mimo-specific Agent Runtime + Token Compression + Work Agent Workflow.
 \end{quote}
 The opportunity is not to clone Cursor or Trae. Instead, MiWork should target model-specific optimization for Mimo and adjacent Chinese model ecosystems such as DeepSeek, Qwen and Kimi. A minimal roadmap is: research atlas, Mimo CLI/TUI, context compression layer, desktop/web work agent, multi-agent worktree execution, and enterprise workflow automation.
 
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node distance=1.2cm, every node/.style={font=\small}, box/.style={draw, rounded corners, align=center, minimum width=2.5cm, minimum height=.8cm}]
+\node[box] (task) {User Task};
+\node[box, right=of task] (planner) {Planner};
+\node[box, right=of planner] (context) {Context Economy\\RepoMap / AST / Memory};
+\node[box, right=of context] (runtime) {Mimo Runtime};
+\node[box, below=of planner] (workers) {Worker Agents\\Worktrees};
+\node[box, below=of context] (review) {Reviewer};
+\node[box, below=of runtime] (pr) {PR Agent};
+\draw[-{Latex}] (task) -- (planner);
+\draw[-{Latex}] (planner) -- (context);
+\draw[-{Latex}] (context) -- (runtime);
+\draw[-{Latex}] (planner) -- (workers);
+\draw[-{Latex}] (context) -- (review);
+\draw[-{Latex}] (runtime) -- (pr);
+\draw[-{Latex}] (workers) -- (review);
+\draw[-{Latex}] (review) -- (pr);
+\end{tikzpicture}
+\caption{MiWork architecture sketch.}
+\label{fig:miwork}
+\end{figure}
+
 \section{Related Work}
-Related systems include terminal agents, IDE agents, work agents, multi-agent frameworks, memory systems and context middleware. LangGraph, AutoGen and CrewAI provide agent orchestration abstractions. SWE-agent and OpenHands focus on software-engineering tasks. rtk, Lowfat, Entroly and LeanCTX focus on context and token efficiency. ICM and memory-server patterns focus on persistent recall.
+Related systems span five areas. First, coding assistants and agents include Claude Code, Codex, Copilot, Aider, Cline and Qoder \cite{anthropic_claude_code,aider,cline,qoder,github_copilot}. Second, work agents such as Devin, Jules and Kimi Work target asynchronous issue-to-PR execution \cite{devin,jules,kimi_work}. Third, orchestration frameworks such as LangGraph, AutoGen, CrewAI, smolagents, MetaGPT and AgentScope provide abstractions for stateful or multi-agent workflows \cite{langgraph,autogen,crewai,smolagents,metagpt,agentscope}. Fourth, token economy middleware such as rtk, Entroly, Lowfat and LiteLLM address cost, context routing and provider abstraction \cite{rtk,entroly,lowfat,litellm}. Fifth, memory systems and protocols such as ICM, Mem0, Letta and MCP externalize project memory and tool access \cite{icm,mem0,letta,mcp}.
 
 \section{Open Problems}
 \begin{itemize}[leftmargin=*]
