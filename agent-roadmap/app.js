@@ -20,6 +20,8 @@ function init(){
   });
   $('cardViewBtn').addEventListener('click', () => setView('cards'));
   $('matrixViewBtn').addEventListener('click', () => setView('matrix'));
+  $('exportJsonBtn').addEventListener('click', () => exportJson(filtered()));
+  $('exportCsvBtn').addEventListener('click', () => exportCsv(filtered()));
   $('detailClose').addEventListener('click', () => selectAgent(null));
   renderStatic();
   render();
@@ -30,7 +32,7 @@ function filtered(){
   const q = state.query.toLowerCase();
   return agents.filter(a => {
     const tokenFocused = /token|context|memory|cache|rag|filter|compression|优化/i.test([a.category,a.optimizationFocus,a.tokenStrategy,a.tags?.join(' ')].join(' '));
-    const hay = [a.name,a.category,a.subcategory,a.interfaceType,a.maturity,a.modelTarget,a.optimizationFocus,a.tokenStrategy,a.agentArchitecture,a.bestFor,a.tags?.join(' ')].join(' ');
+    const hay = [a.name,a.category,a.subcategory,a.interfaceType,a.maturity,a.modelTarget,a.optimizationFocus,a.tokenStrategy,a.agentArchitecture,a.bestFor,a.tags?.join(' '),a.sources?.map(s=>s.title).join(' ')].join(' ');
     return (!q || includes(hay, q)) &&
       (state.category === 'All' || a.category === state.category) &&
       (state.interfaceType === 'All' || a.interfaceType === state.interfaceType) &&
@@ -54,7 +56,6 @@ function renderStatic(){
 function render(){
   const list = filtered();
   const high = agents.filter(a => a.miWorkRelevance === 'High').length;
-  const token = agents.filter(a => /Token|Context|Memory|Middleware|Optimization/i.test(a.category + ' ' + a.optimizationFocus)).length;
   $('stats').innerHTML = [
     ['Total', agents.length], ['Visible', list.length], ['TUI', count('TUI Agent')], ['IDE', count('IDE Agent')], ['Work', count('Work Agent')], ['MiWork High', high]
   ].map(([k,v]) => `<div class="stat"><b>${v}</b><span>${k}</span></div>`).join('');
@@ -78,10 +79,11 @@ function selectAgent(a, scroll = true){
   $('detailTitle').textContent = a.name;
   $('detailSummary').textContent = `${a.subcategory} · ${a.bestFor}`;
   $('detailMeta').innerHTML = [['Category',a.category],['Interface',a.interfaceType],['Model',a.modelTarget],['Risk',a.riskLevel],['MiWork',a.miWorkRelevance],['Focus',a.optimizationFocus]].map(m => `<div class="meta-item"><small>${escapeHtml(m[0])}</small><b>${escapeHtml(m[1])}</b></div>`).join('');
-  $('detailLists').innerHTML = `<div class="detail-list"><h4>Token Strategy</h4><p>${escapeHtml(a.tokenStrategy)}</p></div><div class="detail-list"><h4>Architecture</h4><p>${escapeHtml(a.agentArchitecture)}</p></div>${listBlock('Strengths', a.strengths)}${listBlock('Weaknesses', a.weaknesses)}<div class="detail-list"><h4>Links</h4><p><a href="${escapeHtml(a.link)}" target="_blank" rel="noopener">Open source / docs</a>${a.repo ? ` · <code>${escapeHtml(a.repo)}</code>` : ''}</p></div>`;
+  $('detailLists').innerHTML = `<div class="detail-list"><h4>Token Strategy</h4><p>${escapeHtml(a.tokenStrategy)}</p></div><div class="detail-list"><h4>Architecture</h4><p>${escapeHtml(a.agentArchitecture)}</p></div>${listBlock('Strengths', a.strengths)}${listBlock('Weaknesses', a.weaknesses)}${sourceBlock(a.sources)}<div class="detail-list"><h4>Links</h4><p><a href="${escapeHtml(a.link)}" target="_blank" rel="noopener">Open source / docs</a>${a.repo ? ` · <code>${escapeHtml(a.repo)}</code>` : ''}</p></div>`;
   if (scroll && matchMedia('(max-width: 1080px)').matches) $('detailPanel').scrollIntoView({behavior:'smooth', block:'start'});
 }
 function listBlock(title, arr){ return `<div class="detail-list"><h4>${escapeHtml(title)}</h4><ul>${(arr || []).map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul></div>`; }
+function sourceBlock(sources){ return `<div class="detail-list"><h4>Citation Sources</h4><ul>${(sources || []).map(s => `<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a> <span class="source-type">${escapeHtml(s.type || 'source')}</span></li>`).join('')}</ul></div>`; }
 function pills(arr){ return arr.map(x => `<span>${escapeHtml(x)}</span>`).join(''); }
 function groupBy(list, key){ return list.reduce((acc,a)=>{ acc[a[key] || 'Other']=(acc[a[key] || 'Other']||0)+1; return acc; },{}); }
 function count(cat){ return agents.filter(a => a.category === cat).length; }
@@ -92,4 +94,12 @@ function radarCards(list){
   ];
   return buckets.map(([name, pattern]) => { const re = new RegExp(pattern,'i'); const n = list.filter(a => re.test([a.category,a.optimizationFocus,a.tokenStrategy,a.agentArchitecture,a.tags?.join(' ')].join(' '))).length; return `<article class="radar-card"><b>${n}</b><span>${name}</span></article>`; }).join('');
 }
+function exportJson(list){ downloadFile('agent-roadmap-filtered.json', JSON.stringify(list, null, 2), 'application/json'); }
+function exportCsv(list){
+  const cols = ['id','name','category','interfaceType','maturity','modelTarget','optimizationFocus','tokenStrategy','miWorkRelevance','link'];
+  const rows = [cols.join(',')].concat(list.map(a => cols.map(c => csvCell(a[c])).join(',')));
+  downloadFile('agent-roadmap-filtered.csv', rows.join('\n'), 'text/csv');
+}
+function csvCell(v){ return `"${String(v ?? '').replace(/"/g,'""')}"`; }
+function downloadFile(name, content, type){ const blob = new Blob([content], {type}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = name; a.click(); URL.revokeObjectURL(url); }
 init();
