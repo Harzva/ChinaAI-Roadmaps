@@ -1,5 +1,11 @@
 # Agent Roadmap
 
+<p align="center">
+  <a href="https://harzva.github.io/ChinaAI-Roadmaps/agent-roadmap/">
+    <img src="assets/agent-roadmap-preview.svg" width="980" alt="Agent Roadmap GitHub Pages preview">
+  </a>
+</p>
+
 Agent Roadmap 是 ChinaAI Roadmaps 的独立静态子页面，聚焦 AI Coding Agents、Work Agents、Agent Frameworks、Memory Layer、Context Middleware 与 Token Economy。
 
 在线部署路径预期为：
@@ -23,7 +29,11 @@ agent-roadmap/
 ├── styles.css
 ├── app.js
 ├── data/
-│   └── agents.js
+│   ├── agents.js
+│   └── sources.js
+├── assets/
+│   ├── agent-roadmap-preview.svg
+│   └── miwork-architecture.svg
 ├── paper/
 │   ├── agent-roadmap-review.tex
 │   ├── references.bib
@@ -38,19 +48,21 @@ agent-roadmap/
 - 筛选：分类、界面类型、成熟度、模型目标、MiWork 相关性、Token Focus。
 - Card View：适合浏览研究卡片。
 - Matrix View：适合横向比较。
-- Detail Panel：查看 token strategy、architecture、strengths、weaknesses。
+- Detail Panel：查看 token strategy、architecture、strengths、weaknesses、citation sources。
+- Export JSON / CSV：导出当前筛选结果，便于论文表格、二次分析或数据审阅。
 - MiWork Opportunity：Phase 0 到 Phase 5 路线图、技术模块、风险和机会。
 
 ## 数据模型
 
-数据维护在 `data/agents.js`。
+数据维护在 `data/agents.js`，引用来源补丁维护在 `data/sources.js`。
 
 每条记录包含：
 
 ```js
 id, name, category, subcategory, interfaceType, maturity, licenseType,
 modelTarget, optimizationFocus, tokenStrategy, agentArchitecture,
-strengths, weaknesses, bestFor, riskLevel, miWorkRelevance, link, repo, tags
+strengths, weaknesses, bestFor, riskLevel, miWorkRelevance, link, repo, tags,
+sources
 ```
 
 ## 设计原则
@@ -63,12 +75,20 @@ strengths, weaknesses, bestFor, riskLevel, miWorkRelevance, link, repo, tags
 - 细边框与渐变光晕
 - 清晰 taxonomy
 - 移动端 bottom navigation
+- Matrix View / detail panel / export buttons
+
+## MiWork Architecture
+
+<p align="center">
+  <img src="assets/miwork-architecture.svg" width="960" alt="MiWork architecture diagram">
+</p>
 
 ## 验证清单
 
 - `index.html` 可直接本地打开。
 - 搜索和筛选可正常工作。
 - Card View / Matrix View 可切换。
+- Export JSON / CSV 可导出当前筛选结果。
 - 点击卡片可打开详情侧栏。
 - `paper/agent-roadmap-review.tex` 与 `paper/references.bib` 存在。
 - 根目录 `index.html` 有 `Agent Map` 入口。
