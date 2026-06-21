@@ -15,6 +15,7 @@
     activeCategory: "All",
     query: "",
     selected: null,
+    selectedCountry: null,
     hover: null,
     labels: true,
     density: true,
@@ -42,9 +43,32 @@
     const x = Math.sin(n * 12.9898 + 78.233) * 43758.5453;
     return x - Math.floor(x);
   };
+  const isWorld = () => state.data?.mapMode === "world";
+  const hasGeo = (n) => Number.isFinite(n?.lng) && Number.isFinite(n?.lat);
+  const countryLabel = (country) => ({
+    "United States": "United States · 美国",
+    China: "China · 中国",
+    India: "India · 印度",
+    Japan: "Japan · 日本",
+    Taiwan: "Taiwan · 台湾",
+    Singapore: "Singapore · 新加坡"
+  }[country] || country || "Unknown");
+  const WORLD_LAND = [
+    [[-168, 72], [-142, 70], [-124, 58], [-118, 49], [-100, 50], [-84, 46], [-72, 44], [-54, 52], [-58, 62], [-92, 72], [-132, 74]],
+    [[-125, 49], [-117, 32], [-105, 24], [-96, 16], [-90, 18], [-84, 8], [-78, 9], [-80, 24], [-96, 31], [-112, 38]],
+    [[-81, 12], [-70, 8], [-60, -4], [-50, -20], [-60, -38], [-70, -55], [-78, -40], [-73, -18]],
+    [[-18, 34], [-6, 52], [18, 58], [45, 52], [60, 42], [38, 30], [28, 18], [32, 0], [24, -18], [16, -35], [0, -34], [-10, -10], [-16, 12]],
+    [[-10, 72], [20, 72], [42, 66], [78, 58], [104, 55], [142, 58], [174, 66], [178, 48], [144, 42], [116, 32], [104, 20], [80, 8], [68, 24], [42, 28], [30, 40], [8, 44], [-8, 42]],
+    [[68, 24], [78, 8], [90, 7], [102, 1], [112, -8], [104, -18], [86, -4], [72, 8]],
+    [[112, -12], [154, -10], [154, -36], [132, -44], [114, -30]],
+    [[42, 34], [50, 28], [58, 22], [48, 14], [42, 20]],
+    [[130, 44], [144, 42], [146, 34], [136, 32], [128, 38]],
+    [[-52, 74], [-28, 78], [-18, 68], [-42, 62]]
+  ];
 
   function createRoadmap(data) {
     state.data = data;
+    document.body.classList.toggle("world-mode", isWorld());
     document.title = data.title + " · ChinaAI Roadmaps";
     document.documentElement.style.setProperty("--cyan", data.theme?.cyan || "#6feee0");
     document.documentElement.style.setProperty("--green", data.theme?.green || "#78e08f");
@@ -248,6 +272,10 @@
   }
 
   function renderList() {
+    if (isWorld()) {
+      renderCountryList();
+      return;
+    }
     const nodes = filteredNodes().slice().sort((a, b) => (b.score || 0) - (a.score || 0) || a.name.localeCompare(b.name));
     const max = Math.max(...state.data.nodes.map((n) => n.score || 1), 1);
     $("rankList").innerHTML = nodes.map((n) => {
@@ -260,6 +288,74 @@
       </button>`;
     }).join("") || `<div class="detail-block"><p>No results.</p></div>`;
     $("rankList").querySelectorAll("[data-id]").forEach((btn) => {
+      btn.onclick = () => selectNode(state.data.nodes.find((n) => n.id === btn.dataset.id));
+    });
+  }
+
+  function countryStats() {
+    const map = new Map();
+    for (const n of filteredNodes()) {
+      const country = n.country || "Unknown";
+      const cur = map.get(country) || { country, nodes: [], score: 0, categories: new Set() };
+      cur.nodes.push(n);
+      cur.score += n.score || 0;
+      cur.categories.add(n.category);
+      map.set(country, cur);
+    }
+    return [...map.values()].map((d) => ({
+      ...d,
+      count: d.nodes.length,
+      orgs: new Set(d.nodes.map((n) => n.org || n.name)).size,
+      avgScore: Math.round(d.score / Math.max(1, d.nodes.length)),
+      categories: [...d.categories]
+    })).sort((a, b) => b.count - a.count || b.avgScore - a.avgScore || a.country.localeCompare(b.country));
+  }
+
+  function renderCountryList() {
+    const stats = countryStats();
+    const max = Math.max(...stats.map((d) => d.count), 1);
+    $("rankList").innerHTML = stats.map((d) => {
+      const active = state.selectedCountry === d.country ? "active" : "";
+      const w = Math.round((d.count / max) * 100);
+      return `<button class="rank-item ${active}" data-country="${esc(d.country)}">
+        <span><b>${esc(countryLabel(d.country))}</b><small>${d.orgs} orgs · ${d.count} agent nodes · ${esc(d.categories.slice(0, 3).join(" / "))}</small></span>
+        <strong class="rank-score">${d.count}</strong>
+        <span class="progress"><i style="--w:${w}%"></i></span>
+      </button>`;
+    }).join("") || `<div class="detail-block"><p>No results.</p></div>`;
+    $("rankList").querySelectorAll("[data-country]").forEach((btn) => {
+      btn.onclick = () => selectCountry(btn.dataset.country);
+    });
+  }
+
+  function selectCountry(country) {
+    const nodes = state.data.nodes.filter((n) => n.country === country && hasGeo(n));
+    if (!nodes.length) return;
+    state.selectedCountry = country;
+    state.selected = null;
+    const center = nodes.reduce((acc, n) => ({ lng: acc.lng + n.lng, lat: acc.lat + n.lat }), { lng: 0, lat: 0 });
+    center.lng /= nodes.length;
+    center.lat /= nodes.length;
+    flyToGeo(center.lng, center.lat, nodes.length > 7 ? 1.85 : 2.35);
+    renderCountryDetail(country, nodes);
+    renderCountryList();
+  }
+
+  function renderCountryDetail(country, nodes) {
+    const byScore = nodes.slice().sort((a, b) => (b.score || 0) - (a.score || 0));
+    $("detail").innerHTML = `
+      <p class="detail-kicker">Country / Agent 生态视角</p>
+      <h2 class="detail-title">${esc(countryLabel(country))}</h2>
+      <p class="detail-subtitle">该区域聚合了 ${nodes.length} 个 Agent OS、运行时、编程 Agent、记忆层或科研 Agent 节点。点击项目节点可以查看具体定位和路线。</p>
+      <div class="badges">
+        <span class="badge">${new Set(nodes.map((n) => n.org || n.name)).size} orgs</span>
+        <span class="badge">${nodes.length} nodes</span>
+        ${[...new Set(nodes.map((n) => n.category))].slice(0, 5).map((c) => `<span class="badge">${esc(c)}</span>`).join("")}
+      </div>
+      <div class="detail-grid">${byScore.slice(0, 4).map((n) => `<button class="metric-tile node-tile" data-id="${esc(n.id)}"><b>${esc(n.short || n.name)}</b><span>${esc(n.category)}</span></button>`).join("")}</div>
+      <div class="detail-block"><h3>代表节点</h3><ul>${byScore.slice(0, 8).map((n) => `<li>${esc(n.name)} · ${esc(n.org || n.city || n.category)} · ${esc(n.subtitle || "")}</li>`).join("")}</ul></div>
+    `;
+    $("detail").querySelectorAll("[data-id]").forEach((btn) => {
       btn.onclick = () => selectNode(state.data.nodes.find((n) => n.id === btn.dataset.id));
     });
   }
@@ -286,6 +382,7 @@
   function selectNode(node, fly = true) {
     if (!node) return;
     state.selected = node;
+    state.selectedCountry = null;
     if (fly) flyTo(node);
     renderDetail(node);
     renderList();
@@ -300,6 +397,9 @@
       <p class="detail-subtitle">${esc(n.subtitle || "")}</p>
       <div class="badges">
         <span class="badge">${esc(n.category)}</span>
+        ${n.country ? `<span class="badge">${esc(countryLabel(n.country))}</span>` : ""}
+        ${n.city ? `<span class="badge">${esc(n.city)}</span>` : ""}
+        ${n.org ? `<span class="badge">${esc(n.org)}</span>` : ""}
         ${n.stage ? `<span class="badge">${esc(n.stage)}</span>` : ""}
         ${n.year ? `<span class="badge">${esc(n.year)}</span>` : ""}
         ${(n.tags || []).slice(0, 6).map((t) => `<span class="badge">${esc(t)}</span>`).join("")}
@@ -311,6 +411,7 @@
   }
 
   function projectRaw(n) {
+    if (isWorld() && hasGeo(n)) return projectGeo(n.lng, n.lat);
     const base = Math.min(state.w, state.h) * 0.82;
     let x = n.x;
     let y = n.y;
@@ -325,6 +426,18 @@
       x: state.w / 2 + (x - 0.5) * base * 1.56 * state.zoom + state.panX,
       y: state.h / 2 + (y - 0.5) * base * state.zoom + state.panY
     };
+  }
+
+  function geoScale() {
+    return Math.min(state.w / 2.18, state.h / 1.12) * state.zoom;
+  }
+
+  function projectGeo(lng, lat) {
+    const s = geoScale();
+    const x = state.w / 2 + state.panX + (lng / 180) * s * 1.08;
+    const curve = Math.sin((lng / 180) * Math.PI) * Math.cos((lat / 90) * Math.PI * 0.5) * s * 0.04;
+    const y = state.h / 2 + state.panY - (lat / 90) * s * 0.73 + curve;
+    return { x, y };
   }
 
   function nodeRadius(n) {
@@ -346,10 +459,23 @@
   }
 
   function flyTo(n) {
+    if (isWorld() && hasGeo(n)) {
+      flyToGeo(n.lng, n.lat, 2.25);
+      return;
+    }
     const p = projectRaw(n);
     state.targetPanX += state.w / 2 - p.x;
     state.targetPanY += state.h / 2 - p.y;
     state.targetZoom = clamp(state.targetZoom * 1.12, 0.84, 2.1);
+  }
+
+  function flyToGeo(lng, lat, zoom = 2.2) {
+    const nextZoom = clamp(zoom, 0.82, 2.65);
+    const s = Math.min(state.w / 2.18, state.h / 1.12) * nextZoom;
+    const curve = Math.sin((lng / 180) * Math.PI) * Math.cos((lat / 90) * Math.PI * 0.5) * s * 0.04;
+    state.targetZoom = nextZoom;
+    state.targetPanX = -(lng / 180) * s * 1.08;
+    state.targetPanY = (lat / 90) * s * 0.73 - curve;
   }
 
   function resetView() {
@@ -357,6 +483,7 @@
     state.targetPanY = 0;
     state.targetZoom = 1;
     state.selected = null;
+    state.selectedCountry = null;
     renderDefaultDetail();
     renderList();
     toast("Global view");
@@ -376,9 +503,11 @@
 
     ctx.clearRect(0, 0, state.w, state.h);
     drawBackdrop(ctx, t);
-    drawLanes(ctx);
+    if (isWorld()) drawWorldMap(ctx);
+    else drawLanes(ctx);
     if (state.flow) drawRelations(ctx, t);
     if (state.density) drawDensity(ctx, t);
+    if (isWorld() && state.density) drawWorldParticles(ctx, t);
     drawNodes(ctx, t);
     requestAnimationFrame(draw);
   }
@@ -443,6 +572,80 @@
     ctx.restore();
   }
 
+  function drawWorldMap(ctx) {
+    ctx.save();
+    drawGraticule(ctx);
+    ctx.translate(0, 10 * state.zoom);
+    for (const poly of WORLD_LAND) {
+      ctx.beginPath();
+      poly.forEach(([lng, lat], i) => {
+        const p = projectGeo(lng, lat);
+        if (i === 0) ctx.moveTo(p.x, p.y);
+        else ctx.lineTo(p.x, p.y);
+      });
+      ctx.closePath();
+      ctx.fillStyle = "rgba(8, 18, 31, .58)";
+      ctx.strokeStyle = "rgba(139, 184, 224, .23)";
+      ctx.lineWidth = 1.1;
+      ctx.shadowColor = "rgba(105, 223, 255, .12)";
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    }
+    ctx.restore();
+    drawCountryGlows(ctx);
+  }
+
+  function drawGraticule(ctx) {
+    ctx.save();
+    ctx.strokeStyle = "rgba(155, 193, 226, .12)";
+    ctx.lineWidth = 0.8;
+    for (let lng = -180; lng <= 180; lng += 20) {
+      ctx.beginPath();
+      for (let lat = -65; lat <= 78; lat += 4) {
+        const p = projectGeo(lng, lat);
+        if (lat === -65) ctx.moveTo(p.x, p.y);
+        else ctx.lineTo(p.x, p.y);
+      }
+      ctx.stroke();
+    }
+    for (let lat = -60; lat <= 80; lat += 10) {
+      ctx.beginPath();
+      for (let lng = -180; lng <= 180; lng += 5) {
+        const p = projectGeo(lng, lat);
+        if (lng === -180) ctx.moveTo(p.x, p.y);
+        else ctx.lineTo(p.x, p.y);
+      }
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawCountryGlows(ctx) {
+    const stats = countryStats();
+    ctx.save();
+    ctx.globalCompositeOperation = "lighter";
+    for (const d of stats) {
+      const nodes = d.nodes.filter(hasGeo);
+      if (!nodes.length) continue;
+      const center = nodes.reduce((acc, n) => ({ lng: acc.lng + n.lng, lat: acc.lat + n.lat }), { lng: 0, lat: 0 });
+      center.lng /= nodes.length;
+      center.lat /= nodes.length;
+      const p = projectGeo(center.lng, center.lat);
+      const r = (36 + d.count * 12) * clamp(state.zoom, 0.78, 1.65);
+      const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r);
+      g.addColorStop(0, "rgba(111,238,224,.18)");
+      g.addColorStop(0.42, "rgba(120,224,143,.055)");
+      g.addColorStop(1, "rgba(111,238,224,0)");
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
   function drawRelations(ctx, t) {
     const nodesById = new Map(state.data.nodes.map((n) => [n.id, n]));
     ctx.save();
@@ -476,6 +679,7 @@
     ctx.save();
     ctx.globalCompositeOperation = "lighter";
     for (const n of filteredNodes()) {
+      if (isWorld() && state.selectedCountry && n.country !== state.selectedCountry) continue;
       const p = projectRaw(n);
       const r = (22 + (n.score || 40) * 0.42) * state.zoom;
       const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r);
@@ -491,6 +695,41 @@
     ctx.restore();
   }
 
+  function drawWorldParticles(ctx, t) {
+    ctx.save();
+    ctx.globalCompositeOperation = "lighter";
+    for (const n of filteredNodes()) {
+      if (!hasGeo(n)) continue;
+      if (state.selectedCountry && n.country !== state.selectedCountry) continue;
+      const p = projectRaw(n);
+      const count = Math.min(32, 8 + Math.round((n.score || 50) / 6));
+      const color = colorFor(n.category);
+      for (let i = 0; i < count; i++) {
+        const seed = hash(n.id + ":" + i);
+        const a = seeded(seed) * Math.PI * 2 + t * 0.00012 * (seeded(seed + 1) - 0.5);
+        const radius = (10 + Math.pow(seeded(seed + 2), 0.55) * 58) * clamp(state.zoom, 0.76, 1.7);
+        const x = p.x + Math.cos(a) * radius;
+        const y = p.y + Math.sin(a) * radius * 0.58;
+        const size = 0.8 + seeded(seed + 3) * 2.1;
+        const alpha = 0.18 + seeded(seed + 4) * 0.42;
+        ctx.fillStyle = hexToRgba(color, alpha);
+        if (seeded(seed + 5) > 0.91) {
+          ctx.beginPath();
+          ctx.moveTo(x, y - size * 1.5);
+          ctx.lineTo(x + size * 1.25, y + size);
+          ctx.lineTo(x - size * 1.25, y + size);
+          ctx.closePath();
+          ctx.fill();
+        } else {
+          ctx.beginPath();
+          ctx.arc(x, y, size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+    }
+    ctx.restore();
+  }
+
   function drawNodes(ctx, t) {
     ctx.save();
     for (const n of filteredNodes()) {
@@ -499,9 +738,11 @@
       const color = colorFor(n.category);
       const selected = state.selected && state.selected.id === n.id;
       const hover = state.hover && state.hover.id === n.id;
+      const dimmed = isWorld() && state.selectedCountry && n.country !== state.selectedCountry && !selected;
       const r = nodeRadius(n) * (selected ? 1.4 : hover ? 1.22 : 1);
       ctx.save();
       ctx.globalCompositeOperation = "lighter";
+      ctx.globalAlpha = dimmed ? 0.28 : 1;
       ctx.shadowColor = color;
       ctx.shadowBlur = selected ? 26 : hover ? 18 : 10;
       ctx.fillStyle = color;
@@ -524,8 +765,9 @@
       ctx.stroke();
       ctx.restore();
 
-      if (state.labels || selected || hover) {
+      if ((state.labels && (!isWorld() || state.zoom > 0.88 || selected || hover)) || selected || hover) {
         ctx.save();
+        ctx.globalAlpha = dimmed ? 0.2 : 1;
         ctx.font = `${selected ? 900 : 800} 12px system-ui`;
         ctx.textAlign = "center";
         ctx.textBaseline = "top";
