@@ -12,6 +12,7 @@ window.ROADMAP_DATA = {
     { label: "Agent Map", href: "../agent-roadmap/" },
     { label: "World Map", href: "../worldroadmap/" },
     { label: "Reasoning Map", href: "../reasoning-roadmap/" },
+    { label: "Multi-Agent Map", href: "../multi-agent-roadmap/" },
     { label: "MiWork", href: "../miwork/" },
     { label: "Dev Docs", href: "../developer-docs/" },
     { label: "API CLI", href: "../provider-api-cli/" },
