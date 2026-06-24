@@ -11,6 +11,7 @@ window.ROADMAP_DATA = {
   nav: [
     { label: "Agent Map", href: "../agent-roadmap/" },
     { label: "World Map", href: "../worldroadmap/" },
+    { label: "Reasoning Map", href: "../reasoning-roadmap/" },
     { label: "MiWork", href: "../miwork/" },
     { label: "Dev Docs", href: "../developer-docs/" },
     { label: "API CLI", href: "../provider-api-cli/" },
