@@ -6,11 +6,69 @@
   <title>Reasoning Map · 单智能体推理范式全景</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050708'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23a78bfa'/%3E%3C/svg%3E"/>
   <link rel="stylesheet" href="../roadmap-core/atlas.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div id="app"></div>
   <script src="../roadmap-core/atlas.js"></script>
   <script src="data.js"></script>
-  <script>createRoadmap(window.ROADMAP_DATA);</script>
+  <script>
+    createRoadmap(window.ROADMAP_DATA);
+
+    // Inject WorldMap-style extra elements
+    (function() {
+      const app = document.getElementById('app');
+      if (!app) return;
+
+      // Top title banner
+      const topTitle = document.createElement('div');
+      topTitle.className = 'top-title';
+      topTitle.innerHTML = 'REASONING PARADIGMS<small>COT · REACT · REFLEXION · TOT · CRITIC · PREFLECT</small>';
+      app.appendChild(topTitle);
+
+      // Shortcut panel
+      const shortcuts = document.createElement('div');
+      shortcuts.className = 'shortcut-panel';
+      shortcuts.innerHTML = `
+        <b>快捷键 / Shortcuts</b>
+        <span><kbd>H</kbd> 全局视角</span>
+        <span><kbd>L</kbd> 标签显隐</span>
+        <span><kbd>D</kbd> 密度星云</span>
+        <span><kbd>F</kbd> 流光关系</span>
+        <span><kbd>M</kbd> 矩阵模式</span>
+        <span><kbd>/</kbd> 搜索</span>
+        <span><kbd>Esc</kbd> 清除选择</span>
+      `;
+      app.appendChild(shortcuts);
+
+      // HUD
+      const hud = document.createElement('div');
+      hud.className = 'hud';
+      hud.innerHTML = '<b>AGENT</b><span>Reasoning · Reflection · Search</span>';
+      app.appendChild(hud);
+
+      // Compass
+      const compass = document.createElement('div');
+      compass.className = 'compass';
+      compass.textContent = 'Wheel Zoom · Drag Pan · Click Focus';
+      app.appendChild(compass);
+
+      // Mini version
+      const mini = document.createElement('div');
+      mini.className = 'mini-version';
+      mini.innerHTML = 'Reasoning Map v2 · <span id="miniFps">-- FPS</span>';
+      app.appendChild(mini);
+
+      // Hook into atlas.js FPS counter
+      const atlasFps = document.getElementById('fps');
+      const miniFps = document.getElementById('miniFps');
+      if (atlasFps && miniFps) {
+        const observer = new MutationObserver(() => {
+          miniFps.textContent = atlasFps.textContent;
+        });
+        observer.observe(atlasFps, { childList: true });
+      }
+    })();
+  </script>
 </body>
 </html>

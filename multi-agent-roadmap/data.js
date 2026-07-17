@@ -1,6 +1,6 @@
 window.ROADMAP_DATA = {
   id: "multiagentroadmap",
-  kicker: "Multi-Agent Worldmap v1",
+  kicker: "Multi-Agent Worldmap v2",
   title: "多智能体协作模式全景地图",
   subtitle: "六大主流模式：Pipeline → Supervisor → Hierarchical → Blackboard → Debate → Swarm，覆盖 29 篇论文 + 8 大框架 + 3 大协议。",
   captionTitle: "Multi-Agent Patterns · Frameworks · Protocols",
@@ -51,7 +51,8 @@ window.ROADMAP_DATA = {
     { value: "29", label: "核心论文" },
     { value: "8", label: "主流框架" },
     { value: "6", label: "协作模式" },
-    { value: "3", label: "通信协议" }
+    { value: "3", label: "通信协议" },
+    { value: "17", label: "开源仓库" }
   ],
   defaultDetail: {
     title: "多智能体不是简单的 Agent 叠加",

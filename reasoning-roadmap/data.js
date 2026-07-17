@@ -1,6 +1,6 @@
 window.ROADMAP_DATA = {
   id: "reasoningroadmap",
-  kicker: "Reasoning Worldmap v1",
+  kicker: "Reasoning Worldmap v2",
   title: "单智能体推理范式全景地图",
   subtitle: "从 CoT 到 PreFlect：展示 LLM Agent 的 21 种思考方式、技术演进路线和生产组合决策。",
   captionTitle: "Reasoning Paradigm · Evolution · Decision Tree",
@@ -48,7 +48,8 @@ window.ROADMAP_DATA = {
     { value: "21", label: "核心论文" },
     { value: "7", label: "范式家族" },
     { value: "5", label: "演进层" },
-    { value: "6", label: "顶尖机构" }
+    { value: "6", label: "顶尖机构" },
+    { value: "2022", label: "起始年份" }
   ],
   defaultDetail: {
     title: "单智能体推理不是单一技术",
