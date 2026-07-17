@@ -1,0 +1,416 @@
+/* WorldMap-style overrides for atlas.js-based roadmap */
+/* MiWork Roadmap — Deep Space Nebula Theme (Mint accent) */
+
+:root {
+  --accent: #7df9e5;
+  --accent2: #8df086;
+  --accent-glow: rgba(125, 249, 229, 0.22);
+  --panel-deep: rgba(6, 14, 12, 0.78);
+  --panel-deep2: rgba(10, 22, 18, 0.86);
+}
+
+/* Deep space background overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(40, 110, 100, 0.20), transparent 38%),
+    radial-gradient(circle at 22% 44%, rgba(255, 100, 80, 0.06), transparent 30%),
+    radial-gradient(circle at 78% 36%, rgba(80, 230, 140, 0.07), transparent 28%),
+    linear-gradient(180deg, #070f0c, #050a09 72%, #020303);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scan lines */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 4px;
+  opacity: 0.18;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Panels — worldmap roundness + deep tint */
+.panel {
+  border-radius: 18px !important;
+  background: linear-gradient(180deg, var(--panel-deep2), var(--panel-deep)) !important;
+  border-color: rgba(125, 249, 229, 0.13) !important;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.52), 0 0 0 1px rgba(0,0,0,0.3) !important;
+}
+
+/* Hero panel */
+.hero {
+  width: min(500px, calc(100vw - 32px)) !important;
+  padding: 18px 20px !important;
+  border-radius: 18px !important;
+}
+
+.hero h1 {
+  max-width: none !important;
+  font-size: 29px !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.05 !important;
+}
+
+.kicker {
+  font-size: 11px !important;
+  letter-spacing: 0.12em !important;
+}
+
+.kicker::before {
+  box-shadow: 0 0 18px var(--accent) !important;
+}
+
+/* Top title banner (injected via JS) */
+.top-title {
+  position: fixed;
+  left: 50%;
+  top: 18px;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 14px 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(125, 249, 229, 0.14);
+  background: rgba(6, 14, 12, 0.70);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 0 80px rgba(125, 249, 229, 0.08);
+  letter-spacing: 0.22em;
+  font-weight: 950;
+  font-size: 22px;
+  white-space: nowrap;
+  z-index: 4;
+  color: var(--text);
+  pointer-events: none;
+}
+.top-title small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+/* Stats — worldmap style */
+.stats {
+  top: 108px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  gap: 10px !important;
+  width: auto !important;
+  min-width: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.stat {
+  min-width: 110px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(125, 249, 229, 0.13);
+  background: rgba(6, 14, 12, 0.66);
+  backdrop-filter: blur(14px);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(125, 249, 229, 0.45), transparent);
+  opacity: 0.85;
+}
+
+.stat b {
+  font-size: 22px !important;
+  line-height: 1 !important;
+}
+
+.stat span {
+  font-size: 11px !important;
+  margin-top: 5px !important;
+}
+
+/* Controls */
+.controls {
+  top: 18px !important;
+  right: 18px !important;
+  gap: 8px !important;
+}
+
+.control-button,
+.chip,
+.export-button,
+.site-nav a {
+  border-radius: 14px !important;
+  background: rgba(6, 14, 12, 0.76) !important;
+  backdrop-filter: blur(12px) !important;
+  border-color: rgba(125, 249, 229, 0.13) !important;
+}
+
+.control-button:hover,
+.chip:hover,
+.export-button:hover,
+.site-nav a:hover {
+  border-color: rgba(125, 249, 229, 0.55) !important;
+  background: rgba(125, 249, 229, 0.11) !important;
+}
+
+.control-button.active,
+.chip.active {
+  border-color: rgba(125, 249, 229, 0.7) !important;
+  background: rgba(125, 249, 229, 0.14) !important;
+  color: #e0fff8 !important;
+  box-shadow: 0 0 18px rgba(125, 249, 229, 0.12) inset !important;
+}
+
+/* Side panels */
+.left-panel {
+  top: 172px !important;
+  width: 300px !important;
+  border-radius: 18px !important;
+  padding: 14px !important;
+}
+
+.right-panel {
+  top: 108px !important;
+  width: 400px !important;
+  border-radius: 18px !important;
+  padding: 16px !important;
+}
+
+/* Rank items */
+.rank-item {
+  border-radius: 13px !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.rank-item:hover,
+.rank-item.active {
+  border-color: rgba(125, 249, 229, 0.5) !important;
+  background: rgba(125, 249, 229, 0.10) !important;
+}
+
+.rank-score {
+  color: #c0fff0 !important;
+}
+
+.progress i {
+  background: linear-gradient(90deg, var(--accent), #8df086) !important;
+}
+
+/* Detail panels */
+.detail-kicker {
+  color: var(--accent) !important;
+}
+
+.detail-title {
+  font-size: 24px !important;
+}
+
+.badges .badge {
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.045) !important;
+}
+
+.metric-tile,
+.detail-block {
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+}
+
+/* Bottom panel */
+.bottom-panel {
+  border-radius: 18px !important;
+  padding: 12px 14px !important;
+}
+
+/* Caption */
+.caption {
+  bottom: 118px !important;
+}
+
+.caption b {
+  font-size: 23px !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Tooltip */
+.tooltip {
+  border-radius: 14px !important;
+  background: rgba(4, 10, 8, 0.94) !important;
+  border-color: rgba(125, 249, 229, 0.18) !important;
+}
+
+/* Toast */
+.toast {
+  border-radius: 999px !important;
+  background: rgba(5, 12, 10, 0.92) !important;
+}
+
+/* Footer HUD — hide atlas default, we inject custom */
+.footer-hud {
+  display: none !important;
+}
+
+/* Injected elements */
+.shortcut-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 76px;
+  z-index: 4;
+  width: 190px;
+  padding: 11px 13px;
+  border-radius: 16px;
+  border: 1px solid rgba(125, 249, 229, 0.12);
+  background: rgba(5, 12, 10, 0.62);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.34);
+  opacity: 0.28;
+  transition: opacity 0.22s ease;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+  pointer-events: auto;
+}
+.shortcut-panel:hover {
+  opacity: 1;
+}
+.shortcut-panel b {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: 12px;
+}
+.shortcut-panel span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 4px 0;
+}
+.shortcut-panel kbd {
+  min-width: 20px;
+  text-align: center;
+  padding: 2px 5px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--accent);
+  font-weight: 900;
+  font-family: inherit;
+  font-size: 10px;
+}
+
+.hud {
+  position: fixed;
+  right: 18px;
+  bottom: 42px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(125, 249, 229, 0.12);
+  background: rgba(4, 10, 8, 0.64);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.32);
+  font-size: 11px;
+  color: var(--muted);
+}
+.hud b {
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  font-size: 10px;
+}
+
+.compass {
+  position: fixed;
+  right: 18px;
+  bottom: 16px;
+  z-index: 4;
+  color: #6a8a80;
+  font-size: 11px;
+}
+
+.mini-version {
+  position: fixed;
+  left: 18px;
+  bottom: 16px;
+  z-index: 4;
+  color: #6a8a80;
+  font-size: 11px;
+}
+
+/* Scrollbars */
+.right-panel::-webkit-scrollbar,
+.rank-list::-webkit-scrollbar {
+  width: 5px !important;
+}
+.right-panel::-webkit-scrollbar-thumb,
+.rank-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.20) !important;
+  border-radius: 5px !important;
+}
+
+/* Animations */
+.panel,
+.top-title,
+.stats,
+.bottom-panel,
+.controls,
+.caption {
+  animation: panelIn 0.42s cubic-bezier(0.18, 0.72, 0.22, 1) both;
+}
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 1320px) {
+  .stats {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-title,
+  .shortcut-panel,
+  .hud,
+  .compass,
+  .mini-version {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .left-panel,
+  .right-panel,
+  .bottom-panel,
+  .controls {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    width: calc(100vw - 24px) !important;
+    margin: 12px !important;
+  }
+  .caption,
+  .footer-hud {
+    display: none !important;
+  }
+}

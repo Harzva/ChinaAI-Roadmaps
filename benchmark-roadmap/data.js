@@ -1,6 +1,6 @@
 window.ROADMAP_DATA = {
   id: "benchmarkroadmap",
-  kicker: "Benchmark Worldmap v1",
+  kicker: "Benchmark Worldmap v2",
   title: "Agent Benchmark 世界地图",
   subtitle: "从 Web、软件工程、桌面 OS、工具调用、企业任务、MiniApp 和长程记忆评测看 Agent 能力如何被定义、审计和发布。",
   captionTitle: "Benchmark Atlas · Evaluation Harness · Failure Modes",
@@ -51,7 +51,8 @@ window.ROADMAP_DATA = {
     { value: "25", label: "benchmark nodes" },
     { value: "8", label: "evaluation families" },
     { value: "16k+", label: "ToolBench APIs" },
-    { value: "5", label: "audit failure modes" }
+    { value: "5", label: "audit failure modes" },
+    { value: "500", label: "MiniAppBench tasks" }
   ],
   defaultDetail: {
     title: "Agent Benchmark 是新基础设施",

@@ -1,6 +1,6 @@
 window.ROADMAP_DATA = {
   id: "miwork",
-  kicker: "MiWork Project v1",
+  kicker: "MiWork Project v2",
   title: "MiWork 独立项目地图",
   subtitle: "MiWork 是面向 AgentWork / MiniApp / Benchmark 的工作台：把模型能力、上下文压缩、工作流资产、Playwright 评测和发布报告变成可复现产品。",
   captionTitle: "MiWork · Motivation · Modules · Roadmap",
@@ -47,7 +47,8 @@ window.ROADMAP_DATA = {
     { value: "4", label: "core motivations" },
     { value: "6", label: "product modules" },
     { value: "5", label: "roadmap phases" },
-    { value: "3", label: "benchmark gates" }
+    { value: "3", label: "benchmark gates" },
+    { value: "P0-P4", label: "execution path" }
   ],
   defaultDetail: {
     title: "MiWork 的独立定位",

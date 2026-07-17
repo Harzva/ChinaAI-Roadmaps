@@ -1,7 +1,7 @@
 window.ROADMAP_DATA = {
   id: "agentroadmap",
   mapMode: "world",
-  kicker: "Agent Worldmap v1",
+  kicker: "Agent Worldmap v2",
   title: "全球 Agent OS 与运行时地图",
   subtitle: "把 Agent OS、隔离运行时、生产平台、框架、记忆层、科研 Agent 和工作区包管理放在同一张可探索地图里。",
   captionTitle: "Agent 星云 · 公司锚点 · 世界地图",
@@ -52,7 +52,8 @@ window.ROADMAP_DATA = {
     { value: "28", label: "agent nodes" },
     { value: "8", label: "ecosystem layers" },
     { value: "13", label: "OS / runtime refs" },
-    { value: "6", label: "MiWork inputs" }
+    { value: "6", label: "MiWork inputs" },
+    { value: "8", label: "countries / regions" }
   ],
   defaultDetail: {
     title: "Agent 不是一个单层市场",
