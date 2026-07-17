@@ -36,6 +36,7 @@
         <span><kbd>D</kbd> 密度星云</span>
         <span><kbd>F</kbd> 流光关系</span>
         <span><kbd>M</kbd> 矩阵模式</span>
+        <span><kbd>P</kbd> 专注模式</span>
         <span><kbd>/</kbd> 搜索</span>
         <span><kbd>Esc</kbd> 清除选择</span>
       `;
@@ -58,6 +59,19 @@
       mini.className = 'mini-version';
       mini.innerHTML = 'Benchmark Map v2 · <span id="miniFps">-- FPS</span>';
       app.appendChild(mini);
+
+      // Data watermark
+      const watermark = document.createElement('div');
+      watermark.className = 'data-watermark';
+      watermark.innerHTML = '<b>ChinaAI Roadmaps</b> · Benchmark Atlas · Evaluation & Audit';
+      app.appendChild(watermark);
+
+      // Focus mode toggle (P key)
+      document.addEventListener('keydown', (e) => {
+        if (e.key.toLowerCase() === 'p' && !/input|select|textarea/i.test(e.target.tagName)) {
+          document.body.classList.toggle('focus-mode');
+        }
+      });
 
       // Hook into atlas.js FPS counter
       const atlasFps = document.getElementById('fps');

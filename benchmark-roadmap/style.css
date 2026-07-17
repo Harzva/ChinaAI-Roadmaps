@@ -380,37 +380,174 @@ body::after {
   to { opacity: 1; }
 }
 
-/* Responsive */
-@media (max-width: 1320px) {
+/* ===== v3 worldmap-level polish enhancements ===== */
+
+/* Canvas vignette — darkens edges like worldmap */
+#app::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 36%, rgba(0, 0, 0, 0.42) 68%, rgba(0, 0, 0, 0.88) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Center soft glow */
+#app::before {
+  content: "";
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 72vw;
+  height: 60vh;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(120, 210, 255, 0.04), transparent 66%);
+  filter: blur(22px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Larger top-title like worldmap */
+.top-title {
+  font-size: 25px !important;
+  letter-spacing: 0.28em !important;
+  padding: 15px 44px !important;
+  top: 22px !important;
+}
+.top-title small {
+  margin-top: 8px !important;
+  font-size: 10px !important;
+  letter-spacing: 0.16em !important;
+}
+
+/* Larger stats */
+.stat {
+  min-width: 118px !important;
+  padding: 12px 16px !important;
+  border-radius: 19px !important;
+}
+.stat b {
+  font-size: 24px !important;
+}
+
+/* Search box worldmap style */
+.search {
+  border-radius: 14px !important;
+  height: 42px !important;
+  padding: 0 13px !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+
+/* External link arrow */
+.link-button[target="_blank"]::after,
+a[target="_blank"]::after {
+  content: " ↗";
+  opacity: 0.7;
+  font-size: 10px;
+}
+
+/* Data watermark */
+.data-watermark {
+  position: fixed;
+  left: 50%;
+  top: 178px;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(8, 10, 20, 0.38);
+  backdrop-filter: blur(12px);
+  font-size: 11px;
+  color: rgba(226, 234, 255, 0.62);
+  letter-spacing: 0.06em;
+  pointer-events: none;
+  animation: panelIn 0.42s cubic-bezier(0.18, 0.72, 0.22, 1) both;
+}
+
+/* Stronger active glow */
+.control-button.active,
+.chip.active {
+  box-shadow: 0 0 22px var(--accent-glow) inset, 0 0 16px var(--accent-glow) !important;
+}
+
+/* Kicker pulse */
+.kicker::before {
+  animation: kickerPulse 1.8s ease-in-out infinite;
+}
+@keyframes kickerPulse {
+  0%, 100% { opacity: 0.75; box-shadow: 0 0 14px var(--accent); }
+  50% { opacity: 1; box-shadow: 0 0 26px var(--accent); }
+}
+
+/* Panel hover lift */
+.panel:hover {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Smooth transitions */
+.panel,
+.top-title,
+.stats,
+.bottom-panel,
+.controls,
+.caption,
+.data-watermark {
+  transition: opacity 0.22s ease, transform 0.22s ease, border-color 0.18s ease, background 0.18s ease !important;
+}
+
+/* Focus mode */
+body.focus-mode .panel,
+body.focus-mode .top-title,
+body.focus-mode .stats,
+body.focus-mode .bottom-panel,
+body.focus-mode .controls,
+body.focus-mode .caption,
+body.focus-mode .data-watermark {
+  opacity: 0 !important;
+  transform: translateY(8px) !important;
+  pointer-events: none !important;
+}
+body.focus-mode .shortcut-panel,
+body.focus-mode .hud,
+body.focus-mode .compass,
+body.focus-mode .mini-version {
+  display: none !important;
+}
+
+/* v3 responsive */
+@media (max-width: 1500px) {
   .stats {
+    top: 112px !important;
+  }
+  .stat {
+    min-width: 104px !important;
+    padding: 10px 12px !important;
+  }
+  .top-title {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
+@media (max-width: 1360px) {
+  .top-title {
     display: none !important;
   }
 }
-
 @media (max-width: 1200px) {
-  .top-title,
-  .shortcut-panel,
-  .hud,
-  .compass,
-  .mini-version {
+  .data-watermark {
     display: none !important;
+  }
+}
+@media (max-width: 1100px) {
+  #app::after,
+  #app::before {
+    display: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kicker::before {
+    animation: none !important;
   }
 }
 
-@media (max-width: 1100px) {
-  .hero,
-  .left-panel,
-  .right-panel,
-  .bottom-panel,
-  .controls {
-    position: relative !important;
-    inset: auto !important;
-    transform: none !important;
-    width: calc(100vw - 24px) !important;
-    margin: 12px !important;
-  }
-  .caption,
-  .footer-hud {
-    display: none !important;
-  }
-}
