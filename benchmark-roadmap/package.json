@@ -1,10 +1,11 @@
 {
   "name": "chinaai-benchmark-registry",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
     "audit": "node scripts/audit-inventory.mjs",
+    "sync:catalogs": "node scripts/sync-registry-catalogs.mjs",
     "build": "node scripts/build-leaderboards.mjs",
     "validate": "node scripts/validate-data.mjs",
     "test": "node --test tests/*.test.mjs",

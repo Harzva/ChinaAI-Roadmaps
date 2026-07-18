@@ -1,13 +1,2651 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "generatedAt": "2026-07-18T00:00:00Z",
-  "contentHash": "sha256:d83d43f79185252d86b0dcf71faa9a395861a07f2a8f538f836a33030e370930",
+  "contentHash": "sha256:8fb681d64264caae33a9d0a585a8606f6169115729ce0d94003011cf8283266e",
   "counts": {
-    "benchmarks": 24,
+    "benchmarks": 233,
+    "canonicalSourceEntries": 24,
+    "implementationIndexedEntries": 209,
+    "rankedBenchmarks": 4,
     "hotBenchmarks": 10,
     "qualifiedResults": 16
   },
   "leaderboardSummaries": [
+    {
+      "benchmarkId": "aclue",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "acpbench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "afrimgsm",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "afrimmlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "afrixnli",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "afrobench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "agieval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "aime",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "alghafa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "anli",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "arab-culture",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "arab-culture-completion",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "aexams",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "arabic-leaderboard-complete",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "arabic-leaderboard-light",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "arabicmmlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "aradice",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "arc",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "arc-mt",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "arithmetic",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "asdiv",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "babi",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "babilong",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "bangla",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "basque-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "basqueglue",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "bbq",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "bear",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "belebele",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "bertaqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "bhs",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "bigbench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "bbh",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "blimp",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "blimp-nl",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "browsecomp",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "2025",
+        "subset": "full",
+        "metric": "accuracy",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "ceval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "c4",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "perplexity",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "cabbq",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "careqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "catalan-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "chartqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "click",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "cmmlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "cnn-dailymail",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "code-x-glue",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "common-voice",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "commonsense-qa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "copal-id",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "coqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "crows-pairs",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "cruxeval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "csatqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "darija-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "darijahellaswag",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "darijammlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "discrim-eval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "drop",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "e2lmc",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "egyhellaswag",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "egymmlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "eq-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "esbbq",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "eus-exams",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "eus-proficiency",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "eus-reading",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "eus-trivia",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "evalita-llm",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "fda",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "fld",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "french-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "gaia",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "2023",
+        "subset": "full",
+        "metric": "accuracy",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "galician-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "gdpval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "2025",
+        "subset": "full",
+        "metric": "win_rate",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "glianorex",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "global-mmlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "global-piqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "glue",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "gpqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "gpqa-diamond",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "diamond",
+        "subset": "full",
+        "metric": "accuracy",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "graphwalks",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "groundcocoa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "gsm-plus",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "gsm8k",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "gsm8k-platinum",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "haerae",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "headqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "hellaswag",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "hendrycks-ethics",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "hendrycks-math",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "histoires-morales",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "hrm8k",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "humaneval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "humaneval-infilling",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "humanitys-last-exam",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "2025",
+        "subset": "full",
+        "metric": "accuracy",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "icelandic-winogrande",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "ifeval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "indicparam",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "infinitebench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "inverse-scaling",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "japanese-leaderboard",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "jfinqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "jsonschema-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "kbl",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "kmmlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "kobest",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "kormedmcqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "lambada",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "perplexity",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "lambada-cloze",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "perplexity",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "lambada-multilingual",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "lambada-multilingual-stablelm",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "legalbench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "libra",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "lingoly",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "livebench",
+      "resultCount": 4,
+      "leader": {
+        "resultId": "livebench-gpt56-sol",
+        "rank": 1,
+        "system": {
+          "systemId": "gpt-5-6-sol-max",
+          "name": "GPT-5.6 Sol Max",
+          "scaffold": "LiveBench runner",
+          "harness": "LiveBench",
+          "tools": []
+        },
+        "model": {
+          "modelId": "gpt-5-6-sol",
+          "name": "GPT-5.6 Sol",
+          "organization": "OpenAI",
+          "openWeights": false
+        },
+        "score": 82.4,
+        "uncertainty": null,
+        "evaluationDate": "2026-07-18",
+        "source": {
+          "sourceId": "livebench-official",
+          "type": "official",
+          "name": "LiveBench official leaderboard",
+          "url": "https://livebench.ai/"
+        },
+        "comparability": "comparable",
+        "runConfig": {
+          "effort": "max",
+          "attempts": 1,
+          "passK": 1,
+          "budget": null,
+          "environment": "LiveBench"
+        },
+        "notes": "Rolling benchmark snapshot; versioned by retrieval month."
+      },
+      "top3": [
+        {
+          "resultId": "livebench-gpt56-sol",
+          "rank": 1,
+          "system": {
+            "systemId": "gpt-5-6-sol-max",
+            "name": "GPT-5.6 Sol Max",
+            "scaffold": "LiveBench runner",
+            "harness": "LiveBench",
+            "tools": []
+          },
+          "model": {
+            "modelId": "gpt-5-6-sol",
+            "name": "GPT-5.6 Sol",
+            "organization": "OpenAI",
+            "openWeights": false
+          },
+          "score": 82.4,
+          "uncertainty": null,
+          "evaluationDate": "2026-07-18",
+          "source": {
+            "sourceId": "livebench-official",
+            "type": "official",
+            "name": "LiveBench official leaderboard",
+            "url": "https://livebench.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "max",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "LiveBench"
+          },
+          "notes": "Rolling benchmark snapshot; versioned by retrieval month."
+        },
+        {
+          "resultId": "livebench-fable5",
+          "rank": 2,
+          "system": {
+            "systemId": "fable-5-max",
+            "name": "Fable 5 Max",
+            "scaffold": "LiveBench runner",
+            "harness": "LiveBench",
+            "tools": []
+          },
+          "model": {
+            "modelId": "fable-5",
+            "name": "Fable 5",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 80.8,
+          "uncertainty": null,
+          "evaluationDate": "2026-07-18",
+          "source": {
+            "sourceId": "livebench-official",
+            "type": "official",
+            "name": "LiveBench official leaderboard",
+            "url": "https://livebench.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "max",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "LiveBench"
+          },
+          "notes": "Rolling benchmark snapshot."
+        },
+        {
+          "resultId": "livebench-gpt55",
+          "rank": 3,
+          "system": {
+            "systemId": "gpt-5-5-thinking-xhigh",
+            "name": "GPT-5.5 Thinking xHigh",
+            "scaffold": "LiveBench runner",
+            "harness": "LiveBench",
+            "tools": []
+          },
+          "model": {
+            "modelId": "gpt-5-5",
+            "name": "GPT-5.5",
+            "organization": "OpenAI",
+            "openWeights": false
+          },
+          "score": 79.9,
+          "uncertainty": null,
+          "evaluationDate": "2026-07-18",
+          "source": {
+            "sourceId": "livebench-official",
+            "type": "official",
+            "name": "LiveBench official leaderboard",
+            "url": "https://livebench.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "xhigh",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "LiveBench"
+          },
+          "notes": "Rolling benchmark snapshot."
+        }
+      ],
+      "group": {
+        "version": "2026-07",
+        "subset": "global",
+        "metric": "global_average",
+        "protocol": "official-runner"
+      }
+    },
+    {
+      "benchmarkId": "livecodebench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "v6",
+        "subset": "full",
+        "metric": "pass@1",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "llama3",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "lm-syneval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "logiqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "logiqa2",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "longbench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "longbench2",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "longmemeval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "1.0",
+        "subset": "full",
+        "metric": "accuracy",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mastermind",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mathqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mbpp",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mc-taco",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mcp-atlas",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "1.0",
+        "subset": "full",
+        "metric": "task_success",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "med-concepts-qa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "med-prescriptions",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "med-text-classification",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "meddialog",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mediqa-qa2019",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "medmcqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "medqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "medtext",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mela",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "meqsum",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "metabench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "metr-time-horizon",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "2026",
+        "subset": "full",
+        "metric": "time_horizon",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mgsm",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mimic-repsum",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "minerva-math",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "miniappbench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "1.0",
+        "subset": "full",
+        "metric": "weakest_link",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mlqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mmlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mmlu-pro-plus",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mmlu-prox",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mmlu-redux",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mmlu-redux-spanish",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mmlu-pro",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "1.0",
+        "subset": "full",
+        "metric": "accuracy",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mmlusr",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mmmu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "model-written-evals",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "moral-stories",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mts-dialog",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "multiblimp",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "mutual",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "nq-open",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "nerel-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "noreval",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "noticia",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "okapi",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "olaph",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "online-mind2web",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "online",
+        "subset": "full",
+        "metric": "task_success",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "openai-mmmlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "openbookqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "osworld-v1",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "1.0",
+        "subset": "full",
+        "metric": "task_success",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "osworld-v2",
+      "resultCount": 2,
+      "leader": {
+        "resultId": "oswv2-opus48-batched",
+        "rank": 1,
+        "system": {
+          "systemId": "opus-4-8-batched",
+          "name": "Claude Opus 4.8 + batched tool calls",
+          "scaffold": "OSWorld reference agent",
+          "harness": "OSWorld v2",
+          "tools": [
+            "computer",
+            "batched_tool_calls"
+          ]
+        },
+        "model": {
+          "modelId": "claude-opus-4-8",
+          "name": "Claude Opus 4.8",
+          "organization": "Anthropic",
+          "openWeights": false
+        },
+        "score": 54.8,
+        "uncertainty": null,
+        "evaluationDate": "2026-06-01",
+        "source": {
+          "sourceId": "osworld-v2-official",
+          "type": "official",
+          "name": "OSWorld v2 official project",
+          "url": "https://osworld-v2.xlang.ai/"
+        },
+        "comparability": "comparable",
+        "runConfig": {
+          "effort": "max",
+          "attempts": 1,
+          "passK": 1,
+          "budget": {
+            "outputTokens": 244000
+          },
+          "environment": "OSWorld v2"
+        },
+        "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
+      },
+      "top3": [
+        {
+          "resultId": "oswv2-opus48-batched",
+          "rank": 1,
+          "system": {
+            "systemId": "opus-4-8-batched",
+            "name": "Claude Opus 4.8 + batched tool calls",
+            "scaffold": "OSWorld reference agent",
+            "harness": "OSWorld v2",
+            "tools": [
+              "computer",
+              "batched_tool_calls"
+            ]
+          },
+          "model": {
+            "modelId": "claude-opus-4-8",
+            "name": "Claude Opus 4.8",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 54.8,
+          "uncertainty": null,
+          "evaluationDate": "2026-06-01",
+          "source": {
+            "sourceId": "osworld-v2-official",
+            "type": "official",
+            "name": "OSWorld v2 official project",
+            "url": "https://osworld-v2.xlang.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "max",
+            "attempts": 1,
+            "passK": 1,
+            "budget": {
+              "outputTokens": 244000
+            },
+            "environment": "OSWorld v2"
+          },
+          "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
+        },
+        {
+          "resultId": "oswv2-opus47",
+          "rank": 2,
+          "system": {
+            "systemId": "opus-4-7-osworld",
+            "name": "Claude Opus 4.7",
+            "scaffold": "OSWorld reference agent",
+            "harness": "OSWorld v2",
+            "tools": [
+              "computer"
+            ]
+          },
+          "model": {
+            "modelId": "claude-opus-4-7",
+            "name": "Claude Opus 4.7",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 49.1,
+          "uncertainty": null,
+          "evaluationDate": "2026-03-01",
+          "source": {
+            "sourceId": "osworld-v2-official",
+            "type": "official",
+            "name": "OSWorld v2 official project",
+            "url": "https://osworld-v2.xlang.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "high",
+            "attempts": 1,
+            "passK": 1,
+            "budget": {
+              "outputTokens": 150000
+            },
+            "environment": "OSWorld v2"
+          },
+          "notes": "Official page reports 18.2% binary score; partial-credit value transcribed from the comparison chart."
+        }
+      ],
+      "group": {
+        "version": "2.0",
+        "subset": "108-tasks",
+        "metric": "partial_credit",
+        "protocol": "reference-agent"
+      }
+    },
+    {
+      "benchmarkId": "paloma",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "perplexity",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "paws-x",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "pile",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "perplexity",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "pile-10k",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "perplexity",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "piqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "pisa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "polemo2",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "portuguese-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "prost",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "pubmedqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "qa4mre",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "qasper",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "race",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "realtoxicityprompts",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "remote-labor-index",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "2025",
+        "subset": "full",
+        "metric": "completion_rate",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "ruler",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "sciq",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "score",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "scrolls",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "simple-cooccurrence-bias",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "slr-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "siqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "spanish-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "squad-completion",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "squadv2",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "storycloze",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "super-glue",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "swag",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "swde",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
     {
       "benchmarkId": "swe-bench-verified",
       "resultCount": 5,
@@ -170,6 +2808,18 @@
         "subset": "full",
         "metric": "resolved",
         "protocol": "official-harness"
+      }
+    },
+    {
+      "benchmarkId": "terminal-bench-2-0",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "2.0",
+        "subset": "full",
+        "metric": "task_success",
+        "protocol": "unconfigured"
       }
     },
     {
@@ -341,205 +2991,158 @@
       }
     },
     {
-      "benchmarkId": "terminal-bench-2-0",
+      "benchmarkId": "tinybenchmarks",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
-        "version": "2.0",
+        "version": "version-pending-audit",
         "subset": "full",
-        "metric": "task_success",
+        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
     {
-      "benchmarkId": "osworld-v2",
-      "resultCount": 2,
-      "leader": {
-        "resultId": "oswv2-opus48-batched",
-        "rank": 1,
-        "system": {
-          "systemId": "opus-4-8-batched",
-          "name": "Claude Opus 4.8 + batched tool calls",
-          "scaffold": "OSWorld reference agent",
-          "harness": "OSWorld v2",
-          "tools": [
-            "computer",
-            "batched_tool_calls"
-          ]
-        },
-        "model": {
-          "modelId": "claude-opus-4-8",
-          "name": "Claude Opus 4.8",
-          "organization": "Anthropic",
-          "openWeights": false
-        },
-        "score": 54.8,
-        "uncertainty": null,
-        "evaluationDate": "2026-06-01",
-        "source": {
-          "sourceId": "osworld-v2-official",
-          "type": "official",
-          "name": "OSWorld v2 official project",
-          "url": "https://osworld-v2.xlang.ai/"
-        },
-        "comparability": "comparable",
-        "runConfig": {
-          "effort": "max",
-          "attempts": 1,
-          "passK": 1,
-          "budget": {
-            "outputTokens": 244000
-          },
-          "environment": "OSWorld v2"
-        },
-        "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
-      },
-      "top3": [
-        {
-          "resultId": "oswv2-opus48-batched",
-          "rank": 1,
-          "system": {
-            "systemId": "opus-4-8-batched",
-            "name": "Claude Opus 4.8 + batched tool calls",
-            "scaffold": "OSWorld reference agent",
-            "harness": "OSWorld v2",
-            "tools": [
-              "computer",
-              "batched_tool_calls"
-            ]
-          },
-          "model": {
-            "modelId": "claude-opus-4-8",
-            "name": "Claude Opus 4.8",
-            "organization": "Anthropic",
-            "openWeights": false
-          },
-          "score": 54.8,
-          "uncertainty": null,
-          "evaluationDate": "2026-06-01",
-          "source": {
-            "sourceId": "osworld-v2-official",
-            "type": "official",
-            "name": "OSWorld v2 official project",
-            "url": "https://osworld-v2.xlang.ai/"
-          },
-          "comparability": "comparable",
-          "runConfig": {
-            "effort": "max",
-            "attempts": 1,
-            "passK": 1,
-            "budget": {
-              "outputTokens": 244000
-            },
-            "environment": "OSWorld v2"
-          },
-          "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
-        },
-        {
-          "resultId": "oswv2-opus47",
-          "rank": 2,
-          "system": {
-            "systemId": "opus-4-7-osworld",
-            "name": "Claude Opus 4.7",
-            "scaffold": "OSWorld reference agent",
-            "harness": "OSWorld v2",
-            "tools": [
-              "computer"
-            ]
-          },
-          "model": {
-            "modelId": "claude-opus-4-7",
-            "name": "Claude Opus 4.7",
-            "organization": "Anthropic",
-            "openWeights": false
-          },
-          "score": 49.1,
-          "uncertainty": null,
-          "evaluationDate": "2026-03-01",
-          "source": {
-            "sourceId": "osworld-v2-official",
-            "type": "official",
-            "name": "OSWorld v2 official project",
-            "url": "https://osworld-v2.xlang.ai/"
-          },
-          "comparability": "comparable",
-          "runConfig": {
-            "effort": "high",
-            "attempts": 1,
-            "passK": 1,
-            "budget": {
-              "outputTokens": 150000
-            },
-            "environment": "OSWorld v2"
-          },
-          "notes": "Official page reports 18.2% binary score; partial-credit value transcribed from the comparison chart."
-        }
-      ],
-      "group": {
-        "version": "2.0",
-        "subset": "108-tasks",
-        "metric": "partial_credit",
-        "protocol": "reference-agent"
-      }
-    },
-    {
-      "benchmarkId": "osworld-v1",
+      "benchmarkId": "tmlu",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
-        "version": "1.0",
+        "version": "version-pending-audit",
         "subset": "full",
-        "metric": "task_success",
+        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
     {
-      "benchmarkId": "gaia",
+      "benchmarkId": "tmmluplus",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
-        "version": "2023",
+        "version": "version-pending-audit",
         "subset": "full",
-        "metric": "accuracy",
+        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
     {
-      "benchmarkId": "tau2-bench",
+      "benchmarkId": "toksuite",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
-        "version": "1.0",
+        "version": "version-pending-audit",
         "subset": "full",
-        "metric": "pass@1",
+        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
     {
-      "benchmarkId": "tau-bench",
+      "benchmarkId": "toxigen",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
-        "version": "1.0",
+        "version": "version-pending-audit",
         "subset": "full",
-        "metric": "pass@1",
+        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
     {
-      "benchmarkId": "webarena",
+      "benchmarkId": "translation",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
-        "version": "1.0",
+        "version": "version-pending-audit",
         "subset": "full",
-        "metric": "success_rate",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "triviaqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "truthfulqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "truthfulqa-multi",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "turblimp",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "turkishmmlu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "ulqa",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "unscramble",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
@@ -556,14 +3159,86 @@
       }
     },
     {
-      "benchmarkId": "online-mind2web",
+      "benchmarkId": "webarena",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
-        "version": "online",
+        "version": "1.0",
         "subset": "full",
-        "metric": "task_success",
+        "metric": "success_rate",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "webqs",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "wikitext",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "perplexity",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "winogender",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "winogrande",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "wmdp",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "wmt2016",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
@@ -580,286 +3255,122 @@
       }
     },
     {
-      "benchmarkId": "browsecomp",
+      "benchmarkId": "wsc273",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
-        "version": "2025",
+        "version": "version-pending-audit",
         "subset": "full",
-        "metric": "accuracy",
+        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
     {
-      "benchmarkId": "gdpval",
+      "benchmarkId": "xcopa",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
-        "version": "2025",
+        "version": "version-pending-audit",
         "subset": "full",
-        "metric": "win_rate",
+        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
     {
-      "benchmarkId": "mcp-atlas",
+      "benchmarkId": "xnli",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "xnli-eu",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "xquad",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "xstorycloze",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "xwinograd",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "zhoblimp",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "tau-bench",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
         "version": "1.0",
-        "subset": "full",
-        "metric": "task_success",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "remote-labor-index",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "2025",
-        "subset": "full",
-        "metric": "completion_rate",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "metr-time-horizon",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "2026",
-        "subset": "full",
-        "metric": "time_horizon",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "longmemeval",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "1.0",
-        "subset": "full",
-        "metric": "accuracy",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "miniappbench",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "1.0",
-        "subset": "full",
-        "metric": "weakest_link",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "livebench",
-      "resultCount": 4,
-      "leader": {
-        "resultId": "livebench-gpt56-sol",
-        "rank": 1,
-        "system": {
-          "systemId": "gpt-5-6-sol-max",
-          "name": "GPT-5.6 Sol Max",
-          "scaffold": "LiveBench runner",
-          "harness": "LiveBench",
-          "tools": []
-        },
-        "model": {
-          "modelId": "gpt-5-6-sol",
-          "name": "GPT-5.6 Sol",
-          "organization": "OpenAI",
-          "openWeights": false
-        },
-        "score": 82.4,
-        "uncertainty": null,
-        "evaluationDate": "2026-07-18",
-        "source": {
-          "sourceId": "livebench-official",
-          "type": "official",
-          "name": "LiveBench official leaderboard",
-          "url": "https://livebench.ai/"
-        },
-        "comparability": "comparable",
-        "runConfig": {
-          "effort": "max",
-          "attempts": 1,
-          "passK": 1,
-          "budget": null,
-          "environment": "LiveBench"
-        },
-        "notes": "Rolling benchmark snapshot; versioned by retrieval month."
-      },
-      "top3": [
-        {
-          "resultId": "livebench-gpt56-sol",
-          "rank": 1,
-          "system": {
-            "systemId": "gpt-5-6-sol-max",
-            "name": "GPT-5.6 Sol Max",
-            "scaffold": "LiveBench runner",
-            "harness": "LiveBench",
-            "tools": []
-          },
-          "model": {
-            "modelId": "gpt-5-6-sol",
-            "name": "GPT-5.6 Sol",
-            "organization": "OpenAI",
-            "openWeights": false
-          },
-          "score": 82.4,
-          "uncertainty": null,
-          "evaluationDate": "2026-07-18",
-          "source": {
-            "sourceId": "livebench-official",
-            "type": "official",
-            "name": "LiveBench official leaderboard",
-            "url": "https://livebench.ai/"
-          },
-          "comparability": "comparable",
-          "runConfig": {
-            "effort": "max",
-            "attempts": 1,
-            "passK": 1,
-            "budget": null,
-            "environment": "LiveBench"
-          },
-          "notes": "Rolling benchmark snapshot; versioned by retrieval month."
-        },
-        {
-          "resultId": "livebench-fable5",
-          "rank": 2,
-          "system": {
-            "systemId": "fable-5-max",
-            "name": "Fable 5 Max",
-            "scaffold": "LiveBench runner",
-            "harness": "LiveBench",
-            "tools": []
-          },
-          "model": {
-            "modelId": "fable-5",
-            "name": "Fable 5",
-            "organization": "Anthropic",
-            "openWeights": false
-          },
-          "score": 80.8,
-          "uncertainty": null,
-          "evaluationDate": "2026-07-18",
-          "source": {
-            "sourceId": "livebench-official",
-            "type": "official",
-            "name": "LiveBench official leaderboard",
-            "url": "https://livebench.ai/"
-          },
-          "comparability": "comparable",
-          "runConfig": {
-            "effort": "max",
-            "attempts": 1,
-            "passK": 1,
-            "budget": null,
-            "environment": "LiveBench"
-          },
-          "notes": "Rolling benchmark snapshot."
-        },
-        {
-          "resultId": "livebench-gpt55",
-          "rank": 3,
-          "system": {
-            "systemId": "gpt-5-5-thinking-xhigh",
-            "name": "GPT-5.5 Thinking xHigh",
-            "scaffold": "LiveBench runner",
-            "harness": "LiveBench",
-            "tools": []
-          },
-          "model": {
-            "modelId": "gpt-5-5",
-            "name": "GPT-5.5",
-            "organization": "OpenAI",
-            "openWeights": false
-          },
-          "score": 79.9,
-          "uncertainty": null,
-          "evaluationDate": "2026-07-18",
-          "source": {
-            "sourceId": "livebench-official",
-            "type": "official",
-            "name": "LiveBench official leaderboard",
-            "url": "https://livebench.ai/"
-          },
-          "comparability": "comparable",
-          "runConfig": {
-            "effort": "xhigh",
-            "attempts": 1,
-            "passK": 1,
-            "budget": null,
-            "environment": "LiveBench"
-          },
-          "notes": "Rolling benchmark snapshot."
-        }
-      ],
-      "group": {
-        "version": "2026-07",
-        "subset": "global",
-        "metric": "global_average",
-        "protocol": "official-runner"
-      }
-    },
-    {
-      "benchmarkId": "livecodebench",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "v6",
         "subset": "full",
         "metric": "pass@1",
         "protocol": "unconfigured"
       }
     },
     {
-      "benchmarkId": "gpqa-diamond",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "diamond",
-        "subset": "full",
-        "metric": "accuracy",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "humanitys-last-exam",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "2025",
-        "subset": "full",
-        "metric": "accuracy",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "mmlu-pro",
+      "benchmarkId": "tau2-bench",
       "resultCount": 0,
       "leader": null,
       "top3": [],
       "group": {
         "version": "1.0",
         "subset": "full",
-        "metric": "accuracy",
+        "metric": "pass@1",
         "protocol": "unconfigured"
       }
     }

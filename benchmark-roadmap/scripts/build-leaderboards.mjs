@@ -93,10 +93,14 @@ const hotBenchmarks = popularityDoc.signals
   .map((item) => ({ ...item, benchmark: benchmarkDoc.benchmarks.find((benchmark) => benchmark.benchmarkId === item.benchmarkId), leaderboard: leaderboardSummaries.find((board) => board.benchmarkId === item.benchmarkId) }));
 
 const catalog = {
-  schemaVersion: '1.0.0',
+  schemaVersion: '1.1.0',
   generatedAt,
   methodology: { defaultTopK: 5, eligibleSources: ['official', 'independent'], popularityThreshold: popularityDoc.threshold, popularityWeights: popularityDoc.weights },
-  benchmarks: benchmarkDoc.benchmarks.map((benchmark) => ({ ...benchmark, leaderboard: leaderboardSummaries.find((board) => board.benchmarkId === benchmark.benchmarkId) }))
+  benchmarks: benchmarkDoc.benchmarks.map((benchmark) => ({
+    ...benchmark,
+    evidenceStage: benchmark.registryOrigin?.catalogRole === 'implementation-index' ? 'implementation_index' : 'canonical_source',
+    leaderboard: leaderboardSummaries.find((board) => board.benchmarkId === benchmark.benchmarkId)
+  }))
 };
 await writeJson('data/public/catalog.json', catalog);
 await writeJson('data/public/hot-benchmarks.json', { schemaVersion: '1.0.0', generatedAt, benchmarks: hotBenchmarks });
@@ -109,12 +113,30 @@ const maintenance = {
   generatedAt,
   lastSuccessfulSync: lastSync,
   sources: { total: sourceDoc.sources.length, curatedSnapshots: rawManifest.snapshots.filter((item) => item.status === 'curated').length, broken: 0, onlineAudit: 'scheduled' },
-  queue: { needsSource: benchmarkDoc.benchmarks.filter((item) => item.status === 'needs_source').length, collecting: benchmarkDoc.benchmarks.filter((item) => item.status === 'collecting').length, nonDefaultReports: resultDoc.results.filter((item) => !eligible(item)).length },
+  queue: {
+    needsSource: benchmarkDoc.benchmarks.filter((item) => item.status === 'needs_source').length,
+    collecting: benchmarkDoc.benchmarks.filter((item) => item.status === 'collecting').length,
+    implementationIndex: benchmarkDoc.benchmarks.filter((item) => item.registryOrigin?.catalogRole === 'implementation-index').length,
+    nonDefaultReports: resultDoc.results.filter((item) => !eligible(item)).length
+  },
   staleBenchmarks: benchmarkDoc.benchmarks.filter((item) => item.status === 'legacy').map((item) => item.benchmarkId),
   policy: 'Scheduled checks never overwrite production. A reviewed commit must pass all release gates.'
 };
 await writeJson('data/public/maintenance.json', maintenance);
 
 const digest = createHash('sha256').update(JSON.stringify({ catalog, hotBenchmarks, leaderboardSummaries, maintenance })).digest('hex');
-await writeJson('data/public/snapshot.json', { schemaVersion: '1.0.0', generatedAt, contentHash: `sha256:${digest}`, counts: { benchmarks: benchmarkDoc.benchmarks.length, hotBenchmarks: hotBenchmarks.length, qualifiedResults: leaderboardSummaries.reduce((sum, item) => sum + item.resultCount, 0) }, leaderboardSummaries });
+await writeJson('data/public/snapshot.json', {
+  schemaVersion: '1.1.0',
+  generatedAt,
+  contentHash: `sha256:${digest}`,
+  counts: {
+    benchmarks: benchmarkDoc.benchmarks.length,
+    canonicalSourceEntries: benchmarkDoc.benchmarks.filter((item) => item.registryOrigin?.catalogRole !== 'implementation-index').length,
+    implementationIndexedEntries: benchmarkDoc.benchmarks.filter((item) => item.registryOrigin?.catalogRole === 'implementation-index').length,
+    rankedBenchmarks: leaderboardSummaries.filter((item) => item.resultCount > 0).length,
+    hotBenchmarks: hotBenchmarks.length,
+    qualifiedResults: leaderboardSummaries.reduce((sum, item) => sum + item.resultCount, 0)
+  },
+  leaderboardSummaries
+});
 console.log(`Built ${benchmarkDoc.benchmarks.length} leaderboards; ${hotBenchmarks.length} are hot; snapshot sha256:${digest.slice(0, 12)}…`);

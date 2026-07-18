@@ -1,0 +1,1069 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogId": "lm-evaluation-harness",
+  "repository": "https://github.com/EleutherAI/lm-evaluation-harness",
+  "commit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
+  "capturedAt": "2026-07-18T00:00:00Z",
+  "taskRoot": "lm_eval/tasks",
+  "directoryCount": 210,
+  "importedCount": 209,
+  "skipped": [
+    {
+      "task": "mmlu_pro",
+      "reason": "id:mmlu-pro"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "aclue",
+      "path": "lm_eval/tasks/aclue",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/aclue"
+    },
+    {
+      "name": "acpbench",
+      "path": "lm_eval/tasks/acpbench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/acpbench"
+    },
+    {
+      "name": "aexams",
+      "path": "lm_eval/tasks/aexams",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/aexams"
+    },
+    {
+      "name": "afrimgsm",
+      "path": "lm_eval/tasks/afrimgsm",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/afrimgsm"
+    },
+    {
+      "name": "afrimmlu",
+      "path": "lm_eval/tasks/afrimmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/afrimmlu"
+    },
+    {
+      "name": "afrixnli",
+      "path": "lm_eval/tasks/afrixnli",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/afrixnli"
+    },
+    {
+      "name": "afrobench",
+      "path": "lm_eval/tasks/afrobench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/afrobench"
+    },
+    {
+      "name": "agieval",
+      "path": "lm_eval/tasks/agieval",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/agieval"
+    },
+    {
+      "name": "aime",
+      "path": "lm_eval/tasks/aime",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/aime"
+    },
+    {
+      "name": "alghafa",
+      "path": "lm_eval/tasks/alghafa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/alghafa"
+    },
+    {
+      "name": "anli",
+      "path": "lm_eval/tasks/anli",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/anli"
+    },
+    {
+      "name": "arab_culture",
+      "path": "lm_eval/tasks/arab_culture",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/arab_culture"
+    },
+    {
+      "name": "arab_culture_completion",
+      "path": "lm_eval/tasks/arab_culture_completion",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/arab_culture_completion"
+    },
+    {
+      "name": "arabic_leaderboard_complete",
+      "path": "lm_eval/tasks/arabic_leaderboard_complete",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/arabic_leaderboard_complete"
+    },
+    {
+      "name": "arabic_leaderboard_light",
+      "path": "lm_eval/tasks/arabic_leaderboard_light",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/arabic_leaderboard_light"
+    },
+    {
+      "name": "arabicmmlu",
+      "path": "lm_eval/tasks/arabicmmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/arabicmmlu"
+    },
+    {
+      "name": "aradice",
+      "path": "lm_eval/tasks/aradice",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/aradice"
+    },
+    {
+      "name": "arc",
+      "path": "lm_eval/tasks/arc",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/arc"
+    },
+    {
+      "name": "arc_mt",
+      "path": "lm_eval/tasks/arc_mt",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/arc_mt"
+    },
+    {
+      "name": "arithmetic",
+      "path": "lm_eval/tasks/arithmetic",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/arithmetic"
+    },
+    {
+      "name": "asdiv",
+      "path": "lm_eval/tasks/asdiv",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/asdiv"
+    },
+    {
+      "name": "babi",
+      "path": "lm_eval/tasks/babi",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/babi"
+    },
+    {
+      "name": "babilong",
+      "path": "lm_eval/tasks/babilong",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/babilong"
+    },
+    {
+      "name": "bangla",
+      "path": "lm_eval/tasks/bangla",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bangla"
+    },
+    {
+      "name": "basque_bench",
+      "path": "lm_eval/tasks/basque_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/basque_bench"
+    },
+    {
+      "name": "basqueglue",
+      "path": "lm_eval/tasks/basqueglue",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/basqueglue"
+    },
+    {
+      "name": "bbh",
+      "path": "lm_eval/tasks/bbh",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bbh"
+    },
+    {
+      "name": "bbq",
+      "path": "lm_eval/tasks/bbq",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bbq"
+    },
+    {
+      "name": "bear",
+      "path": "lm_eval/tasks/bear",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bear"
+    },
+    {
+      "name": "belebele",
+      "path": "lm_eval/tasks/belebele",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/belebele"
+    },
+    {
+      "name": "bertaqa",
+      "path": "lm_eval/tasks/bertaqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bertaqa"
+    },
+    {
+      "name": "bhs",
+      "path": "lm_eval/tasks/bhs",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bhs"
+    },
+    {
+      "name": "bigbench",
+      "path": "lm_eval/tasks/bigbench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bigbench"
+    },
+    {
+      "name": "blimp",
+      "path": "lm_eval/tasks/blimp",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/blimp"
+    },
+    {
+      "name": "blimp_nl",
+      "path": "lm_eval/tasks/blimp_nl",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/blimp_nl"
+    },
+    {
+      "name": "c4",
+      "path": "lm_eval/tasks/c4",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/c4"
+    },
+    {
+      "name": "cabbq",
+      "path": "lm_eval/tasks/cabbq",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/cabbq"
+    },
+    {
+      "name": "careqa",
+      "path": "lm_eval/tasks/careqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/careqa"
+    },
+    {
+      "name": "catalan_bench",
+      "path": "lm_eval/tasks/catalan_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/catalan_bench"
+    },
+    {
+      "name": "ceval",
+      "path": "lm_eval/tasks/ceval",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/ceval"
+    },
+    {
+      "name": "chartqa",
+      "path": "lm_eval/tasks/chartqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/chartqa"
+    },
+    {
+      "name": "click",
+      "path": "lm_eval/tasks/click",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/click"
+    },
+    {
+      "name": "cmmlu",
+      "path": "lm_eval/tasks/cmmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/cmmlu"
+    },
+    {
+      "name": "cnn_dailymail",
+      "path": "lm_eval/tasks/cnn_dailymail",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/cnn_dailymail"
+    },
+    {
+      "name": "code_x_glue",
+      "path": "lm_eval/tasks/code_x_glue",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/code_x_glue"
+    },
+    {
+      "name": "common_voice",
+      "path": "lm_eval/tasks/common_voice",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/common_voice"
+    },
+    {
+      "name": "commonsense_qa",
+      "path": "lm_eval/tasks/commonsense_qa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/commonsense_qa"
+    },
+    {
+      "name": "copal_id",
+      "path": "lm_eval/tasks/copal_id",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/copal_id"
+    },
+    {
+      "name": "coqa",
+      "path": "lm_eval/tasks/coqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/coqa"
+    },
+    {
+      "name": "crows_pairs",
+      "path": "lm_eval/tasks/crows_pairs",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/crows_pairs"
+    },
+    {
+      "name": "cruxeval",
+      "path": "lm_eval/tasks/cruxeval",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/cruxeval"
+    },
+    {
+      "name": "csatqa",
+      "path": "lm_eval/tasks/csatqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/csatqa"
+    },
+    {
+      "name": "darija_bench",
+      "path": "lm_eval/tasks/darija_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/darija_bench"
+    },
+    {
+      "name": "darijahellaswag",
+      "path": "lm_eval/tasks/darijahellaswag",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/darijahellaswag"
+    },
+    {
+      "name": "darijammlu",
+      "path": "lm_eval/tasks/darijammlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/darijammlu"
+    },
+    {
+      "name": "discrim_eval",
+      "path": "lm_eval/tasks/discrim_eval",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/discrim_eval"
+    },
+    {
+      "name": "drop",
+      "path": "lm_eval/tasks/drop",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/drop"
+    },
+    {
+      "name": "e2lmc",
+      "path": "lm_eval/tasks/e2lmc",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/e2lmc"
+    },
+    {
+      "name": "egyhellaswag",
+      "path": "lm_eval/tasks/egyhellaswag",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/egyhellaswag"
+    },
+    {
+      "name": "egymmlu",
+      "path": "lm_eval/tasks/egymmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/egymmlu"
+    },
+    {
+      "name": "eq_bench",
+      "path": "lm_eval/tasks/eq_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/eq_bench"
+    },
+    {
+      "name": "esbbq",
+      "path": "lm_eval/tasks/esbbq",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/esbbq"
+    },
+    {
+      "name": "eus_exams",
+      "path": "lm_eval/tasks/eus_exams",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/eus_exams"
+    },
+    {
+      "name": "eus_proficiency",
+      "path": "lm_eval/tasks/eus_proficiency",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/eus_proficiency"
+    },
+    {
+      "name": "eus_reading",
+      "path": "lm_eval/tasks/eus_reading",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/eus_reading"
+    },
+    {
+      "name": "eus_trivia",
+      "path": "lm_eval/tasks/eus_trivia",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/eus_trivia"
+    },
+    {
+      "name": "evalita_llm",
+      "path": "lm_eval/tasks/evalita_llm",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/evalita_llm"
+    },
+    {
+      "name": "fda",
+      "path": "lm_eval/tasks/fda",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/fda"
+    },
+    {
+      "name": "fld",
+      "path": "lm_eval/tasks/fld",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/fld"
+    },
+    {
+      "name": "french_bench",
+      "path": "lm_eval/tasks/french_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/french_bench"
+    },
+    {
+      "name": "galician_bench",
+      "path": "lm_eval/tasks/galician_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/galician_bench"
+    },
+    {
+      "name": "glianorex",
+      "path": "lm_eval/tasks/glianorex",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/glianorex"
+    },
+    {
+      "name": "global_mmlu",
+      "path": "lm_eval/tasks/global_mmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/global_mmlu"
+    },
+    {
+      "name": "global_piqa",
+      "path": "lm_eval/tasks/global_piqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/global_piqa"
+    },
+    {
+      "name": "glue",
+      "path": "lm_eval/tasks/glue",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/glue"
+    },
+    {
+      "name": "gpqa",
+      "path": "lm_eval/tasks/gpqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/gpqa"
+    },
+    {
+      "name": "graphwalks",
+      "path": "lm_eval/tasks/graphwalks",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/graphwalks"
+    },
+    {
+      "name": "groundcocoa",
+      "path": "lm_eval/tasks/groundcocoa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/groundcocoa"
+    },
+    {
+      "name": "gsm_plus",
+      "path": "lm_eval/tasks/gsm_plus",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/gsm_plus"
+    },
+    {
+      "name": "gsm8k",
+      "path": "lm_eval/tasks/gsm8k",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/gsm8k"
+    },
+    {
+      "name": "gsm8k_platinum",
+      "path": "lm_eval/tasks/gsm8k_platinum",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/gsm8k_platinum"
+    },
+    {
+      "name": "haerae",
+      "path": "lm_eval/tasks/haerae",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/haerae"
+    },
+    {
+      "name": "headqa",
+      "path": "lm_eval/tasks/headqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/headqa"
+    },
+    {
+      "name": "hellaswag",
+      "path": "lm_eval/tasks/hellaswag",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/hellaswag"
+    },
+    {
+      "name": "hendrycks_ethics",
+      "path": "lm_eval/tasks/hendrycks_ethics",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/hendrycks_ethics"
+    },
+    {
+      "name": "hendrycks_math",
+      "path": "lm_eval/tasks/hendrycks_math",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/hendrycks_math"
+    },
+    {
+      "name": "histoires_morales",
+      "path": "lm_eval/tasks/histoires_morales",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/histoires_morales"
+    },
+    {
+      "name": "hrm8k",
+      "path": "lm_eval/tasks/hrm8k",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/hrm8k"
+    },
+    {
+      "name": "humaneval",
+      "path": "lm_eval/tasks/humaneval",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/humaneval"
+    },
+    {
+      "name": "humaneval_infilling",
+      "path": "lm_eval/tasks/humaneval_infilling",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/humaneval_infilling"
+    },
+    {
+      "name": "icelandic_winogrande",
+      "path": "lm_eval/tasks/icelandic_winogrande",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/icelandic_winogrande"
+    },
+    {
+      "name": "ifeval",
+      "path": "lm_eval/tasks/ifeval",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/ifeval"
+    },
+    {
+      "name": "indicparam",
+      "path": "lm_eval/tasks/indicparam",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/indicparam"
+    },
+    {
+      "name": "infinitebench",
+      "path": "lm_eval/tasks/infinitebench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/infinitebench"
+    },
+    {
+      "name": "inverse_scaling",
+      "path": "lm_eval/tasks/inverse_scaling",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/inverse_scaling"
+    },
+    {
+      "name": "japanese_leaderboard",
+      "path": "lm_eval/tasks/japanese_leaderboard",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/japanese_leaderboard"
+    },
+    {
+      "name": "jfinqa",
+      "path": "lm_eval/tasks/jfinqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/jfinqa"
+    },
+    {
+      "name": "jsonschema_bench",
+      "path": "lm_eval/tasks/jsonschema_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/jsonschema_bench"
+    },
+    {
+      "name": "kbl",
+      "path": "lm_eval/tasks/kbl",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/kbl"
+    },
+    {
+      "name": "kmmlu",
+      "path": "lm_eval/tasks/kmmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/kmmlu"
+    },
+    {
+      "name": "kobest",
+      "path": "lm_eval/tasks/kobest",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/kobest"
+    },
+    {
+      "name": "kormedmcqa",
+      "path": "lm_eval/tasks/kormedmcqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/kormedmcqa"
+    },
+    {
+      "name": "lambada",
+      "path": "lm_eval/tasks/lambada",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/lambada"
+    },
+    {
+      "name": "lambada_cloze",
+      "path": "lm_eval/tasks/lambada_cloze",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/lambada_cloze"
+    },
+    {
+      "name": "lambada_multilingual",
+      "path": "lm_eval/tasks/lambada_multilingual",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/lambada_multilingual"
+    },
+    {
+      "name": "lambada_multilingual_stablelm",
+      "path": "lm_eval/tasks/lambada_multilingual_stablelm",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/lambada_multilingual_stablelm"
+    },
+    {
+      "name": "legalbench",
+      "path": "lm_eval/tasks/legalbench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/legalbench"
+    },
+    {
+      "name": "libra",
+      "path": "lm_eval/tasks/libra",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/libra"
+    },
+    {
+      "name": "lingoly",
+      "path": "lm_eval/tasks/lingoly",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/lingoly"
+    },
+    {
+      "name": "llama3",
+      "path": "lm_eval/tasks/llama3",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/llama3"
+    },
+    {
+      "name": "lm_syneval",
+      "path": "lm_eval/tasks/lm_syneval",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/lm_syneval"
+    },
+    {
+      "name": "logiqa",
+      "path": "lm_eval/tasks/logiqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/logiqa"
+    },
+    {
+      "name": "logiqa2",
+      "path": "lm_eval/tasks/logiqa2",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/logiqa2"
+    },
+    {
+      "name": "longbench",
+      "path": "lm_eval/tasks/longbench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/longbench"
+    },
+    {
+      "name": "longbench2",
+      "path": "lm_eval/tasks/longbench2",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/longbench2"
+    },
+    {
+      "name": "mastermind",
+      "path": "lm_eval/tasks/mastermind",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mastermind"
+    },
+    {
+      "name": "mathqa",
+      "path": "lm_eval/tasks/mathqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mathqa"
+    },
+    {
+      "name": "mbpp",
+      "path": "lm_eval/tasks/mbpp",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mbpp"
+    },
+    {
+      "name": "mc_taco",
+      "path": "lm_eval/tasks/mc_taco",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mc_taco"
+    },
+    {
+      "name": "med_concepts_qa",
+      "path": "lm_eval/tasks/med_concepts_qa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/med_concepts_qa"
+    },
+    {
+      "name": "med_prescriptions",
+      "path": "lm_eval/tasks/med_prescriptions",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/med_prescriptions"
+    },
+    {
+      "name": "med_text_classification",
+      "path": "lm_eval/tasks/med_text_classification",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/med_text_classification"
+    },
+    {
+      "name": "meddialog",
+      "path": "lm_eval/tasks/meddialog",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/meddialog"
+    },
+    {
+      "name": "mediqa_qa2019",
+      "path": "lm_eval/tasks/mediqa_qa2019",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mediqa_qa2019"
+    },
+    {
+      "name": "medmcqa",
+      "path": "lm_eval/tasks/medmcqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/medmcqa"
+    },
+    {
+      "name": "medqa",
+      "path": "lm_eval/tasks/medqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/medqa"
+    },
+    {
+      "name": "medtext",
+      "path": "lm_eval/tasks/medtext",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/medtext"
+    },
+    {
+      "name": "mela",
+      "path": "lm_eval/tasks/mela",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mela"
+    },
+    {
+      "name": "meqsum",
+      "path": "lm_eval/tasks/meqsum",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/meqsum"
+    },
+    {
+      "name": "metabench",
+      "path": "lm_eval/tasks/metabench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/metabench"
+    },
+    {
+      "name": "mgsm",
+      "path": "lm_eval/tasks/mgsm",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mgsm"
+    },
+    {
+      "name": "mimic_repsum",
+      "path": "lm_eval/tasks/mimic_repsum",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mimic_repsum"
+    },
+    {
+      "name": "minerva_math",
+      "path": "lm_eval/tasks/minerva_math",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/minerva_math"
+    },
+    {
+      "name": "mlqa",
+      "path": "lm_eval/tasks/mlqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mlqa"
+    },
+    {
+      "name": "mmlu",
+      "path": "lm_eval/tasks/mmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mmlu"
+    },
+    {
+      "name": "mmlu_pro",
+      "path": "lm_eval/tasks/mmlu_pro",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mmlu_pro"
+    },
+    {
+      "name": "mmlu_prox",
+      "path": "lm_eval/tasks/mmlu_prox",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mmlu_prox"
+    },
+    {
+      "name": "mmlu-pro-plus",
+      "path": "lm_eval/tasks/mmlu-pro-plus",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mmlu-pro-plus"
+    },
+    {
+      "name": "mmlu-redux",
+      "path": "lm_eval/tasks/mmlu-redux",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mmlu-redux"
+    },
+    {
+      "name": "mmlu-redux-spanish",
+      "path": "lm_eval/tasks/mmlu-redux-spanish",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mmlu-redux-spanish"
+    },
+    {
+      "name": "mmlusr",
+      "path": "lm_eval/tasks/mmlusr",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mmlusr"
+    },
+    {
+      "name": "mmmu",
+      "path": "lm_eval/tasks/mmmu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mmmu"
+    },
+    {
+      "name": "model_written_evals",
+      "path": "lm_eval/tasks/model_written_evals",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/model_written_evals"
+    },
+    {
+      "name": "moral_stories",
+      "path": "lm_eval/tasks/moral_stories",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/moral_stories"
+    },
+    {
+      "name": "mts_dialog",
+      "path": "lm_eval/tasks/mts_dialog",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mts_dialog"
+    },
+    {
+      "name": "multiblimp",
+      "path": "lm_eval/tasks/multiblimp",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/multiblimp"
+    },
+    {
+      "name": "mutual",
+      "path": "lm_eval/tasks/mutual",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/mutual"
+    },
+    {
+      "name": "nerel-bench",
+      "path": "lm_eval/tasks/nerel-bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/nerel-bench"
+    },
+    {
+      "name": "noreval",
+      "path": "lm_eval/tasks/noreval",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/noreval"
+    },
+    {
+      "name": "noticia",
+      "path": "lm_eval/tasks/noticia",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/noticia"
+    },
+    {
+      "name": "nq_open",
+      "path": "lm_eval/tasks/nq_open",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/nq_open"
+    },
+    {
+      "name": "okapi",
+      "path": "lm_eval/tasks/okapi",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/okapi"
+    },
+    {
+      "name": "olaph",
+      "path": "lm_eval/tasks/olaph",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/olaph"
+    },
+    {
+      "name": "openai-mmmlu",
+      "path": "lm_eval/tasks/openai-mmmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/openai-mmmlu"
+    },
+    {
+      "name": "openbookqa",
+      "path": "lm_eval/tasks/openbookqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/openbookqa"
+    },
+    {
+      "name": "paloma",
+      "path": "lm_eval/tasks/paloma",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/paloma"
+    },
+    {
+      "name": "paws-x",
+      "path": "lm_eval/tasks/paws-x",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/paws-x"
+    },
+    {
+      "name": "pile",
+      "path": "lm_eval/tasks/pile",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/pile"
+    },
+    {
+      "name": "pile_10k",
+      "path": "lm_eval/tasks/pile_10k",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/pile_10k"
+    },
+    {
+      "name": "piqa",
+      "path": "lm_eval/tasks/piqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/piqa"
+    },
+    {
+      "name": "pisa",
+      "path": "lm_eval/tasks/pisa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/pisa"
+    },
+    {
+      "name": "polemo2",
+      "path": "lm_eval/tasks/polemo2",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/polemo2"
+    },
+    {
+      "name": "portuguese_bench",
+      "path": "lm_eval/tasks/portuguese_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/portuguese_bench"
+    },
+    {
+      "name": "prost",
+      "path": "lm_eval/tasks/prost",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/prost"
+    },
+    {
+      "name": "pubmedqa",
+      "path": "lm_eval/tasks/pubmedqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/pubmedqa"
+    },
+    {
+      "name": "qa4mre",
+      "path": "lm_eval/tasks/qa4mre",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/qa4mre"
+    },
+    {
+      "name": "qasper",
+      "path": "lm_eval/tasks/qasper",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/qasper"
+    },
+    {
+      "name": "race",
+      "path": "lm_eval/tasks/race",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/race"
+    },
+    {
+      "name": "realtoxicityprompts",
+      "path": "lm_eval/tasks/realtoxicityprompts",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/realtoxicityprompts"
+    },
+    {
+      "name": "ruler",
+      "path": "lm_eval/tasks/ruler",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/ruler"
+    },
+    {
+      "name": "sciq",
+      "path": "lm_eval/tasks/sciq",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/sciq"
+    },
+    {
+      "name": "score",
+      "path": "lm_eval/tasks/score",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/score"
+    },
+    {
+      "name": "scrolls",
+      "path": "lm_eval/tasks/scrolls",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/scrolls"
+    },
+    {
+      "name": "simple_cooccurrence_bias",
+      "path": "lm_eval/tasks/simple_cooccurrence_bias",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/simple_cooccurrence_bias"
+    },
+    {
+      "name": "siqa",
+      "path": "lm_eval/tasks/siqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/siqa"
+    },
+    {
+      "name": "slr_bench",
+      "path": "lm_eval/tasks/slr_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/slr_bench"
+    },
+    {
+      "name": "spanish_bench",
+      "path": "lm_eval/tasks/spanish_bench",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/spanish_bench"
+    },
+    {
+      "name": "squad_completion",
+      "path": "lm_eval/tasks/squad_completion",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/squad_completion"
+    },
+    {
+      "name": "squadv2",
+      "path": "lm_eval/tasks/squadv2",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/squadv2"
+    },
+    {
+      "name": "storycloze",
+      "path": "lm_eval/tasks/storycloze",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/storycloze"
+    },
+    {
+      "name": "super_glue",
+      "path": "lm_eval/tasks/super_glue",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/super_glue"
+    },
+    {
+      "name": "swag",
+      "path": "lm_eval/tasks/swag",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/swag"
+    },
+    {
+      "name": "swde",
+      "path": "lm_eval/tasks/swde",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/swde"
+    },
+    {
+      "name": "tinyBenchmarks",
+      "path": "lm_eval/tasks/tinyBenchmarks",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/tinyBenchmarks"
+    },
+    {
+      "name": "tmlu",
+      "path": "lm_eval/tasks/tmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/tmlu"
+    },
+    {
+      "name": "tmmluplus",
+      "path": "lm_eval/tasks/tmmluplus",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/tmmluplus"
+    },
+    {
+      "name": "toksuite",
+      "path": "lm_eval/tasks/toksuite",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/toksuite"
+    },
+    {
+      "name": "toxigen",
+      "path": "lm_eval/tasks/toxigen",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/toxigen"
+    },
+    {
+      "name": "translation",
+      "path": "lm_eval/tasks/translation",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/translation"
+    },
+    {
+      "name": "triviaqa",
+      "path": "lm_eval/tasks/triviaqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/triviaqa"
+    },
+    {
+      "name": "truthfulqa",
+      "path": "lm_eval/tasks/truthfulqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/truthfulqa"
+    },
+    {
+      "name": "truthfulqa-multi",
+      "path": "lm_eval/tasks/truthfulqa-multi",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/truthfulqa-multi"
+    },
+    {
+      "name": "turblimp",
+      "path": "lm_eval/tasks/turblimp",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/turblimp"
+    },
+    {
+      "name": "turkishmmlu",
+      "path": "lm_eval/tasks/turkishmmlu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/turkishmmlu"
+    },
+    {
+      "name": "ulqa",
+      "path": "lm_eval/tasks/ulqa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/ulqa"
+    },
+    {
+      "name": "unscramble",
+      "path": "lm_eval/tasks/unscramble",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/unscramble"
+    },
+    {
+      "name": "webqs",
+      "path": "lm_eval/tasks/webqs",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/webqs"
+    },
+    {
+      "name": "wikitext",
+      "path": "lm_eval/tasks/wikitext",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/wikitext"
+    },
+    {
+      "name": "winogender",
+      "path": "lm_eval/tasks/winogender",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/winogender"
+    },
+    {
+      "name": "winogrande",
+      "path": "lm_eval/tasks/winogrande",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/winogrande"
+    },
+    {
+      "name": "wmdp",
+      "path": "lm_eval/tasks/wmdp",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/wmdp"
+    },
+    {
+      "name": "wmt2016",
+      "path": "lm_eval/tasks/wmt2016",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/wmt2016"
+    },
+    {
+      "name": "wsc273",
+      "path": "lm_eval/tasks/wsc273",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/wsc273"
+    },
+    {
+      "name": "xcopa",
+      "path": "lm_eval/tasks/xcopa",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/xcopa"
+    },
+    {
+      "name": "xnli",
+      "path": "lm_eval/tasks/xnli",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/xnli"
+    },
+    {
+      "name": "xnli_eu",
+      "path": "lm_eval/tasks/xnli_eu",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/xnli_eu"
+    },
+    {
+      "name": "xquad",
+      "path": "lm_eval/tasks/xquad",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/xquad"
+    },
+    {
+      "name": "xstorycloze",
+      "path": "lm_eval/tasks/xstorycloze",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/xstorycloze"
+    },
+    {
+      "name": "xwinograd",
+      "path": "lm_eval/tasks/xwinograd",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/xwinograd"
+    },
+    {
+      "name": "zhoblimp",
+      "path": "lm_eval/tasks/zhoblimp",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/zhoblimp"
+    }
+  ],
+  "contentHash": "sha256:388342e9203ffa6fcaa99ad1a7b8dd7d0ea406d3262e6e54dc6a46b1b0b1732e"
+}

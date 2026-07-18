@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "pile-10k",
+    "canonicalName": "Pile 10k",
+    "category": "Language Modeling",
+    "status": "collecting",
+    "summary": "Pile 10k 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
+    "metric": {
+      "name": "perplexity",
+      "unit": "",
+      "direction": "lower",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/pile_10k",
+      "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/pile_10k"
+    }
+  },
+  "group": {
+    "version": "version-pending-audit",
+    "subset": "full",
+    "metric": "perplexity",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

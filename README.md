@@ -48,7 +48,7 @@
 | Agent Roadmap | TUI / IDE / Work Agent、Token Economy、Memory Layer、MiWork 机会分析 | [agent-roadmap](https://harzva.github.io/ChinaAI-Roadmaps/agent-roadmap/) |
 | 岗位与面试 | Agent 岗位画像、公司专项、通用题库、实战训练和 12 周冲刺计划 | [Agent-Job-Interview](https://harzva.github.io/Agent-Job-Interview/) |
 | 全球模型地图 | 国家、公司、模型族、论文卡片和开源生态关系 | [worldroadmap](https://harzva.github.io/ChinaAI-Roadmaps/worldroadmap/) |
-| Benchmark 排行榜 | 24 项 Registry、透明热门集合、来源可追溯 Top-K 与模型比较 | [benchmark-roadmap](https://harzva.github.io/ChinaAI-Roadmaps/benchmark-roadmap/) |
+| Benchmark 排行榜 | 233 项 Registry、透明热门集合、来源可追溯 Top-K 与模型比较 | [benchmark-roadmap](https://harzva.github.io/ChinaAI-Roadmaps/benchmark-roadmap/) |
 | 论文下载 | 45 个 PDF/报告入口与阅读页 | [downloads.html](https://harzva.github.io/ChinaAI-Roadmaps/downloads.html) |
 | 研究笔记 | Markdown 解析、旧版 HTML 专题、流程图素材 | [content/](content/) |
 
@@ -133,6 +133,8 @@ cd benchmark-roadmap
 npm ci
 npm run gates
 ```
+
+Registry 的大规模实现目录快照可通过 `npm run sync:catalogs` 更新；该命令只更新待审核索引，不能绕过来源、版本和可比性门禁直接生成模型名次。
 
 `gates` 会依次校验身份与引用、重建 Top-K、运行 golden evals、检查链接结构，并扫描公开 JSON 的敏感字段。榜单的来源、可比性和贡献规则见 [`SOURCE_POLICY.md`](benchmark-roadmap/SOURCE_POLICY.md)、[`COMPARABILITY.md`](benchmark-roadmap/COMPARABILITY.md) 与 [`CONTRIBUTING.md`](benchmark-roadmap/CONTRIBUTING.md)。
 

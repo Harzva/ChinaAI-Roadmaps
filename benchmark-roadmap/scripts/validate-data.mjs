@@ -20,6 +20,7 @@ export async function validateData(overrides = {}) {
   const modelIds = ids(modelDoc.models, 'modelId', 'model');
   const systemIds = ids(systemDoc.systems, 'systemId', 'system');
   const sourceIds = ids(sourceDoc.sources, 'sourceId', 'source');
+  const sourceById = new Map(sourceDoc.sources.map((item) => [item.sourceId, item]));
   ids(resultDoc.results, 'resultId', 'result');
   const aliases = new Map();
   for (const benchmark of benchmarkDoc.benchmarks) {
@@ -32,8 +33,18 @@ export async function validateData(overrides = {}) {
       if (aliases.has(key) && aliases.get(key) !== benchmark.benchmarkId) errors.push(`${benchmark.benchmarkId}: alias conflict ${name} with ${aliases.get(key)}`);
       aliases.set(key, benchmark.benchmarkId);
     }
-    for (const sourceId of benchmark.sourceIds || []) if (!sourceIds.has(sourceId)) errors.push(`${benchmark.benchmarkId}: unknown source ${sourceId}`);
+    if (!Object.values(benchmark.links || {}).some((url) => /^https:\/\//.test(url))) errors.push(`${benchmark.benchmarkId}: missing HTTPS registry link`);
+    for (const sourceId of benchmark.sourceIds || []) {
+      if (!sourceIds.has(sourceId)) errors.push(`${benchmark.benchmarkId}: unknown source ${sourceId}`);
+      else if (!(sourceById.get(sourceId).benchmarkIds || []).includes(benchmark.benchmarkId)) errors.push(`${benchmark.benchmarkId}: source ${sourceId} does not link back to benchmark`);
+    }
+    if (benchmark.registryOrigin?.catalogRole === 'implementation-index') {
+      if (!benchmark.registryOrigin.upstreamPath) errors.push(`${benchmark.benchmarkId}: catalog entry missing upstream path`);
+      if (!/^[a-f0-9]{40}$/.test(benchmark.registryOrigin.upstreamCommit || '')) errors.push(`${benchmark.benchmarkId}: catalog entry missing pinned commit`);
+      if (benchmark.status !== 'collecting') errors.push(`${benchmark.benchmarkId}: implementation-index entry must remain collecting until source audit`);
+    }
   }
+  if (!Object.keys(overrides).length && benchmarkDoc.benchmarks.length < 200) errors.push(`registry: expected at least 200 benchmark entries, found ${benchmarkDoc.benchmarks.length}`);
   for (const system of systemDoc.systems) if (!modelIds.has(system.modelId)) errors.push(`${system.systemId}: unknown model ${system.modelId}`);
   for (const result of resultDoc.results) {
     if (!benchmarkIds.has(result.benchmarkId)) errors.push(`${result.resultId}: unknown benchmark`);

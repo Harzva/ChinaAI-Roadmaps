@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-07-18T13:49:05.011Z",
+  "generatedAt": "2026-07-18T15:14:00.557Z",
   "scannedFiles": [
     "benchmark-roadmap/data.js",
     "app/src/pages/Benchmarks.tsx",
@@ -10,18 +10,20 @@
     "app/src/pages/Mimo.tsx"
   ],
   "summary": {
-    "registryEntries": 24,
-    "benchmarks": 21,
-    "suites": 2,
-    "datasets": 1,
+    "registryEntries": 233,
+    "benchmarks": 213,
+    "suites": 13,
+    "datasets": 7,
     "frameworksInRegistry": 0,
     "auditMethodsInRegistry": 0,
     "sourceCoveragePercent": 100,
     "ready": 10,
-    "collecting": 8,
+    "collecting": 217,
     "needsSource": 3,
     "legacy": 3,
-    "discoveredRegistryReferences": 20
+    "implementationIndexed": 209,
+    "canonicalSourceEntries": 24,
+    "discoveredLegacySurfaceReferences": 20
   },
   "aliasResolutions": [
     {
@@ -65,10 +67,13 @@
       "reason": "Leaderboard result adapter is pending."
     }
   ],
-  "uncoveredRegistryEntries": [
-    "terminal-bench-2-1",
-    "osworld-v2",
+  "catalogSnapshots": [
+    "lm-evaluation-harness@f4d4b3de3ee6741a7151a9fe74945ee515262f4c"
+  ],
+  "uncoveredLegacySurfaceEntries": [
+    "livebench",
     "metr-time-horizon",
-    "livebench"
+    "osworld-v2",
+    "terminal-bench-2-1"
   ]
 }

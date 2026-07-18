@@ -1,23 +1,24 @@
-# Release Audit — 1.0.0
+# Release Audit — 1.1.0
 
 发布日期：2026-07-18
 
-- 数据范围：24 个 Registry 条目；首发 Agent 为主，General Registry 为辅。
+- 数据范围：233 个唯一 Registry 条目；24 个 canonical-source 记录，209 个 implementation-index 记录。
+- 目录快照：EleutherAI LM Evaluation Harness commit `f4d4b3de3ee6741a7151a9fe74945ee515262f4c`；210 个任务目录中导入 209 个，1 个重复身份自动拒绝。
 - 默认成绩：仅 `official` / `independent` 且 `comparable`。
 - 生成：`npm run gates` 可在干净 Node 20+ 环境重建并验证。
 - 安全：公开 JSON 采用结果字段 allowlist 和凭据/内部字段/私有路径 denylist。
 - 回滚：GitHub Pages 产物绑定 Git commit；回滚时 revert 发布提交并重新运行 Pages workflow。
-- 已知限制：GAIA、τ²-bench、WebArena 等已建档但尚无符合本项目口径的默认 Top-K；它们明确显示“等待来源合格成绩”。
+- 已知限制：implementation-index 条目只证明可信评测框架中存在对应实现，不替代原论文/许可证/协议审核；这些条目明确显示“等待来源合格成绩”。
 - M1 Registry：完成；M2 可追溯 Top-K：完成；M3 自动更新与治理：完成基础版，计划继续扩展适配器覆盖。
 
 ## 验证证据
 
 | 检查 | 结果 |
 | --- | --- |
-| Release gates | 12/12 tests；24 个榜单、10 个热门条目、16 条默认合格成绩 |
+| Release gates | 13/13 tests；233 个榜单、10 个热门条目、16 条默认合格成绩 |
 | Determinism | 固定输入重复生成相同 snapshot hash；公开产物由 CI 执行 `git diff --exit-code` |
-| Browser smoke | 热门 → Top-K、模型详情、共同 benchmark 比较、Map bridge 均通过；控制台 0 error |
-| Mobile | 390 × 844；`documentElement.scrollWidth === innerWidth` |
+| Browser smoke | 233 项加载、登记深度筛选、commit-pinned 来源详情、50 → 100 渐进加载均通过；控制台 0 error / 0 warning |
+| Mobile | 390 × 844；50/100 项渐进加载后 `documentElement.scrollWidth === innerWidth === 390` |
 | Lighthouse | Performance 97、Accessibility 100、Best Practices 100、SEO 100；TBT 0 ms |
 | Secret scan | Semgrep secrets：42 rules / 79 targets / 0 findings；公开 JSON denylist：29 files passed |
 | Workflow lint | `actionlint .github/workflows/benchmark-*.yml` 通过 |

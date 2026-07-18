@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0 — 2026-07-18
+
+- Registry 从 24 项扩展到 233 项：保留 24 项 canonical-source 记录，新增 209 项 commit-pinned implementation index。
+- 新增 EleutherAI LM Evaluation Harness 目录同步器、上游快照、任务级 GitHub 路径与内容哈希。
+- 新增 200+ 数量门禁、来源反向引用、上游 commit、目录路径和 `collecting` 状态校验。
+- 页面新增登记深度筛选、来源阶段标识、233 项覆盖统计和每次 50 项渐进加载；实现目录条目不会自动进入 Top-K。
+
 ## 1.0.0 — 2026-07-18
 
 - 建立 24 项 Benchmark Registry、模型/系统/成绩/来源四层数据模型和 JSON Schema。

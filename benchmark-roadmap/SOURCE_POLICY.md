@@ -8,6 +8,10 @@
 
 每条可排名成绩必须带有 HTTPS 原始来源、评测日期、抓取时间、内容哈希、明确版本、subset、metric、protocol 以及运行配置。截图、二手转载、无日期页面和版本不明记录降级为 `unverified`。
 
+Registry 使用两级登记深度：`canonical_source` 表示已经为条目建立原始或项目官方来源；`implementation_index` 表示已在可信评测框架的锁定 commit 中核验实现目录，但原论文、数据集许可证、精确版本与协议仍待二次审核。后者只能保持 `collecting`，不能仅凭目录存在进入 Top-K。
+
+当前大规模目录快照来自 [EleutherAI LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness)。快照保存 commit、任务路径和内容哈希；同步命令为 `npm run sync:catalogs`。这是一条实现存在性证据，不冒充各 benchmark 作者的官方背书。
+
 ## 更新、更正与撤回
 
 采集遵循 `fetch → snapshot → normalize → validate → publish`。任一来源失败时保留上一份通过验证的公开快照，禁止以空结果覆盖线上榜单。来源更正通过新增提交记录；撤回的结果保留在 Git 历史和发布审计中，页面不静默改写旧证据。

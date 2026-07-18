@@ -2,7 +2,7 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (char) => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' }[char]));
 const formatScore = (result, unit = '') => `${Number(result.score).toFixed(Number.isInteger(result.score) ? 0 : 1)}${unit === '%' ? '%' : ''}${result.uncertainty ? ` ±${result.uncertainty}` : ''}`;
-const state = { catalog: null, hot: null, models: null, snapshot: null, maintenance: null, boards: new Map(), selectedSystems: new Set() };
+const state = { catalog: null, hot: null, models: null, snapshot: null, maintenance: null, boards: new Map(), selectedSystems: new Set(), visibleLimit: 50 };
 
 async function getJson(path) {
   const response = await fetch(path, { cache: 'no-cache' });
@@ -18,7 +18,7 @@ async function getBoard(benchmarkId) {
 function renderSnapshot() {
   const { counts } = state.snapshot;
   $('#snapshot-state').textContent = 'VALIDATED';
-  $('#snapshot-stats').innerHTML = `<div><strong>${counts.benchmarks}</strong><span>benchmarks</span></div><div><strong>${counts.hotBenchmarks}</strong><span>hot set</span></div><div><strong>${counts.qualifiedResults}</strong><span>qualified runs</span></div>`;
+  $('#snapshot-stats').innerHTML = `<div><strong>${counts.benchmarks}</strong><span>registry</span></div><div><strong>${counts.canonicalSourceEntries}</strong><span>canonical source</span></div><div><strong>${counts.rankedBenchmarks}</strong><span>ranked boards</span></div><div><strong>${counts.qualifiedResults}</strong><span>qualified runs</span></div>`;
 }
 
 function signalBars(item) {
@@ -41,6 +41,7 @@ function renderMaintenance() {
     [item.sources.curatedSnapshots, 'curated snapshots'],
     [item.queue.needsSource, 'needs source'],
     [item.queue.collecting, 'collecting'],
+    [item.queue.implementationIndex, 'implementation index'],
     [item.staleBenchmarks.length, 'legacy / stale']
   ];
   $('#maintenance-stats').innerHTML = values.map(([value,label]) => `<div><strong>${value}</strong><span>${escapeHtml(label)}</span></div>`).join('');
@@ -62,6 +63,7 @@ function filteredBenchmarks() {
   const coverage = $('#coverage').value;
   const language = $('#language').value;
   const modality = $('#modality').value;
+  const evidenceStage = $('#evidence-stage').value;
   return state.catalog.benchmarks.filter((item) => {
     const haystack = [item.canonicalName, item.summary, item.category, ...(item.aliases || [])].join(' ').toLowerCase();
     if (query && !haystack.includes(query)) return false;
@@ -71,17 +73,23 @@ function filteredBenchmarks() {
     if (coverage === 'pending' && item.leaderboard.resultCount) return false;
     if (language && !(item.languages || []).includes(language)) return false;
     if (modality && !(item.modalities || []).includes(modality)) return false;
+    if (evidenceStage && item.evidenceStage !== evidenceStage) return false;
     return true;
   });
 }
 
 function renderRegistry() {
-  const rows = filteredBenchmarks();
-  $('#result-count').textContent = `${rows.length} / ${state.catalog.benchmarks.length} entries · canonical identity + version isolation`;
+  const filtered = filteredBenchmarks();
+  const rows = filtered.slice(0, state.visibleLimit);
+  $('#result-count').textContent = `展示 ${rows.length} / 筛选 ${filtered.length} / 总计 ${state.catalog.benchmarks.length} · canonical identity + version isolation`;
   $('#registry-body').innerHTML = rows.map((item) => {
     const leader = item.leaderboard.leader;
-    return `<tr><td><span class="benchmark-name">${escapeHtml(item.canonicalName)}</span><span class="benchmark-alias">${escapeHtml((item.aliases || []).slice(0,2).join(' · '))}</span></td><td>${escapeHtml(item.category)}<span class="benchmark-alias">${escapeHtml(item.versions.join(' / '))}</span></td><td><span class="status status-${escapeHtml(item.status)}">${escapeHtml(item.status)}</span></td><td><span class="count-badge">${item.leaderboard.resultCount}</span></td><td class="leader-cell">${leader ? `${escapeHtml(leader.system.name)}<small>${formatScore(leader, item.primaryMetric.unit)}</small>` : '<span class="benchmark-alias">暂无默认排名</span>'}</td><td><button class="row-button" type="button" data-benchmark="${escapeHtml(item.benchmarkId)}">详情 →</button></td></tr>`;
+    const stageLabel = item.evidenceStage === 'implementation_index' ? '实现目录已核验' : '原始来源已建档';
+    return `<tr><td><span class="benchmark-name">${escapeHtml(item.canonicalName)}</span><span class="benchmark-alias">${escapeHtml((item.aliases || []).slice(0,2).join(' · '))}</span></td><td>${escapeHtml(item.category)}<span class="benchmark-alias">${escapeHtml(item.versions.join(' / '))}</span></td><td><span class="status status-${escapeHtml(item.status)}">${escapeHtml(item.status)}</span><span class="benchmark-alias">${stageLabel}</span></td><td><span class="count-badge">${item.leaderboard.resultCount}</span></td><td class="leader-cell">${leader ? `${escapeHtml(leader.system.name)}<small>${formatScore(leader, item.primaryMetric.unit)}</small>` : '<span class="benchmark-alias">暂无默认排名</span>'}</td><td><button class="row-button" type="button" data-benchmark="${escapeHtml(item.benchmarkId)}">详情 →</button></td></tr>`;
   }).join('') || '<tr><td colspan="6"><div class="empty-state">没有符合筛选条件的 Benchmark。</div></td></tr>';
+  const more = $('#load-more');
+  more.hidden = rows.length >= filtered.length;
+  more.textContent = `继续加载 ${Math.min(50, filtered.length - rows.length)} 项`;
 }
 
 function popularityFor(id) { return state.hot.benchmarks.find((item) => item.benchmark.benchmarkId === id); }
@@ -111,8 +119,12 @@ function rankingRows(board, options = {}) {
 async function openBenchmark(id) {
   const board = await getBoard(id);
   const hot = popularityFor(id);
+  const registryEntry = state.catalog.benchmarks.find((item) => item.benchmarkId === id);
+  const evidenceLabel = registryEntry?.evidenceStage === 'implementation_index' ? '实现目录已核验 · 原始来源待审核' : '原始来源已建档';
   const content = $('#detail-content');
   content.innerHTML = `<p class="eyebrow">BENCHMARK DETAIL / EXACT GROUP</p><h2 id="detail-title">${escapeHtml(board.benchmark.canonicalName)}</h2><p class="dialog-intro">${escapeHtml(board.benchmark.summary)}</p><div class="detail-meta"><span class="chip">${escapeHtml(board.benchmark.category)}</span><span class="chip">v ${escapeHtml(board.group.version)}</span><span class="chip">subset ${escapeHtml(board.group.subset)}</span><span class="chip">${escapeHtml(board.group.metric)}</span><span class="chip">${escapeHtml(board.group.protocol)}</span><span class="chip">${escapeHtml((state.catalog.benchmarks.find((item) => item.benchmarkId === id)?.languages || []).join(' / '))}</span><span class="chip">${escapeHtml((state.catalog.benchmarks.find((item) => item.benchmarkId === id)?.modalities || []).join(' / '))}</span><span class="chip status status-${escapeHtml(board.benchmark.status)}">${escapeHtml(board.benchmark.status)}</span></div>${hot ? `<div class="pop-breakdown"><div><strong>${hot.activeLeaderboard}</strong><span>榜单 / 35</span></div><div><strong>${hot.modelAdoption}</strong><span>采用 / 25</span></div><div><strong>${hot.communityImpact}</strong><span>社区 / 15</span></div><div><strong>${hot.freshness}</strong><span>新鲜 / 15</span></div><div><strong>${hot.reproducibility}</strong><span>复现 / 10</span></div></div>` : ''}${uncertaintyNote(board) ? `<p class="source-receipt">${escapeHtml(uncertaintyNote(board))}</p>` : ''}<div class="detail-toolbar"><p><b>Top-K</b><br><span class="benchmark-alias">${escapeHtml(board.caveat)}</span></p><div><label>展示 <select id="topk-select"><option value="5">Top 5</option><option value="10">Top 10</option><option value="all">全部</option></select></label><label>权重 <select id="weights-select"><option value="all">全部模型</option><option value="open">开放权重</option></select></label><label>实体 <select id="entity-select"><option value="system">完整系统</option><option value="model">每模型最佳配置</option></select></label><label>来源 <select id="source-select"><option value="default">官方与独立</option><option value="all">包含其他报告</option></select></label></div></div><div id="ranking-output">${rankingRows(board)}</div>${board.sotaTimeline.length ? `<section class="timeline"><h3>当时的 SOTA</h3><ol>${board.sotaTimeline.map((point) => `<li><time>${escapeHtml(point.date)}</time>${point.leaders.map((leader) => `${escapeHtml(leader.system.name)} · ${formatScore(leader, board.benchmark.metric.unit)}`).join('<br>')}</li>`).join('')}</ol></section>` : ''}<aside class="source-receipt"><h3>Evidence receipt / 来源回执</h3>${board.all.length ? `<p>默认榜来源：${[...new Set(board.all.map((item) => item.source.name))].map(escapeHtml).join(' · ')}</p><p>资格：official / independent + comparable；生成时间 ${escapeHtml(board.generatedAt)}</p>` : '<p>暂无同时满足来源等级、可比性与配置完整性的成绩。Registry 条目不会因此伪造空缺排名。</p>'}<p>其他报告：${board.otherReports.length} 条（不进入默认 Top-K）</p></aside>`;
+  $('.detail-meta', content)?.insertAdjacentHTML('beforeend', `<span class="chip">${escapeHtml(evidenceLabel)}</span>`);
+  $('.source-receipt', content)?.insertAdjacentHTML('afterbegin', `<p>登记深度：${escapeHtml(evidenceLabel)}。 <a class="source-link" href="${escapeHtml(registryEntry?.links?.repo || registryEntry?.links?.homepage || '#')}" target="_blank" rel="noreferrer">查看登记来源 ↗</a></p>`);
   const updateRanking = () => { $('#ranking-output').innerHTML = rankingRows(board, { limit: $('#topk-select').value, openOnly: $('#weights-select').value === 'open', entity: $('#entity-select').value, includeReports: $('#source-select').value === 'all' }); };
   ['#topk-select','#weights-select','#entity-select','#source-select'].forEach((selector) => $(selector)?.addEventListener('change', updateRanking));
   const dialog = $('#detail-dialog');
@@ -170,7 +182,8 @@ function renderComparison(index) {
 }
 
 function bindEvents() {
-  $('#filters').addEventListener('input', renderRegistry);
+  $('#filters').addEventListener('input', () => { state.visibleLimit = 50; renderRegistry(); });
+  $('#load-more').addEventListener('click', () => { state.visibleLimit += 50; renderRegistry(); });
   document.addEventListener('click', (event) => {
     const benchmark = event.target.closest('[data-benchmark]');
     if (benchmark) openBenchmark(benchmark.dataset.benchmark).catch(showError);

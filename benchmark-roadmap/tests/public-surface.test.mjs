@@ -7,6 +7,8 @@ test('generated catalog has a leaderboard for every registry entry', async () =>
   const catalog = JSON.parse(await readFile(new URL('../data/public/catalog.json', import.meta.url), 'utf8'));
   assert.equal(catalog.benchmarks.length, registry.benchmarks.length);
   assert.ok(catalog.benchmarks.every((item) => item.leaderboard && item.leaderboard.group));
+  assert.ok(catalog.benchmarks.length >= 200);
+  assert.ok(catalog.benchmarks.some((item) => item.evidenceStage === 'implementation_index'));
 });
 
 test('every default result links to evidence and carries a run configuration', async () => {
@@ -30,6 +32,7 @@ test('leaderboard, map bridge and no-JavaScript notice remain present', async ()
   const app = await readFile(new URL('../leaderboard.js', import.meta.url), 'utf8');
   assert.match(index, /<noscript>/);
   assert.match(index, /maintenance-panel/);
+  assert.match(index, /id="load-more"/);
   assert.match(app, /data\/public\/maintenance\.json/);
   assert.match(map, /data\/public\/catalog\.json/);
 });
