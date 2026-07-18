@@ -12,6 +12,8 @@ Registry 使用两级登记深度：`canonical_source` 表示已经为条目建�
 
 当前大规模目录快照来自 [EleutherAI LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness)。快照保存 commit、任务路径和内容哈希；同步命令为 `npm run sync:catalogs`。这是一条实现存在性证据，不冒充各 benchmark 作者的官方背书。
 
+论文增量发现采用独立 staging 与人工审核队列。PDF/OCR 抽取结果只是一条 `result claim`，必须带 arXiv version、PDF hash、页码、表号、行列和运行配置；未经人工复核不得写入公开成绩。论文提出的方法名也不会自动登记为 benchmark。完整方案见 [`ARXIV_BENCHMARK_DISCOVERY.md`](ARXIV_BENCHMARK_DISCOVERY.md)。
+
 ## 更新、更正与撤回
 
 采集遵循 `fetch → snapshot → normalize → validate → publish`。任一来源失败时保留上一份通过验证的公开快照，禁止以空结果覆盖线上榜单。来源更正通过新增提交记录；撤回的结果保留在 Git 历史和发布审计中，页面不静默改写旧证据。

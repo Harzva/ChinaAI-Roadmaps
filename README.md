@@ -97,6 +97,7 @@ flowchart LR
 | 全球模型地图 | [`worldroadmap/`](worldroadmap/) | 独立静态子页面，覆盖全球 AI 公司、模型族和论文关系 |
 | Benchmark Registry | [`benchmark-roadmap/`](benchmark-roadmap/) | Registry、热门集合、Top 5/10/全部、来源审计、Map 与模型比较 |
 | Benchmark 排行榜路线图 | [`ROADMAP.md`](ROADMAP.md) | 已完成的 1–10 步升级计划与验收证据 |
+| arXiv Benchmark 发现 | [`benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md`](benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md) | 每日论文召回、PDF/OCR 成绩取证、Memory 专项与内容素材方案 |
 | 下载中心 | [`downloads.html`](downloads.html) | 论文与报告入口 |
 | 技术路线图 | [`assets/flowcharts`](assets/flowcharts/) | GLM、Kimi、DeepSeek、MiniMax SVG |
 | Markdown 笔记 | [`content/markdown`](content/markdown/) | 论文解析与索引 |

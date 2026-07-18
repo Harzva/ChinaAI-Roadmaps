@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- 新增 arXiv benchmark 增量发现方案，覆盖 Memory 专项、PDF 表格取证、局部 OCR、版本化 claim 与人工审核。
+- 完成 VTM-Nav 样例核验，明确 benchmark/dataset/suite/protocol 分类和不同 step budget 的可比性边界。
+- 规划 New/Rising/Hot 统计与知乎、微信证据卡输出，未把论文自报结果直接放入 Top-K。
+
 ## 1.1.0 — 2026-07-18
 
 - Registry 从 24 项扩展到 233 项：保留 24 项 canonical-source 记录，新增 209 项 commit-pinned implementation index。

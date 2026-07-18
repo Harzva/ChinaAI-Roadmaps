@@ -23,6 +23,12 @@
 
 发布质量结果：Lighthouse Performance 97 / Accessibility 100 / Best Practices 100 / SEO 100，TBT 0 ms；移动端 390 px 无页面横向溢出。`npm run gates` 是本地与 CI 的统一发布命令，远端 Pages smoke job 会同时验证排行榜页面和公开快照。
 
+## 后续探索：arXiv 增量发现
+
+200+ Registry 之后的增量来源不能只依赖评测框架目录，还需要从新论文中识别 benchmark、dataset、suite、protocol 和可比成绩。已完成本地 arXiv 日报、PDF 文本层、Poppler 渲染和 Tesseract OCR 的能力核验，并用一篇 cross-episode memory 论文逐表验证 SR/SPL 与 step budget。
+
+完整的来源对比、PDF 取证级联、结构化 claim、New/Rising/Hot 统计、知乎/微信素材流与下一轮 1–10 实施计划见 [`benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md`](benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md)。该阶段当前是已完成探索、待实现，不计入上方 v1.1 的完成项。
+
 ## 0. 目标、范围与完成定义
 
 当前 `benchmark-roadmap/data.js` 有 25 个节点，其中约 18 个是真正的 benchmark，另有评测框架和审计概念；React 站点的模型页面还包含约 29 个地图之外的 benchmark 或版本。现有成绩大多写在页面代码里，缺少统一身份、版本、来源和运行配置，不能直接成为可信排行榜。
