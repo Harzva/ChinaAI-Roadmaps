@@ -17,6 +17,7 @@
     </a>
     <nav aria-label="Benchmark 导航">
       <a class="active" href="./">Leaderboard</a>
+      <a href="discover.html">arXiv 发现</a>
       <a href="map.html">Map 模式</a>
       <a href="../agent-roadmap/">Agent Map</a>
       <a href="../">首页</a>
@@ -31,6 +32,7 @@
         <p class="lede">已收录 200+ 项评测索引；这里不制造跨 benchmark 的总冠军。每张榜只比较相同版本、subset、metric 与 protocol，并把模型、Agent scaffold、预算和原始来源一起展示。</p>
         <div class="hero-actions">
           <a class="button primary" href="#hot">查看热门榜</a>
+          <a class="button" href="discover.html">每日论文发现</a>
           <a class="button" href="COMPARABILITY.md">可比性规则</a>
         </div>
       </div>
@@ -71,7 +73,7 @@
         <label><span>类别</span><select id="category"><option value="">全部类别</option></select></label>
         <label><span>状态</span><select id="status"><option value="">全部状态</option><option value="ready">Ready</option><option value="collecting">Collecting</option><option value="needs_source">Needs source</option><option value="legacy">Legacy</option></select></label>
         <label><span>数据</span><select id="coverage"><option value="">全部</option><option value="ranked">已有合格 Top-K</option><option value="pending">等待合格成绩</option></select></label>
-        <label><span>登记深度</span><select id="evidence-stage"><option value="">全部</option><option value="canonical_source">原始来源已建档</option><option value="implementation_index">实现目录已核验</option></select></label>
+        <label><span>登记深度</span><select id="evidence-stage"><option value="">全部</option><option value="canonical_source">原始来源已建档</option><option value="paper_evidence">论文证据待升格</option><option value="implementation_index">实现目录已核验</option></select></label>
         <label><span>语言</span><select id="language"><option value="">全部语言</option></select></label>
         <label><span>模态</span><select id="modality"><option value="">全部模态</option></select></label>
       </form>
@@ -96,7 +98,7 @@
   </main>
 
   <footer>
-    <p>ChinaAI Roadmaps · Benchmark Registry v1.1 · 200+ index</p>
+    <p>ChinaAI Roadmaps · Benchmark Registry v1.2 · 200+ index + arXiv discovery</p>
     <p><a href="CONTRIBUTING.md">贡献数据</a><a href="RELEASE_AUDIT.md">发布审计</a><a href="https://github.com/Harzva/ChinaAI-Roadmaps">GitHub</a></p>
   </footer>
 

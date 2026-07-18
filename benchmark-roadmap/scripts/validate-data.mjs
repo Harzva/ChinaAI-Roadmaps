@@ -24,7 +24,7 @@ export async function validateData(overrides = {}) {
   ids(resultDoc.results, 'resultId', 'result');
   const aliases = new Map();
   for (const benchmark of benchmarkDoc.benchmarks) {
-    if (!['benchmark','suite','framework','dataset','audit_method'].includes(benchmark.type)) errors.push(`${benchmark.benchmarkId}: invalid type`);
+    if (!['benchmark','suite','framework','dataset','protocol','audit_method'].includes(benchmark.type)) errors.push(`${benchmark.benchmarkId}: invalid type`);
     if (!['higher','lower'].includes(benchmark.primaryMetric?.direction)) errors.push(`${benchmark.benchmarkId}: missing metric direction`);
     if (!Array.isArray(benchmark.languages) || !benchmark.languages.length) errors.push(`${benchmark.benchmarkId}: missing languages`);
     if (!Array.isArray(benchmark.modalities) || !benchmark.modalities.length) errors.push(`${benchmark.benchmarkId}: missing modalities`);
@@ -42,6 +42,12 @@ export async function validateData(overrides = {}) {
       if (!benchmark.registryOrigin.upstreamPath) errors.push(`${benchmark.benchmarkId}: catalog entry missing upstream path`);
       if (!/^[a-f0-9]{40}$/.test(benchmark.registryOrigin.upstreamCommit || '')) errors.push(`${benchmark.benchmarkId}: catalog entry missing pinned commit`);
       if (benchmark.status !== 'collecting') errors.push(`${benchmark.benchmarkId}: implementation-index entry must remain collecting until source audit`);
+    }
+    if (benchmark.registryOrigin?.catalogRole === 'paper-evidence') {
+      if (!/^arxiv-[a-z0-9-]+$/.test(benchmark.registryOrigin.paperId || '')) errors.push(`${benchmark.benchmarkId}: paper-evidence entry missing paper id`);
+      if (!/^v[0-9]+$/.test(benchmark.registryOrigin.sourceVersion || '')) errors.push(`${benchmark.benchmarkId}: paper-evidence entry missing arXiv version`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(benchmark.registryOrigin.discoveredAt || '')) errors.push(`${benchmark.benchmarkId}: paper-evidence entry missing discovery date`);
+      if (benchmark.status !== 'collecting') errors.push(`${benchmark.benchmarkId}: paper-evidence entry must remain collecting until result audit`);
     }
   }
   if (!Object.keys(overrides).length && benchmarkDoc.benchmarks.length < 200) errors.push(`registry: expected at least 200 benchmark entries, found ${benchmarkDoc.benchmarks.length}`);

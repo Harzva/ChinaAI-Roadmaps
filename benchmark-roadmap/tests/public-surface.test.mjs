@@ -29,10 +29,14 @@ test('hot summaries, SOTA history and maintenance panel data are generated', asy
 test('leaderboard, map bridge and no-JavaScript notice remain present', async () => {
   const index = await readFile(new URL('../index.html', import.meta.url), 'utf8');
   const map = await readFile(new URL('../map.html', import.meta.url), 'utf8');
+  const discovery = await readFile(new URL('../discover.html', import.meta.url), 'utf8');
   const app = await readFile(new URL('../leaderboard.js', import.meta.url), 'utf8');
   assert.match(index, /<noscript>/);
   assert.match(index, /maintenance-panel/);
   assert.match(index, /id="load-more"/);
   assert.match(app, /data\/public\/maintenance\.json/);
   assert.match(map, /data\/public\/catalog\.json/);
+  assert.match(index, /discover\.html/);
+  assert.match(discovery, /id="review-queue"/);
+  assert.match(discovery, /data\/public\/arxiv-discovery\.json/);
 });

@@ -1,6 +1,6 @@
 # Benchmark Leaderboard 全面升级路线图
 
-> 状态：Complete · v1.1 · 200+ Registry expansion
+> 状态：Complete · v1.2 · 200+ Registry + arXiv evidence pipeline
 >
 > 最后更新：2026-07-18
 >
@@ -10,16 +10,16 @@
 
 | Step | 状态 | 可复核交付物 |
 | ---: | :---: | --- |
-| 1 | ✅ | `data/benchmarks.json`、`data/audit/inventory-report.json`；233 项稳定身份，旧地图 framework/audit concept 不混计 |
+| 1 | ✅ | `data/benchmarks.json`、`data/audit/inventory-report.json`；237 项稳定身份，旧地图 framework/audit concept 不混计 |
 | 2 | ✅ | benchmark/model/system/result/source JSON Schema；版本、语言、模态、metric direction 与运行配置显式建模 |
 | 3 | ✅ | `SOURCE_POLICY.md`、24 组来源、canonical-source / implementation-index 分层、详情 Evidence receipt 与更正/撤回流程 |
 | 4 | ✅ | SWE-bench、Hugging Face/OpenEvals、Epoch/METR 适配器及 EleutherAI 目录同步；snapshot、commit、hash、normalize、validate、publish 与失败保留策略 |
 | 5 | ✅ | `COMPARABILITY.md`、五字段分组键、三档资格、版本隔离与可比性诊断 |
 | 6 | ✅ | 五信号透明热度、75 分门槛、10 项热门集合及构成面板 |
-| 7 | ✅ | 233 个确定性榜单 JSON、默认 Top 5、Top 10/全部、开放权重/来源/实体筛选、历史 SOTA 与 13 个回归用例 |
+| 7 | ✅ | 237 个确定性榜单 JSON、默认 Top 5、Top 10/全部、开放权重/来源/实体筛选、历史 SOTA 与回归用例 |
 | 8 | ✅ | 热门首页、200+ Registry、登记深度筛选、Benchmark/模型详情、2–4 系统比较、共享数据 Map、空/错/无 JS/移动端状态 |
 | 9 | ✅ | `npm run gates`、公开字段 allowlist/denylist、Semgrep secrets 0 findings、Playwright smoke、Lighthouse A11y 100 |
-| 10 | ✅ | 三条 `benchmark-*.yml` workflow、贡献模板、维护面板、变更日志、发布审计与可回滚 Pages 部署 |
+| 10 | ✅ | 四条 `benchmark-*.yml` workflow、每日 arXiv 审核 artifact、贡献模板、维护面板、变更日志、发布审计与可回滚 Pages 部署 |
 
 发布质量结果：Lighthouse Performance 97 / Accessibility 100 / Best Practices 100 / SEO 100，TBT 0 ms；移动端 390 px 无页面横向溢出。`npm run gates` 是本地与 CI 的统一发布命令，远端 Pages smoke job 会同时验证排行榜页面和公开快照。
 
@@ -27,7 +27,7 @@
 
 200+ Registry 之后的增量来源不能只依赖评测框架目录，还需要从新论文中识别 benchmark、dataset、suite、protocol 和可比成绩。已完成本地 arXiv 日报、PDF 文本层、Poppler 渲染和 Tesseract OCR 的能力核验，并用一篇 cross-episode memory 论文逐表验证 SR/SPL 与 step budget。
 
-完整的来源对比、PDF 取证级联、结构化 claim、New/Rising/Hot 统计、知乎/微信素材流与下一轮 1–10 实施计划见 [`benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md`](benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md)。该阶段当前是已完成探索、待实现，不计入上方 v1.1 的完成项。
+完整的来源对比、PDF 取证级联、结构化 claim、New/Rising/Hot 统计、知乎/微信素材流与下一轮 1–10 实施计划见 [`benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md`](benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md)。该阶段已在 v1.2 完成首个端到端闭环：20 篇 PDF golden set、5 个候选、18 条隔离 claim、4 个 collecting 晋升和独立审核台。
 
 ## 0. 目标、范围与完成定义
 

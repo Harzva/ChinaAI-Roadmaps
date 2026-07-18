@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import { listLeaderboardFiles, PUBLIC } from './lib.mjs';
 import { PRIVATE_DENYLIST, PUBLIC_RESULT_FIELDS } from './public-fields.mjs';
 
-const files = ['catalog.json','hot-benchmarks.json','models.json','snapshot.json','maintenance.json', ...(await listLeaderboardFiles()).map((name) => `leaderboards/${name}`)];
+const files = ['catalog.json','hot-benchmarks.json','models.json','snapshot.json','maintenance.json','arxiv-discovery.json','arxiv-daily.json','arxiv-weekly.json','arxiv-content-cards.json','arxiv-content-pack.md', ...(await listLeaderboardFiles()).map((name) => `leaderboards/${name}`)];
 const errors = [];
 for (const file of files) {
   const path = resolve(PUBLIC, file);

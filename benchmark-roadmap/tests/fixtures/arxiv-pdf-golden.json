@@ -1,0 +1,399 @@
+{
+  "schemaVersion": "1.0.0",
+  "frozenAt": "2026-07-18T00:00:00Z",
+  "cases": [
+    {
+      "paperId": "arxiv-2607-01469-v1",
+      "pdfSha256": "sha256:e97d349cceb1719308b0e1197aeab174325088bd43ea90c14838d62776bf4471",
+      "pageCount": 15,
+      "textLayer": "usable",
+      "candidatePages": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12,
+        15
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-02096-v1",
+      "pdfSha256": "sha256:7de74938227b78cf4c47691208e94881b24998d983b2ebfc26279e48e1e4ae35",
+      "pageCount": 30,
+      "textLayer": "usable",
+      "candidatePages": [
+        8,
+        10,
+        11,
+        12,
+        13,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-02588-v1",
+      "pdfSha256": "sha256:16ff84b76eccac13067eae97edfd80da2e98fbbe2112ec71927c1356f3c03eda",
+      "pageCount": 18,
+      "textLayer": "usable",
+      "candidatePages": [
+        7,
+        9,
+        10
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-04334-v1",
+      "pdfSha256": "sha256:873925738b4ff667dda0a29958392bb526367dda9b4185507c8bdffe35d0e51c",
+      "pageCount": 15,
+      "textLayer": "usable",
+      "candidatePages": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": false,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-05511-v1",
+      "pdfSha256": "sha256:676c77f205d6fee07350283679bcb3ca54712d45d590b67fa20b53442a62d257",
+      "pageCount": 21,
+      "textLayer": "usable",
+      "candidatePages": [
+        2,
+        5,
+        6,
+        7,
+        8,
+        16,
+        18
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-07189-v1",
+      "pdfSha256": "sha256:98f088eea77e65279439140f0a79dccf19a7967a7ef5c084820f53860a030137",
+      "pageCount": 14,
+      "textLayer": "usable",
+      "candidatePages": [
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": false,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-08233-v1",
+      "pdfSha256": "sha256:deef5296ef13bcb64f16233bce1b885cea431bbee386be54069c85ad713f5baa",
+      "pageCount": 33,
+      "textLayer": "usable",
+      "candidatePages": [
+        2,
+        5,
+        8,
+        18
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-08448-v1",
+      "pdfSha256": "sha256:8c076133567919afd5420dc4a200a388314fec451cb6da1e8d4de93e1a1c0deb",
+      "pageCount": 38,
+      "textLayer": "usable",
+      "candidatePages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        24,
+        28,
+        29,
+        30,
+        32,
+        37,
+        38
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-08705-v1",
+      "pdfSha256": "sha256:d2504618a82bd18e885f75e070665b064dde498907aed588038d56ba488d0a59",
+      "pageCount": 6,
+      "textLayer": "usable",
+      "candidatePages": [],
+      "security": {
+        "javascript": false,
+        "openAction": false,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-08716-v1",
+      "pdfSha256": "sha256:c1863f4062cb9f21f1ee9e23195340494ed934959a20f18e5b94f0448cdc9f83",
+      "pageCount": 12,
+      "textLayer": "usable",
+      "candidatePages": [
+        1,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-08768-v1",
+      "pdfSha256": "sha256:4a29ad6166889872d9100a0165ec005a8aab08470b76ddb658a0245c5203c8ea",
+      "pageCount": 33,
+      "textLayer": "usable",
+      "candidatePages": [
+        32
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-08970-v1",
+      "pdfSha256": "sha256:e62ca31c44e753af12f5c59319f9be0ccd910186c31f7aaa05c233b8d85fbdb1",
+      "pageCount": 33,
+      "textLayer": "usable",
+      "candidatePages": [
+        8
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-09078-v1",
+      "pdfSha256": "sha256:c5fbb767be63c6f79cb56b35391f89df325565b6a3be4b859767f6e707e593bb",
+      "pageCount": 18,
+      "textLayer": "usable",
+      "candidatePages": [
+        8,
+        12,
+        13,
+        14,
+        15
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-09195-v1",
+      "pdfSha256": "sha256:fd181d432367c5ef11fb075bfa0e7931e776d9bed214c8c34ec3cf39fe334ed5",
+      "pageCount": 17,
+      "textLayer": "usable",
+      "candidatePages": [
+        8,
+        9
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-09510-v1",
+      "pdfSha256": "sha256:5d45c4f70d9a8c03eb374a36a59f6e5a662dad7c323b0bf6536e65e95d911f03",
+      "pageCount": 12,
+      "textLayer": "usable",
+      "candidatePages": [
+        5,
+        10
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-13621-v1",
+      "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609",
+      "pageCount": 9,
+      "textLayer": "usable",
+      "candidatePages": [
+        5,
+        7,
+        8
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": false,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-13653-v1",
+      "pdfSha256": "sha256:9659c5560a55cef7d207f0ab0102391b3ec7e054f5052a9e057e74b5fa9002db",
+      "pageCount": 57,
+      "textLayer": "usable",
+      "candidatePages": [
+        3,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        31,
+        32,
+        46
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": false,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-14514-v1",
+      "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9",
+      "pageCount": 12,
+      "textLayer": "usable",
+      "candidatePages": [
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": true,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-14543-v1",
+      "pdfSha256": "sha256:f80199510097fd1765513eef97313ef2277609951eb0e1f9a6dd37756ade4c11",
+      "pageCount": 18,
+      "textLayer": "usable",
+      "candidatePages": [
+        3,
+        6,
+        7,
+        8
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": false,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    },
+    {
+      "paperId": "arxiv-2607-14547-v1",
+      "pdfSha256": "sha256:72dad067a9289167234da4890bba5f2f3aafa869c81b37107c98c2ead5788968",
+      "pageCount": 22,
+      "textLayer": "usable",
+      "candidatePages": [
+        1,
+        9,
+        13,
+        15
+      ],
+      "security": {
+        "javascript": false,
+        "openAction": false,
+        "additionalActions": false,
+        "embeddedFiles": false
+      }
+    }
+  ],
+  "policy": {
+    "pdfsCommitted": false,
+    "fullTextCommitted": false,
+    "purpose": "Regression baseline for page count, text-layer detection, evidence-page recall and PDF security flags."
+  }
+}

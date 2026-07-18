@@ -2,8 +2,11 @@ import { spawnSync } from 'node:child_process';
 
 const commands = [
   ['node', ['scripts/validate-data.mjs']],
+  ['node', ['scripts/arxiv-validate.mjs']],
+  ['node', ['scripts/arxiv-promote.mjs']],
+  ['node', ['scripts/arxiv-build.mjs']],
   ['node', ['scripts/build-leaderboards.mjs']],
-  ['node', ['--test', 'tests/ranking.test.mjs', 'tests/validation.test.mjs', 'tests/public-surface.test.mjs']],
+  ['node', ['--test', 'tests/arxiv-discovery.test.mjs', 'tests/ranking.test.mjs', 'tests/validation.test.mjs', 'tests/public-surface.test.mjs']],
   ['node', ['scripts/check-links.mjs']],
   ['node', ['scripts/scan-public.mjs']]
 ];

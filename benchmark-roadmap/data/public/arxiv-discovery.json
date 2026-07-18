@@ -1,0 +1,1086 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "asOf": "2026-07-18",
+  "stats": {
+    "papers": 5,
+    "candidates": 5,
+    "claims": 18,
+    "acceptedIdentities": 4,
+    "humanReviewed": 0,
+    "agentReviewed": 5,
+    "rankingEligibleClaims": 0,
+    "memoryCandidates": 1,
+    "new": 4,
+    "rising": 1,
+    "hot": 0
+  },
+  "policy": {
+    "autoPromote": false,
+    "paperReportedAutoRank": false,
+    "ocrAutoRank": false,
+    "humanReviewRequiredForTopK": true,
+    "newWindowDays": 14,
+    "risingWindowDays": 90,
+    "hotThreshold": 70
+  },
+  "candidates": [
+    {
+      "candidateId": "candidate-visualprobe",
+      "paperId": "arxiv-2607-14547-v1",
+      "entityKind": "benchmark",
+      "entityName": "VisualProbe",
+      "relation": "uses",
+      "classificationConfidence": 0.86,
+      "registryMatch": {
+        "matched": false,
+        "matchedId": null,
+        "matchedName": "",
+        "matchScore": 0,
+        "matchType": "none"
+      },
+      "createdAt": "2026-07-18T00:30:00Z",
+      "updatedAt": "2026-07-18T00:30:00Z",
+      "status": "needs_manual_review",
+      "statusHistory": [
+        {
+          "status": "open",
+          "timestamp": "2026-07-18T00:30:00Z"
+        },
+        {
+          "status": "needs_manual_review",
+          "timestamp": "2026-07-18T00:30:00Z",
+          "note": "AdaTurn 只使用 VisualProbe；必须回溯原始 benchmark 论文后再建档。"
+        }
+      ],
+      "evidence": {
+        "sourcePdfPage": 7,
+        "table": "Table 1",
+        "contextSnippet": "AdaTurn 报告 VisualProbe hard/medium/easy，但不是该 benchmark 的发布论文。"
+      },
+      "watchlists": [
+        "perception-agent"
+      ],
+      "noveltySignals": [
+        "used by a new agent paper",
+        "budget-sensitive results"
+      ],
+      "paper": {
+        "paperId": "arxiv-2607-14547-v1",
+        "arxivId": "2607.14547",
+        "version": "v1",
+        "title": "AdaTurn: Budget-Aware Test-Time Scaling for Active Visual Perception Agents",
+        "submittedAt": "2026-07-16T04:07:22Z",
+        "arxivUrl": "https://arxiv.org/abs/2607.14547v1",
+        "pdfUrl": "https://arxiv.org/pdf/2607.14547v1",
+        "pdfSha256": "sha256:72dad067a9289167234da4890bba5f2f3aafa869c81b37107c98c2ead5788968",
+        "pageCount": 22,
+        "summary": "研究主动视觉 Agent 在 4–32 turn 推理预算下的表现，并报告 VisualProbe 等既有 benchmark 成绩。"
+      },
+      "claims": [
+        {
+          "claimId": "claim-visualprobe-medium-minio3-4turns",
+          "paperId": "arxiv-2607-14547-v1",
+          "candidateId": "candidate-visualprobe",
+          "dataset": "VisualProbe",
+          "datasetVersion": "Medium / Avg@32",
+          "system": "Mini-o3 + Qwen2.5-VL-7B",
+          "metric": {
+            "name": "accuracy",
+            "direction": "higher",
+            "unit": "%",
+            "value": 36.7
+          },
+          "runConfig": {
+            "raw": {
+              "maxTurns": 4,
+              "subset": "medium",
+              "backbone": "Qwen2.5-VL-7B"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14547v1",
+            "pdfSha256": "sha256:72dad067a9289167234da4890bba5f2f3aafa869c81b37107c98c2ead5788968",
+            "pdfPage": 7,
+            "table": "Table 1",
+            "row": "Mini-o3 (4 turns)",
+            "column": "VisualProbe / medium",
+            "textSnippet": "Mini-o3 reports 36.7 on VisualProbe-Medium at four turns.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "需要回溯 VisualProbe 原始协议。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-visualprobe-medium-adaturn-4turns",
+          "paperId": "arxiv-2607-14547-v1",
+          "candidateId": "candidate-visualprobe",
+          "dataset": "VisualProbe",
+          "datasetVersion": "Medium / Avg@32",
+          "system": "AdaTurn + Qwen2.5-VL-7B",
+          "metric": {
+            "name": "accuracy",
+            "direction": "higher",
+            "unit": "%",
+            "value": 47.6
+          },
+          "runConfig": {
+            "raw": {
+              "maxTurns": 4,
+              "subset": "medium",
+              "backbone": "Qwen2.5-VL-7B"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14547v1",
+            "pdfSha256": "sha256:72dad067a9289167234da4890bba5f2f3aafa869c81b37107c98c2ead5788968",
+            "pdfPage": 7,
+            "table": "Table 1",
+            "row": "Ours (4 turns)",
+            "column": "VisualProbe / medium",
+            "textSnippet": "AdaTurn reports 47.6 on VisualProbe-Medium at four turns.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "论文使用旧 benchmark，原始来源尚未建档。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        }
+      ],
+      "review": {
+        "decisionId": "review-visualprobe-source-gap",
+        "targetType": "candidate",
+        "targetId": "candidate-visualprobe",
+        "decision": "downgrade",
+        "reviewer": "codex-evidence-review",
+        "reviewerKind": "agent",
+        "timestamp": "2026-07-18T00:30:00Z",
+        "reason": "当前论文只是使用方；在找到 VisualProbe 原始论文、版本和许可前不进入 Registry。"
+      },
+      "trend": {
+        "candidateId": "candidate-visualprobe",
+        "firstPublished": "2025-01-01",
+        "adoptionPapers": 3,
+        "modelCount": 10,
+        "repository": true,
+        "leaderboard": false,
+        "independentResults": 2,
+        "harness": false,
+        "score": 53,
+        "ageDays": 563,
+        "independentSignals": 3,
+        "stage": "Rising"
+      }
+    },
+    {
+      "candidateId": "candidate-real-bench",
+      "paperId": "arxiv-2607-13653-v1",
+      "entityKind": "benchmark",
+      "entityName": "REAL-Bench",
+      "relation": "introduces",
+      "classificationConfidence": 0.99,
+      "registryMatch": {
+        "matched": true,
+        "matchedId": "real-bench",
+        "matchedName": "REAL-Bench",
+        "matchScore": 1,
+        "matchType": "exact"
+      },
+      "createdAt": "2026-07-18T00:30:00Z",
+      "updatedAt": "2026-07-18T00:30:00Z",
+      "status": "accepted",
+      "statusHistory": [
+        {
+          "status": "open",
+          "timestamp": "2026-07-18T00:30:00Z"
+        },
+        {
+          "status": "accepted",
+          "timestamp": "2026-07-18T00:30:00Z",
+          "note": "241-task benchmark identity verified from paper; scores remain isolated."
+        }
+      ],
+      "evidence": {
+        "sourcePdfPage": 3,
+        "table": "Table 1",
+        "contextSnippet": "论文将 REAL-Bench 定义为 241 项任务、四类任务族的评测。"
+      },
+      "watchlists": [
+        "embodied-agent"
+      ],
+      "noveltySignals": [
+        "named benchmark",
+        "241 tasks",
+        "public code link"
+      ],
+      "paper": {
+        "paperId": "arxiv-2607-13653-v1",
+        "arxivId": "2607.13653",
+        "version": "v1",
+        "title": "Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World Mobile Manipulation",
+        "submittedAt": "2026-07-15T09:55:45Z",
+        "arxivUrl": "https://arxiv.org/abs/2607.13653v1",
+        "pdfUrl": "https://arxiv.org/pdf/2607.13653v1",
+        "pdfSha256": "sha256:9659c5560a55cef7d207f0ab0102391b3ec7e054f5052a9e057e74b5fa9002db",
+        "pageCount": 57,
+        "summary": "We introduce REAL-Bench：241 项开放世界移动操作任务，重点覆盖主动探索、视觉干扰、关节操作和交互式意图消歧。"
+      },
+      "claims": [
+        {
+          "claimId": "claim-real-bench-sul-sr",
+          "paperId": "arxiv-2607-13653-v1",
+          "candidateId": "candidate-real-bench",
+          "dataset": "REAL-Bench",
+          "datasetVersion": "v1",
+          "system": "REAL Ours-8B-SFT+RL",
+          "metric": {
+            "name": "success rate",
+            "direction": "higher",
+            "unit": "%",
+            "value": 56.9
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "SUL",
+              "backbone": "Qwen3-VL-8B"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.13653v1",
+            "pdfSha256": "sha256:9659c5560a55cef7d207f0ab0102391b3ec7e054f5052a9e057e74b5fa9002db",
+            "pdfPage": 10,
+            "table": "Table 1",
+            "row": "Ours-8B-SFT+RL",
+            "column": "SUL",
+            "textSnippet": "The SFT+RL agent reports 56.9 success on the interaction-heavy SUL split.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "作者自报且仅为 SUL subset。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-real-physical-overall-sr",
+          "paperId": "arxiv-2607-13653-v1",
+          "candidateId": "candidate-real-bench",
+          "dataset": "REAL physical deployment",
+          "datasetVersion": "v1",
+          "system": "REAL physical robot",
+          "metric": {
+            "name": "success rate",
+            "direction": "higher",
+            "unit": "%",
+            "value": 78.3
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "overall real-world",
+              "episodes": 60
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.13653v1",
+            "pdfSha256": "sha256:9659c5560a55cef7d207f0ab0102391b3ec7e054f5052a9e057e74b5fa9002db",
+            "pdfPage": 13,
+            "table": "Table 2",
+            "row": "Overall",
+            "column": "SR",
+            "textSnippet": "Overall real-world SR is 78.3% across 60 episodes.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "not_comparable",
+          "rankingEligible": false,
+          "rankReason": "物理部署结果与模拟 benchmark 不同组。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-real-physical-overall-spl",
+          "paperId": "arxiv-2607-13653-v1",
+          "candidateId": "candidate-real-bench",
+          "dataset": "REAL physical deployment",
+          "datasetVersion": "v1",
+          "system": "REAL physical robot",
+          "metric": {
+            "name": "SPL",
+            "direction": "higher",
+            "unit": "%",
+            "value": 63.1
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "overall real-world",
+              "episodes": 60
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.13653v1",
+            "pdfSha256": "sha256:9659c5560a55cef7d207f0ab0102391b3ec7e054f5052a9e057e74b5fa9002db",
+            "pdfPage": 13,
+            "table": "Table 2",
+            "row": "Overall",
+            "column": "SPL",
+            "textSnippet": "Overall real-world SPL is 63.1%.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "not_comparable",
+          "rankingEligible": false,
+          "rankReason": "物理部署隔离组。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        }
+      ],
+      "review": {
+        "decisionId": "review-real-bench-identity",
+        "targetType": "candidate",
+        "targetId": "candidate-real-bench",
+        "decision": "accept",
+        "reviewer": "codex-evidence-review",
+        "reviewerKind": "agent",
+        "timestamp": "2026-07-18T00:30:00Z",
+        "reason": "论文明确发布 REAL-Bench，并给出 241-task 组成和结果表。"
+      },
+      "trend": {
+        "candidateId": "candidate-real-bench",
+        "firstPublished": "2026-07-15",
+        "adoptionPapers": 1,
+        "modelCount": 10,
+        "repository": true,
+        "leaderboard": false,
+        "independentResults": 0,
+        "harness": false,
+        "score": 30,
+        "ageDays": 3,
+        "independentSignals": 1,
+        "stage": "New"
+      }
+    },
+    {
+      "candidateId": "candidate-saferelbench",
+      "paperId": "arxiv-2607-14543-v1",
+      "entityKind": "benchmark",
+      "entityName": "SafeRelBench",
+      "relation": "introduces",
+      "classificationConfidence": 0.99,
+      "registryMatch": {
+        "matched": true,
+        "matchedId": "saferelbench",
+        "matchedName": "SafeRelBench",
+        "matchScore": 1,
+        "matchType": "exact"
+      },
+      "createdAt": "2026-07-18T00:30:00Z",
+      "updatedAt": "2026-07-18T00:30:00Z",
+      "status": "accepted",
+      "statusHistory": [
+        {
+          "status": "open",
+          "timestamp": "2026-07-18T00:30:00Z"
+        },
+        {
+          "status": "accepted",
+          "timestamp": "2026-07-18T00:30:00Z",
+          "note": "507 个可执行样本和三类空间关系已核验；进入 collecting。"
+        }
+      ],
+      "evidence": {
+        "sourcePdfPage": 2,
+        "table": "Table 2",
+        "contextSnippet": "论文明确发布空间关系过程安全 benchmark，含空间关系样本与配对控制。"
+      },
+      "watchlists": [
+        "safety",
+        "embodied-agent"
+      ],
+      "noveltySignals": [
+        "named benchmark",
+        "507 executable samples",
+        "seven evaluated agents"
+      ],
+      "paper": {
+        "paperId": "arxiv-2607-14543-v1",
+        "arxivId": "2607.14543",
+        "version": "v1",
+        "title": "SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents",
+        "submittedAt": "2026-07-16T03:59:44Z",
+        "arxivUrl": "https://arxiv.org/abs/2607.14543v1",
+        "pdfUrl": "https://arxiv.org/pdf/2607.14543v1",
+        "pdfSha256": "sha256:f80199510097fd1765513eef97313ef2277609951eb0e1f9a6dd37756ade4c11",
+        "pageCount": 18,
+        "summary": "用 507 个可执行样本检验支持、包含与邻近关系引发的具身 Agent 过程级安全风险。"
+      },
+      "claims": [
+        {
+          "claimId": "claim-saferel-qwen25-72b-supporting-ssr",
+          "paperId": "arxiv-2607-14543-v1",
+          "candidateId": "candidate-saferelbench",
+          "dataset": "SafeRelBench",
+          "datasetVersion": "v1",
+          "system": "Qwen2.5-72B",
+          "metric": {
+            "name": "SSR",
+            "direction": "higher",
+            "unit": "ratio",
+            "value": 0.42
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "Supporting with spatial relation",
+              "promptVariant": "BASE"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14543v1",
+            "pdfSha256": "sha256:f80199510097fd1765513eef97313ef2277609951eb0e1f9a6dd37756ade4c11",
+            "pdfPage": 8,
+            "table": "Table 2",
+            "row": "Qwen2.5-72B",
+            "column": "Supporting / w / SSR",
+            "textSnippet": "Qwen2.5-72B reports 0.42 SSR for Supporting with spatial relations.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "需锁定 prompt 与执行环境。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-saferel-gpt54-supporting-ssr",
+          "paperId": "arxiv-2607-14543-v1",
+          "candidateId": "candidate-saferelbench",
+          "dataset": "SafeRelBench",
+          "datasetVersion": "v1",
+          "system": "GPT-5.4",
+          "metric": {
+            "name": "SSR",
+            "direction": "higher",
+            "unit": "ratio",
+            "value": 0.49
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "Supporting with spatial relation",
+              "promptVariant": "BASE"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14543v1",
+            "pdfSha256": "sha256:f80199510097fd1765513eef97313ef2277609951eb0e1f9a6dd37756ade4c11",
+            "pdfPage": 8,
+            "table": "Table 2",
+            "row": "GPT-5.4",
+            "column": "Supporting / w / SSR",
+            "textSnippet": "GPT-5.4 reports 0.49 SSR for Supporting with spatial relations.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "论文作者评测；未接入官方榜单。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-saferel-claude46-proximity-ssr",
+          "paperId": "arxiv-2607-14543-v1",
+          "candidateId": "candidate-saferelbench",
+          "dataset": "SafeRelBench",
+          "datasetVersion": "v1",
+          "system": "Claude-4.6",
+          "metric": {
+            "name": "SSR",
+            "direction": "higher",
+            "unit": "ratio",
+            "value": 0.38
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "Proximity with spatial relation",
+              "promptVariant": "BASE"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14543v1",
+            "pdfSha256": "sha256:f80199510097fd1765513eef97313ef2277609951eb0e1f9a6dd37756ade4c11",
+            "pdfPage": 8,
+            "table": "Table 2",
+            "row": "Claude-4.6",
+            "column": "Proximity / w / SSR",
+            "textSnippet": "Claude-4.6 reports 0.38 SSR for Proximity with spatial relations.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "不同 relation subset 不得混排。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        }
+      ],
+      "review": {
+        "decisionId": "review-saferelbench-identity",
+        "targetType": "candidate",
+        "targetId": "candidate-saferelbench",
+        "decision": "accept",
+        "reviewer": "codex-evidence-review",
+        "reviewerKind": "agent",
+        "timestamp": "2026-07-18T00:30:00Z",
+        "reason": "论文提供 507 个可执行评测样本、指标和 7-agent 表格。"
+      },
+      "trend": {
+        "candidateId": "candidate-saferelbench",
+        "firstPublished": "2026-07-16",
+        "adoptionPapers": 1,
+        "modelCount": 7,
+        "repository": false,
+        "leaderboard": false,
+        "independentResults": 0,
+        "harness": false,
+        "score": 16,
+        "ageDays": 2,
+        "independentSignals": 0,
+        "stage": "New"
+      }
+    },
+    {
+      "candidateId": "candidate-cross-episode-object-goal-navigation",
+      "paperId": "arxiv-2607-14514-v1",
+      "entityKind": "protocol",
+      "entityName": "Cross-Episode Object-Goal Navigation",
+      "relation": "proposes_protocol",
+      "classificationConfidence": 0.99,
+      "registryMatch": {
+        "matched": true,
+        "matchedId": "cross-episode-object-goal-navigation",
+        "matchedName": "Cross-Episode Object-Goal Navigation",
+        "matchScore": 1,
+        "matchType": "exact"
+      },
+      "createdAt": "2026-07-18T00:30:00Z",
+      "updatedAt": "2026-07-18T00:30:00Z",
+      "status": "accepted",
+      "statusHistory": [
+        {
+          "status": "open",
+          "timestamp": "2026-07-18T00:30:00Z"
+        },
+        {
+          "status": "accepted",
+          "timestamp": "2026-07-18T00:30:00Z",
+          "note": "识别为 protocol，不把方法名 VTM-Nav 虚构成 benchmark。"
+        }
+      ],
+      "evidence": {
+        "sourcePdfPage": 1,
+        "contextSnippet": "论文定义跨 episode、同场景、参数固定且只保留自采集经验的评测设置。"
+      },
+      "watchlists": [
+        "memory",
+        "embodied-agent"
+      ],
+      "noveltySignals": [
+        "new evaluation protocol",
+        "cross-episode persistence",
+        "same-scene control"
+      ],
+      "paper": {
+        "paperId": "arxiv-2607-14514-v1",
+        "arxivId": "2607.14514",
+        "version": "v1",
+        "title": "VTM-Nav: Hierarchical Visual-Topological Memory for Cross-Episode Object-Goal Navigation",
+        "submittedAt": "2026-07-16T03:11:37Z",
+        "arxivUrl": "https://arxiv.org/abs/2607.14514v1",
+        "pdfUrl": "https://arxiv.org/pdf/2607.14514v1",
+        "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9",
+        "pageCount": 12,
+        "summary": "提出 Cross-Episode Object-Goal Navigation：同一场景内跨 episode 保留自采集视觉拓扑经验的评测协议。"
+      },
+      "claims": [
+        {
+          "claimId": "claim-vtm-hm3d-v01-40-sr",
+          "paperId": "arxiv-2607-14514-v1",
+          "candidateId": "candidate-cross-episode-object-goal-navigation",
+          "dataset": "HM3D",
+          "datasetVersion": "v0.1",
+          "system": "VTM-Nav + Qwen3-VL-Plus",
+          "metric": {
+            "name": "SR",
+            "direction": "higher",
+            "unit": "%",
+            "value": 59.6
+          },
+          "runConfig": {
+            "raw": {
+              "steps": 40,
+              "training_free": true,
+              "zero_shot": true,
+              "backbone": "Qwen3-VL-Plus"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1",
+            "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9",
+            "pdfPage": 8,
+            "table": "Table 1",
+            "row": "VTM-Nav",
+            "column": "HM3D v0.1 / SR",
+            "textSnippet": "VTM-Nav reports 59.6 SR under the controlled 40-step protocol.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "作者自报；需保持 40-step 组。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-vtm-hm3d-v01-40-spl",
+          "paperId": "arxiv-2607-14514-v1",
+          "candidateId": "candidate-cross-episode-object-goal-navigation",
+          "dataset": "HM3D",
+          "datasetVersion": "v0.1",
+          "system": "VTM-Nav + Qwen3-VL-Plus",
+          "metric": {
+            "name": "SPL",
+            "direction": "higher",
+            "unit": "%",
+            "value": 31.8
+          },
+          "runConfig": {
+            "raw": {
+              "steps": 40,
+              "training_free": true,
+              "zero_shot": true,
+              "backbone": "Qwen3-VL-Plus"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1",
+            "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9",
+            "pdfPage": 8,
+            "table": "Table 1",
+            "row": "VTM-Nav",
+            "column": "HM3D v0.1 / SPL",
+            "textSnippet": "VTM-Nav reports 31.8 SPL at 40 steps.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "作者自报；需保持 metric 隔离。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-vtm-hm3d-v01-500-sr",
+          "paperId": "arxiv-2607-14514-v1",
+          "candidateId": "candidate-cross-episode-object-goal-navigation",
+          "dataset": "HM3D",
+          "datasetVersion": "v0.1",
+          "system": "VTM-Nav + Qwen3-VL-Plus",
+          "metric": {
+            "name": "SR",
+            "direction": "higher",
+            "unit": "%",
+            "value": 65.3
+          },
+          "runConfig": {
+            "raw": {
+              "steps": 500,
+              "training_free": true,
+              "zero_shot": true,
+              "backbone": "Qwen3-VL-Plus"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1",
+            "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9",
+            "pdfPage": 8,
+            "table": "Table 1",
+            "row": "VTM-Nav (500 steps)",
+            "column": "HM3D v0.1 / SR",
+            "textSnippet": "The relaxed 500-step row reports 65.3 SR.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "not_comparable",
+          "rankingEligible": false,
+          "rankReason": "500-step 结果不可与 40-step 行直接比较。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-vtm-hm3d-v02-40-sr",
+          "paperId": "arxiv-2607-14514-v1",
+          "candidateId": "candidate-cross-episode-object-goal-navigation",
+          "dataset": "HM3D",
+          "datasetVersion": "v0.2",
+          "system": "VTM-Nav + Qwen3-VL-Plus",
+          "metric": {
+            "name": "SR",
+            "direction": "higher",
+            "unit": "%",
+            "value": 72
+          },
+          "runConfig": {
+            "raw": {
+              "steps": 40,
+              "training_free": true,
+              "zero_shot": true,
+              "backbone": "Qwen3-VL-Plus"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1",
+            "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9",
+            "pdfPage": 8,
+            "table": "Table 1",
+            "row": "VTM-Nav",
+            "column": "HM3D v0.2 / SR",
+            "textSnippet": "VTM-Nav reports 72.0 SR on HM3D v0.2 at 40 steps.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "HM3D v0.2 与 v0.1 分组。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-vtm-mp3d-40-sr",
+          "paperId": "arxiv-2607-14514-v1",
+          "candidateId": "candidate-cross-episode-object-goal-navigation",
+          "dataset": "MP3D",
+          "datasetVersion": "paper protocol",
+          "system": "VTM-Nav + Qwen3-VL-Plus",
+          "metric": {
+            "name": "SR",
+            "direction": "higher",
+            "unit": "%",
+            "value": 44.3
+          },
+          "runConfig": {
+            "raw": {
+              "steps": 40,
+              "training_free": true,
+              "zero_shot": true,
+              "backbone": "Qwen3-VL-Plus"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1",
+            "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9",
+            "pdfPage": 8,
+            "table": "Table 2",
+            "row": "VTM-Nav",
+            "column": "SR",
+            "textSnippet": "VTM-Nav reports 44.3 SR on MP3D.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "MP3D 独立数据集组。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-vtm-mp3d-40-spl",
+          "paperId": "arxiv-2607-14514-v1",
+          "candidateId": "candidate-cross-episode-object-goal-navigation",
+          "dataset": "MP3D",
+          "datasetVersion": "paper protocol",
+          "system": "VTM-Nav + Qwen3-VL-Plus",
+          "metric": {
+            "name": "SPL",
+            "direction": "higher",
+            "unit": "%",
+            "value": 16.2
+          },
+          "runConfig": {
+            "raw": {
+              "steps": 40,
+              "training_free": true,
+              "zero_shot": true,
+              "backbone": "Qwen3-VL-Plus"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1",
+            "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9",
+            "pdfPage": 8,
+            "table": "Table 2",
+            "row": "VTM-Nav",
+            "column": "SPL",
+            "textSnippet": "VTM-Nav reports 16.2 SPL on MP3D.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "指标与数据集隔离。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        }
+      ],
+      "review": {
+        "decisionId": "review-cross-episode-protocol",
+        "targetType": "candidate",
+        "targetId": "candidate-cross-episode-object-goal-navigation",
+        "decision": "accept",
+        "reviewer": "codex-evidence-review",
+        "reviewerKind": "agent",
+        "timestamp": "2026-07-18T00:30:00Z",
+        "reason": "接受为 protocol；VTM-Nav 是方法名，不登记为 benchmark。"
+      },
+      "trend": {
+        "candidateId": "candidate-cross-episode-object-goal-navigation",
+        "firstPublished": "2026-07-16",
+        "adoptionPapers": 1,
+        "modelCount": 3,
+        "repository": false,
+        "leaderboard": false,
+        "independentResults": 0,
+        "harness": false,
+        "score": 10,
+        "ageDays": 2,
+        "independentSignals": 0,
+        "stage": "New"
+      }
+    },
+    {
+      "candidateId": "candidate-uesf-bench",
+      "paperId": "arxiv-2607-13621-v1",
+      "entityKind": "benchmark",
+      "entityName": "UESF-Bench",
+      "relation": "introduces",
+      "classificationConfidence": 0.99,
+      "registryMatch": {
+        "matched": true,
+        "matchedId": "uesf-bench",
+        "matchedName": "UESF-Bench",
+        "matchScore": 1,
+        "matchType": "exact"
+      },
+      "createdAt": "2026-07-18T00:30:00Z",
+      "updatedAt": "2026-07-18T00:30:00Z",
+      "status": "accepted",
+      "statusHistory": [
+        {
+          "status": "open",
+          "timestamp": "2026-07-18T00:30:00Z"
+        },
+        {
+          "status": "accepted",
+          "timestamp": "2026-07-18T00:30:00Z",
+          "note": "论文正文明确声明发布新 benchmark；进入 collecting，不进入 Top-K。"
+        }
+      ],
+      "evidence": {
+        "sourcePdfPage": 1,
+        "contextSnippet": "论文标题和摘要明确给出 UESF-Bench，并说明统一搜索与跟随任务。"
+      },
+      "watchlists": [
+        "embodied-agent"
+      ],
+      "noveltySignals": [
+        "named benchmark",
+        "new unified task",
+        "train/validation/test splits"
+      ],
+      "paper": {
+        "paperId": "arxiv-2607-13621-v1",
+        "arxivId": "2607.13621",
+        "version": "v1",
+        "title": "UESF-Bench: Benchmarking and Probing for Unified Embodied Seeking and Following",
+        "submittedAt": "2026-07-15T09:09:25Z",
+        "arxivUrl": "https://arxiv.org/abs/2607.13621v1",
+        "pdfUrl": "https://arxiv.org/pdf/2607.13621v1",
+        "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609",
+        "pageCount": 9,
+        "summary": "把语言描述的人物搜索与持续跟随合并成统一具身任务，覆盖单人和多人干扰场景。"
+      },
+      "claims": [
+        {
+          "claimId": "claim-uesf-single-dualhead-td-tsr",
+          "paperId": "arxiv-2607-13621-v1",
+          "candidateId": "candidate-uesf-bench",
+          "dataset": "UESF-Bench",
+          "datasetVersion": "v1",
+          "system": "DualHead-TD",
+          "metric": {
+            "name": "TSR",
+            "direction": "higher",
+            "unit": "ratio",
+            "value": 0.35
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "single-person test"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.13621v1",
+            "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609",
+            "pdfPage": 7,
+            "table": "Table 1",
+            "row": "DualHead-TD",
+            "column": "TSR",
+            "textSnippet": "DualHead-TD reports TSR 0.35 on the single-person test set.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "作者论文结果；等待官方榜单或独立复现。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-uesf-single-dualhead-td-spl",
+          "paperId": "arxiv-2607-13621-v1",
+          "candidateId": "candidate-uesf-bench",
+          "dataset": "UESF-Bench",
+          "datasetVersion": "v1",
+          "system": "DualHead-TD",
+          "metric": {
+            "name": "Search SPL",
+            "direction": "higher",
+            "unit": "ratio",
+            "value": 0.53
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "single-person test"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.13621v1",
+            "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609",
+            "pdfPage": 7,
+            "table": "Table 1",
+            "row": "DualHead-TD",
+            "column": "SPL",
+            "textSnippet": "DualHead-TD reports Search SPL 0.53.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "作者论文结果；等待协议复核。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-uesf-multi-dualhead-td-tsr",
+          "paperId": "arxiv-2607-13621-v1",
+          "candidateId": "candidate-uesf-bench",
+          "dataset": "UESF-Bench",
+          "datasetVersion": "v1",
+          "system": "DualHead-TD",
+          "metric": {
+            "name": "TSR",
+            "direction": "higher",
+            "unit": "ratio",
+            "value": 0.2
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "multi-person test"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.13621v1",
+            "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609",
+            "pdfPage": 8,
+            "table": "Table 2",
+            "row": "DualHead-TD",
+            "column": "TSR",
+            "textSnippet": "DualHead-TD reports TSR 0.20 with multiple distractor persons.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "不同 subset 不与单人结果混排。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        },
+        {
+          "claimId": "claim-uesf-multi-dualhead-td-spl",
+          "paperId": "arxiv-2607-13621-v1",
+          "candidateId": "candidate-uesf-bench",
+          "dataset": "UESF-Bench",
+          "datasetVersion": "v1",
+          "system": "DualHead-TD",
+          "metric": {
+            "name": "Search SPL",
+            "direction": "higher",
+            "unit": "ratio",
+            "value": 0.55
+          },
+          "runConfig": {
+            "raw": {
+              "subset": "multi-person test"
+            }
+          },
+          "evidence": {
+            "sourcePdfUrl": "https://arxiv.org/pdf/2607.13621v1",
+            "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609",
+            "pdfPage": 8,
+            "table": "Table 2",
+            "row": "DualHead-TD",
+            "column": "SPL",
+            "textSnippet": "DualHead-TD reports Search SPL 0.55 on the multi-person test set.",
+            "extractionMethod": "visual_review"
+          },
+          "status": "agent_verified",
+          "sourceType": "paper_reported",
+          "comparability": "partially_comparable",
+          "rankingEligible": false,
+          "rankReason": "作者论文结果；等待官方榜单。",
+          "createdAt": "2026-07-18T00:30:00Z"
+        }
+      ],
+      "review": {
+        "decisionId": "review-uesf-bench-identity",
+        "targetType": "candidate",
+        "targetId": "candidate-uesf-bench",
+        "decision": "accept",
+        "reviewer": "codex-evidence-review",
+        "reviewerKind": "agent",
+        "timestamp": "2026-07-18T00:30:00Z",
+        "reason": "标题、摘要、数据规模和测试表均支持新 benchmark 身份；仅晋升为 collecting。"
+      },
+      "trend": {
+        "candidateId": "candidate-uesf-bench",
+        "firstPublished": "2026-07-15",
+        "adoptionPapers": 1,
+        "modelCount": 3,
+        "repository": false,
+        "leaderboard": false,
+        "independentResults": 0,
+        "harness": false,
+        "score": 10,
+        "ageDays": 3,
+        "independentSignals": 0,
+        "stage": "New"
+      }
+    }
+  ]
+}

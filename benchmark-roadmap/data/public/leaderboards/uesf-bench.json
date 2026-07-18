@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "uesf-bench",
+    "canonicalName": "UESF-Bench",
+    "category": "Embodied Agent & Robotics",
+    "status": "collecting",
+    "summary": "统一评测语言引导的人物搜索、阶段切换、恢复与持续跟随。",
+    "metric": {
+      "name": "TSR",
+      "unit": "ratio",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "paper": "https://arxiv.org/abs/2607.13621v1"
+    }
+  },
+  "group": {
+    "version": "arXiv 2607.13621v1",
+    "subset": "full",
+    "metric": "TSR",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

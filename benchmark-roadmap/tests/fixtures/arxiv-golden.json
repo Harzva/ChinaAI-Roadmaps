@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "identityCases": [
+    {"paperId": "arxiv-2607-13621-v1", "entityName": "UESF-Bench", "entityKind": "benchmark", "relation": "introduces"},
+    {"paperId": "arxiv-2607-13653-v1", "entityName": "REAL-Bench", "entityKind": "benchmark", "relation": "introduces"},
+    {"paperId": "arxiv-2607-14514-v1", "entityName": "Cross-Episode Object-Goal Navigation", "entityKind": "protocol", "relation": "proposes_protocol"},
+    {"paperId": "arxiv-2607-14543-v1", "entityName": "SafeRelBench", "entityKind": "benchmark", "relation": "introduces"},
+    {"paperId": "arxiv-2607-14547-v1", "entityName": "VisualProbe", "entityKind": "benchmark", "relation": "uses"}
+  ],
+  "claimCases": [
+    {"claimId": "claim-uesf-single-dualhead-td-tsr", "value": 0.35, "page": 7, "table": "Table 1"},
+    {"claimId": "claim-uesf-single-dualhead-td-spl", "value": 0.53, "page": 7, "table": "Table 1"},
+    {"claimId": "claim-uesf-multi-dualhead-td-tsr", "value": 0.20, "page": 8, "table": "Table 2"},
+    {"claimId": "claim-uesf-multi-dualhead-td-spl", "value": 0.55, "page": 8, "table": "Table 2"},
+    {"claimId": "claim-real-bench-sul-sr", "value": 56.9, "page": 10, "table": "Table 1"},
+    {"claimId": "claim-real-physical-overall-sr", "value": 78.3, "page": 13, "table": "Table 2"},
+    {"claimId": "claim-real-physical-overall-spl", "value": 63.1, "page": 13, "table": "Table 2"},
+    {"claimId": "claim-saferel-qwen25-72b-supporting-ssr", "value": 0.42, "page": 8, "table": "Table 2"},
+    {"claimId": "claim-saferel-gpt54-supporting-ssr", "value": 0.49, "page": 8, "table": "Table 2"},
+    {"claimId": "claim-saferel-claude46-proximity-ssr", "value": 0.38, "page": 8, "table": "Table 2"},
+    {"claimId": "claim-vtm-hm3d-v01-40-sr", "value": 59.6, "page": 8, "table": "Table 1"},
+    {"claimId": "claim-vtm-hm3d-v01-40-spl", "value": 31.8, "page": 8, "table": "Table 1"},
+    {"claimId": "claim-vtm-hm3d-v01-500-sr", "value": 65.3, "page": 8, "table": "Table 1"},
+    {"claimId": "claim-vtm-hm3d-v02-40-sr", "value": 72.0, "page": 8, "table": "Table 1"},
+    {"claimId": "claim-vtm-mp3d-40-sr", "value": 44.3, "page": 8, "table": "Table 2"},
+    {"claimId": "claim-vtm-mp3d-40-spl", "value": 16.2, "page": 8, "table": "Table 2"},
+    {"claimId": "claim-visualprobe-medium-minio3-4turns", "value": 36.7, "page": 7, "table": "Table 1"},
+    {"claimId": "claim-visualprobe-medium-adaturn-4turns", "value": 47.6, "page": 7, "table": "Table 1"}
+  ]
+}

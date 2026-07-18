@@ -10,5 +10,12 @@
 | Freshness | 上游失败或滚动榜变更 | 保留上次验证快照并报警 |
 | Security | token、Cookie、私有路径或内部字段 | 立即阻断并清理历史后再发布 |
 | Presentation | 键盘、移动端、来源链接不可用 | 阻断 UI 发布或回滚 |
+| Paper identity | 把方法名当 benchmark、把 dataset 当 suite | 保留 candidate，拒绝自动晋升 |
+| Paper version | v2 覆盖 v1、PDF hash 改变但版本未变 | 新建版本记录并报警，不静默覆盖 |
+| PDF security | 加密、JavaScript、嵌入文件或异常自动动作 | 停止抽取，进入安全人工检查 |
+| Layout extraction | 多栏错序、跨页表、caption 与表格脱离 | 渲染候选页，改用 bbox/table fallback |
+| OCR numeric | `59.6` 读成 `596`、百分号或负号丢失 | rankingEligible=false，逐格视觉复核 |
+| Claim grouping | 40/500 steps、不同 subset/version 混组 | 阻断发布，补 runConfig 与 golden case |
+| Source role | 使用某 benchmark 的论文被误当成发布论文 | 回溯 canonical paper，状态降级 source audit |
 
 严重度：P0 为安全/错误榜单，P1 为证据与可比性，P2 为新鲜度和可用性，P3 为文案与视觉问题。每个 P0/P1 修复必须增加自动化回归用例。

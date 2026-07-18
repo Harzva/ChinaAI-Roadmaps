@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "benchmark-candidate.schema.json",
+  "title": "Benchmark Candidate",
+  "type": "object",
+  "required": [
+    "candidateId",
+    "paperId",
+    "entityKind",
+    "relation",
+    "entityName",
+    "classificationConfidence",
+    "registryMatch",
+    "createdAt",
+    "updatedAt",
+    "status",
+    "statusHistory"
+  ],
+  "properties": {
+    "candidateId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "paperId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "entityKind": {
+      "type": "string",
+      "enum": [
+        "benchmark",
+        "suite",
+        "dataset",
+        "protocol"
+      ]
+    },
+    "entityName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relation": {
+      "type": "string",
+      "enum": ["introduces", "uses", "extends", "proposes_protocol"]
+    },
+    "classificationConfidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "registryMatch": {
+      "type": "object",
+      "required": [
+        "matched",
+        "matchedId"
+      ],
+      "properties": {
+        "matched": {
+          "type": "boolean"
+        },
+        "matchedId": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "matchedName": {
+          "type": "string"
+        },
+        "matchScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "matchType": {
+          "type": "string",
+          "enum": ["exact", "alias", "fuzzy", "none"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "needs_manual_review",
+        "accepted",
+        "rejected",
+        "merged",
+        "downgraded"
+      ]
+    },
+    "statusHistory": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "status",
+          "timestamp"
+        ],
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["sourcePdfPage"],
+      "properties": {
+        "sourcePdfPage": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "table": {
+          "type": "string"
+        },
+        "contextSnippet": {
+          "type": "string"
+        },
+        "textFragments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "watchlists": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "noveltySignals": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

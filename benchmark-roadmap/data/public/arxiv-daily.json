@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-07-18",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "counts": {
+    "papers": 5,
+    "candidates": 5,
+    "claims": 18,
+    "acceptedIdentities": 4,
+    "humanReviewed": 0,
+    "agentReviewed": 5,
+    "rankingEligibleClaims": 0,
+    "memoryCandidates": 1,
+    "new": 4,
+    "rising": 1,
+    "hot": 0
+  },
+  "newCandidates": [
+    {
+      "candidateId": "candidate-real-bench",
+      "entityName": "REAL-Bench",
+      "entityKind": "benchmark",
+      "paper": "https://arxiv.org/abs/2607.13653v1",
+      "claimCount": 3,
+      "rankingEligible": false
+    },
+    {
+      "candidateId": "candidate-saferelbench",
+      "entityName": "SafeRelBench",
+      "entityKind": "benchmark",
+      "paper": "https://arxiv.org/abs/2607.14543v1",
+      "claimCount": 3,
+      "rankingEligible": false
+    },
+    {
+      "candidateId": "candidate-cross-episode-object-goal-navigation",
+      "entityName": "Cross-Episode Object-Goal Navigation",
+      "entityKind": "protocol",
+      "paper": "https://arxiv.org/abs/2607.14514v1",
+      "claimCount": 6,
+      "rankingEligible": false
+    },
+    {
+      "candidateId": "candidate-uesf-bench",
+      "entityName": "UESF-Bench",
+      "entityKind": "benchmark",
+      "paper": "https://arxiv.org/abs/2607.13621v1",
+      "claimCount": 4,
+      "rankingEligible": false
+    }
+  ],
+  "memoryWatch": [
+    {
+      "candidateId": "candidate-cross-episode-object-goal-navigation",
+      "entityName": "Cross-Episode Object-Goal Navigation",
+      "paper": "https://arxiv.org/abs/2607.14514v1"
+    }
+  ],
+  "reviewQueue": [
+    {
+      "candidateId": "candidate-visualprobe",
+      "reason": "AdaTurn 只使用 VisualProbe；必须回溯原始 benchmark 论文后再建档。"
+    }
+  ]
+}

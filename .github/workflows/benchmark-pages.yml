@@ -81,3 +81,5 @@ jobs:
           test -n "$PAGE_URL"
           curl --fail --retry 6 --retry-delay 10 --max-time 20 "${PAGE_URL}benchmark-roadmap/"
           curl --fail --retry 6 --retry-delay 10 --max-time 20 "${PAGE_URL}benchmark-roadmap/data/public/snapshot.json"
+          curl --fail --retry 6 --retry-delay 10 --max-time 20 "${PAGE_URL}benchmark-roadmap/discover.html"
+          curl --fail --retry 6 --retry-delay 10 --max-time 20 "${PAGE_URL}benchmark-roadmap/data/public/arxiv-discovery.json"

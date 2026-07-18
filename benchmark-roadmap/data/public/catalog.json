@@ -130,6 +130,62 @@
       }
     },
     {
+      "benchmarkId": "aexams",
+      "type": "benchmark",
+      "canonicalName": "Arabic Exams",
+      "aliases": [
+        "aexams"
+      ],
+      "category": "Knowledge & Reasoning",
+      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
+      "status": "collecting",
+      "versions": [
+        "version-pending-audit"
+      ],
+      "primaryMetric": {
+        "name": "upstream primary score",
+        "unit": "",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/aexams",
+        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/aexams"
+      },
+      "sourceIds": [
+        "lm-eval-catalog-snapshot"
+      ],
+      "summary": "Arabic Exams 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "registryOrigin": {
+        "catalogId": "lm-evaluation-harness",
+        "catalogRole": "implementation-index",
+        "upstreamPath": "lm_eval/tasks/aexams",
+        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
+        "originalSourceStatus": "pending-audit",
+        "auditedAt": "2026-07-18"
+      },
+      "evidenceStage": "implementation_index",
+      "leaderboard": {
+        "benchmarkId": "aexams",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "version-pending-audit",
+          "subset": "full",
+          "metric": "upstream primary score",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
       "benchmarkId": "afrimgsm",
       "type": "benchmark",
       "canonicalName": "AfriMGSM",
@@ -682,62 +738,6 @@
       "evidenceStage": "implementation_index",
       "leaderboard": {
         "benchmarkId": "arab-culture-completion",
-        "resultCount": 0,
-        "leader": null,
-        "top3": [],
-        "group": {
-          "version": "version-pending-audit",
-          "subset": "full",
-          "metric": "upstream primary score",
-          "protocol": "unconfigured"
-        }
-      }
-    },
-    {
-      "benchmarkId": "aexams",
-      "type": "benchmark",
-      "canonicalName": "Arabic Exams",
-      "aliases": [
-        "aexams"
-      ],
-      "category": "Knowledge & Reasoning",
-      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
-      "status": "collecting",
-      "versions": [
-        "version-pending-audit"
-      ],
-      "primaryMetric": {
-        "name": "upstream primary score",
-        "unit": "",
-        "direction": "higher",
-        "tiesAllowed": true
-      },
-      "links": {
-        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/aexams",
-        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/aexams"
-      },
-      "sourceIds": [
-        "lm-eval-catalog-snapshot"
-      ],
-      "summary": "Arabic Exams 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
-      "languages": [
-        "en"
-      ],
-      "modalities": [
-        "text"
-      ],
-      "timeWindow": null,
-      "registryOrigin": {
-        "catalogId": "lm-evaluation-harness",
-        "catalogRole": "implementation-index",
-        "upstreamPath": "lm_eval/tasks/aexams",
-        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
-        "originalSourceStatus": "pending-audit",
-        "auditedAt": "2026-07-18"
-      },
-      "evidenceStage": "implementation_index",
-      "leaderboard": {
-        "benchmarkId": "aexams",
         "resultCount": 0,
         "leader": null,
         "top3": [],
@@ -1478,6 +1478,62 @@
       }
     },
     {
+      "benchmarkId": "bbh",
+      "type": "benchmark",
+      "canonicalName": "BIG-Bench Hard",
+      "aliases": [
+        "bbh"
+      ],
+      "category": "Knowledge & Reasoning",
+      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
+      "status": "collecting",
+      "versions": [
+        "version-pending-audit"
+      ],
+      "primaryMetric": {
+        "name": "upstream primary score",
+        "unit": "",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bbh",
+        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bbh"
+      },
+      "sourceIds": [
+        "lm-eval-catalog-snapshot"
+      ],
+      "summary": "BIG-Bench Hard 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "registryOrigin": {
+        "catalogId": "lm-evaluation-harness",
+        "catalogRole": "implementation-index",
+        "upstreamPath": "lm_eval/tasks/bbh",
+        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
+        "originalSourceStatus": "pending-audit",
+        "auditedAt": "2026-07-18"
+      },
+      "evidenceStage": "implementation_index",
+      "leaderboard": {
+        "benchmarkId": "bbh",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "version-pending-audit",
+          "subset": "full",
+          "metric": "upstream primary score",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
       "benchmarkId": "bbq",
       "type": "benchmark",
       "canonicalName": "BBQ",
@@ -1814,62 +1870,6 @@
       }
     },
     {
-      "benchmarkId": "bbh",
-      "type": "benchmark",
-      "canonicalName": "BIG-Bench Hard",
-      "aliases": [
-        "bbh"
-      ],
-      "category": "Knowledge & Reasoning",
-      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
-      "status": "collecting",
-      "versions": [
-        "version-pending-audit"
-      ],
-      "primaryMetric": {
-        "name": "upstream primary score",
-        "unit": "",
-        "direction": "higher",
-        "tiesAllowed": true
-      },
-      "links": {
-        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bbh",
-        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/bbh"
-      },
-      "sourceIds": [
-        "lm-eval-catalog-snapshot"
-      ],
-      "summary": "BIG-Bench Hard 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
-      "languages": [
-        "en"
-      ],
-      "modalities": [
-        "text"
-      ],
-      "timeWindow": null,
-      "registryOrigin": {
-        "catalogId": "lm-evaluation-harness",
-        "catalogRole": "implementation-index",
-        "upstreamPath": "lm_eval/tasks/bbh",
-        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
-        "originalSourceStatus": "pending-audit",
-        "auditedAt": "2026-07-18"
-      },
-      "evidenceStage": "implementation_index",
-      "leaderboard": {
-        "benchmarkId": "bbh",
-        "resultCount": 0,
-        "leader": null,
-        "top3": [],
-        "group": {
-          "version": "version-pending-audit",
-          "subset": "full",
-          "metric": "upstream primary score",
-          "protocol": "unconfigured"
-        }
-      }
-    },
-    {
       "benchmarkId": "blimp",
       "type": "benchmark",
       "canonicalName": "BLiMP",
@@ -2024,62 +2024,6 @@
           "version": "2025",
           "subset": "full",
           "metric": "accuracy",
-          "protocol": "unconfigured"
-        }
-      }
-    },
-    {
-      "benchmarkId": "ceval",
-      "type": "benchmark",
-      "canonicalName": "C-Eval",
-      "aliases": [
-        "ceval"
-      ],
-      "category": "Knowledge & Reasoning",
-      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
-      "status": "collecting",
-      "versions": [
-        "version-pending-audit"
-      ],
-      "primaryMetric": {
-        "name": "upstream primary score",
-        "unit": "",
-        "direction": "higher",
-        "tiesAllowed": true
-      },
-      "links": {
-        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/ceval",
-        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/ceval"
-      },
-      "sourceIds": [
-        "lm-eval-catalog-snapshot"
-      ],
-      "summary": "C-Eval 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
-      "languages": [
-        "zh"
-      ],
-      "modalities": [
-        "text"
-      ],
-      "timeWindow": null,
-      "registryOrigin": {
-        "catalogId": "lm-evaluation-harness",
-        "catalogRole": "implementation-index",
-        "upstreamPath": "lm_eval/tasks/ceval",
-        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
-        "originalSourceStatus": "pending-audit",
-        "auditedAt": "2026-07-18"
-      },
-      "evidenceStage": "implementation_index",
-      "leaderboard": {
-        "benchmarkId": "ceval",
-        "resultCount": 0,
-        "leader": null,
-        "top3": [],
-        "group": {
-          "version": "version-pending-audit",
-          "subset": "full",
-          "metric": "upstream primary score",
           "protocol": "unconfigured"
         }
       }
@@ -2297,6 +2241,62 @@
       "evidenceStage": "implementation_index",
       "leaderboard": {
         "benchmarkId": "catalan-bench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "version-pending-audit",
+          "subset": "full",
+          "metric": "upstream primary score",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "ceval",
+      "type": "benchmark",
+      "canonicalName": "C-Eval",
+      "aliases": [
+        "ceval"
+      ],
+      "category": "Knowledge & Reasoning",
+      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
+      "status": "collecting",
+      "versions": [
+        "version-pending-audit"
+      ],
+      "primaryMetric": {
+        "name": "upstream primary score",
+        "unit": "",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/ceval",
+        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/ceval"
+      },
+      "sourceIds": [
+        "lm-eval-catalog-snapshot"
+      ],
+      "summary": "C-Eval 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
+      "languages": [
+        "zh"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "registryOrigin": {
+        "catalogId": "lm-evaluation-harness",
+        "catalogRole": "implementation-index",
+        "upstreamPath": "lm_eval/tasks/ceval",
+        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
+        "originalSourceStatus": "pending-audit",
+        "auditedAt": "2026-07-18"
+      },
+      "evidenceStage": "implementation_index",
+      "leaderboard": {
+        "benchmarkId": "ceval",
         "resultCount": 0,
         "leader": null,
         "top3": [],
@@ -2809,6 +2809,62 @@
           "version": "version-pending-audit",
           "subset": "full",
           "metric": "upstream primary score",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "cross-episode-object-goal-navigation",
+      "type": "protocol",
+      "canonicalName": "Cross-Episode Object-Goal Navigation",
+      "aliases": [
+        "Cross-Episode ObjectNav"
+      ],
+      "category": "Memory & Long-Horizon",
+      "owner": "VTM-Nav authors",
+      "status": "collecting",
+      "versions": [
+        "arXiv 2607.14514v1"
+      ],
+      "primaryMetric": {
+        "name": "SR",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "paper": "https://arxiv.org/abs/2607.14514v1"
+      },
+      "sourceIds": [
+        "arxiv-2607-14514-v1"
+      ],
+      "summary": "在同一场景的重复 episode 间保留自采集经验，同时保持模型参数固定的 ObjectNav 协议。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "vision",
+        "action",
+        "memory"
+      ],
+      "timeWindow": null,
+      "registryOrigin": {
+        "catalogId": "arxiv-benchmark-discovery",
+        "catalogRole": "paper-evidence",
+        "paperId": "arxiv-2607-14514-v1",
+        "sourceVersion": "v1",
+        "discoveredAt": "2026-07-18"
+      },
+      "evidenceStage": "paper_evidence",
+      "leaderboard": {
+        "benchmarkId": "cross-episode-object-goal-navigation",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "arXiv 2607.14514v1",
+          "subset": "full",
+          "metric": "SR",
           "protocol": "unconfigured"
         }
       }
@@ -8253,6 +8309,53 @@
       }
     },
     {
+      "benchmarkId": "mmlu-pro",
+      "type": "benchmark",
+      "canonicalName": "MMLU-Pro",
+      "aliases": [
+        "MMLU Pro"
+      ],
+      "category": "Reasoning",
+      "owner": "TIGER-Lab",
+      "status": "ready",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "accuracy",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "repo": "https://github.com/TIGER-AI-Lab/MMLU-Pro"
+      },
+      "sourceIds": [
+        "mmlu-pro-official"
+      ],
+      "summary": "更高难度、十选一的知识与推理评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "evidenceStage": "canonical_source",
+      "leaderboard": {
+        "benchmarkId": "mmlu-pro",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "accuracy",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
       "benchmarkId": "mmlu-pro-plus",
       "type": "benchmark",
       "canonicalName": "MMLU Pro Plus",
@@ -8472,53 +8575,6 @@
           "version": "version-pending-audit",
           "subset": "full",
           "metric": "upstream primary score",
-          "protocol": "unconfigured"
-        }
-      }
-    },
-    {
-      "benchmarkId": "mmlu-pro",
-      "type": "benchmark",
-      "canonicalName": "MMLU-Pro",
-      "aliases": [
-        "MMLU Pro"
-      ],
-      "category": "Reasoning",
-      "owner": "TIGER-Lab",
-      "status": "ready",
-      "versions": [
-        "1.0"
-      ],
-      "primaryMetric": {
-        "name": "accuracy",
-        "unit": "%",
-        "direction": "higher",
-        "tiesAllowed": true
-      },
-      "links": {
-        "repo": "https://github.com/TIGER-AI-Lab/MMLU-Pro"
-      },
-      "sourceIds": [
-        "mmlu-pro-official"
-      ],
-      "summary": "更高难度、十选一的知识与推理评测。",
-      "languages": [
-        "en"
-      ],
-      "modalities": [
-        "text"
-      ],
-      "timeWindow": null,
-      "evidenceStage": "canonical_source",
-      "leaderboard": {
-        "benchmarkId": "mmlu-pro",
-        "resultCount": 0,
-        "leader": null,
-        "top3": [],
-        "group": {
-          "version": "1.0",
-          "subset": "full",
-          "metric": "accuracy",
           "protocol": "unconfigured"
         }
       }
@@ -8916,62 +8972,6 @@
       }
     },
     {
-      "benchmarkId": "nq-open",
-      "type": "benchmark",
-      "canonicalName": "Natural Questions Open",
-      "aliases": [
-        "nq_open"
-      ],
-      "category": "Knowledge & Reasoning",
-      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
-      "status": "collecting",
-      "versions": [
-        "version-pending-audit"
-      ],
-      "primaryMetric": {
-        "name": "upstream primary score",
-        "unit": "",
-        "direction": "higher",
-        "tiesAllowed": true
-      },
-      "links": {
-        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/nq_open",
-        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/nq_open"
-      },
-      "sourceIds": [
-        "lm-eval-catalog-snapshot"
-      ],
-      "summary": "Natural Questions Open 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
-      "languages": [
-        "en"
-      ],
-      "modalities": [
-        "text"
-      ],
-      "timeWindow": null,
-      "registryOrigin": {
-        "catalogId": "lm-evaluation-harness",
-        "catalogRole": "implementation-index",
-        "upstreamPath": "lm_eval/tasks/nq_open",
-        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
-        "originalSourceStatus": "pending-audit",
-        "auditedAt": "2026-07-18"
-      },
-      "evidenceStage": "implementation_index",
-      "leaderboard": {
-        "benchmarkId": "nq-open",
-        "resultCount": 0,
-        "leader": null,
-        "top3": [],
-        "group": {
-          "version": "version-pending-audit",
-          "subset": "full",
-          "metric": "upstream primary score",
-          "protocol": "unconfigured"
-        }
-      }
-    },
-    {
       "benchmarkId": "nerel-bench",
       "type": "benchmark",
       "canonicalName": "Nerel Bench",
@@ -9128,6 +9128,62 @@
       "evidenceStage": "implementation_index",
       "leaderboard": {
         "benchmarkId": "noticia",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "version-pending-audit",
+          "subset": "full",
+          "metric": "upstream primary score",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "nq-open",
+      "type": "benchmark",
+      "canonicalName": "Natural Questions Open",
+      "aliases": [
+        "nq_open"
+      ],
+      "category": "Knowledge & Reasoning",
+      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
+      "status": "collecting",
+      "versions": [
+        "version-pending-audit"
+      ],
+      "primaryMetric": {
+        "name": "upstream primary score",
+        "unit": "",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/nq_open",
+        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/nq_open"
+      },
+      "sourceIds": [
+        "lm-eval-catalog-snapshot"
+      ],
+      "summary": "Natural Questions Open 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "registryOrigin": {
+        "catalogId": "lm-evaluation-harness",
+        "catalogRole": "implementation-index",
+        "upstreamPath": "lm_eval/tasks/nq_open",
+        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
+        "originalSourceStatus": "pending-audit",
+        "auditedAt": "2026-07-18"
+      },
+      "evidenceStage": "implementation_index",
+      "leaderboard": {
+        "benchmarkId": "nq-open",
         "resultCount": 0,
         "leader": null,
         "top3": [],
@@ -10360,6 +10416,64 @@
       }
     },
     {
+      "benchmarkId": "real-bench",
+      "type": "benchmark",
+      "canonicalName": "REAL-Bench",
+      "aliases": [
+        "REAL Bench"
+      ],
+      "category": "Embodied Agent & Robotics",
+      "owner": "REAL-Bench authors",
+      "status": "collecting",
+      "versions": [
+        "arXiv 2607.13653v1"
+      ],
+      "primaryMetric": {
+        "name": "success rate",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "paper": "https://arxiv.org/abs/2607.13653v1",
+        "repo": "https://github.com/InternRobotics/REAL"
+      },
+      "sourceIds": [
+        "arxiv-2607-13653-v1"
+      ],
+      "summary": "241 项开放世界移动操作任务，覆盖主动探索、视觉干扰、关节操作和交互消歧。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "vision",
+        "language",
+        "action",
+        "dialogue"
+      ],
+      "timeWindow": null,
+      "registryOrigin": {
+        "catalogId": "arxiv-benchmark-discovery",
+        "catalogRole": "paper-evidence",
+        "paperId": "arxiv-2607-13653-v1",
+        "sourceVersion": "v1",
+        "discoveredAt": "2026-07-18"
+      },
+      "evidenceStage": "paper_evidence",
+      "leaderboard": {
+        "benchmarkId": "real-bench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "arXiv 2607.13653v1",
+          "subset": "full",
+          "metric": "success rate",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
       "benchmarkId": "realtoxicityprompts",
       "type": "benchmark",
       "canonicalName": "Realtoxicityprompts",
@@ -10514,6 +10628,62 @@
           "version": "version-pending-audit",
           "subset": "full",
           "metric": "upstream primary score",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "saferelbench",
+      "type": "benchmark",
+      "canonicalName": "SafeRelBench",
+      "aliases": [
+        "SAFERELBENCH"
+      ],
+      "category": "Safety & Robustness",
+      "owner": "SafeRelBench authors",
+      "status": "collecting",
+      "versions": [
+        "arXiv 2607.14543v1"
+      ],
+      "primaryMetric": {
+        "name": "SSR",
+        "unit": "ratio",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "paper": "https://arxiv.org/abs/2607.14543v1"
+      },
+      "sourceIds": [
+        "arxiv-2607-14543-v1"
+      ],
+      "summary": "507 个可执行样本评估空间关系导致的过程级具身安全风险。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "vision",
+        "language",
+        "action"
+      ],
+      "timeWindow": null,
+      "registryOrigin": {
+        "catalogId": "arxiv-benchmark-discovery",
+        "catalogRole": "paper-evidence",
+        "paperId": "arxiv-2607-14543-v1",
+        "sourceVersion": "v1",
+        "discoveredAt": "2026-07-18"
+      },
+      "evidenceStage": "paper_evidence",
+      "leaderboard": {
+        "benchmarkId": "saferelbench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "arXiv 2607.14543v1",
+          "subset": "full",
+          "metric": "SSR",
           "protocol": "unconfigured"
         }
       }
@@ -10743,62 +10913,6 @@
       }
     },
     {
-      "benchmarkId": "slr-bench",
-      "type": "benchmark",
-      "canonicalName": "Slr Bench",
-      "aliases": [
-        "slr_bench"
-      ],
-      "category": "Knowledge & Reasoning",
-      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
-      "status": "collecting",
-      "versions": [
-        "version-pending-audit"
-      ],
-      "primaryMetric": {
-        "name": "upstream primary score",
-        "unit": "",
-        "direction": "higher",
-        "tiesAllowed": true
-      },
-      "links": {
-        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/slr_bench",
-        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/slr_bench"
-      },
-      "sourceIds": [
-        "lm-eval-catalog-snapshot"
-      ],
-      "summary": "Slr Bench 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
-      "languages": [
-        "en"
-      ],
-      "modalities": [
-        "text"
-      ],
-      "timeWindow": null,
-      "registryOrigin": {
-        "catalogId": "lm-evaluation-harness",
-        "catalogRole": "implementation-index",
-        "upstreamPath": "lm_eval/tasks/slr_bench",
-        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
-        "originalSourceStatus": "pending-audit",
-        "auditedAt": "2026-07-18"
-      },
-      "evidenceStage": "implementation_index",
-      "leaderboard": {
-        "benchmarkId": "slr-bench",
-        "resultCount": 0,
-        "leader": null,
-        "top3": [],
-        "group": {
-          "version": "version-pending-audit",
-          "subset": "full",
-          "metric": "upstream primary score",
-          "protocol": "unconfigured"
-        }
-      }
-    },
-    {
       "benchmarkId": "siqa",
       "type": "benchmark",
       "canonicalName": "Social IQa",
@@ -10843,6 +10957,62 @@
       "evidenceStage": "implementation_index",
       "leaderboard": {
         "benchmarkId": "siqa",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "version-pending-audit",
+          "subset": "full",
+          "metric": "upstream primary score",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "slr-bench",
+      "type": "benchmark",
+      "canonicalName": "Slr Bench",
+      "aliases": [
+        "slr_bench"
+      ],
+      "category": "Knowledge & Reasoning",
+      "owner": "Upstream benchmark authors; catalogued by EleutherAI",
+      "status": "collecting",
+      "versions": [
+        "version-pending-audit"
+      ],
+      "primaryMetric": {
+        "name": "upstream primary score",
+        "unit": "",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/slr_bench",
+        "repo": "https://github.com/EleutherAI/lm-evaluation-harness/tree/f4d4b3de3ee6741a7151a9fe74945ee515262f4c/lm_eval/tasks/slr_bench"
+      },
+      "sourceIds": [
+        "lm-eval-catalog-snapshot"
+      ],
+      "summary": "Slr Bench 已由 EleutherAI LM Evaluation Harness 的任务目录核验收录；原始论文、精确版本、协议和可比成绩仍在逐项审核。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "registryOrigin": {
+        "catalogId": "lm-evaluation-harness",
+        "catalogRole": "implementation-index",
+        "upstreamPath": "lm_eval/tasks/slr_bench",
+        "upstreamCommit": "f4d4b3de3ee6741a7151a9fe74945ee515262f4c",
+        "originalSourceStatus": "pending-audit",
+        "auditedAt": "2026-07-18"
+      },
+      "evidenceStage": "implementation_index",
+      "leaderboard": {
+        "benchmarkId": "slr-bench",
         "resultCount": 0,
         "leader": null,
         "top3": [],
@@ -11447,6 +11617,101 @@
           "subset": "full",
           "metric": "resolved",
           "protocol": "official-harness"
+        }
+      }
+    },
+    {
+      "benchmarkId": "tau-bench",
+      "type": "benchmark",
+      "canonicalName": "τ-bench",
+      "aliases": [
+        "tau-bench"
+      ],
+      "category": "Enterprise",
+      "owner": "τ-bench",
+      "status": "legacy",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "pass@1",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "repo": "https://github.com/sierra-research/tau-bench"
+      },
+      "sourceIds": [
+        "tau-official"
+      ],
+      "summary": "τ²-bench 的前代，不与后者合并。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "evidenceStage": "canonical_source",
+      "leaderboard": {
+        "benchmarkId": "tau-bench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "pass@1",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "tau2-bench",
+      "type": "benchmark",
+      "canonicalName": "τ²-bench",
+      "aliases": [
+        "tau2-bench",
+        "tau squared bench"
+      ],
+      "category": "Enterprise",
+      "owner": "τ²-bench",
+      "status": "needs_source",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "pass@1",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "repo": "https://github.com/sierra-research/tau2-bench"
+      },
+      "sourceIds": [
+        "tau2-official"
+      ],
+      "summary": "双控制环境下的对话式企业 Agent 任务评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "evidenceStage": "canonical_source",
+      "leaderboard": {
+        "benchmarkId": "tau2-bench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "pass@1",
+          "protocol": "unconfigured"
         }
       }
     },
@@ -12319,6 +12584,62 @@
           "version": "version-pending-audit",
           "subset": "full",
           "metric": "upstream primary score",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "uesf-bench",
+      "type": "benchmark",
+      "canonicalName": "UESF-Bench",
+      "aliases": [
+        "Unified Embodied Seeking and Following Benchmark"
+      ],
+      "category": "Embodied Agent & Robotics",
+      "owner": "UESF-Bench authors",
+      "status": "collecting",
+      "versions": [
+        "arXiv 2607.13621v1"
+      ],
+      "primaryMetric": {
+        "name": "TSR",
+        "unit": "ratio",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "paper": "https://arxiv.org/abs/2607.13621v1"
+      },
+      "sourceIds": [
+        "arxiv-2607-13621-v1"
+      ],
+      "summary": "统一评测语言引导的人物搜索、阶段切换、恢复与持续跟随。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "vision",
+        "language",
+        "action"
+      ],
+      "timeWindow": null,
+      "registryOrigin": {
+        "catalogId": "arxiv-benchmark-discovery",
+        "catalogRole": "paper-evidence",
+        "paperId": "arxiv-2607-13621-v1",
+        "sourceVersion": "v1",
+        "discoveredAt": "2026-07-18"
+      },
+      "evidenceStage": "paper_evidence",
+      "leaderboard": {
+        "benchmarkId": "uesf-bench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "arXiv 2607.13621v1",
+          "subset": "full",
+          "metric": "TSR",
           "protocol": "unconfigured"
         }
       }
@@ -13361,101 +13682,6 @@
           "version": "version-pending-audit",
           "subset": "full",
           "metric": "upstream primary score",
-          "protocol": "unconfigured"
-        }
-      }
-    },
-    {
-      "benchmarkId": "tau-bench",
-      "type": "benchmark",
-      "canonicalName": "τ-bench",
-      "aliases": [
-        "tau-bench"
-      ],
-      "category": "Enterprise",
-      "owner": "τ-bench",
-      "status": "legacy",
-      "versions": [
-        "1.0"
-      ],
-      "primaryMetric": {
-        "name": "pass@1",
-        "unit": "%",
-        "direction": "higher",
-        "tiesAllowed": true
-      },
-      "links": {
-        "repo": "https://github.com/sierra-research/tau-bench"
-      },
-      "sourceIds": [
-        "tau-official"
-      ],
-      "summary": "τ²-bench 的前代，不与后者合并。",
-      "languages": [
-        "en"
-      ],
-      "modalities": [
-        "text"
-      ],
-      "timeWindow": null,
-      "evidenceStage": "canonical_source",
-      "leaderboard": {
-        "benchmarkId": "tau-bench",
-        "resultCount": 0,
-        "leader": null,
-        "top3": [],
-        "group": {
-          "version": "1.0",
-          "subset": "full",
-          "metric": "pass@1",
-          "protocol": "unconfigured"
-        }
-      }
-    },
-    {
-      "benchmarkId": "tau2-bench",
-      "type": "benchmark",
-      "canonicalName": "τ²-bench",
-      "aliases": [
-        "tau2-bench",
-        "tau squared bench"
-      ],
-      "category": "Enterprise",
-      "owner": "τ²-bench",
-      "status": "needs_source",
-      "versions": [
-        "1.0"
-      ],
-      "primaryMetric": {
-        "name": "pass@1",
-        "unit": "%",
-        "direction": "higher",
-        "tiesAllowed": true
-      },
-      "links": {
-        "repo": "https://github.com/sierra-research/tau2-bench"
-      },
-      "sourceIds": [
-        "tau2-official"
-      ],
-      "summary": "双控制环境下的对话式企业 Agent 任务评测。",
-      "languages": [
-        "en"
-      ],
-      "modalities": [
-        "text"
-      ],
-      "timeWindow": null,
-      "evidenceStage": "canonical_source",
-      "leaderboard": {
-        "benchmarkId": "tau2-bench",
-        "resultCount": 0,
-        "leader": null,
-        "top3": [],
-        "group": {
-          "version": "1.0",
-          "subset": "full",
-          "metric": "pass@1",
           "protocol": "unconfigured"
         }
       }

@@ -3,6 +3,54 @@
   "updatedAt": "2026-07-18T00:00:00Z",
   "sources": [
     {
+      "sourceId": "arxiv-2607-13621-v1",
+      "benchmarkIds": [
+        "uesf-bench"
+      ],
+      "name": "UESF-Bench arXiv v1",
+      "url": "https://arxiv.org/abs/2607.13621v1",
+      "type": "official",
+      "access": "public",
+      "adapter": "arxiv-paper-review",
+      "licenseNote": "Metadata and evidence coordinates only; PDF is not mirrored."
+    },
+    {
+      "sourceId": "arxiv-2607-13653-v1",
+      "benchmarkIds": [
+        "real-bench"
+      ],
+      "name": "REAL-Bench arXiv v1",
+      "url": "https://arxiv.org/abs/2607.13653v1",
+      "type": "official",
+      "access": "public",
+      "adapter": "arxiv-paper-review",
+      "licenseNote": "Metadata and evidence coordinates only; PDF is not mirrored."
+    },
+    {
+      "sourceId": "arxiv-2607-14514-v1",
+      "benchmarkIds": [
+        "cross-episode-object-goal-navigation"
+      ],
+      "name": "VTM-Nav arXiv v1 protocol evidence",
+      "url": "https://arxiv.org/abs/2607.14514v1",
+      "type": "official",
+      "access": "public",
+      "adapter": "arxiv-paper-review",
+      "licenseNote": "Protocol identity and evidence coordinates only; PDF is not mirrored."
+    },
+    {
+      "sourceId": "arxiv-2607-14543-v1",
+      "benchmarkIds": [
+        "saferelbench"
+      ],
+      "name": "SafeRelBench arXiv v1",
+      "url": "https://arxiv.org/abs/2607.14543v1",
+      "type": "official",
+      "access": "public",
+      "adapter": "arxiv-paper-review",
+      "licenseNote": "Metadata and evidence coordinates only; PDF is not mirrored."
+    },
+    {
       "sourceId": "browsecomp-official",
       "benchmarkIds": [
         "browsecomp"

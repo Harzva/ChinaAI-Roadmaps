@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "real-bench",
+    "canonicalName": "REAL-Bench",
+    "category": "Embodied Agent & Robotics",
+    "status": "collecting",
+    "summary": "241 项开放世界移动操作任务，覆盖主动探索、视觉干扰、关节操作和交互消歧。",
+    "metric": {
+      "name": "success rate",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "paper": "https://arxiv.org/abs/2607.13653v1",
+      "repo": "https://github.com/InternRobotics/REAL"
+    }
+  },
+  "group": {
+    "version": "arXiv 2607.13653v1",
+    "subset": "full",
+    "metric": "success rate",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

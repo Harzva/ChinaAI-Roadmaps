@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:30:00Z",
+  "claims": [
+    {
+      "claimId": "claim-uesf-single-dualhead-td-tsr",
+      "paperId": "arxiv-2607-13621-v1",
+      "candidateId": "candidate-uesf-bench",
+      "dataset": "UESF-Bench",
+      "datasetVersion": "v1",
+      "system": "DualHead-TD",
+      "metric": {"name": "TSR", "direction": "higher", "unit": "ratio", "value": 0.35},
+      "runConfig": {"raw": {"subset": "single-person test"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.13621v1", "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609", "pdfPage": 7, "table": "Table 1", "row": "DualHead-TD", "column": "TSR", "textSnippet": "DualHead-TD reports TSR 0.35 on the single-person test set.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false,
+      "rankReason": "作者论文结果；等待官方榜单或独立复现。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-uesf-single-dualhead-td-spl",
+      "paperId": "arxiv-2607-13621-v1", "candidateId": "candidate-uesf-bench", "dataset": "UESF-Bench", "datasetVersion": "v1", "system": "DualHead-TD",
+      "metric": {"name": "Search SPL", "direction": "higher", "unit": "ratio", "value": 0.53},
+      "runConfig": {"raw": {"subset": "single-person test"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.13621v1", "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609", "pdfPage": 7, "table": "Table 1", "row": "DualHead-TD", "column": "SPL", "textSnippet": "DualHead-TD reports Search SPL 0.53.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "作者论文结果；等待协议复核。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-uesf-multi-dualhead-td-tsr",
+      "paperId": "arxiv-2607-13621-v1", "candidateId": "candidate-uesf-bench", "dataset": "UESF-Bench", "datasetVersion": "v1", "system": "DualHead-TD",
+      "metric": {"name": "TSR", "direction": "higher", "unit": "ratio", "value": 0.20},
+      "runConfig": {"raw": {"subset": "multi-person test"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.13621v1", "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609", "pdfPage": 8, "table": "Table 2", "row": "DualHead-TD", "column": "TSR", "textSnippet": "DualHead-TD reports TSR 0.20 with multiple distractor persons.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "不同 subset 不与单人结果混排。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-uesf-multi-dualhead-td-spl",
+      "paperId": "arxiv-2607-13621-v1", "candidateId": "candidate-uesf-bench", "dataset": "UESF-Bench", "datasetVersion": "v1", "system": "DualHead-TD",
+      "metric": {"name": "Search SPL", "direction": "higher", "unit": "ratio", "value": 0.55},
+      "runConfig": {"raw": {"subset": "multi-person test"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.13621v1", "pdfSha256": "sha256:47e44d3d9c2066c6d59eb02bc07a380ffc9d585393857333848cd4883406a609", "pdfPage": 8, "table": "Table 2", "row": "DualHead-TD", "column": "SPL", "textSnippet": "DualHead-TD reports Search SPL 0.55 on the multi-person test set.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "作者论文结果；等待官方榜单。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-real-bench-sul-sr",
+      "paperId": "arxiv-2607-13653-v1", "candidateId": "candidate-real-bench", "dataset": "REAL-Bench", "datasetVersion": "v1", "system": "REAL Ours-8B-SFT+RL",
+      "metric": {"name": "success rate", "direction": "higher", "unit": "%", "value": 56.9},
+      "runConfig": {"raw": {"subset": "SUL", "backbone": "Qwen3-VL-8B"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.13653v1", "pdfSha256": "sha256:9659c5560a55cef7d207f0ab0102391b3ec7e054f5052a9e057e74b5fa9002db", "pdfPage": 10, "table": "Table 1", "row": "Ours-8B-SFT+RL", "column": "SUL", "textSnippet": "The SFT+RL agent reports 56.9 success on the interaction-heavy SUL split.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "作者自报且仅为 SUL subset。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-real-physical-overall-sr",
+      "paperId": "arxiv-2607-13653-v1", "candidateId": "candidate-real-bench", "dataset": "REAL physical deployment", "datasetVersion": "v1", "system": "REAL physical robot",
+      "metric": {"name": "success rate", "direction": "higher", "unit": "%", "value": 78.3},
+      "runConfig": {"raw": {"subset": "overall real-world", "episodes": 60}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.13653v1", "pdfSha256": "sha256:9659c5560a55cef7d207f0ab0102391b3ec7e054f5052a9e057e74b5fa9002db", "pdfPage": 13, "table": "Table 2", "row": "Overall", "column": "SR", "textSnippet": "Overall real-world SR is 78.3% across 60 episodes.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "not_comparable", "rankingEligible": false, "rankReason": "物理部署结果与模拟 benchmark 不同组。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-real-physical-overall-spl",
+      "paperId": "arxiv-2607-13653-v1", "candidateId": "candidate-real-bench", "dataset": "REAL physical deployment", "datasetVersion": "v1", "system": "REAL physical robot",
+      "metric": {"name": "SPL", "direction": "higher", "unit": "%", "value": 63.1},
+      "runConfig": {"raw": {"subset": "overall real-world", "episodes": 60}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.13653v1", "pdfSha256": "sha256:9659c5560a55cef7d207f0ab0102391b3ec7e054f5052a9e057e74b5fa9002db", "pdfPage": 13, "table": "Table 2", "row": "Overall", "column": "SPL", "textSnippet": "Overall real-world SPL is 63.1%.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "not_comparable", "rankingEligible": false, "rankReason": "物理部署隔离组。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-saferel-qwen25-72b-supporting-ssr",
+      "paperId": "arxiv-2607-14543-v1", "candidateId": "candidate-saferelbench", "dataset": "SafeRelBench", "datasetVersion": "v1", "system": "Qwen2.5-72B",
+      "metric": {"name": "SSR", "direction": "higher", "unit": "ratio", "value": 0.42},
+      "runConfig": {"raw": {"subset": "Supporting with spatial relation", "promptVariant": "BASE"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14543v1", "pdfSha256": "sha256:f80199510097fd1765513eef97313ef2277609951eb0e1f9a6dd37756ade4c11", "pdfPage": 8, "table": "Table 2", "row": "Qwen2.5-72B", "column": "Supporting / w / SSR", "textSnippet": "Qwen2.5-72B reports 0.42 SSR for Supporting with spatial relations.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "需锁定 prompt 与执行环境。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-saferel-gpt54-supporting-ssr",
+      "paperId": "arxiv-2607-14543-v1", "candidateId": "candidate-saferelbench", "dataset": "SafeRelBench", "datasetVersion": "v1", "system": "GPT-5.4",
+      "metric": {"name": "SSR", "direction": "higher", "unit": "ratio", "value": 0.49},
+      "runConfig": {"raw": {"subset": "Supporting with spatial relation", "promptVariant": "BASE"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14543v1", "pdfSha256": "sha256:f80199510097fd1765513eef97313ef2277609951eb0e1f9a6dd37756ade4c11", "pdfPage": 8, "table": "Table 2", "row": "GPT-5.4", "column": "Supporting / w / SSR", "textSnippet": "GPT-5.4 reports 0.49 SSR for Supporting with spatial relations.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "论文作者评测；未接入官方榜单。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-saferel-claude46-proximity-ssr",
+      "paperId": "arxiv-2607-14543-v1", "candidateId": "candidate-saferelbench", "dataset": "SafeRelBench", "datasetVersion": "v1", "system": "Claude-4.6",
+      "metric": {"name": "SSR", "direction": "higher", "unit": "ratio", "value": 0.38},
+      "runConfig": {"raw": {"subset": "Proximity with spatial relation", "promptVariant": "BASE"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14543v1", "pdfSha256": "sha256:f80199510097fd1765513eef97313ef2277609951eb0e1f9a6dd37756ade4c11", "pdfPage": 8, "table": "Table 2", "row": "Claude-4.6", "column": "Proximity / w / SSR", "textSnippet": "Claude-4.6 reports 0.38 SSR for Proximity with spatial relations.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "不同 relation subset 不得混排。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-vtm-hm3d-v01-40-sr",
+      "paperId": "arxiv-2607-14514-v1", "candidateId": "candidate-cross-episode-object-goal-navigation", "dataset": "HM3D", "datasetVersion": "v0.1", "system": "VTM-Nav + Qwen3-VL-Plus",
+      "metric": {"name": "SR", "direction": "higher", "unit": "%", "value": 59.6},
+      "runConfig": {"raw": {"steps": 40, "training_free": true, "zero_shot": true, "backbone": "Qwen3-VL-Plus"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1", "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9", "pdfPage": 8, "table": "Table 1", "row": "VTM-Nav", "column": "HM3D v0.1 / SR", "textSnippet": "VTM-Nav reports 59.6 SR under the controlled 40-step protocol.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "作者自报；需保持 40-step 组。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-vtm-hm3d-v01-40-spl",
+      "paperId": "arxiv-2607-14514-v1", "candidateId": "candidate-cross-episode-object-goal-navigation", "dataset": "HM3D", "datasetVersion": "v0.1", "system": "VTM-Nav + Qwen3-VL-Plus",
+      "metric": {"name": "SPL", "direction": "higher", "unit": "%", "value": 31.8},
+      "runConfig": {"raw": {"steps": 40, "training_free": true, "zero_shot": true, "backbone": "Qwen3-VL-Plus"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1", "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9", "pdfPage": 8, "table": "Table 1", "row": "VTM-Nav", "column": "HM3D v0.1 / SPL", "textSnippet": "VTM-Nav reports 31.8 SPL at 40 steps.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "作者自报；需保持 metric 隔离。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-vtm-hm3d-v01-500-sr",
+      "paperId": "arxiv-2607-14514-v1", "candidateId": "candidate-cross-episode-object-goal-navigation", "dataset": "HM3D", "datasetVersion": "v0.1", "system": "VTM-Nav + Qwen3-VL-Plus",
+      "metric": {"name": "SR", "direction": "higher", "unit": "%", "value": 65.3},
+      "runConfig": {"raw": {"steps": 500, "training_free": true, "zero_shot": true, "backbone": "Qwen3-VL-Plus"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1", "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9", "pdfPage": 8, "table": "Table 1", "row": "VTM-Nav (500 steps)", "column": "HM3D v0.1 / SR", "textSnippet": "The relaxed 500-step row reports 65.3 SR.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "not_comparable", "rankingEligible": false, "rankReason": "500-step 结果不可与 40-step 行直接比较。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-vtm-hm3d-v02-40-sr",
+      "paperId": "arxiv-2607-14514-v1", "candidateId": "candidate-cross-episode-object-goal-navigation", "dataset": "HM3D", "datasetVersion": "v0.2", "system": "VTM-Nav + Qwen3-VL-Plus",
+      "metric": {"name": "SR", "direction": "higher", "unit": "%", "value": 72.0},
+      "runConfig": {"raw": {"steps": 40, "training_free": true, "zero_shot": true, "backbone": "Qwen3-VL-Plus"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1", "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9", "pdfPage": 8, "table": "Table 1", "row": "VTM-Nav", "column": "HM3D v0.2 / SR", "textSnippet": "VTM-Nav reports 72.0 SR on HM3D v0.2 at 40 steps.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "HM3D v0.2 与 v0.1 分组。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-vtm-mp3d-40-sr",
+      "paperId": "arxiv-2607-14514-v1", "candidateId": "candidate-cross-episode-object-goal-navigation", "dataset": "MP3D", "datasetVersion": "paper protocol", "system": "VTM-Nav + Qwen3-VL-Plus",
+      "metric": {"name": "SR", "direction": "higher", "unit": "%", "value": 44.3},
+      "runConfig": {"raw": {"steps": 40, "training_free": true, "zero_shot": true, "backbone": "Qwen3-VL-Plus"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1", "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9", "pdfPage": 8, "table": "Table 2", "row": "VTM-Nav", "column": "SR", "textSnippet": "VTM-Nav reports 44.3 SR on MP3D.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "MP3D 独立数据集组。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-vtm-mp3d-40-spl",
+      "paperId": "arxiv-2607-14514-v1", "candidateId": "candidate-cross-episode-object-goal-navigation", "dataset": "MP3D", "datasetVersion": "paper protocol", "system": "VTM-Nav + Qwen3-VL-Plus",
+      "metric": {"name": "SPL", "direction": "higher", "unit": "%", "value": 16.2},
+      "runConfig": {"raw": {"steps": 40, "training_free": true, "zero_shot": true, "backbone": "Qwen3-VL-Plus"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14514v1", "pdfSha256": "sha256:fcfccd59ce91a3ecbfce87eb56fd73b5e150b7f7932e413ef28b09214c430bb9", "pdfPage": 8, "table": "Table 2", "row": "VTM-Nav", "column": "SPL", "textSnippet": "VTM-Nav reports 16.2 SPL on MP3D.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "指标与数据集隔离。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-visualprobe-medium-minio3-4turns",
+      "paperId": "arxiv-2607-14547-v1", "candidateId": "candidate-visualprobe", "dataset": "VisualProbe", "datasetVersion": "Medium / Avg@32", "system": "Mini-o3 + Qwen2.5-VL-7B",
+      "metric": {"name": "accuracy", "direction": "higher", "unit": "%", "value": 36.7},
+      "runConfig": {"raw": {"maxTurns": 4, "subset": "medium", "backbone": "Qwen2.5-VL-7B"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14547v1", "pdfSha256": "sha256:72dad067a9289167234da4890bba5f2f3aafa869c81b37107c98c2ead5788968", "pdfPage": 7, "table": "Table 1", "row": "Mini-o3 (4 turns)", "column": "VisualProbe / medium", "textSnippet": "Mini-o3 reports 36.7 on VisualProbe-Medium at four turns.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "需要回溯 VisualProbe 原始协议。", "createdAt": "2026-07-18T00:30:00Z"
+    },
+    {
+      "claimId": "claim-visualprobe-medium-adaturn-4turns",
+      "paperId": "arxiv-2607-14547-v1", "candidateId": "candidate-visualprobe", "dataset": "VisualProbe", "datasetVersion": "Medium / Avg@32", "system": "AdaTurn + Qwen2.5-VL-7B",
+      "metric": {"name": "accuracy", "direction": "higher", "unit": "%", "value": 47.6},
+      "runConfig": {"raw": {"maxTurns": 4, "subset": "medium", "backbone": "Qwen2.5-VL-7B"}},
+      "evidence": {"sourcePdfUrl": "https://arxiv.org/pdf/2607.14547v1", "pdfSha256": "sha256:72dad067a9289167234da4890bba5f2f3aafa869c81b37107c98c2ead5788968", "pdfPage": 7, "table": "Table 1", "row": "Ours (4 turns)", "column": "VisualProbe / medium", "textSnippet": "AdaTurn reports 47.6 on VisualProbe-Medium at four turns.", "extractionMethod": "visual_review"},
+      "status": "agent_verified", "sourceType": "paper_reported", "comparability": "partially_comparable", "rankingEligible": false, "rankReason": "论文使用旧 benchmark，原始来源尚未建档。", "createdAt": "2026-07-18T00:30:00Z"
+    }
+  ]
+}

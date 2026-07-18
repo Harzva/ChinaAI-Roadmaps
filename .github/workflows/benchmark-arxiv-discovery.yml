@@ -1,0 +1,78 @@
+name: Benchmark arXiv discovery
+
+on:
+  schedule:
+    - cron: "23 1 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "UTC date to query (YYYY-MM-DD); blank uses today"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: benchmark-arxiv-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    name: Discover, download and stage PDF evidence
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: benchmark-roadmap
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Use Node.js 24
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: benchmark-roadmap/package-lock.json
+      - name: Use Python 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: benchmark-roadmap/requirements-arxiv.txt
+      - name: Install deterministic dependencies
+        run: |
+          npm ci --ignore-scripts
+          python -m pip install --requirement requirements-arxiv.txt
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils tesseract-ocr
+      - name: Query arXiv with persistent version semantics
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+        run: |
+          QUERY_DATE="${INPUT_DATE:-$(date -u +%F)}"
+          node scripts/arxiv-discover.mjs --date "$QUERY_DATE" --download
+          node scripts/arxiv-stage.mjs
+      - name: Inspect downloaded PDFs without publishing scores
+        run: |
+          mkdir -p data/arxiv/runtime/evidence
+          for pdf in data/arxiv/cache/*.pdf; do
+            test -e "$pdf" || continue
+            stem="$(basename "$pdf" .pdf)"
+            paper_id="$(printf '%s' "$stem" | sed -E 's/^([0-9]{4})\.([0-9]{4,5})(v[0-9]+)$/arxiv-\1-\2-\3/')"
+            python scripts/arxiv-pdf-evidence.py --pdf "$pdf" --paper-id "$paper_id" --out "data/arxiv/runtime/evidence/${stem}.json"
+          done
+      - name: Keep production release gates green
+        run: npm run gates
+      - name: Upload review queue without PDFs
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: arxiv-benchmark-review-${{ github.run_id }}
+          path: |
+            benchmark-roadmap/data/arxiv/runtime/discovery.json
+            benchmark-roadmap/data/arxiv/runtime/staging.json
+            benchmark-roadmap/data/arxiv/runtime/ledger.jsonl
+            benchmark-roadmap/data/arxiv/runtime/evidence/*.json
+          if-no-files-found: warn
+          retention-days: 30

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "cross-episode-object-goal-navigation",
+    "canonicalName": "Cross-Episode Object-Goal Navigation",
+    "category": "Memory & Long-Horizon",
+    "status": "collecting",
+    "summary": "在同一场景的重复 episode 间保留自采集经验，同时保持模型参数固定的 ObjectNav 协议。",
+    "metric": {
+      "name": "SR",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "paper": "https://arxiv.org/abs/2607.14514v1"
+    }
+  },
+  "group": {
+    "version": "arXiv 2607.14514v1",
+    "subset": "full",
+    "metric": "SR",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

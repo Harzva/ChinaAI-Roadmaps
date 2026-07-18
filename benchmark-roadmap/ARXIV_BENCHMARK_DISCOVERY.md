@@ -1,6 +1,6 @@
 # arXiv Benchmark Discovery 与 PDF 成绩取证方案
 
-> 状态：Exploration complete · implementation proposal
+> 状态：Implementation complete · v1.2 baseline
 >
 > 调研日期：2026-07-18
 >
@@ -248,4 +248,4 @@ VTM-Nav 可形成两个选题：
 
 ## 推荐的下一项实现
 
-先完成 Step 1–5 的最小闭环：每天生成 `paper candidates → PDF evidence → review queue`，暂不自动写入 Top-K。用 VTM-Nav、SafeRelBench、REAL-Bench、UESF-Bench 与 AdaTurn 作为首批 golden papers，验证实体分类、表格数字和证据坐标，再决定是否引入 PyMuPDF4LLM 或重型文档模型。
+v1.2 已完成 `paper candidates → PDF evidence → review queue → Registry collecting → daily/weekly/content output`。当前基线包括 20 篇真实 PDF、5 个精读候选、18 条原子成绩 claim；所有 paper-reported 成绩保持 `rankingEligible: false`。下一轮重点是积累人工二次复核、扩展扫描件/跨页表 failure cases，并用固定 golden set 决定是否引入 PyMuPDF4LLM 或重型文档模型。

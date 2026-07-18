@@ -14,6 +14,8 @@ Registry 使用两级登记深度：`canonical_source` 表示已经为条目建�
 
 论文增量发现采用独立 staging 与人工审核队列。PDF/OCR 抽取结果只是一条 `result claim`，必须带 arXiv version、PDF hash、页码、表号、行列和运行配置；未经人工复核不得写入公开成绩。论文提出的方法名也不会自动登记为 benchmark。完整方案见 [`ARXIV_BENCHMARK_DISCOVERY.md`](ARXIV_BENCHMARK_DISCOVERY.md)。
 
+`paper-evidence` 表示论文中明确出现并经过身份预审的 benchmark/dataset/suite/protocol，只能以 `collecting` 进入 Registry。`paper_reported` 是隔离成绩来源类型，不等于 official leaderboard；即使 claim 已由 Agent 核对页表坐标，也保持 `rankingEligible: false`。OCR-only 结果永远不能自动升格。每日自动任务只上传 review artifact，不直接推送 Registry 或榜单。
+
 ## 更新、更正与撤回
 
 采集遵循 `fetch → snapshot → normalize → validate → publish`。任一来源失败时保留上一份通过验证的公开快照，禁止以空结果覆盖线上榜单。来源更正通过新增提交记录；撤回的结果保留在 Git 历史和发布审计中，页面不静默改写旧证据。

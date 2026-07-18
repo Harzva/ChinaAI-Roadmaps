@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "asOf": "2026-07-18",
+  "signals": [
+    {"candidateId": "candidate-uesf-bench", "firstPublished": "2026-07-15", "adoptionPapers": 1, "modelCount": 3, "repository": false, "leaderboard": false, "independentResults": 0, "harness": false},
+    {"candidateId": "candidate-real-bench", "firstPublished": "2026-07-15", "adoptionPapers": 1, "modelCount": 10, "repository": true, "leaderboard": false, "independentResults": 0, "harness": false},
+    {"candidateId": "candidate-cross-episode-object-goal-navigation", "firstPublished": "2026-07-16", "adoptionPapers": 1, "modelCount": 3, "repository": false, "leaderboard": false, "independentResults": 0, "harness": false},
+    {"candidateId": "candidate-saferelbench", "firstPublished": "2026-07-16", "adoptionPapers": 1, "modelCount": 7, "repository": false, "leaderboard": false, "independentResults": 0, "harness": false},
+    {"candidateId": "candidate-visualprobe", "firstPublished": "2025-01-01", "adoptionPapers": 3, "modelCount": 10, "repository": true, "leaderboard": false, "independentResults": 2, "harness": false}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:30:00Z",
+  "decisions": [
+    {"decisionId": "review-uesf-bench-identity", "targetType": "candidate", "targetId": "candidate-uesf-bench", "decision": "accept", "reviewer": "codex-evidence-review", "reviewerKind": "agent", "timestamp": "2026-07-18T00:30:00Z", "reason": "标题、摘要、数据规模和测试表均支持新 benchmark 身份；仅晋升为 collecting。"},
+    {"decisionId": "review-real-bench-identity", "targetType": "candidate", "targetId": "candidate-real-bench", "decision": "accept", "reviewer": "codex-evidence-review", "reviewerKind": "agent", "timestamp": "2026-07-18T00:30:00Z", "reason": "论文明确发布 REAL-Bench，并给出 241-task 组成和结果表。"},
+    {"decisionId": "review-cross-episode-protocol", "targetType": "candidate", "targetId": "candidate-cross-episode-object-goal-navigation", "decision": "accept", "reviewer": "codex-evidence-review", "reviewerKind": "agent", "timestamp": "2026-07-18T00:30:00Z", "reason": "接受为 protocol；VTM-Nav 是方法名，不登记为 benchmark。"},
+    {"decisionId": "review-saferelbench-identity", "targetType": "candidate", "targetId": "candidate-saferelbench", "decision": "accept", "reviewer": "codex-evidence-review", "reviewerKind": "agent", "timestamp": "2026-07-18T00:30:00Z", "reason": "论文提供 507 个可执行评测样本、指标和 7-agent 表格。"},
+    {"decisionId": "review-visualprobe-source-gap", "targetType": "candidate", "targetId": "candidate-visualprobe", "decision": "downgrade", "reviewer": "codex-evidence-review", "reviewerKind": "agent", "timestamp": "2026-07-18T00:30:00Z", "reason": "当前论文只是使用方；在找到 VisualProbe 原始论文、版本和许可前不进入 Registry。"}
+  ]
+}

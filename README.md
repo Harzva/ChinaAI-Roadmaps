@@ -48,7 +48,7 @@
 | Agent Roadmap | TUI / IDE / Work Agent、Token Economy、Memory Layer、MiWork 机会分析 | [agent-roadmap](https://harzva.github.io/ChinaAI-Roadmaps/agent-roadmap/) |
 | 岗位与面试 | Agent 岗位画像、公司专项、通用题库、实战训练和 12 周冲刺计划 | [Agent-Job-Interview](https://harzva.github.io/Agent-Job-Interview/) |
 | 全球模型地图 | 国家、公司、模型族、论文卡片和开源生态关系 | [worldroadmap](https://harzva.github.io/ChinaAI-Roadmaps/worldroadmap/) |
-| Benchmark 排行榜 | 233 项 Registry、透明热门集合、来源可追溯 Top-K 与模型比较 | [benchmark-roadmap](https://harzva.github.io/ChinaAI-Roadmaps/benchmark-roadmap/) |
+| Benchmark 排行榜 | 237 项 Registry、arXiv 每日发现、透明热门集合、来源可追溯 Top-K 与模型比较 | [benchmark-roadmap](https://harzva.github.io/ChinaAI-Roadmaps/benchmark-roadmap/) |
 | 论文下载 | 45 个 PDF/报告入口与阅读页 | [downloads.html](https://harzva.github.io/ChinaAI-Roadmaps/downloads.html) |
 | 研究笔记 | Markdown 解析、旧版 HTML 专题、流程图素材 | [content/](content/) |
 
@@ -95,7 +95,7 @@ flowchart LR
 | Agent Roadmap Paper | [`agent-roadmap/paper/`](agent-roadmap/paper/) | arXiv-style survey scaffold，包含 LaTeX 与 BibTeX |
 | 岗位与面试 | [Agent-Job-Interview](https://harzva.github.io/Agent-Job-Interview/) | 外部 GitHub Pages 站点，承接岗位画像、面试题库和 Agent 实战训练 |
 | 全球模型地图 | [`worldroadmap/`](worldroadmap/) | 独立静态子页面，覆盖全球 AI 公司、模型族和论文关系 |
-| Benchmark Registry | [`benchmark-roadmap/`](benchmark-roadmap/) | Registry、热门集合、Top 5/10/全部、来源审计、Map 与模型比较 |
+| Benchmark Registry | [`benchmark-roadmap/`](benchmark-roadmap/) | 237 项 Registry、热门集合、Top 5/10/全部、来源审计、Map 与模型比较 |
 | Benchmark 排行榜路线图 | [`ROADMAP.md`](ROADMAP.md) | 已完成的 1–10 步升级计划与验收证据 |
 | arXiv Benchmark 发现 | [`benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md`](benchmark-roadmap/ARXIV_BENCHMARK_DISCOVERY.md) | 每日论文召回、PDF/OCR 成绩取证、Memory 专项与内容素材方案 |
 | 下载中心 | [`downloads.html`](downloads.html) | 论文与报告入口 |

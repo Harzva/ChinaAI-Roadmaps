@@ -9,6 +9,13 @@ const resultDoc = await readJson('data/results.json');
 const sourceDoc = await readJson('data/sources.json');
 const popularityDoc = await readJson('data/popularity-signals.json');
 
+function evidenceStage(benchmark) {
+  const role = benchmark.registryOrigin?.catalogRole;
+  if (role === 'implementation-index') return 'implementation_index';
+  if (role === 'paper-evidence') return 'paper_evidence';
+  return 'canonical_source';
+}
+
 const modelById = new Map(modelDoc.models.map((item) => [item.modelId, item]));
 const systemById = new Map(systemDoc.systems.map((item) => [item.systemId, item]));
 const sourceById = new Map(sourceDoc.sources.map((item) => [item.sourceId, item]));
@@ -98,7 +105,7 @@ const catalog = {
   methodology: { defaultTopK: 5, eligibleSources: ['official', 'independent'], popularityThreshold: popularityDoc.threshold, popularityWeights: popularityDoc.weights },
   benchmarks: benchmarkDoc.benchmarks.map((benchmark) => ({
     ...benchmark,
-    evidenceStage: benchmark.registryOrigin?.catalogRole === 'implementation-index' ? 'implementation_index' : 'canonical_source',
+    evidenceStage: evidenceStage(benchmark),
     leaderboard: leaderboardSummaries.find((board) => board.benchmarkId === benchmark.benchmarkId)
   }))
 };
@@ -117,6 +124,7 @@ const maintenance = {
     needsSource: benchmarkDoc.benchmarks.filter((item) => item.status === 'needs_source').length,
     collecting: benchmarkDoc.benchmarks.filter((item) => item.status === 'collecting').length,
     implementationIndex: benchmarkDoc.benchmarks.filter((item) => item.registryOrigin?.catalogRole === 'implementation-index').length,
+    paperEvidence: benchmarkDoc.benchmarks.filter((item) => item.registryOrigin?.catalogRole === 'paper-evidence').length,
     nonDefaultReports: resultDoc.results.filter((item) => !eligible(item)).length
   },
   staleBenchmarks: benchmarkDoc.benchmarks.filter((item) => item.status === 'legacy').map((item) => item.benchmarkId),
@@ -131,8 +139,9 @@ await writeJson('data/public/snapshot.json', {
   contentHash: `sha256:${digest}`,
   counts: {
     benchmarks: benchmarkDoc.benchmarks.length,
-    canonicalSourceEntries: benchmarkDoc.benchmarks.filter((item) => item.registryOrigin?.catalogRole !== 'implementation-index').length,
+    canonicalSourceEntries: benchmarkDoc.benchmarks.filter((item) => !item.registryOrigin?.catalogRole).length,
     implementationIndexedEntries: benchmarkDoc.benchmarks.filter((item) => item.registryOrigin?.catalogRole === 'implementation-index').length,
+    paperEvidenceEntries: benchmarkDoc.benchmarks.filter((item) => item.registryOrigin?.catalogRole === 'paper-evidence').length,
     rankedBenchmarks: leaderboardSummaries.filter((item) => item.resultCount > 0).length,
     hotBenchmarks: hotBenchmarks.length,
     qualifiedResults: leaderboardSummaries.reduce((sum, item) => sum + item.resultCount, 0)

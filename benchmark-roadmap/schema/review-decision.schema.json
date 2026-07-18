@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "review-decision.schema.json",
+  "title": "Review Decision",
+  "type": "object",
+  "required": [
+    "decisionId",
+    "targetType",
+    "targetId",
+    "decision",
+    "reviewer",
+    "reviewerKind",
+    "timestamp",
+    "reason"
+  ],
+  "properties": {
+    "decisionId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "targetType": {
+      "type": "string",
+      "enum": [
+        "paper",
+        "candidate",
+        "result_claim"
+      ]
+    },
+    "targetId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "accept",
+        "merge",
+        "downgrade",
+        "reject"
+      ]
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewerKind": {
+      "type": "string",
+      "enum": ["agent", "human"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "notes": {
+      "type": "string"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "url"
+        ],
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

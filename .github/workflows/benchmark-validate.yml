@@ -52,4 +52,5 @@ jobs:
           path: |
             benchmark-roadmap/RELEASE_AUDIT.md
             benchmark-roadmap/data/public/snapshot.json
+            benchmark-roadmap/data/public/arxiv-discovery.json
           retention-days: 30

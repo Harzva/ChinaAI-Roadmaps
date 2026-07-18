@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="从每日 arXiv 论文中发现新 Benchmark、Memory 协议和可追溯成绩证据。">
+  <title>arXiv Benchmark Discovery · ChinaAI Roadmaps</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316252d'/%3E%3Cpath d='M8 22V12h4v10zm6 0V7h4v15zm6 0v-7h4v7z' fill='%23edf0eb'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="leaderboard.css">
+  <link rel="stylesheet" href="discover.css">
+</head>
+<body>
+  <a class="skip-link" href="#review-queue">跳到审核队列</a>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">CA</span><span>ChinaAI / Eval Observatory</span></a>
+    <nav aria-label="Benchmark 导航">
+      <a href="./">Leaderboard</a>
+      <a class="active" href="discover.html">arXiv 发现</a>
+      <a href="map.html">Map 模式</a>
+      <a href="../">首页</a>
+    </nav>
+  </header>
+
+  <main data-source="data/public/arxiv-discovery.json">
+    <section class="discovery-hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">DAILY PAPER EVIDENCE / HUMAN-GATED</p>
+        <h1 id="page-title">从论文里发现<br><em>下一个 Benchmark</em></h1>
+        <p class="lede">每日召回论文、锁定 arXiv 版本、定位 PDF 表格，再把每个分数保存为带页码和行列坐标的 claim。论文作者报告和 OCR 结果不会自动进入 Top-K。</p>
+        <div class="hero-actions"><a class="button primary" href="#review-queue">打开审核队列</a><a class="button" href="ARXIV_BENCHMARK_DISCOVERY.md">查看方法</a></div>
+      </div>
+      <aside class="discovery-status" aria-label="arXiv 发现统计">
+        <div class="instrument-head"><span>DISCOVERY SNAPSHOT</span><span id="snapshot-date">LOADING</span></div>
+        <div id="discovery-stats" class="discovery-stats" aria-live="polite"></div>
+        <p>自动：召回、去重、PDF 定位、趋势计算<br>人工门禁：身份、表格数字、可比性、Top-K</p>
+      </aside>
+    </section>
+
+    <section class="discovery-flow" aria-label="发现流程">
+      <span>arXiv API</span><i>→</i><span>version ledger</span><i>→</i><span>PDF evidence</span><i>→</i><span>review decision</span><i>→</i><span>Registry collecting</span>
+    </section>
+
+    <section id="review-queue" class="section discovery-section" aria-labelledby="queue-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">EVIDENCE REVIEW CONSOLE</p><h2 id="queue-title">论文证据审核队列</h2></div>
+        <p>New 是时间状态，Rising/Hot 是多源采用状态；它们都不代表成绩已具备排名资格。</p>
+      </div>
+      <form class="discovery-filters" id="discovery-filters" role="search">
+        <label><span>搜索</span><input id="discovery-search" type="search" placeholder="Memory、SafeRelBench、protocol…"></label>
+        <label><span>趋势</span><select id="trend-filter"><option value="">全部</option><option>New</option><option>Rising</option><option>Hot</option><option>Watch</option></select></label>
+        <label><span>实体</span><select id="kind-filter"><option value="">全部</option><option value="benchmark">Benchmark</option><option value="suite">Suite</option><option value="dataset">Dataset</option><option value="protocol">Protocol</option></select></label>
+        <label><span>审核</span><select id="review-filter"><option value="">全部</option><option value="accepted">已进入 collecting</option><option value="needs_manual_review">等待原始来源</option></select></label>
+        <label><span>专题</span><select id="watch-filter"><option value="">全部</option><option value="memory">Memory</option><option value="safety">Safety</option><option value="embodied-agent">Embodied Agent</option></select></label>
+      </form>
+      <p id="queue-count" class="result-count" aria-live="polite"></p>
+      <div id="candidate-grid" class="candidate-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section content-output" aria-labelledby="content-title">
+      <div><p class="eyebrow">TRANSFORMATIVE CONTENT</p><h2 id="content-title">知乎 / 微信素材出口</h2><p>只有已经核验页表坐标的 claim 才进入素材卡；观点与排行榜共享证据，但不共享未经审核的排名结论。</p></div>
+      <div class="content-links"><a class="button primary" href="data/public/arxiv-content-pack.md">打开 Markdown 素材包</a><a class="button" href="data/public/arxiv-daily.json">每日 JSON</a><a class="button" href="data/public/arxiv-weekly.json">每周趋势 JSON</a></div>
+    </section>
+  </main>
+
+  <footer><p>ChinaAI Roadmaps · arXiv Benchmark Discovery v1</p><p><a href="SOURCE_POLICY.md">来源政策</a><a href="ARXIV_BENCHMARK_DISCOVERY.md">实施方案</a><a href="https://github.com/Harzva/ChinaAI-Roadmaps">GitHub</a></p></footer>
+
+  <dialog id="evidence-dialog" class="detail-dialog" aria-labelledby="evidence-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" data-close aria-label="关闭证据">×</button>
+      <div id="evidence-content"></div>
+    </div>
+  </dialog>
+  <div id="copy-status" class="app-error copy-status" role="status" hidden></div>
+  <div id="app-error" class="app-error" role="alert" hidden></div>
+  <noscript><div class="app-error">审核台需要 JavaScript 读取已生成 JSON；原始数据仍可从 data/public/arxiv-discovery.json 查看。</div></noscript>
+  <script type="module" src="discover.js"></script>
+</body>
+</html>

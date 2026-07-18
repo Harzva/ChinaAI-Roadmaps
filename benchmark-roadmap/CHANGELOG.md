@@ -1,10 +1,12 @@
 # Changelog
 
-## Unreleased
+## 1.2.0 — 2026-07-18
 
-- 新增 arXiv benchmark 增量发现方案，覆盖 Memory 专项、PDF 表格取证、局部 OCR、版本化 claim 与人工审核。
-- 完成 VTM-Nav 样例核验，明确 benchmark/dataset/suite/protocol 分类和不同 step budget 的可比性边界。
-- 规划 New/Rising/Hot 统计与知乎、微信证据卡输出，未把论文自报结果直接放入 Top-K。
+- 上线 arXiv benchmark 每日发现管线：官方 API 查询、四类召回、24 小时缓存、3 秒节流、永久 version ledger 与最多 5 篇 PDF 下载。
+- 新增 PDF 安全、文本层、表格页定位、Poppler 渲染和局部 Tesseract OCR 回退；建立 20 篇真实 PDF 与 23 个身份/成绩 golden cases。
+- 新增 paper/candidate/claim/review 四层 schema、18 条页表坐标 claim 和逐格证据审核台；paper-reported 与 OCR-only 均 fail closed。
+- Registry 从 233 增到 237：UESF-Bench、REAL-Bench、SafeRelBench 及 Cross-Episode Object-Goal Navigation protocol 以 paper-evidence/collecting 加入。
+- 新增 New/Rising/Hot 统计、Memory watchlist、每日/周报、知乎/微信内容素材包和每日 GitHub Actions 审核产物。
 
 ## 1.1.0 — 2026-07-18
 

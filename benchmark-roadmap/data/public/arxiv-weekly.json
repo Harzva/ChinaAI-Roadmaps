@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "weekEnding": "2026-07-18",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "counts": {
+    "papers": 5,
+    "candidates": 5,
+    "claims": 18,
+    "acceptedIdentities": 4,
+    "humanReviewed": 0,
+    "agentReviewed": 5,
+    "rankingEligibleClaims": 0,
+    "memoryCandidates": 1,
+    "new": 4,
+    "rising": 1,
+    "hot": 0
+  },
+  "emerging": [
+    {
+      "candidateId": "candidate-visualprobe",
+      "entityName": "VisualProbe",
+      "stage": "Rising",
+      "score": 53,
+      "adoptionPapers": 3,
+      "modelCount": 10
+    },
+    {
+      "candidateId": "candidate-real-bench",
+      "entityName": "REAL-Bench",
+      "stage": "New",
+      "score": 30,
+      "adoptionPapers": 1,
+      "modelCount": 10
+    },
+    {
+      "candidateId": "candidate-saferelbench",
+      "entityName": "SafeRelBench",
+      "stage": "New",
+      "score": 16,
+      "adoptionPapers": 1,
+      "modelCount": 7
+    },
+    {
+      "candidateId": "candidate-cross-episode-object-goal-navigation",
+      "entityName": "Cross-Episode Object-Goal Navigation",
+      "stage": "New",
+      "score": 10,
+      "adoptionPapers": 1,
+      "modelCount": 3
+    },
+    {
+      "candidateId": "candidate-uesf-bench",
+      "entityName": "UESF-Bench",
+      "stage": "New",
+      "score": 10,
+      "adoptionPapers": 1,
+      "modelCount": 3
+    }
+  ],
+  "caveat": "New/Rising/Hot are separate evidence states. New paper claims never become Top-K without source and comparability review."
+}

@@ -3,4 +3,10 @@ Thumbs.db
 desktop.ini
 *.tmp
 *.log
+__pycache__/
 site-preview-*.png
+benchmark-roadmap/data/arxiv/cache/
+benchmark-roadmap/data/arxiv/runtime/
+benchmark-roadmap/tmp/pdfs/
+benchmark-roadmap/output/playwright/
+.playwright-cli/

@@ -1,11 +1,12 @@
 {
   "schemaVersion": "1.1.0",
   "generatedAt": "2026-07-18T00:00:00Z",
-  "contentHash": "sha256:8fb681d64264caae33a9d0a585a8606f6169115729ce0d94003011cf8283266e",
+  "contentHash": "sha256:ec2bc188b4eb91b450ceb9f62875bc2f22347285ba1031d39a0dd1d4bb0c1839",
   "counts": {
-    "benchmarks": 233,
+    "benchmarks": 237,
     "canonicalSourceEntries": 24,
     "implementationIndexedEntries": 209,
+    "paperEvidenceEntries": 4,
     "rankedBenchmarks": 4,
     "hotBenchmarks": 10,
     "qualifiedResults": 16
@@ -25,6 +26,18 @@
     },
     {
       "benchmarkId": "acpbench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "aexams",
       "resultCount": 0,
       "leader": null,
       "top3": [],
@@ -145,18 +158,6 @@
     },
     {
       "benchmarkId": "arab-culture-completion",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "version-pending-audit",
-        "subset": "full",
-        "metric": "upstream primary score",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "aexams",
       "resultCount": 0,
       "leader": null,
       "top3": [],
@@ -324,6 +325,18 @@
       }
     },
     {
+      "benchmarkId": "bbh",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
       "benchmarkId": "bbq",
       "resultCount": 0,
       "leader": null,
@@ -396,18 +409,6 @@
       }
     },
     {
-      "benchmarkId": "bbh",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "version-pending-audit",
-        "subset": "full",
-        "metric": "upstream primary score",
-        "protocol": "unconfigured"
-      }
-    },
-    {
       "benchmarkId": "blimp",
       "resultCount": 0,
       "leader": null,
@@ -440,18 +441,6 @@
         "version": "2025",
         "subset": "full",
         "metric": "accuracy",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "ceval",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "version-pending-audit",
-        "subset": "full",
-        "metric": "upstream primary score",
         "protocol": "unconfigured"
       }
     },
@@ -493,6 +482,18 @@
     },
     {
       "benchmarkId": "catalan-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "ceval",
       "resultCount": 0,
       "leader": null,
       "top3": [],
@@ -608,6 +609,18 @@
         "version": "version-pending-audit",
         "subset": "full",
         "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "cross-episode-object-goal-navigation",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "arXiv 2607.14514v1",
+        "subset": "full",
+        "metric": "SR",
         "protocol": "unconfigured"
       }
     },
@@ -1904,6 +1917,18 @@
       }
     },
     {
+      "benchmarkId": "mmlu-pro",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "1.0",
+        "subset": "full",
+        "metric": "accuracy",
+        "protocol": "unconfigured"
+      }
+    },
+    {
       "benchmarkId": "mmlu-pro-plus",
       "resultCount": 0,
       "leader": null,
@@ -1948,18 +1973,6 @@
         "version": "version-pending-audit",
         "subset": "full",
         "metric": "upstream primary score",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "mmlu-pro",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "1.0",
-        "subset": "full",
-        "metric": "accuracy",
         "protocol": "unconfigured"
       }
     },
@@ -2048,18 +2061,6 @@
       }
     },
     {
-      "benchmarkId": "nq-open",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "version-pending-audit",
-        "subset": "full",
-        "metric": "upstream primary score",
-        "protocol": "unconfigured"
-      }
-    },
-    {
       "benchmarkId": "nerel-bench",
       "resultCount": 0,
       "leader": null,
@@ -2085,6 +2086,18 @@
     },
     {
       "benchmarkId": "noticia",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "version-pending-audit",
+        "subset": "full",
+        "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "nq-open",
       "resultCount": 0,
       "leader": null,
       "top3": [],
@@ -2455,6 +2468,18 @@
       }
     },
     {
+      "benchmarkId": "real-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "arXiv 2607.13653v1",
+        "subset": "full",
+        "metric": "success rate",
+        "protocol": "unconfigured"
+      }
+    },
+    {
       "benchmarkId": "realtoxicityprompts",
       "resultCount": 0,
       "leader": null,
@@ -2487,6 +2512,18 @@
         "version": "version-pending-audit",
         "subset": "full",
         "metric": "upstream primary score",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "saferelbench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "arXiv 2607.14543v1",
+        "subset": "full",
+        "metric": "SSR",
         "protocol": "unconfigured"
       }
     },
@@ -2539,7 +2576,7 @@
       }
     },
     {
-      "benchmarkId": "slr-bench",
+      "benchmarkId": "siqa",
       "resultCount": 0,
       "leader": null,
       "top3": [],
@@ -2551,7 +2588,7 @@
       }
     },
     {
-      "benchmarkId": "siqa",
+      "benchmarkId": "slr-bench",
       "resultCount": 0,
       "leader": null,
       "top3": [],
@@ -2808,6 +2845,30 @@
         "subset": "full",
         "metric": "resolved",
         "protocol": "official-harness"
+      }
+    },
+    {
+      "benchmarkId": "tau-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "1.0",
+        "subset": "full",
+        "metric": "pass@1",
+        "protocol": "unconfigured"
+      }
+    },
+    {
+      "benchmarkId": "tau2-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "1.0",
+        "subset": "full",
+        "metric": "pass@1",
+        "protocol": "unconfigured"
       }
     },
     {
@@ -3123,6 +3184,18 @@
       }
     },
     {
+      "benchmarkId": "uesf-bench",
+      "resultCount": 0,
+      "leader": null,
+      "top3": [],
+      "group": {
+        "version": "arXiv 2607.13621v1",
+        "subset": "full",
+        "metric": "TSR",
+        "protocol": "unconfigured"
+      }
+    },
+    {
       "benchmarkId": "ulqa",
       "resultCount": 0,
       "leader": null,
@@ -3347,30 +3420,6 @@
         "version": "version-pending-audit",
         "subset": "full",
         "metric": "upstream primary score",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "tau-bench",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "1.0",
-        "subset": "full",
-        "metric": "pass@1",
-        "protocol": "unconfigured"
-      }
-    },
-    {
-      "benchmarkId": "tau2-bench",
-      "resultCount": 0,
-      "leader": null,
-      "top3": [],
-      "group": {
-        "version": "1.0",
-        "subset": "full",
-        "metric": "pass@1",
         "protocol": "unconfigured"
       }
     }

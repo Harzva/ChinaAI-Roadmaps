@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "categories": ["cs.AI", "cs.CL", "cs.CV", "cs.LG", "cs.RO", "cs.SE", "cs.IR"],
+  "maxCandidatesPerRun": 200,
+  "maxPdfDownloadsPerRun": 5,
+  "requestDelayMs": 3000,
+  "cacheTtlHours": 24,
+  "newWindowDays": 14,
+  "risingWindowDays": 90,
+  "hotThreshold": 70,
+  "queryBuckets": [
+    {
+      "id": "new-benchmark",
+      "weight": 4,
+      "terms": ["benchmark", "bench", "evaluation suite", "leaderboard", "dataset"]
+    },
+    {
+      "id": "release-claim",
+      "weight": 4,
+      "terms": ["we introduce", "we present", "we propose", "we release", "evaluation protocol"]
+    },
+    {
+      "id": "result-claim",
+      "weight": 2,
+      "terms": ["state-of-the-art", "outperform", "success rate", "accuracy", "SPL", "pass@k", "win rate"]
+    },
+    {
+      "id": "memory-watch",
+      "weight": 2,
+      "terms": ["agent memory", "long-term memory", "episodic memory", "cross-episode", "continual agent", "memory benchmark", "retrieval memory"]
+    }
+  ],
+  "candidateWeights": {
+    "titleBenchmark": 4,
+    "releaseAndBenchmark": 4,
+    "scaleSignal": 2,
+    "codeOrDataset": 1,
+    "memoryAndAgent": 2,
+    "relatedWorkOnly": -3
+  },
+  "trendWeights": {
+    "adoptionPapers": 25,
+    "modelCount": 15,
+    "repository": 10,
+    "leaderboard": 20,
+    "independentResults": 20,
+    "harness": 10
+  }
+}

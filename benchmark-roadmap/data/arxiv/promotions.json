@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "promotions": [
+    {
+      "candidateId": "candidate-uesf-bench",
+      "benchmark": {"benchmarkId": "uesf-bench", "type": "benchmark", "canonicalName": "UESF-Bench", "aliases": ["Unified Embodied Seeking and Following Benchmark"], "category": "Embodied Agent & Robotics", "owner": "UESF-Bench authors", "status": "collecting", "versions": ["arXiv 2607.13621v1"], "primaryMetric": {"name": "TSR", "unit": "ratio", "direction": "higher", "tiesAllowed": true}, "links": {"paper": "https://arxiv.org/abs/2607.13621v1"}, "sourceIds": ["arxiv-2607-13621-v1"], "summary": "统一评测语言引导的人物搜索、阶段切换、恢复与持续跟随。", "languages": ["en"], "modalities": ["vision", "language", "action"], "timeWindow": null, "registryOrigin": {"catalogId": "arxiv-benchmark-discovery", "catalogRole": "paper-evidence", "paperId": "arxiv-2607-13621-v1", "sourceVersion": "v1", "discoveredAt": "2026-07-18"}},
+      "source": {"sourceId": "arxiv-2607-13621-v1", "benchmarkIds": ["uesf-bench"], "name": "UESF-Bench arXiv v1", "url": "https://arxiv.org/abs/2607.13621v1", "type": "official", "access": "public", "adapter": "arxiv-paper-review", "licenseNote": "Metadata and evidence coordinates only; PDF is not mirrored."}
+    },
+    {
+      "candidateId": "candidate-real-bench",
+      "benchmark": {"benchmarkId": "real-bench", "type": "benchmark", "canonicalName": "REAL-Bench", "aliases": ["REAL Bench"], "category": "Embodied Agent & Robotics", "owner": "REAL-Bench authors", "status": "collecting", "versions": ["arXiv 2607.13653v1"], "primaryMetric": {"name": "success rate", "unit": "%", "direction": "higher", "tiesAllowed": true}, "links": {"paper": "https://arxiv.org/abs/2607.13653v1", "repo": "https://github.com/InternRobotics/REAL"}, "sourceIds": ["arxiv-2607-13653-v1"], "summary": "241 项开放世界移动操作任务，覆盖主动探索、视觉干扰、关节操作和交互消歧。", "languages": ["en"], "modalities": ["vision", "language", "action", "dialogue"], "timeWindow": null, "registryOrigin": {"catalogId": "arxiv-benchmark-discovery", "catalogRole": "paper-evidence", "paperId": "arxiv-2607-13653-v1", "sourceVersion": "v1", "discoveredAt": "2026-07-18"}},
+      "source": {"sourceId": "arxiv-2607-13653-v1", "benchmarkIds": ["real-bench"], "name": "REAL-Bench arXiv v1", "url": "https://arxiv.org/abs/2607.13653v1", "type": "official", "access": "public", "adapter": "arxiv-paper-review", "licenseNote": "Metadata and evidence coordinates only; PDF is not mirrored."}
+    },
+    {
+      "candidateId": "candidate-cross-episode-object-goal-navigation",
+      "benchmark": {"benchmarkId": "cross-episode-object-goal-navigation", "type": "protocol", "canonicalName": "Cross-Episode Object-Goal Navigation", "aliases": ["Cross-Episode ObjectNav"], "category": "Memory & Long-Horizon", "owner": "VTM-Nav authors", "status": "collecting", "versions": ["arXiv 2607.14514v1"], "primaryMetric": {"name": "SR", "unit": "%", "direction": "higher", "tiesAllowed": true}, "links": {"paper": "https://arxiv.org/abs/2607.14514v1"}, "sourceIds": ["arxiv-2607-14514-v1"], "summary": "在同一场景的重复 episode 间保留自采集经验，同时保持模型参数固定的 ObjectNav 协议。", "languages": ["en"], "modalities": ["vision", "action", "memory"], "timeWindow": null, "registryOrigin": {"catalogId": "arxiv-benchmark-discovery", "catalogRole": "paper-evidence", "paperId": "arxiv-2607-14514-v1", "sourceVersion": "v1", "discoveredAt": "2026-07-18"}},
+      "source": {"sourceId": "arxiv-2607-14514-v1", "benchmarkIds": ["cross-episode-object-goal-navigation"], "name": "VTM-Nav arXiv v1 protocol evidence", "url": "https://arxiv.org/abs/2607.14514v1", "type": "official", "access": "public", "adapter": "arxiv-paper-review", "licenseNote": "Protocol identity and evidence coordinates only; PDF is not mirrored."}
+    },
+    {
+      "candidateId": "candidate-saferelbench",
+      "benchmark": {"benchmarkId": "saferelbench", "type": "benchmark", "canonicalName": "SafeRelBench", "aliases": ["SAFERELBENCH"], "category": "Safety & Robustness", "owner": "SafeRelBench authors", "status": "collecting", "versions": ["arXiv 2607.14543v1"], "primaryMetric": {"name": "SSR", "unit": "ratio", "direction": "higher", "tiesAllowed": true}, "links": {"paper": "https://arxiv.org/abs/2607.14543v1"}, "sourceIds": ["arxiv-2607-14543-v1"], "summary": "507 个可执行样本评估空间关系导致的过程级具身安全风险。", "languages": ["en"], "modalities": ["vision", "language", "action"], "timeWindow": null, "registryOrigin": {"catalogId": "arxiv-benchmark-discovery", "catalogRole": "paper-evidence", "paperId": "arxiv-2607-14543-v1", "sourceVersion": "v1", "discoveredAt": "2026-07-18"}},
+      "source": {"sourceId": "arxiv-2607-14543-v1", "benchmarkIds": ["saferelbench"], "name": "SafeRelBench arXiv v1", "url": "https://arxiv.org/abs/2607.14543v1", "type": "official", "access": "public", "adapter": "arxiv-paper-review", "licenseNote": "Metadata and evidence coordinates only; PDF is not mirrored."}
+    }
+  ]
+}
