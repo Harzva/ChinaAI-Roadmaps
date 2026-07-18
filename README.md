@@ -22,6 +22,8 @@
     ·
     <a href="https://harzva.github.io/ChinaAI-Roadmaps/worldroadmap/">全球 AI 模型地图</a>
     ·
+    <a href="ROADMAP.md">Benchmark 排行榜路线图</a>
+    ·
     <a href="content/markdown/paper-downloads.md">Markdown 索引</a>
     ·
     <a href="content/html/analysis_page.html">专题归档</a>
@@ -92,6 +94,7 @@ flowchart LR
 | Agent Roadmap Paper | [`agent-roadmap/paper/`](agent-roadmap/paper/) | arXiv-style survey scaffold，包含 LaTeX 与 BibTeX |
 | 岗位与面试 | [Agent-Job-Interview](https://harzva.github.io/Agent-Job-Interview/) | 外部 GitHub Pages 站点，承接岗位画像、面试题库和 Agent 实战训练 |
 | 全球模型地图 | [`worldroadmap/`](worldroadmap/) | 独立静态子页面，覆盖全球 AI 公司、模型族和论文关系 |
+| Benchmark 排行榜路线图 | [`ROADMAP.md`](ROADMAP.md) | Benchmark Registry、热门集合、Top-K、来源审计与持续发布的 1–10 步升级计划 |
 | 下载中心 | [`downloads.html`](downloads.html) | 论文与报告入口 |
 | 技术路线图 | [`assets/flowcharts`](assets/flowcharts/) | GLM、Kimi、DeepSeek、MiniMax SVG |
 | Markdown 笔记 | [`content/markdown`](content/markdown/) | 论文解析与索引 |
