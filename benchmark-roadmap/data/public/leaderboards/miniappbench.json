@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "miniappbench",
+    "canonicalName": "MiniAppBench",
+    "category": "App Creation",
+    "status": "collecting",
+    "summary": "交互 HTML 应用生成的意图、静态与动态质量评测。",
+    "metric": {
+      "name": "weakest_link",
+      "unit": "score",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://miniappbench.github.io",
+      "paper": "https://arxiv.org/abs/2603.09652"
+    }
+  },
+  "group": {
+    "version": "1.0",
+    "subset": "full",
+    "metric": "weakest_link",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

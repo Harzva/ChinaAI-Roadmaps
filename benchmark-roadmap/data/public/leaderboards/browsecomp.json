@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "browsecomp",
+    "canonicalName": "BrowseComp",
+    "category": "Web Agent",
+    "status": "collecting",
+    "summary": "难检索、需多步浏览研究的问题集。",
+    "metric": {
+      "name": "accuracy",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://openai.com/index/browsecomp/"
+    }
+  },
+  "group": {
+    "version": "2025",
+    "subset": "full",
+    "metric": "accuracy",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

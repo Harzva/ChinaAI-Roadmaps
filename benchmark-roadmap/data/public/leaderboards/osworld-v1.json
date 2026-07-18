@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "osworld-v1",
+    "canonicalName": "OSWorld v1",
+    "category": "OS / Desktop",
+    "status": "legacy",
+    "summary": "第一代 369 任务桌面环境；与 v2 分开归档。",
+    "metric": {
+      "name": "task_success",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://os-world.github.io/",
+      "repo": "https://github.com/xlang-ai/OSWorld"
+    }
+  },
+  "group": {
+    "version": "1.0",
+    "subset": "full",
+    "metric": "task_success",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

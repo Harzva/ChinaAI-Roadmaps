@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-07-18T00:00:00Z",
+  "models": [
+    {"modelId":"claude-opus-4-5","name":"Claude Opus 4.5","organization":"Anthropic","releaseDate":"2025-11-01","openWeights":false},
+    {"modelId":"claude-opus-4-7","name":"Claude Opus 4.7","organization":"Anthropic","releaseDate":"2026-01-01","openWeights":false},
+    {"modelId":"claude-opus-4-8","name":"Claude Opus 4.8","organization":"Anthropic","releaseDate":"2026-05-01","openWeights":false},
+    {"modelId":"fable-5","name":"Fable 5","organization":"Anthropic","releaseDate":"2026-05-01","openWeights":false},
+    {"modelId":"gpt-5-5","name":"GPT-5.5","organization":"OpenAI","releaseDate":"2026-04-01","openWeights":false},
+    {"modelId":"gpt-5-6-sol","name":"GPT-5.6 Sol","organization":"OpenAI","releaseDate":"2026-07-01","openWeights":false},
+    {"modelId":"gpt-5-6-terra","name":"GPT-5.6 Terra","organization":"OpenAI","releaseDate":"2026-07-01","openWeights":false},
+    {"modelId":"grok-4-5","name":"Grok 4.5","organization":"xAI","releaseDate":"2026-06-01","openWeights":false},
+    {"modelId":"doubao-seed-code","name":"Doubao-Seed-Code","organization":"ByteDance","releaseDate":"2025-09-01","openWeights":false},
+    {"modelId":"gemini-3-pro-preview","name":"Gemini 3 Pro Preview","organization":"Google","releaseDate":"2025-11-18","openWeights":false},
+    {"modelId":"proprietary-stack","name":"Proprietary model stack","organization":"Multiple","releaseDate":null,"openWeights":false}
+  ]
+}

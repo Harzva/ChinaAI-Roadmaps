@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "tau2-bench",
+    "canonicalName": "τ²-bench",
+    "category": "Enterprise",
+    "status": "needs_source",
+    "summary": "双控制环境下的对话式企业 Agent 任务评测。",
+    "metric": {
+      "name": "pass@1",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "repo": "https://github.com/sierra-research/tau2-bench"
+    }
+  },
+  "group": {
+    "version": "1.0",
+    "subset": "full",
+    "metric": "pass@1",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

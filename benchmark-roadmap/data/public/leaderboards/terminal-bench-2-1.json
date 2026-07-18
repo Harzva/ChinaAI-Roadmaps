@@ -1,0 +1,720 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "terminal-bench-2-1",
+    "canonicalName": "Terminal-Bench 2.1",
+    "category": "Tool Use",
+    "status": "ready",
+    "summary": "在受控终端环境中执行真实、长程任务的 Agent 评测。",
+    "metric": {
+      "name": "task_success",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://www.tbench.ai/",
+      "leaderboard": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+    }
+  },
+  "group": {
+    "version": "2.1",
+    "subset": "full",
+    "metric": "task_success",
+    "protocol": "harbor"
+  },
+  "top5": [
+    {
+      "resultId": "tb21-claude-code-fable5",
+      "rank": 1,
+      "system": {
+        "systemId": "claude-code-fable-5",
+        "name": "Claude Code + Fable 5",
+        "scaffold": "Claude Code",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "fable-5",
+        "name": "Fable 5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 83.8,
+      "uncertainty": 1.2,
+      "evaluationDate": "2026-06-07",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "xhigh",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 552.67
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Verified by the Terminal-Bench team."
+    },
+    {
+      "resultId": "tb21-codex-gpt55",
+      "rank": 2,
+      "system": {
+        "systemId": "codex-gpt-5-5",
+        "name": "Codex + GPT-5.5",
+        "scaffold": "Codex",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "gpt-5-5",
+        "name": "GPT-5.5",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 83.1,
+      "uncertainty": 1.1,
+      "evaluationDate": "2026-05-01",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "xhigh",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 2059.19
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    },
+    {
+      "resultId": "tb21-terminus2-fable5",
+      "rank": 3,
+      "system": {
+        "systemId": "terminus-2-fable-5",
+        "name": "Terminus 2 + Fable 5",
+        "scaffold": "Terminus 2",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "fable-5",
+        "name": "Fable 5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 80.4,
+      "uncertainty": 1.2,
+      "evaluationDate": "2026-06-05",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 438.64
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    },
+    {
+      "resultId": "tb21-cursor-grok45",
+      "rank": 4,
+      "system": {
+        "systemId": "cursor-grok-4-5",
+        "name": "Cursor CLI + Grok 4.5",
+        "scaffold": "Cursor CLI",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "grok-4-5",
+        "name": "Grok 4.5",
+        "organization": "xAI",
+        "openWeights": false
+      },
+      "score": 79.3,
+      "uncertainty": 1.5,
+      "evaluationDate": "2026-07-09",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 134.09
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    },
+    {
+      "resultId": "tb21-claude-code-opus48",
+      "rank": 5,
+      "system": {
+        "systemId": "claude-code-opus-4-8",
+        "name": "Claude Code + Claude Opus 4.8",
+        "scaffold": "Claude Code",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-8",
+        "name": "Claude Opus 4.8",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 78.9,
+      "uncertainty": 1.3,
+      "evaluationDate": "2026-07-09",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 286.94
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    }
+  ],
+  "top10": [
+    {
+      "resultId": "tb21-claude-code-fable5",
+      "rank": 1,
+      "system": {
+        "systemId": "claude-code-fable-5",
+        "name": "Claude Code + Fable 5",
+        "scaffold": "Claude Code",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "fable-5",
+        "name": "Fable 5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 83.8,
+      "uncertainty": 1.2,
+      "evaluationDate": "2026-06-07",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "xhigh",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 552.67
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Verified by the Terminal-Bench team."
+    },
+    {
+      "resultId": "tb21-codex-gpt55",
+      "rank": 2,
+      "system": {
+        "systemId": "codex-gpt-5-5",
+        "name": "Codex + GPT-5.5",
+        "scaffold": "Codex",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "gpt-5-5",
+        "name": "GPT-5.5",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 83.1,
+      "uncertainty": 1.1,
+      "evaluationDate": "2026-05-01",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "xhigh",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 2059.19
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    },
+    {
+      "resultId": "tb21-terminus2-fable5",
+      "rank": 3,
+      "system": {
+        "systemId": "terminus-2-fable-5",
+        "name": "Terminus 2 + Fable 5",
+        "scaffold": "Terminus 2",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "fable-5",
+        "name": "Fable 5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 80.4,
+      "uncertainty": 1.2,
+      "evaluationDate": "2026-06-05",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 438.64
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    },
+    {
+      "resultId": "tb21-cursor-grok45",
+      "rank": 4,
+      "system": {
+        "systemId": "cursor-grok-4-5",
+        "name": "Cursor CLI + Grok 4.5",
+        "scaffold": "Cursor CLI",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "grok-4-5",
+        "name": "Grok 4.5",
+        "organization": "xAI",
+        "openWeights": false
+      },
+      "score": 79.3,
+      "uncertainty": 1.5,
+      "evaluationDate": "2026-07-09",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 134.09
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    },
+    {
+      "resultId": "tb21-claude-code-opus48",
+      "rank": 5,
+      "system": {
+        "systemId": "claude-code-opus-4-8",
+        "name": "Claude Code + Claude Opus 4.8",
+        "scaffold": "Claude Code",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-8",
+        "name": "Claude Opus 4.8",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 78.9,
+      "uncertainty": 1.3,
+      "evaluationDate": "2026-07-09",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 286.94
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    }
+  ],
+  "all": [
+    {
+      "resultId": "tb21-claude-code-fable5",
+      "rank": 1,
+      "system": {
+        "systemId": "claude-code-fable-5",
+        "name": "Claude Code + Fable 5",
+        "scaffold": "Claude Code",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "fable-5",
+        "name": "Fable 5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 83.8,
+      "uncertainty": 1.2,
+      "evaluationDate": "2026-06-07",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "xhigh",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 552.67
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Verified by the Terminal-Bench team."
+    },
+    {
+      "resultId": "tb21-codex-gpt55",
+      "rank": 2,
+      "system": {
+        "systemId": "codex-gpt-5-5",
+        "name": "Codex + GPT-5.5",
+        "scaffold": "Codex",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "gpt-5-5",
+        "name": "GPT-5.5",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 83.1,
+      "uncertainty": 1.1,
+      "evaluationDate": "2026-05-01",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "xhigh",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 2059.19
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    },
+    {
+      "resultId": "tb21-terminus2-fable5",
+      "rank": 3,
+      "system": {
+        "systemId": "terminus-2-fable-5",
+        "name": "Terminus 2 + Fable 5",
+        "scaffold": "Terminus 2",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "fable-5",
+        "name": "Fable 5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 80.4,
+      "uncertainty": 1.2,
+      "evaluationDate": "2026-06-05",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 438.64
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    },
+    {
+      "resultId": "tb21-cursor-grok45",
+      "rank": 4,
+      "system": {
+        "systemId": "cursor-grok-4-5",
+        "name": "Cursor CLI + Grok 4.5",
+        "scaffold": "Cursor CLI",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "grok-4-5",
+        "name": "Grok 4.5",
+        "organization": "xAI",
+        "openWeights": false
+      },
+      "score": 79.3,
+      "uncertainty": 1.5,
+      "evaluationDate": "2026-07-09",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 134.09
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    },
+    {
+      "resultId": "tb21-claude-code-opus48",
+      "rank": 5,
+      "system": {
+        "systemId": "claude-code-opus-4-8",
+        "name": "Claude Code + Claude Opus 4.8",
+        "scaffold": "Claude Code",
+        "harness": "Harbor / Terminal-Bench 2.1",
+        "tools": [
+          "terminal"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-8",
+        "name": "Claude Opus 4.8",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 78.9,
+      "uncertainty": 1.3,
+      "evaluationDate": "2026-07-09",
+      "source": {
+        "sourceId": "terminalbench-official",
+        "type": "official",
+        "name": "Terminal-Bench official leaderboard",
+        "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "usd": 286.94
+        },
+        "environment": "Harbor"
+      },
+      "notes": "Official leaderboard."
+    }
+  ],
+  "availableGroups": [
+    {
+      "key": "2.1::full::task_success::harbor",
+      "resultCount": 5,
+      "version": "2.1",
+      "subset": "full",
+      "metric": "task_success",
+      "protocol": "harbor"
+    }
+  ],
+  "sotaTimeline": [
+    {
+      "date": "2026-05-01",
+      "leaders": [
+        {
+          "resultId": "tb21-codex-gpt55",
+          "rank": 1,
+          "system": {
+            "systemId": "codex-gpt-5-5",
+            "name": "Codex + GPT-5.5",
+            "scaffold": "Codex",
+            "harness": "Harbor / Terminal-Bench 2.1",
+            "tools": [
+              "terminal"
+            ]
+          },
+          "model": {
+            "modelId": "gpt-5-5",
+            "name": "GPT-5.5",
+            "organization": "OpenAI",
+            "openWeights": false
+          },
+          "score": 83.1,
+          "uncertainty": 1.1,
+          "evaluationDate": "2026-05-01",
+          "source": {
+            "sourceId": "terminalbench-official",
+            "type": "official",
+            "name": "Terminal-Bench official leaderboard",
+            "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "xhigh",
+            "attempts": 1,
+            "passK": 1,
+            "budget": {
+              "usd": 2059.19
+            },
+            "environment": "Harbor"
+          },
+          "notes": "Official leaderboard."
+        }
+      ]
+    },
+    {
+      "date": "2026-06-07",
+      "leaders": [
+        {
+          "resultId": "tb21-claude-code-fable5",
+          "rank": 1,
+          "system": {
+            "systemId": "claude-code-fable-5",
+            "name": "Claude Code + Fable 5",
+            "scaffold": "Claude Code",
+            "harness": "Harbor / Terminal-Bench 2.1",
+            "tools": [
+              "terminal"
+            ]
+          },
+          "model": {
+            "modelId": "fable-5",
+            "name": "Fable 5",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 83.8,
+          "uncertainty": 1.2,
+          "evaluationDate": "2026-06-07",
+          "source": {
+            "sourceId": "terminalbench-official",
+            "type": "official",
+            "name": "Terminal-Bench official leaderboard",
+            "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "xhigh",
+            "attempts": 1,
+            "passK": 1,
+            "budget": {
+              "usd": 552.67
+            },
+            "environment": "Harbor"
+          },
+          "notes": "Verified by the Terminal-Bench team."
+        }
+      ]
+    }
+  ],
+  "otherReports": [],
+  "caveat": "Ranked only within this exact version, subset, metric and protocol."
+}

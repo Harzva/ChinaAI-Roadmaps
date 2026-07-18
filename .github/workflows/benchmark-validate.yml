@@ -1,0 +1,55 @@
+name: Benchmark validate
+
+on:
+  pull_request:
+    paths:
+      - "benchmark-roadmap/**"
+      - ".github/workflows/benchmark-*.yml"
+      - "ROADMAP.md"
+  push:
+    branches: [main]
+    paths:
+      - "benchmark-roadmap/**"
+      - ".github/workflows/benchmark-*.yml"
+      - "ROADMAP.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: benchmark-validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Data, evals and public-surface gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: benchmark-roadmap
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Use Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: benchmark-roadmap/package-lock.json
+      - name: Install from lockfile
+        run: npm ci --ignore-scripts
+      - name: Run release gates
+        run: npm run gates
+      - name: Verify generated public data is committed
+        run: git diff --exit-code -- data/public
+      - name: Upload release audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-release-audit
+          path: |
+            benchmark-roadmap/RELEASE_AUDIT.md
+            benchmark-roadmap/data/public/snapshot.json
+          retention-days: 30

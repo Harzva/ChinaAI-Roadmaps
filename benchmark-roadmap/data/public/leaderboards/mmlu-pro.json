@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "mmlu-pro",
+    "canonicalName": "MMLU-Pro",
+    "category": "Reasoning",
+    "status": "ready",
+    "summary": "更高难度、十选一的知识与推理评测。",
+    "metric": {
+      "name": "accuracy",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "repo": "https://github.com/TIGER-AI-Lab/MMLU-Pro"
+    }
+  },
+  "group": {
+    "version": "1.0",
+    "subset": "full",
+    "metric": "accuracy",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

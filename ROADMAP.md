@@ -1,10 +1,27 @@
 # Benchmark Leaderboard 全面升级路线图
 
-> 状态：Proposed
+> 状态：Complete · v1.0
 >
 > 最后更新：2026-07-18
 >
 > 目标：把现有 Benchmark Map 从“研究导航图”升级为“可追溯、可比较、可持续更新的 Benchmark Registry 与 Top-K 模型排行榜”。
+
+## 完成验收（2026-07-18）
+
+| Step | 状态 | 可复核交付物 |
+| ---: | :---: | --- |
+| 1 | ✅ | `data/benchmarks.json`、`data/audit/inventory-report.json`；24 项稳定身份，旧地图 framework/audit concept 不混计 |
+| 2 | ✅ | benchmark/model/system/result/source JSON Schema；版本、语言、模态、metric direction 与运行配置显式建模 |
+| 3 | ✅ | `SOURCE_POLICY.md`、23 个 canonical sources、详情 Evidence receipt 与更正/撤回流程 |
+| 4 | ✅ | SWE-bench、Hugging Face/OpenEvals、Epoch/METR 适配器；snapshot、hash、normalize、validate、publish 与失败保留策略 |
+| 5 | ✅ | `COMPARABILITY.md`、五字段分组键、三档资格、版本隔离与可比性诊断 |
+| 6 | ✅ | 五信号透明热度、75 分门槛、10 项热门集合及构成面板 |
+| 7 | ✅ | 24 个确定性榜单 JSON、默认 Top 5、Top 10/全部、开放权重/来源/实体筛选、历史 SOTA 与 12 个回归用例 |
+| 8 | ✅ | 热门首页、Registry、Benchmark/模型详情、2–4 系统比较、共享数据 Map、空/错/无 JS/移动端状态 |
+| 9 | ✅ | `npm run gates`、公开字段 allowlist/denylist、Semgrep secrets 0 findings、Playwright smoke、Lighthouse A11y 100 |
+| 10 | ✅ | 三条 `benchmark-*.yml` workflow、贡献模板、维护面板、变更日志、发布审计与可回滚 Pages 部署 |
+
+发布质量结果：Lighthouse Performance 97 / Accessibility 100 / Best Practices 100 / SEO 100，TBT 0 ms；移动端 390 px 无页面横向溢出。`npm run gates` 是本地与 CI 的统一发布命令，远端 Pages smoke job 会同时验证排行榜页面和公开快照。
 
 ## 0. 目标、范围与完成定义
 

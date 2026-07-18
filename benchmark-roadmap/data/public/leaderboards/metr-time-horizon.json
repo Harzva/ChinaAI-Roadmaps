@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "metr-time-horizon",
+    "canonicalName": "METR Time Horizon",
+    "category": "Software Engineering",
+    "status": "ready",
+    "summary": "以人类任务时长衡量 Agent 可可靠完成任务的时间跨度。",
+    "metric": {
+      "name": "time_horizon",
+      "unit": "minutes",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://metr.org/time-horizons/"
+    }
+  },
+  "group": {
+    "version": "2026",
+    "subset": "full",
+    "metric": "time_horizon",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

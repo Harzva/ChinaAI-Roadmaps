@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "terminal-bench-2-0",
+    "canonicalName": "Terminal-Bench 2.0",
+    "category": "Tool Use",
+    "status": "legacy",
+    "summary": "Terminal-Bench 的旧版本；不与 2.1 混排。",
+    "metric": {
+      "name": "task_success",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://www.tbench.ai/"
+    }
+  },
+  "group": {
+    "version": "2.0",
+    "subset": "full",
+    "metric": "task_success",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

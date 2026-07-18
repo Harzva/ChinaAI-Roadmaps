@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"public-leaderboard.schema.json","title":"Public leaderboard","type":"object","required":["schemaVersion","generatedAt","benchmark","group","top5","top10","all"],"properties":{"top5":{"type":"array","maxItems":5},"top10":{"type":"array","maxItems":10},"all":{"type":"array"}},"additionalProperties":true}

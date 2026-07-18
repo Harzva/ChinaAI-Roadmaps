@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "lastSuccessfulSync": "2026-07-18T00:00:00Z",
+  "sources": {
+    "total": 23,
+    "curatedSnapshots": 4,
+    "broken": 0,
+    "onlineAudit": "scheduled"
+  },
+  "queue": {
+    "needsSource": 3,
+    "collecting": 8,
+    "nonDefaultReports": 1
+  },
+  "staleBenchmarks": [
+    "terminal-bench-2-0",
+    "osworld-v1",
+    "tau-bench"
+  ],
+  "policy": "Scheduled checks never overwrite production. A reviewed commit must pass all release gates."
+}

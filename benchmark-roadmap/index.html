@@ -1,88 +1,129 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Benchmark World Map · ChinaAI Roadmaps</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050708'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%238ce7ff'/%3E%3C/svg%3E"/>
-  <link rel="stylesheet" href="../roadmap-core/atlas.css"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="可追溯、可比较的 AI Benchmark Registry 与模型 Top-K 排行榜。">
+  <title>Benchmark Observatory · ChinaAI Roadmaps</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316252d'/%3E%3Cpath d='M8 22V12h4v10zm6 0V7h4v15zm6 0v-7h4v7z' fill='%23edf0eb'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="leaderboard.css">
 </head>
 <body>
-  <div id="app"></div>
-  <script src="../roadmap-core/atlas.js"></script>
-  <script src="data.js"></script>
-  <script>
-    createRoadmap(window.ROADMAP_DATA);
+  <a class="skip-link" href="#registry">跳到 Benchmark Registry</a>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="CA · 返回 ChinaAI Roadmaps 首页">
+      <span class="brand-mark" aria-hidden="true">CA</span>
+      <span>ChinaAI / Eval Observatory</span>
+    </a>
+    <nav aria-label="Benchmark 导航">
+      <a class="active" href="./">Leaderboard</a>
+      <a href="map.html">Map 模式</a>
+      <a href="../agent-roadmap/">Agent Map</a>
+      <a href="../">首页</a>
+    </nav>
+  </header>
 
-    // Inject WorldMap-style extra elements
-    (function() {
-      const app = document.getElementById('app');
-      if (!app) return;
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">BENCHMARK REGISTRY / VERIFIED TOP-K</p>
+        <h1 id="page-title">把“最好”限定在<br><em>可比较的证据里</em></h1>
+        <p class="lede">这里不制造跨 benchmark 的总冠军。每张榜只比较相同版本、subset、metric 与 protocol，并把模型、Agent scaffold、预算和原始来源一起展示。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#hot">查看热门榜</a>
+          <a class="button" href="COMPARABILITY.md">可比性规则</a>
+        </div>
+      </div>
+      <aside class="instrument" aria-label="数据快照状态">
+        <div class="instrument-head"><span>SNAPSHOT</span><span id="snapshot-state">LOADING</span></div>
+        <div class="instrument-grid" id="snapshot-stats" aria-live="polite">
+          <div><strong>—</strong><span>benchmarks</span></div>
+          <div><strong>—</strong><span>hot set</span></div>
+          <div><strong>—</strong><span>qualified runs</span></div>
+        </div>
+        <div class="calibration"><span></span><span></span><span></span><span></span><span></span></div>
+        <p>默认来源：官方 + 标准化独立评测<br>默认显示：Top 5 · 同分共享名次</p>
+      </aside>
+    </section>
 
-      // Top title banner
-      const topTitle = document.createElement('div');
-      topTitle.className = 'top-title';
-      topTitle.innerHTML = 'BENCHMARK ATLAS<small>EVALUATION · HARNESS · AUDIT · LEADERBOARD</small>';
-      app.appendChild(topTitle);
+    <section class="principles" aria-label="排行榜原则">
+      <p><b>01 / 局部排名</b><span>只回答具体 benchmark 内谁领先</span></p>
+      <p><b>02 / 系统实体</b><span>模型 + scaffold + harness + budget</span></p>
+      <p><b>03 / 证据回执</b><span>每个默认成绩可回到原始来源</span></p>
+    </section>
 
-      // Shortcut panel
-      const shortcuts = document.createElement('div');
-      shortcuts.className = 'shortcut-panel';
-      shortcuts.innerHTML = `
-        <b>快捷键 / Shortcuts</b>
-        <span><kbd>H</kbd> 全局视角</span>
-        <span><kbd>L</kbd> 标签显隐</span>
-        <span><kbd>D</kbd> 密度星云</span>
-        <span><kbd>F</kbd> 流光关系</span>
-        <span><kbd>M</kbd> 矩阵模式</span>
-        <span><kbd>P</kbd> 专注模式</span>
-        <span><kbd>/</kbd> 搜索</span>
-        <span><kbd>Esc</kbd> 清除选择</span>
-      `;
-      app.appendChild(shortcuts);
+    <section id="hot" class="section hot-section" aria-labelledby="hot-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">CALIBRATED SIGNALS</p><h2 id="hot-title">热门 Benchmark</h2></div>
+        <p>热度 = 活跃榜单 35 + 模型采用 25 + 社区影响 15 + 新鲜度 15 + 可复现性 10；门槛 75，且至少两个独立信号。</p>
+      </div>
+      <div id="hot-grid" class="hot-grid" aria-live="polite"></div>
+    </section>
 
-      // HUD
-      const hud = document.createElement('div');
-      hud.className = 'hud';
-      hud.innerHTML = '<b>BENCH</b><span>Web · SE · OS · Tool · Enterprise · Memory</span>';
-      app.appendChild(hud);
+    <section id="registry" class="section registry-section" aria-labelledby="registry-title">
+      <div class="section-heading registry-heading">
+        <div><p class="eyebrow">CANONICAL INDEX</p><h2 id="registry-title">全部 Benchmark Registry</h2></div>
+        <button class="button" id="compare-open" type="button">比较 2–4 个模型</button>
+      </div>
+      <form class="filters" id="filters" role="search">
+        <label class="search-field"><span>搜索</span><input id="search" type="search" placeholder="SWE-bench、OSWorld、Agent…" autocomplete="off"></label>
+        <label><span>类别</span><select id="category"><option value="">全部类别</option></select></label>
+        <label><span>状态</span><select id="status"><option value="">全部状态</option><option value="ready">Ready</option><option value="collecting">Collecting</option><option value="needs_source">Needs source</option><option value="legacy">Legacy</option></select></label>
+        <label><span>数据</span><select id="coverage"><option value="">全部</option><option value="ranked">已有合格 Top-K</option><option value="pending">等待合格成绩</option></select></label>
+        <label><span>语言</span><select id="language"><option value="">全部语言</option></select></label>
+        <label><span>模态</span><select id="modality"><option value="">全部模态</option></select></label>
+      </form>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="registry-table-wrap">
+        <table class="registry-table">
+          <thead><tr><th>Benchmark</th><th>类别 / 版本</th><th>状态</th><th>合格成绩</th><th>当前领先系统</th><th><span class="sr-only">操作</span></th></tr></thead>
+          <tbody id="registry-body"></tbody>
+        </table>
+      </div>
+      <aside class="maintenance-panel" aria-labelledby="maintenance-title">
+        <div><p class="eyebrow">MAINTENANCE PANEL</p><h3 id="maintenance-title">来源健康与审核队列</h3></div>
+        <div id="maintenance-stats" class="maintenance-stats" aria-live="polite"></div>
+      </aside>
+    </section>
 
-      // Compass
-      const compass = document.createElement('div');
-      compass.className = 'compass';
-      compass.textContent = 'Wheel Zoom · Drag Pan · Click Focus';
-      app.appendChild(compass);
+    <section class="method-strip" aria-label="数据流程">
+      <span>官方来源</span><i>→</i><span>快照 + Hash</span><i>→</i><span>身份归一化</span><i>→</i><span>可比性门槛</span><i>→</i><span>Top-K</span>
+      <a href="SOURCE_POLICY.md">查看来源政策 ↗</a>
+    </section>
+  </main>
 
-      // Mini version
-      const mini = document.createElement('div');
-      mini.className = 'mini-version';
-      mini.innerHTML = 'Benchmark Map v2 · <span id="miniFps">-- FPS</span>';
-      app.appendChild(mini);
+  <footer>
+    <p>ChinaAI Roadmaps · Benchmark Registry v1.0</p>
+    <p><a href="CONTRIBUTING.md">贡献数据</a><a href="RELEASE_AUDIT.md">发布审计</a><a href="https://github.com/Harzva/ChinaAI-Roadmaps">GitHub</a></p>
+  </footer>
 
-      // Data watermark
-      const watermark = document.createElement('div');
-      watermark.className = 'data-watermark';
-      watermark.innerHTML = '<b>ChinaAI Roadmaps</b> · Benchmark Atlas · Evaluation & Audit';
-      app.appendChild(watermark);
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" data-close aria-label="关闭详情">×</button>
+      <div id="detail-content"></div>
+    </div>
+  </dialog>
 
-      // Focus mode toggle (P key)
-      document.addEventListener('keydown', (e) => {
-        if (e.key.toLowerCase() === 'p' && !/input|select|textarea/i.test(e.target.tagName)) {
-          document.body.classList.toggle('focus-mode');
-        }
-      });
+  <dialog id="compare-dialog" class="compare-dialog" aria-labelledby="compare-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" data-close aria-label="关闭比较">×</button>
+      <p class="eyebrow">MODEL / SYSTEM COMPARISON</p>
+      <h2 id="compare-title">比较 2–4 个模型系统</h2>
+      <p class="dialog-intro">只展示它们共同拥有、且评测设置一致的 benchmark 成绩；不计算跨榜总分。</p>
+      <div id="compare-picker" class="compare-picker"></div>
+      <div id="compare-output" class="compare-output" aria-live="polite"></div>
+    </div>
+  </dialog>
 
-      // Hook into atlas.js FPS counter
-      const atlasFps = document.getElementById('fps');
-      const miniFps = document.getElementById('miniFps');
-      if (atlasFps && miniFps) {
-        const observer = new MutationObserver(() => {
-          miniFps.textContent = atlasFps.textContent;
-        });
-        observer.observe(atlasFps, { childList: true });
-      }
-    })();
-  </script>
+  <dialog id="model-dialog" class="detail-dialog" aria-labelledby="model-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" data-close aria-label="关闭模型详情">×</button>
+      <div id="model-content"></div>
+    </div>
+  </dialog>
+
+  <div id="app-error" class="app-error" role="alert" hidden></div>
+  <noscript><div class="app-error">排行榜需要 JavaScript 读取已生成的公开 JSON。数据文件与方法文档仍可直接访问。</div></noscript>
+  <script type="module" src="leaderboard.js"></script>
 </body>
 </html>

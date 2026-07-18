@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "webarena",
+    "canonicalName": "WebArena",
+    "category": "Web Agent",
+    "status": "ready",
+    "summary": "812 个自托管真实网站导航任务。",
+    "metric": {
+      "name": "success_rate",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://webarena.dev/",
+      "repo": "https://github.com/web-arena-x/webarena"
+    }
+  },
+  "group": {
+    "version": "1.0",
+    "subset": "full",
+    "metric": "success_rate",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

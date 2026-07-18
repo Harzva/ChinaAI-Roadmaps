@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-07-18T00:00:00Z",
+  "systems": [
+    {"systemId":"live-swe-claude-opus-4-5","name":"live-SWE-agent + Claude Opus 4.5","modelId":"claude-opus-4-5","scaffold":"live-SWE-agent","harness":"SWE-bench official harness","tools":["bash","editor"]},
+    {"systemId":"sonar-foundation-claude-opus-4-5","name":"Sonar Foundation Agent + Claude Opus 4.5","modelId":"claude-opus-4-5","scaffold":"Sonar Foundation Agent","harness":"SWE-bench official harness","tools":["bash","editor"]},
+    {"systemId":"trae-doubao-seed-code","name":"TRAE + Doubao-Seed-Code","modelId":"doubao-seed-code","scaffold":"TRAE","harness":"SWE-bench official harness","tools":["bash","editor"]},
+    {"systemId":"live-swe-gemini-3-pro","name":"live-SWE-agent + Gemini 3 Pro Preview","modelId":"gemini-3-pro-preview","scaffold":"live-SWE-agent","harness":"SWE-bench official harness","tools":["bash","editor"]},
+    {"systemId":"atlassian-rovo-dev","name":"Atlassian Rovo Dev","modelId":"proprietary-stack","scaffold":"Rovo Dev","harness":"SWE-bench official harness","tools":["bash","editor"]},
+    {"systemId":"claude-code-fable-5","name":"Claude Code + Fable 5","modelId":"fable-5","scaffold":"Claude Code","harness":"Harbor / Terminal-Bench 2.1","tools":["terminal"]},
+    {"systemId":"codex-gpt-5-5","name":"Codex + GPT-5.5","modelId":"gpt-5-5","scaffold":"Codex","harness":"Harbor / Terminal-Bench 2.1","tools":["terminal"]},
+    {"systemId":"terminus-2-fable-5","name":"Terminus 2 + Fable 5","modelId":"fable-5","scaffold":"Terminus 2","harness":"Harbor / Terminal-Bench 2.1","tools":["terminal"]},
+    {"systemId":"cursor-grok-4-5","name":"Cursor CLI + Grok 4.5","modelId":"grok-4-5","scaffold":"Cursor CLI","harness":"Harbor / Terminal-Bench 2.1","tools":["terminal"]},
+    {"systemId":"claude-code-opus-4-8","name":"Claude Code + Claude Opus 4.8","modelId":"claude-opus-4-8","scaffold":"Claude Code","harness":"Harbor / Terminal-Bench 2.1","tools":["terminal"]},
+    {"systemId":"opus-4-8-batched","name":"Claude Opus 4.8 + batched tool calls","modelId":"claude-opus-4-8","scaffold":"OSWorld reference agent","harness":"OSWorld v2","tools":["computer","batched_tool_calls"]},
+    {"systemId":"opus-4-7-osworld","name":"Claude Opus 4.7","modelId":"claude-opus-4-7","scaffold":"OSWorld reference agent","harness":"OSWorld v2","tools":["computer"]},
+    {"systemId":"gpt-5-5-osworld","name":"GPT-5.5","modelId":"gpt-5-5","scaffold":"OSWorld reference agent","harness":"OSWorld v2","tools":["computer"]},
+    {"systemId":"gpt-5-6-sol-max","name":"GPT-5.6 Sol Max","modelId":"gpt-5-6-sol","scaffold":"LiveBench runner","harness":"LiveBench","tools":[]},
+    {"systemId":"fable-5-max","name":"Fable 5 Max","modelId":"fable-5","scaffold":"LiveBench runner","harness":"LiveBench","tools":[]},
+    {"systemId":"gpt-5-5-thinking-xhigh","name":"GPT-5.5 Thinking xHigh","modelId":"gpt-5-5","scaffold":"LiveBench runner","harness":"LiveBench","tools":[]},
+    {"systemId":"gpt-5-6-terra-max","name":"GPT-5.6 Terra Max","modelId":"gpt-5-6-terra","scaffold":"LiveBench runner","harness":"LiveBench","tools":[]}
+  ]
+}

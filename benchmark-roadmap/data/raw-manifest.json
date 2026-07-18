@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-07-18T00:00:00Z",
+  "snapshots": [
+    {"sourceId":"swebench-official-data","status":"curated","retrievedAt":"2026-07-18T00:00:00Z","contentHash":"sha256:bbf7e37c5aa24ee42720437bf7e47614dbb3b7980a2a8bf67e24ca7d95020efc","recordCount":5},
+    {"sourceId":"terminalbench-official","status":"curated","retrievedAt":"2026-07-18T00:00:00Z","contentHash":"sha256:261b9b6325b4a9ef56b4afaee9557e07d49a6c62686f509e8dd9a7231787ee70","recordCount":5},
+    {"sourceId":"osworld-v2-official","status":"curated","retrievedAt":"2026-07-18T00:00:00Z","contentHash":"sha256:d10a4a0235addd132d89fe364c6065ff6ac7baa83456e666e4dfdd33b2c9bcdc","recordCount":3},
+    {"sourceId":"livebench-official","status":"curated","retrievedAt":"2026-07-18T00:00:00Z","contentHash":"sha256:130364a0fc6e7bb863c4263bef1d5c2c964a08357c2e298325e67c388ed238f7","recordCount":4}
+  ]
+}

@@ -1,0 +1,44 @@
+name: Benchmark data change
+description: 新增 Benchmark、成绩更正、来源撤回或版本弃用
+title: "[benchmark] "
+labels: ["benchmark-data"]
+body:
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: 变更类型
+      options:
+        - 新增 Benchmark
+        - 新增或更正成绩
+        - 来源撤回或降级
+        - 版本弃用
+    validations:
+      required: true
+  - type: input
+    id: benchmark
+    attributes:
+      label: Benchmark 与版本
+      placeholder: Terminal-Bench 2.1 / full
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 原始来源
+      placeholder: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Metric、protocol 与运行配置
+      description: 请包含 model、scaffold、harness、effort、attempts/pass@k 与已披露预算。
+    validations:
+      required: true
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: 政策确认
+      options:
+        - label: 我已阅读 SOURCE_POLICY.md 与 COMPARABILITY.md，且没有提交凭据或受限数据。
+          required: true

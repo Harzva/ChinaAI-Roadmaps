@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "gpqa-diamond",
+    "canonicalName": "GPQA Diamond",
+    "category": "Reasoning",
+    "status": "collecting",
+    "summary": "研究生级、抗搜索的科学问答子集。",
+    "metric": {
+      "name": "accuracy",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "dataset": "https://huggingface.co/datasets/Idavidrein/gpqa"
+    }
+  },
+  "group": {
+    "version": "diamond",
+    "subset": "full",
+    "metric": "accuracy",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

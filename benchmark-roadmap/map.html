@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Benchmark Map · ChinaAI Roadmaps</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050708'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%238ce7ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../roadmap-core/atlas.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script src="../roadmap-core/atlas.js"></script>
+  <script src="data.js"></script>
+  <script>
+    (async function () {
+      try {
+        const response = await fetch('data/public/catalog.json');
+        if (response.ok) {
+          const catalog = await response.json();
+          const registry = new Map(catalog.benchmarks.map(function (item) { return [item.benchmarkId, item]; }));
+          window.ROADMAP_DATA.nodes.forEach(function (node) {
+            const aliases = { swebench: 'swe-bench-verified', terminalbench: 'terminal-bench-2-1', osworld: 'osworld-v2', mind2web: 'online-mind2web' };
+            const item = registry.get(aliases[node.id] || node.id);
+            if (!item) return;
+            node.tags = Array.from(new Set((node.tags || []).concat([item.status, item.versions[0], item.leaderboard.resultCount + ' qualified runs'])));
+            if (item.leaderboard.leader) {
+              node.metrics = [{ value: item.leaderboard.leader.score, label: item.primaryMetric.unit + ' leader' }].concat(node.metrics || []);
+              node.blocks = [{ title: '当前 Top 3 系统', body: item.leaderboard.top3.map(function (result) { return '#' + result.rank + ' ' + result.system.name + ' · ' + result.score; }).join(' | ') + ' · exact group: ' + Object.values(item.leaderboard.group).join(' / ') }].concat(node.blocks || []);
+            }
+            node.links = [{ label: '打开可信排行榜', href: './#benchmark=' + item.benchmarkId }].concat(node.links || []);
+          });
+        }
+      } catch (error) { console.warn('Registry bridge unavailable; using embedded map metadata.', error); }
+      createRoadmap(window.ROADMAP_DATA);
+      const title = document.createElement('a');
+      title.className = 'top-title';
+      title.href = './';
+      title.innerHTML = 'BENCHMARK ATLAS<small>← VERIFIED LEADERBOARD · SHARED DATA SNAPSHOT</small>';
+      document.getElementById('app').appendChild(title);
+    })();
+  </script>
+</body>
+</html>

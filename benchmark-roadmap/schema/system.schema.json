@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"system.schema.json","title":"System","type":"object","required":["systemId","name","modelId","scaffold","harness","tools"],"properties":{"systemId":{"type":"string","pattern":"^[a-z0-9-]+$"},"tools":{"type":"array","items":{"type":"string"}}},"additionalProperties":true}

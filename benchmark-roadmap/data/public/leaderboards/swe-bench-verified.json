@@ -1,0 +1,829 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "swe-bench-verified",
+    "canonicalName": "SWE-bench Verified",
+    "category": "Software Engineering",
+    "status": "ready",
+    "summary": "500 个经人工筛选、可执行验证的软件工程问题。",
+    "metric": {
+      "name": "resolved",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://www.swebench.com/",
+      "repo": "https://github.com/SWE-bench/SWE-bench",
+      "dataset": "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified",
+      "leaderboard": "https://www.swebench.com/"
+    }
+  },
+  "group": {
+    "version": "verified-500",
+    "subset": "full",
+    "metric": "resolved",
+    "protocol": "official-harness"
+  },
+  "top5": [
+    {
+      "resultId": "swev-live-swe-opus45",
+      "rank": 1,
+      "system": {
+        "systemId": "live-swe-claude-opus-4-5",
+        "name": "live-SWE-agent + Claude Opus 4.5",
+        "scaffold": "live-SWE-agent",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-5",
+        "name": "Claude Opus 4.5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 79.2,
+      "uncertainty": null,
+      "evaluationDate": "2025-12-15",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "medium",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Official Verified leaderboard entry."
+    },
+    {
+      "resultId": "swev-sonar-opus45",
+      "rank": 1,
+      "system": {
+        "systemId": "sonar-foundation-claude-opus-4-5",
+        "name": "Sonar Foundation Agent + Claude Opus 4.5",
+        "scaffold": "Sonar Foundation Agent",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-5",
+        "name": "Claude Opus 4.5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 79.2,
+      "uncertainty": null,
+      "evaluationDate": "2025-12-05",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Tie is preserved."
+    },
+    {
+      "resultId": "swev-trae-doubao",
+      "rank": 3,
+      "system": {
+        "systemId": "trae-doubao-seed-code",
+        "name": "TRAE + Doubao-Seed-Code",
+        "scaffold": "TRAE",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "doubao-seed-code",
+        "name": "Doubao-Seed-Code",
+        "organization": "ByteDance",
+        "openWeights": false
+      },
+      "score": 78.8,
+      "uncertainty": null,
+      "evaluationDate": "2025-09-28",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Official leaderboard entry."
+    },
+    {
+      "resultId": "swev-live-swe-gemini3",
+      "rank": 4,
+      "system": {
+        "systemId": "live-swe-gemini-3-pro",
+        "name": "live-SWE-agent + Gemini 3 Pro Preview",
+        "scaffold": "live-SWE-agent",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "gemini-3-pro-preview",
+        "name": "Gemini 3 Pro Preview",
+        "organization": "Google",
+        "openWeights": false
+      },
+      "score": 77.4,
+      "uncertainty": null,
+      "evaluationDate": "2025-11-20",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Official leaderboard entry."
+    },
+    {
+      "resultId": "swev-rovo-dev",
+      "rank": 5,
+      "system": {
+        "systemId": "atlassian-rovo-dev",
+        "name": "Atlassian Rovo Dev",
+        "scaffold": "Rovo Dev",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "proprietary-stack",
+        "name": "Proprietary model stack",
+        "organization": "Multiple",
+        "openWeights": false
+      },
+      "score": 76.8,
+      "uncertainty": null,
+      "evaluationDate": "2025-09-02",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Underlying model is not disclosed."
+    }
+  ],
+  "top10": [
+    {
+      "resultId": "swev-live-swe-opus45",
+      "rank": 1,
+      "system": {
+        "systemId": "live-swe-claude-opus-4-5",
+        "name": "live-SWE-agent + Claude Opus 4.5",
+        "scaffold": "live-SWE-agent",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-5",
+        "name": "Claude Opus 4.5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 79.2,
+      "uncertainty": null,
+      "evaluationDate": "2025-12-15",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "medium",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Official Verified leaderboard entry."
+    },
+    {
+      "resultId": "swev-sonar-opus45",
+      "rank": 1,
+      "system": {
+        "systemId": "sonar-foundation-claude-opus-4-5",
+        "name": "Sonar Foundation Agent + Claude Opus 4.5",
+        "scaffold": "Sonar Foundation Agent",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-5",
+        "name": "Claude Opus 4.5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 79.2,
+      "uncertainty": null,
+      "evaluationDate": "2025-12-05",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Tie is preserved."
+    },
+    {
+      "resultId": "swev-trae-doubao",
+      "rank": 3,
+      "system": {
+        "systemId": "trae-doubao-seed-code",
+        "name": "TRAE + Doubao-Seed-Code",
+        "scaffold": "TRAE",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "doubao-seed-code",
+        "name": "Doubao-Seed-Code",
+        "organization": "ByteDance",
+        "openWeights": false
+      },
+      "score": 78.8,
+      "uncertainty": null,
+      "evaluationDate": "2025-09-28",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Official leaderboard entry."
+    },
+    {
+      "resultId": "swev-live-swe-gemini3",
+      "rank": 4,
+      "system": {
+        "systemId": "live-swe-gemini-3-pro",
+        "name": "live-SWE-agent + Gemini 3 Pro Preview",
+        "scaffold": "live-SWE-agent",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "gemini-3-pro-preview",
+        "name": "Gemini 3 Pro Preview",
+        "organization": "Google",
+        "openWeights": false
+      },
+      "score": 77.4,
+      "uncertainty": null,
+      "evaluationDate": "2025-11-20",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Official leaderboard entry."
+    },
+    {
+      "resultId": "swev-rovo-dev",
+      "rank": 5,
+      "system": {
+        "systemId": "atlassian-rovo-dev",
+        "name": "Atlassian Rovo Dev",
+        "scaffold": "Rovo Dev",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "proprietary-stack",
+        "name": "Proprietary model stack",
+        "organization": "Multiple",
+        "openWeights": false
+      },
+      "score": 76.8,
+      "uncertainty": null,
+      "evaluationDate": "2025-09-02",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Underlying model is not disclosed."
+    }
+  ],
+  "all": [
+    {
+      "resultId": "swev-live-swe-opus45",
+      "rank": 1,
+      "system": {
+        "systemId": "live-swe-claude-opus-4-5",
+        "name": "live-SWE-agent + Claude Opus 4.5",
+        "scaffold": "live-SWE-agent",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-5",
+        "name": "Claude Opus 4.5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 79.2,
+      "uncertainty": null,
+      "evaluationDate": "2025-12-15",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "medium",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Official Verified leaderboard entry."
+    },
+    {
+      "resultId": "swev-sonar-opus45",
+      "rank": 1,
+      "system": {
+        "systemId": "sonar-foundation-claude-opus-4-5",
+        "name": "Sonar Foundation Agent + Claude Opus 4.5",
+        "scaffold": "Sonar Foundation Agent",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-5",
+        "name": "Claude Opus 4.5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 79.2,
+      "uncertainty": null,
+      "evaluationDate": "2025-12-05",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Tie is preserved."
+    },
+    {
+      "resultId": "swev-trae-doubao",
+      "rank": 3,
+      "system": {
+        "systemId": "trae-doubao-seed-code",
+        "name": "TRAE + Doubao-Seed-Code",
+        "scaffold": "TRAE",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "doubao-seed-code",
+        "name": "Doubao-Seed-Code",
+        "organization": "ByteDance",
+        "openWeights": false
+      },
+      "score": 78.8,
+      "uncertainty": null,
+      "evaluationDate": "2025-09-28",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Official leaderboard entry."
+    },
+    {
+      "resultId": "swev-live-swe-gemini3",
+      "rank": 4,
+      "system": {
+        "systemId": "live-swe-gemini-3-pro",
+        "name": "live-SWE-agent + Gemini 3 Pro Preview",
+        "scaffold": "live-SWE-agent",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "gemini-3-pro-preview",
+        "name": "Gemini 3 Pro Preview",
+        "organization": "Google",
+        "openWeights": false
+      },
+      "score": 77.4,
+      "uncertainty": null,
+      "evaluationDate": "2025-11-20",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Official leaderboard entry."
+    },
+    {
+      "resultId": "swev-rovo-dev",
+      "rank": 5,
+      "system": {
+        "systemId": "atlassian-rovo-dev",
+        "name": "Atlassian Rovo Dev",
+        "scaffold": "Rovo Dev",
+        "harness": "SWE-bench official harness",
+        "tools": [
+          "bash",
+          "editor"
+        ]
+      },
+      "model": {
+        "modelId": "proprietary-stack",
+        "name": "Proprietary model stack",
+        "organization": "Multiple",
+        "openWeights": false
+      },
+      "score": 76.8,
+      "uncertainty": null,
+      "evaluationDate": "2025-09-02",
+      "source": {
+        "sourceId": "swebench-official-data",
+        "type": "official",
+        "name": "SWE-bench official leaderboard data",
+        "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "not_disclosed",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "SWE-bench official"
+      },
+      "notes": "Underlying model is not disclosed."
+    }
+  ],
+  "availableGroups": [
+    {
+      "key": "verified-500::full::resolved::official-harness",
+      "resultCount": 5,
+      "version": "verified-500",
+      "subset": "full",
+      "metric": "resolved",
+      "protocol": "official-harness"
+    }
+  ],
+  "sotaTimeline": [
+    {
+      "date": "2025-09-02",
+      "leaders": [
+        {
+          "resultId": "swev-rovo-dev",
+          "rank": 1,
+          "system": {
+            "systemId": "atlassian-rovo-dev",
+            "name": "Atlassian Rovo Dev",
+            "scaffold": "Rovo Dev",
+            "harness": "SWE-bench official harness",
+            "tools": [
+              "bash",
+              "editor"
+            ]
+          },
+          "model": {
+            "modelId": "proprietary-stack",
+            "name": "Proprietary model stack",
+            "organization": "Multiple",
+            "openWeights": false
+          },
+          "score": 76.8,
+          "uncertainty": null,
+          "evaluationDate": "2025-09-02",
+          "source": {
+            "sourceId": "swebench-official-data",
+            "type": "official",
+            "name": "SWE-bench official leaderboard data",
+            "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "not_disclosed",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "SWE-bench official"
+          },
+          "notes": "Underlying model is not disclosed."
+        }
+      ]
+    },
+    {
+      "date": "2025-09-28",
+      "leaders": [
+        {
+          "resultId": "swev-trae-doubao",
+          "rank": 1,
+          "system": {
+            "systemId": "trae-doubao-seed-code",
+            "name": "TRAE + Doubao-Seed-Code",
+            "scaffold": "TRAE",
+            "harness": "SWE-bench official harness",
+            "tools": [
+              "bash",
+              "editor"
+            ]
+          },
+          "model": {
+            "modelId": "doubao-seed-code",
+            "name": "Doubao-Seed-Code",
+            "organization": "ByteDance",
+            "openWeights": false
+          },
+          "score": 78.8,
+          "uncertainty": null,
+          "evaluationDate": "2025-09-28",
+          "source": {
+            "sourceId": "swebench-official-data",
+            "type": "official",
+            "name": "SWE-bench official leaderboard data",
+            "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "not_disclosed",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "SWE-bench official"
+          },
+          "notes": "Official leaderboard entry."
+        }
+      ]
+    },
+    {
+      "date": "2025-12-05",
+      "leaders": [
+        {
+          "resultId": "swev-sonar-opus45",
+          "rank": 1,
+          "system": {
+            "systemId": "sonar-foundation-claude-opus-4-5",
+            "name": "Sonar Foundation Agent + Claude Opus 4.5",
+            "scaffold": "Sonar Foundation Agent",
+            "harness": "SWE-bench official harness",
+            "tools": [
+              "bash",
+              "editor"
+            ]
+          },
+          "model": {
+            "modelId": "claude-opus-4-5",
+            "name": "Claude Opus 4.5",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 79.2,
+          "uncertainty": null,
+          "evaluationDate": "2025-12-05",
+          "source": {
+            "sourceId": "swebench-official-data",
+            "type": "official",
+            "name": "SWE-bench official leaderboard data",
+            "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "not_disclosed",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "SWE-bench official"
+          },
+          "notes": "Tie is preserved."
+        }
+      ]
+    },
+    {
+      "date": "2025-12-15",
+      "leaders": [
+        {
+          "resultId": "swev-live-swe-opus45",
+          "rank": 1,
+          "system": {
+            "systemId": "live-swe-claude-opus-4-5",
+            "name": "live-SWE-agent + Claude Opus 4.5",
+            "scaffold": "live-SWE-agent",
+            "harness": "SWE-bench official harness",
+            "tools": [
+              "bash",
+              "editor"
+            ]
+          },
+          "model": {
+            "modelId": "claude-opus-4-5",
+            "name": "Claude Opus 4.5",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 79.2,
+          "uncertainty": null,
+          "evaluationDate": "2025-12-15",
+          "source": {
+            "sourceId": "swebench-official-data",
+            "type": "official",
+            "name": "SWE-bench official leaderboard data",
+            "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "medium",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "SWE-bench official"
+          },
+          "notes": "Official Verified leaderboard entry."
+        },
+        {
+          "resultId": "swev-sonar-opus45",
+          "rank": 1,
+          "system": {
+            "systemId": "sonar-foundation-claude-opus-4-5",
+            "name": "Sonar Foundation Agent + Claude Opus 4.5",
+            "scaffold": "Sonar Foundation Agent",
+            "harness": "SWE-bench official harness",
+            "tools": [
+              "bash",
+              "editor"
+            ]
+          },
+          "model": {
+            "modelId": "claude-opus-4-5",
+            "name": "Claude Opus 4.5",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 79.2,
+          "uncertainty": null,
+          "evaluationDate": "2025-12-05",
+          "source": {
+            "sourceId": "swebench-official-data",
+            "type": "official",
+            "name": "SWE-bench official leaderboard data",
+            "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "not_disclosed",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "SWE-bench official"
+          },
+          "notes": "Tie is preserved."
+        }
+      ]
+    }
+  ],
+  "otherReports": [],
+  "caveat": "Ranked only within this exact version, subset, metric and protocol."
+}

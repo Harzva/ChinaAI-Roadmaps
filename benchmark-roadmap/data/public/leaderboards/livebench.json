@@ -1,0 +1,547 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "livebench",
+    "canonicalName": "LiveBench",
+    "category": "General",
+    "status": "ready",
+    "summary": "持续更新、减少污染风险的综合能力评测套件。",
+    "metric": {
+      "name": "global_average",
+      "unit": "score",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://livebench.ai/",
+      "repo": "https://github.com/LiveBench/LiveBench"
+    }
+  },
+  "group": {
+    "version": "2026-07",
+    "subset": "global",
+    "metric": "global_average",
+    "protocol": "official-runner"
+  },
+  "top5": [
+    {
+      "resultId": "livebench-gpt56-sol",
+      "rank": 1,
+      "system": {
+        "systemId": "gpt-5-6-sol-max",
+        "name": "GPT-5.6 Sol Max",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "gpt-5-6-sol",
+        "name": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 82.4,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot; versioned by retrieval month."
+    },
+    {
+      "resultId": "livebench-fable5",
+      "rank": 2,
+      "system": {
+        "systemId": "fable-5-max",
+        "name": "Fable 5 Max",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "fable-5",
+        "name": "Fable 5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 80.8,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot."
+    },
+    {
+      "resultId": "livebench-gpt55",
+      "rank": 3,
+      "system": {
+        "systemId": "gpt-5-5-thinking-xhigh",
+        "name": "GPT-5.5 Thinking xHigh",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "gpt-5-5",
+        "name": "GPT-5.5",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 79.9,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "xhigh",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot."
+    },
+    {
+      "resultId": "livebench-gpt56-terra",
+      "rank": 4,
+      "system": {
+        "systemId": "gpt-5-6-terra-max",
+        "name": "GPT-5.6 Terra Max",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "gpt-5-6-terra",
+        "name": "GPT-5.6 Terra",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 79.8,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot."
+    }
+  ],
+  "top10": [
+    {
+      "resultId": "livebench-gpt56-sol",
+      "rank": 1,
+      "system": {
+        "systemId": "gpt-5-6-sol-max",
+        "name": "GPT-5.6 Sol Max",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "gpt-5-6-sol",
+        "name": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 82.4,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot; versioned by retrieval month."
+    },
+    {
+      "resultId": "livebench-fable5",
+      "rank": 2,
+      "system": {
+        "systemId": "fable-5-max",
+        "name": "Fable 5 Max",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "fable-5",
+        "name": "Fable 5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 80.8,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot."
+    },
+    {
+      "resultId": "livebench-gpt55",
+      "rank": 3,
+      "system": {
+        "systemId": "gpt-5-5-thinking-xhigh",
+        "name": "GPT-5.5 Thinking xHigh",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "gpt-5-5",
+        "name": "GPT-5.5",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 79.9,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "xhigh",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot."
+    },
+    {
+      "resultId": "livebench-gpt56-terra",
+      "rank": 4,
+      "system": {
+        "systemId": "gpt-5-6-terra-max",
+        "name": "GPT-5.6 Terra Max",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "gpt-5-6-terra",
+        "name": "GPT-5.6 Terra",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 79.8,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot."
+    }
+  ],
+  "all": [
+    {
+      "resultId": "livebench-gpt56-sol",
+      "rank": 1,
+      "system": {
+        "systemId": "gpt-5-6-sol-max",
+        "name": "GPT-5.6 Sol Max",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "gpt-5-6-sol",
+        "name": "GPT-5.6 Sol",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 82.4,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot; versioned by retrieval month."
+    },
+    {
+      "resultId": "livebench-fable5",
+      "rank": 2,
+      "system": {
+        "systemId": "fable-5-max",
+        "name": "Fable 5 Max",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "fable-5",
+        "name": "Fable 5",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 80.8,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot."
+    },
+    {
+      "resultId": "livebench-gpt55",
+      "rank": 3,
+      "system": {
+        "systemId": "gpt-5-5-thinking-xhigh",
+        "name": "GPT-5.5 Thinking xHigh",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "gpt-5-5",
+        "name": "GPT-5.5",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 79.9,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "xhigh",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot."
+    },
+    {
+      "resultId": "livebench-gpt56-terra",
+      "rank": 4,
+      "system": {
+        "systemId": "gpt-5-6-terra-max",
+        "name": "GPT-5.6 Terra Max",
+        "scaffold": "LiveBench runner",
+        "harness": "LiveBench",
+        "tools": []
+      },
+      "model": {
+        "modelId": "gpt-5-6-terra",
+        "name": "GPT-5.6 Terra",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 79.8,
+      "uncertainty": null,
+      "evaluationDate": "2026-07-18",
+      "source": {
+        "sourceId": "livebench-official",
+        "type": "official",
+        "name": "LiveBench official leaderboard",
+        "url": "https://livebench.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": null,
+        "environment": "LiveBench"
+      },
+      "notes": "Rolling benchmark snapshot."
+    }
+  ],
+  "availableGroups": [
+    {
+      "key": "2026-07::global::global_average::official-runner",
+      "resultCount": 4,
+      "version": "2026-07",
+      "subset": "global",
+      "metric": "global_average",
+      "protocol": "official-runner"
+    }
+  ],
+  "sotaTimeline": [
+    {
+      "date": "2026-07-18",
+      "leaders": [
+        {
+          "resultId": "livebench-fable5",
+          "rank": 1,
+          "system": {
+            "systemId": "fable-5-max",
+            "name": "Fable 5 Max",
+            "scaffold": "LiveBench runner",
+            "harness": "LiveBench",
+            "tools": []
+          },
+          "model": {
+            "modelId": "fable-5",
+            "name": "Fable 5",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 80.8,
+          "uncertainty": null,
+          "evaluationDate": "2026-07-18",
+          "source": {
+            "sourceId": "livebench-official",
+            "type": "official",
+            "name": "LiveBench official leaderboard",
+            "url": "https://livebench.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "max",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "LiveBench"
+          },
+          "notes": "Rolling benchmark snapshot."
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "leaders": [
+        {
+          "resultId": "livebench-gpt56-sol",
+          "rank": 1,
+          "system": {
+            "systemId": "gpt-5-6-sol-max",
+            "name": "GPT-5.6 Sol Max",
+            "scaffold": "LiveBench runner",
+            "harness": "LiveBench",
+            "tools": []
+          },
+          "model": {
+            "modelId": "gpt-5-6-sol",
+            "name": "GPT-5.6 Sol",
+            "organization": "OpenAI",
+            "openWeights": false
+          },
+          "score": 82.4,
+          "uncertainty": null,
+          "evaluationDate": "2026-07-18",
+          "source": {
+            "sourceId": "livebench-official",
+            "type": "official",
+            "name": "LiveBench official leaderboard",
+            "url": "https://livebench.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "max",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "LiveBench"
+          },
+          "notes": "Rolling benchmark snapshot; versioned by retrieval month."
+        }
+      ]
+    }
+  ],
+  "otherReports": [],
+  "caveat": "Ranked only within this exact version, subset, metric and protocol."
+}

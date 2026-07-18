@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "gdpval",
+    "canonicalName": "GDPval",
+    "category": "Knowledge Work",
+    "status": "needs_source",
+    "summary": "真实经济任务与专业知识工作评测。",
+    "metric": {
+      "name": "win_rate",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://openai.com/index/gdpval/"
+    }
+  },
+  "group": {
+    "version": "2025",
+    "subset": "full",
+    "metric": "win_rate",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

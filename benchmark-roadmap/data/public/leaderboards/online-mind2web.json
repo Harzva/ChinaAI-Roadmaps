@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "online-mind2web",
+    "canonicalName": "Online-Mind2Web",
+    "category": "Web Agent",
+    "status": "collecting",
+    "summary": "面向实时网站的动作与任务完成评测。",
+    "metric": {
+      "name": "task_success",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://osu-nlp-group.github.io/Mind2Web/"
+    }
+  },
+  "group": {
+    "version": "online",
+    "subset": "full",
+    "metric": "task_success",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

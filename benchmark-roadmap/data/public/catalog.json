@@ -1,0 +1,1725 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "methodology": {
+    "defaultTopK": 5,
+    "eligibleSources": [
+      "official",
+      "independent"
+    ],
+    "popularityThreshold": 75,
+    "popularityWeights": {
+      "activeLeaderboard": 35,
+      "modelAdoption": 25,
+      "communityImpact": 15,
+      "freshness": 15,
+      "reproducibility": 10
+    }
+  },
+  "benchmarks": [
+    {
+      "benchmarkId": "swe-bench-verified",
+      "type": "benchmark",
+      "canonicalName": "SWE-bench Verified",
+      "aliases": [
+        "SWE-Verified",
+        "SWEbench Verified"
+      ],
+      "category": "Software Engineering",
+      "owner": "SWE-bench",
+      "status": "ready",
+      "versions": [
+        "verified-500"
+      ],
+      "primaryMetric": {
+        "name": "resolved",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://www.swebench.com/",
+        "repo": "https://github.com/SWE-bench/SWE-bench",
+        "dataset": "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified",
+        "leaderboard": "https://www.swebench.com/"
+      },
+      "sourceIds": [
+        "swebench-official-data"
+      ],
+      "summary": "500 个经人工筛选、可执行验证的软件工程问题。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "code"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "swe-bench-verified",
+        "resultCount": 5,
+        "leader": {
+          "resultId": "swev-live-swe-opus45",
+          "rank": 1,
+          "system": {
+            "systemId": "live-swe-claude-opus-4-5",
+            "name": "live-SWE-agent + Claude Opus 4.5",
+            "scaffold": "live-SWE-agent",
+            "harness": "SWE-bench official harness",
+            "tools": [
+              "bash",
+              "editor"
+            ]
+          },
+          "model": {
+            "modelId": "claude-opus-4-5",
+            "name": "Claude Opus 4.5",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 79.2,
+          "uncertainty": null,
+          "evaluationDate": "2025-12-15",
+          "source": {
+            "sourceId": "swebench-official-data",
+            "type": "official",
+            "name": "SWE-bench official leaderboard data",
+            "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "medium",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "SWE-bench official"
+          },
+          "notes": "Official Verified leaderboard entry."
+        },
+        "top3": [
+          {
+            "resultId": "swev-live-swe-opus45",
+            "rank": 1,
+            "system": {
+              "systemId": "live-swe-claude-opus-4-5",
+              "name": "live-SWE-agent + Claude Opus 4.5",
+              "scaffold": "live-SWE-agent",
+              "harness": "SWE-bench official harness",
+              "tools": [
+                "bash",
+                "editor"
+              ]
+            },
+            "model": {
+              "modelId": "claude-opus-4-5",
+              "name": "Claude Opus 4.5",
+              "organization": "Anthropic",
+              "openWeights": false
+            },
+            "score": 79.2,
+            "uncertainty": null,
+            "evaluationDate": "2025-12-15",
+            "source": {
+              "sourceId": "swebench-official-data",
+              "type": "official",
+              "name": "SWE-bench official leaderboard data",
+              "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "medium",
+              "attempts": 1,
+              "passK": 1,
+              "budget": null,
+              "environment": "SWE-bench official"
+            },
+            "notes": "Official Verified leaderboard entry."
+          },
+          {
+            "resultId": "swev-sonar-opus45",
+            "rank": 1,
+            "system": {
+              "systemId": "sonar-foundation-claude-opus-4-5",
+              "name": "Sonar Foundation Agent + Claude Opus 4.5",
+              "scaffold": "Sonar Foundation Agent",
+              "harness": "SWE-bench official harness",
+              "tools": [
+                "bash",
+                "editor"
+              ]
+            },
+            "model": {
+              "modelId": "claude-opus-4-5",
+              "name": "Claude Opus 4.5",
+              "organization": "Anthropic",
+              "openWeights": false
+            },
+            "score": 79.2,
+            "uncertainty": null,
+            "evaluationDate": "2025-12-05",
+            "source": {
+              "sourceId": "swebench-official-data",
+              "type": "official",
+              "name": "SWE-bench official leaderboard data",
+              "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "not_disclosed",
+              "attempts": 1,
+              "passK": 1,
+              "budget": null,
+              "environment": "SWE-bench official"
+            },
+            "notes": "Tie is preserved."
+          },
+          {
+            "resultId": "swev-trae-doubao",
+            "rank": 3,
+            "system": {
+              "systemId": "trae-doubao-seed-code",
+              "name": "TRAE + Doubao-Seed-Code",
+              "scaffold": "TRAE",
+              "harness": "SWE-bench official harness",
+              "tools": [
+                "bash",
+                "editor"
+              ]
+            },
+            "model": {
+              "modelId": "doubao-seed-code",
+              "name": "Doubao-Seed-Code",
+              "organization": "ByteDance",
+              "openWeights": false
+            },
+            "score": 78.8,
+            "uncertainty": null,
+            "evaluationDate": "2025-09-28",
+            "source": {
+              "sourceId": "swebench-official-data",
+              "type": "official",
+              "name": "SWE-bench official leaderboard data",
+              "url": "https://github.com/SWE-bench/swe-bench.github.io/blob/master/data/leaderboards.json"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "not_disclosed",
+              "attempts": 1,
+              "passK": 1,
+              "budget": null,
+              "environment": "SWE-bench official"
+            },
+            "notes": "Official leaderboard entry."
+          }
+        ],
+        "group": {
+          "version": "verified-500",
+          "subset": "full",
+          "metric": "resolved",
+          "protocol": "official-harness"
+        }
+      }
+    },
+    {
+      "benchmarkId": "terminal-bench-2-1",
+      "type": "benchmark",
+      "canonicalName": "Terminal-Bench 2.1",
+      "aliases": [
+        "TerminalBench 2.1",
+        "TB 2.1"
+      ],
+      "category": "Tool Use",
+      "owner": "Terminal-Bench",
+      "status": "ready",
+      "versions": [
+        "2.1"
+      ],
+      "primaryMetric": {
+        "name": "task_success",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://www.tbench.ai/",
+        "leaderboard": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+      },
+      "sourceIds": [
+        "terminalbench-official"
+      ],
+      "summary": "在受控终端环境中执行真实、长程任务的 Agent 评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "code",
+        "terminal"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "terminal-bench-2-1",
+        "resultCount": 5,
+        "leader": {
+          "resultId": "tb21-claude-code-fable5",
+          "rank": 1,
+          "system": {
+            "systemId": "claude-code-fable-5",
+            "name": "Claude Code + Fable 5",
+            "scaffold": "Claude Code",
+            "harness": "Harbor / Terminal-Bench 2.1",
+            "tools": [
+              "terminal"
+            ]
+          },
+          "model": {
+            "modelId": "fable-5",
+            "name": "Fable 5",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 83.8,
+          "uncertainty": 1.2,
+          "evaluationDate": "2026-06-07",
+          "source": {
+            "sourceId": "terminalbench-official",
+            "type": "official",
+            "name": "Terminal-Bench official leaderboard",
+            "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "xhigh",
+            "attempts": 1,
+            "passK": 1,
+            "budget": {
+              "usd": 552.67
+            },
+            "environment": "Harbor"
+          },
+          "notes": "Verified by the Terminal-Bench team."
+        },
+        "top3": [
+          {
+            "resultId": "tb21-claude-code-fable5",
+            "rank": 1,
+            "system": {
+              "systemId": "claude-code-fable-5",
+              "name": "Claude Code + Fable 5",
+              "scaffold": "Claude Code",
+              "harness": "Harbor / Terminal-Bench 2.1",
+              "tools": [
+                "terminal"
+              ]
+            },
+            "model": {
+              "modelId": "fable-5",
+              "name": "Fable 5",
+              "organization": "Anthropic",
+              "openWeights": false
+            },
+            "score": 83.8,
+            "uncertainty": 1.2,
+            "evaluationDate": "2026-06-07",
+            "source": {
+              "sourceId": "terminalbench-official",
+              "type": "official",
+              "name": "Terminal-Bench official leaderboard",
+              "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "xhigh",
+              "attempts": 1,
+              "passK": 1,
+              "budget": {
+                "usd": 552.67
+              },
+              "environment": "Harbor"
+            },
+            "notes": "Verified by the Terminal-Bench team."
+          },
+          {
+            "resultId": "tb21-codex-gpt55",
+            "rank": 2,
+            "system": {
+              "systemId": "codex-gpt-5-5",
+              "name": "Codex + GPT-5.5",
+              "scaffold": "Codex",
+              "harness": "Harbor / Terminal-Bench 2.1",
+              "tools": [
+                "terminal"
+              ]
+            },
+            "model": {
+              "modelId": "gpt-5-5",
+              "name": "GPT-5.5",
+              "organization": "OpenAI",
+              "openWeights": false
+            },
+            "score": 83.1,
+            "uncertainty": 1.1,
+            "evaluationDate": "2026-05-01",
+            "source": {
+              "sourceId": "terminalbench-official",
+              "type": "official",
+              "name": "Terminal-Bench official leaderboard",
+              "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "xhigh",
+              "attempts": 1,
+              "passK": 1,
+              "budget": {
+                "usd": 2059.19
+              },
+              "environment": "Harbor"
+            },
+            "notes": "Official leaderboard."
+          },
+          {
+            "resultId": "tb21-terminus2-fable5",
+            "rank": 3,
+            "system": {
+              "systemId": "terminus-2-fable-5",
+              "name": "Terminus 2 + Fable 5",
+              "scaffold": "Terminus 2",
+              "harness": "Harbor / Terminal-Bench 2.1",
+              "tools": [
+                "terminal"
+              ]
+            },
+            "model": {
+              "modelId": "fable-5",
+              "name": "Fable 5",
+              "organization": "Anthropic",
+              "openWeights": false
+            },
+            "score": 80.4,
+            "uncertainty": 1.2,
+            "evaluationDate": "2026-06-05",
+            "source": {
+              "sourceId": "terminalbench-official",
+              "type": "official",
+              "name": "Terminal-Bench official leaderboard",
+              "url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "high",
+              "attempts": 1,
+              "passK": 1,
+              "budget": {
+                "usd": 438.64
+              },
+              "environment": "Harbor"
+            },
+            "notes": "Official leaderboard."
+          }
+        ],
+        "group": {
+          "version": "2.1",
+          "subset": "full",
+          "metric": "task_success",
+          "protocol": "harbor"
+        }
+      }
+    },
+    {
+      "benchmarkId": "terminal-bench-2-0",
+      "type": "benchmark",
+      "canonicalName": "Terminal-Bench 2.0",
+      "aliases": [
+        "TerminalBench",
+        "TB 2.0"
+      ],
+      "category": "Tool Use",
+      "owner": "Terminal-Bench",
+      "status": "legacy",
+      "versions": [
+        "2.0"
+      ],
+      "primaryMetric": {
+        "name": "task_success",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://www.tbench.ai/"
+      },
+      "sourceIds": [
+        "terminalbench-official"
+      ],
+      "summary": "Terminal-Bench 的旧版本；不与 2.1 混排。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "code",
+        "terminal"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "terminal-bench-2-0",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "2.0",
+          "subset": "full",
+          "metric": "task_success",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "osworld-v2",
+      "type": "benchmark",
+      "canonicalName": "OSWorld v2",
+      "aliases": [
+        "OSWorld 2.0"
+      ],
+      "category": "OS / Desktop",
+      "owner": "OSWorld",
+      "status": "ready",
+      "versions": [
+        "2.0"
+      ],
+      "primaryMetric": {
+        "name": "partial_credit",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://osworld-v2.xlang.ai/",
+        "repo": "https://github.com/xlang-ai/OSWorld"
+      },
+      "sourceIds": [
+        "osworld-v2-official"
+      ],
+      "summary": "108 个跨应用、长程桌面操作任务，提供二元与部分得分。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "image",
+        "gui"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "osworld-v2",
+        "resultCount": 2,
+        "leader": {
+          "resultId": "oswv2-opus48-batched",
+          "rank": 1,
+          "system": {
+            "systemId": "opus-4-8-batched",
+            "name": "Claude Opus 4.8 + batched tool calls",
+            "scaffold": "OSWorld reference agent",
+            "harness": "OSWorld v2",
+            "tools": [
+              "computer",
+              "batched_tool_calls"
+            ]
+          },
+          "model": {
+            "modelId": "claude-opus-4-8",
+            "name": "Claude Opus 4.8",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 54.8,
+          "uncertainty": null,
+          "evaluationDate": "2026-06-01",
+          "source": {
+            "sourceId": "osworld-v2-official",
+            "type": "official",
+            "name": "OSWorld v2 official project",
+            "url": "https://osworld-v2.xlang.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "max",
+            "attempts": 1,
+            "passK": 1,
+            "budget": {
+              "outputTokens": 244000
+            },
+            "environment": "OSWorld v2"
+          },
+          "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
+        },
+        "top3": [
+          {
+            "resultId": "oswv2-opus48-batched",
+            "rank": 1,
+            "system": {
+              "systemId": "opus-4-8-batched",
+              "name": "Claude Opus 4.8 + batched tool calls",
+              "scaffold": "OSWorld reference agent",
+              "harness": "OSWorld v2",
+              "tools": [
+                "computer",
+                "batched_tool_calls"
+              ]
+            },
+            "model": {
+              "modelId": "claude-opus-4-8",
+              "name": "Claude Opus 4.8",
+              "organization": "Anthropic",
+              "openWeights": false
+            },
+            "score": 54.8,
+            "uncertainty": null,
+            "evaluationDate": "2026-06-01",
+            "source": {
+              "sourceId": "osworld-v2-official",
+              "type": "official",
+              "name": "OSWorld v2 official project",
+              "url": "https://osworld-v2.xlang.ai/"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "max",
+              "attempts": 1,
+              "passK": 1,
+              "budget": {
+                "outputTokens": 244000
+              },
+              "environment": "OSWorld v2"
+            },
+            "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
+          },
+          {
+            "resultId": "oswv2-opus47",
+            "rank": 2,
+            "system": {
+              "systemId": "opus-4-7-osworld",
+              "name": "Claude Opus 4.7",
+              "scaffold": "OSWorld reference agent",
+              "harness": "OSWorld v2",
+              "tools": [
+                "computer"
+              ]
+            },
+            "model": {
+              "modelId": "claude-opus-4-7",
+              "name": "Claude Opus 4.7",
+              "organization": "Anthropic",
+              "openWeights": false
+            },
+            "score": 49.1,
+            "uncertainty": null,
+            "evaluationDate": "2026-03-01",
+            "source": {
+              "sourceId": "osworld-v2-official",
+              "type": "official",
+              "name": "OSWorld v2 official project",
+              "url": "https://osworld-v2.xlang.ai/"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "high",
+              "attempts": 1,
+              "passK": 1,
+              "budget": {
+                "outputTokens": 150000
+              },
+              "environment": "OSWorld v2"
+            },
+            "notes": "Official page reports 18.2% binary score; partial-credit value transcribed from the comparison chart."
+          }
+        ],
+        "group": {
+          "version": "2.0",
+          "subset": "108-tasks",
+          "metric": "partial_credit",
+          "protocol": "reference-agent"
+        }
+      }
+    },
+    {
+      "benchmarkId": "osworld-v1",
+      "type": "benchmark",
+      "canonicalName": "OSWorld v1",
+      "aliases": [
+        "OSWorld"
+      ],
+      "category": "OS / Desktop",
+      "owner": "OSWorld",
+      "status": "legacy",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "task_success",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://os-world.github.io/",
+        "repo": "https://github.com/xlang-ai/OSWorld"
+      },
+      "sourceIds": [
+        "osworld-v1-official"
+      ],
+      "summary": "第一代 369 任务桌面环境；与 v2 分开归档。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "image",
+        "gui"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "osworld-v1",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "task_success",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "gaia",
+      "type": "benchmark",
+      "canonicalName": "GAIA",
+      "aliases": [
+        "GAIA Benchmark"
+      ],
+      "category": "Knowledge Work",
+      "owner": "GAIA benchmark",
+      "status": "ready",
+      "versions": [
+        "2023"
+      ],
+      "primaryMetric": {
+        "name": "accuracy",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "dataset": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+        "leaderboard": "https://huggingface.co/spaces/gaia-benchmark/leaderboard"
+      },
+      "sourceIds": [
+        "gaia-official"
+      ],
+      "summary": "需要推理、工具和外部信息检索的现实问题评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "gaia",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "2023",
+          "subset": "full",
+          "metric": "accuracy",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "tau2-bench",
+      "type": "benchmark",
+      "canonicalName": "τ²-bench",
+      "aliases": [
+        "tau2-bench",
+        "tau squared bench"
+      ],
+      "category": "Enterprise",
+      "owner": "τ²-bench",
+      "status": "needs_source",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "pass@1",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "repo": "https://github.com/sierra-research/tau2-bench"
+      },
+      "sourceIds": [
+        "tau2-official"
+      ],
+      "summary": "双控制环境下的对话式企业 Agent 任务评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "tau2-bench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "pass@1",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "tau-bench",
+      "type": "benchmark",
+      "canonicalName": "τ-bench",
+      "aliases": [
+        "tau-bench"
+      ],
+      "category": "Enterprise",
+      "owner": "τ-bench",
+      "status": "legacy",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "pass@1",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "repo": "https://github.com/sierra-research/tau-bench"
+      },
+      "sourceIds": [
+        "tau-official"
+      ],
+      "summary": "τ²-bench 的前代，不与后者合并。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "tau-bench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "pass@1",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "webarena",
+      "type": "benchmark",
+      "canonicalName": "WebArena",
+      "aliases": [
+        "Web Arena"
+      ],
+      "category": "Web Agent",
+      "owner": "WebArena",
+      "status": "ready",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "success_rate",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://webarena.dev/",
+        "repo": "https://github.com/web-arena-x/webarena"
+      },
+      "sourceIds": [
+        "webarena-official"
+      ],
+      "summary": "812 个自托管真实网站导航任务。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "web"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "webarena",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "success_rate",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "visualwebarena",
+      "type": "benchmark",
+      "canonicalName": "VisualWebArena",
+      "aliases": [
+        "Visual WebArena"
+      ],
+      "category": "Web Agent",
+      "owner": "WebArena",
+      "status": "collecting",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "success_rate",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "repo": "https://github.com/web-arena-x/visualwebarena"
+      },
+      "sourceIds": [
+        "visualwebarena-official"
+      ],
+      "summary": "WebArena 的视觉多模态扩展。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "image",
+        "web"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "visualwebarena",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "success_rate",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "online-mind2web",
+      "type": "benchmark",
+      "canonicalName": "Online-Mind2Web",
+      "aliases": [
+        "Mind2Web-live",
+        "Mind2Web"
+      ],
+      "category": "Web Agent",
+      "owner": "OSU NLP",
+      "status": "collecting",
+      "versions": [
+        "online"
+      ],
+      "primaryMetric": {
+        "name": "task_success",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://osu-nlp-group.github.io/Mind2Web/"
+      },
+      "sourceIds": [
+        "mind2web-official"
+      ],
+      "summary": "面向实时网站的动作与任务完成评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "web"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "online-mind2web",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "online",
+          "subset": "full",
+          "metric": "task_success",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "workarena-plus",
+      "type": "benchmark",
+      "canonicalName": "WorkArena++",
+      "aliases": [
+        "WorkArena Plus"
+      ],
+      "category": "Enterprise",
+      "owner": "ServiceNow Research",
+      "status": "collecting",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "success_rate",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "repo": "https://github.com/ServiceNow/WorkArena"
+      },
+      "sourceIds": [
+        "workarena-official"
+      ],
+      "summary": "ServiceNow 企业知识与工作流任务。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "web"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "workarena-plus",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "success_rate",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "browsecomp",
+      "type": "benchmark",
+      "canonicalName": "BrowseComp",
+      "aliases": [
+        "Browse Comp"
+      ],
+      "category": "Web Agent",
+      "owner": "OpenAI",
+      "status": "collecting",
+      "versions": [
+        "2025"
+      ],
+      "primaryMetric": {
+        "name": "accuracy",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://openai.com/index/browsecomp/"
+      },
+      "sourceIds": [
+        "browsecomp-official"
+      ],
+      "summary": "难检索、需多步浏览研究的问题集。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "browsecomp",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "2025",
+          "subset": "full",
+          "metric": "accuracy",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "gdpval",
+      "type": "benchmark",
+      "canonicalName": "GDPval",
+      "aliases": [
+        "GDP Val"
+      ],
+      "category": "Knowledge Work",
+      "owner": "OpenAI",
+      "status": "needs_source",
+      "versions": [
+        "2025"
+      ],
+      "primaryMetric": {
+        "name": "win_rate",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://openai.com/index/gdpval/"
+      },
+      "sourceIds": [
+        "gdpval-official"
+      ],
+      "summary": "真实经济任务与专业知识工作评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "gdpval",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "2025",
+          "subset": "full",
+          "metric": "win_rate",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "mcp-atlas",
+      "type": "suite",
+      "canonicalName": "MCP Atlas",
+      "aliases": [
+        "MCPAtlas"
+      ],
+      "category": "Tool Use",
+      "owner": "MCP research community",
+      "status": "needs_source",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "task_success",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://mcp-atlas.github.io/"
+      },
+      "sourceIds": [
+        "mcp-atlas-project"
+      ],
+      "summary": "MCP 工具使用与互操作能力套件。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "mcp-atlas",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "task_success",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "remote-labor-index",
+      "type": "benchmark",
+      "canonicalName": "Remote Labor Index",
+      "aliases": [
+        "RLI"
+      ],
+      "category": "Knowledge Work",
+      "owner": "Scale AI",
+      "status": "collecting",
+      "versions": [
+        "2025"
+      ],
+      "primaryMetric": {
+        "name": "completion_rate",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://scale.com/research/remote-labor-index"
+      },
+      "sourceIds": [
+        "rli-official"
+      ],
+      "summary": "远程数字劳动任务的端到端完成度评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "remote-labor-index",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "2025",
+          "subset": "full",
+          "metric": "completion_rate",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "metr-time-horizon",
+      "type": "benchmark",
+      "canonicalName": "METR Time Horizon",
+      "aliases": [
+        "METR TH"
+      ],
+      "category": "Software Engineering",
+      "owner": "METR",
+      "status": "ready",
+      "versions": [
+        "2026"
+      ],
+      "primaryMetric": {
+        "name": "time_horizon",
+        "unit": "minutes",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://metr.org/time-horizons/"
+      },
+      "sourceIds": [
+        "metr-official"
+      ],
+      "summary": "以人类任务时长衡量 Agent 可可靠完成任务的时间跨度。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "metr-time-horizon",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "2026",
+          "subset": "full",
+          "metric": "time_horizon",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "longmemeval",
+      "type": "benchmark",
+      "canonicalName": "LongMemEval",
+      "aliases": [
+        "LongMem Eval"
+      ],
+      "category": "Memory",
+      "owner": "LongMemEval",
+      "status": "collecting",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "accuracy",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "repo": "https://github.com/xiaowu0162/LongMemEval"
+      },
+      "sourceIds": [
+        "longmemeval-official"
+      ],
+      "summary": "长程对话记忆的检索、更新与时序推理。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "longmemeval",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "accuracy",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "miniappbench",
+      "type": "benchmark",
+      "canonicalName": "MiniAppBench",
+      "aliases": [
+        "Mini App Bench"
+      ],
+      "category": "App Creation",
+      "owner": "MiniAppBench",
+      "status": "collecting",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "weakest_link",
+        "unit": "score",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://miniappbench.github.io",
+        "paper": "https://arxiv.org/abs/2603.09652"
+      },
+      "sourceIds": [
+        "miniappbench-official"
+      ],
+      "summary": "交互 HTML 应用生成的意图、静态与动态质量评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text",
+        "code",
+        "image",
+        "gui"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "miniappbench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "weakest_link",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "livebench",
+      "type": "suite",
+      "canonicalName": "LiveBench",
+      "aliases": [
+        "Live Bench"
+      ],
+      "category": "General",
+      "owner": "LiveBench",
+      "status": "ready",
+      "versions": [
+        "2026-07"
+      ],
+      "primaryMetric": {
+        "name": "global_average",
+        "unit": "score",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://livebench.ai/",
+        "repo": "https://github.com/LiveBench/LiveBench"
+      },
+      "sourceIds": [
+        "livebench-official"
+      ],
+      "summary": "持续更新、减少污染风险的综合能力评测套件。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "livebench",
+        "resultCount": 4,
+        "leader": {
+          "resultId": "livebench-gpt56-sol",
+          "rank": 1,
+          "system": {
+            "systemId": "gpt-5-6-sol-max",
+            "name": "GPT-5.6 Sol Max",
+            "scaffold": "LiveBench runner",
+            "harness": "LiveBench",
+            "tools": []
+          },
+          "model": {
+            "modelId": "gpt-5-6-sol",
+            "name": "GPT-5.6 Sol",
+            "organization": "OpenAI",
+            "openWeights": false
+          },
+          "score": 82.4,
+          "uncertainty": null,
+          "evaluationDate": "2026-07-18",
+          "source": {
+            "sourceId": "livebench-official",
+            "type": "official",
+            "name": "LiveBench official leaderboard",
+            "url": "https://livebench.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "max",
+            "attempts": 1,
+            "passK": 1,
+            "budget": null,
+            "environment": "LiveBench"
+          },
+          "notes": "Rolling benchmark snapshot; versioned by retrieval month."
+        },
+        "top3": [
+          {
+            "resultId": "livebench-gpt56-sol",
+            "rank": 1,
+            "system": {
+              "systemId": "gpt-5-6-sol-max",
+              "name": "GPT-5.6 Sol Max",
+              "scaffold": "LiveBench runner",
+              "harness": "LiveBench",
+              "tools": []
+            },
+            "model": {
+              "modelId": "gpt-5-6-sol",
+              "name": "GPT-5.6 Sol",
+              "organization": "OpenAI",
+              "openWeights": false
+            },
+            "score": 82.4,
+            "uncertainty": null,
+            "evaluationDate": "2026-07-18",
+            "source": {
+              "sourceId": "livebench-official",
+              "type": "official",
+              "name": "LiveBench official leaderboard",
+              "url": "https://livebench.ai/"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "max",
+              "attempts": 1,
+              "passK": 1,
+              "budget": null,
+              "environment": "LiveBench"
+            },
+            "notes": "Rolling benchmark snapshot; versioned by retrieval month."
+          },
+          {
+            "resultId": "livebench-fable5",
+            "rank": 2,
+            "system": {
+              "systemId": "fable-5-max",
+              "name": "Fable 5 Max",
+              "scaffold": "LiveBench runner",
+              "harness": "LiveBench",
+              "tools": []
+            },
+            "model": {
+              "modelId": "fable-5",
+              "name": "Fable 5",
+              "organization": "Anthropic",
+              "openWeights": false
+            },
+            "score": 80.8,
+            "uncertainty": null,
+            "evaluationDate": "2026-07-18",
+            "source": {
+              "sourceId": "livebench-official",
+              "type": "official",
+              "name": "LiveBench official leaderboard",
+              "url": "https://livebench.ai/"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "max",
+              "attempts": 1,
+              "passK": 1,
+              "budget": null,
+              "environment": "LiveBench"
+            },
+            "notes": "Rolling benchmark snapshot."
+          },
+          {
+            "resultId": "livebench-gpt55",
+            "rank": 3,
+            "system": {
+              "systemId": "gpt-5-5-thinking-xhigh",
+              "name": "GPT-5.5 Thinking xHigh",
+              "scaffold": "LiveBench runner",
+              "harness": "LiveBench",
+              "tools": []
+            },
+            "model": {
+              "modelId": "gpt-5-5",
+              "name": "GPT-5.5",
+              "organization": "OpenAI",
+              "openWeights": false
+            },
+            "score": 79.9,
+            "uncertainty": null,
+            "evaluationDate": "2026-07-18",
+            "source": {
+              "sourceId": "livebench-official",
+              "type": "official",
+              "name": "LiveBench official leaderboard",
+              "url": "https://livebench.ai/"
+            },
+            "comparability": "comparable",
+            "runConfig": {
+              "effort": "xhigh",
+              "attempts": 1,
+              "passK": 1,
+              "budget": null,
+              "environment": "LiveBench"
+            },
+            "notes": "Rolling benchmark snapshot."
+          }
+        ],
+        "group": {
+          "version": "2026-07",
+          "subset": "global",
+          "metric": "global_average",
+          "protocol": "official-runner"
+        }
+      }
+    },
+    {
+      "benchmarkId": "livecodebench",
+      "type": "benchmark",
+      "canonicalName": "LiveCodeBench",
+      "aliases": [
+        "Live Code Bench"
+      ],
+      "category": "Code",
+      "owner": "LiveCodeBench",
+      "status": "ready",
+      "versions": [
+        "v6"
+      ],
+      "primaryMetric": {
+        "name": "pass@1",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://livecodebench.github.io/",
+        "repo": "https://github.com/LiveCodeBench/LiveCodeBench"
+      },
+      "sourceIds": [
+        "livecodebench-official"
+      ],
+      "summary": "按时间滚动更新的代码生成与自修复评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "livecodebench",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "v6",
+          "subset": "full",
+          "metric": "pass@1",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "gpqa-diamond",
+      "type": "dataset",
+      "canonicalName": "GPQA Diamond",
+      "aliases": [
+        "GPQA-D"
+      ],
+      "category": "Reasoning",
+      "owner": "NYU",
+      "status": "collecting",
+      "versions": [
+        "diamond"
+      ],
+      "primaryMetric": {
+        "name": "accuracy",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "dataset": "https://huggingface.co/datasets/Idavidrein/gpqa"
+      },
+      "sourceIds": [
+        "gpqa-dataset"
+      ],
+      "summary": "研究生级、抗搜索的科学问答子集。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "gpqa-diamond",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "diamond",
+          "subset": "full",
+          "metric": "accuracy",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "humanitys-last-exam",
+      "type": "benchmark",
+      "canonicalName": "Humanity's Last Exam",
+      "aliases": [
+        "HLE"
+      ],
+      "category": "Reasoning",
+      "owner": "Center for AI Safety",
+      "status": "ready",
+      "versions": [
+        "2025"
+      ],
+      "primaryMetric": {
+        "name": "accuracy",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "homepage": "https://lastexam.ai/"
+      },
+      "sourceIds": [
+        "hle-official"
+      ],
+      "summary": "跨学科专家级闭卷问题评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "humanitys-last-exam",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "2025",
+          "subset": "full",
+          "metric": "accuracy",
+          "protocol": "unconfigured"
+        }
+      }
+    },
+    {
+      "benchmarkId": "mmlu-pro",
+      "type": "benchmark",
+      "canonicalName": "MMLU-Pro",
+      "aliases": [
+        "MMLU Pro"
+      ],
+      "category": "Reasoning",
+      "owner": "TIGER-Lab",
+      "status": "ready",
+      "versions": [
+        "1.0"
+      ],
+      "primaryMetric": {
+        "name": "accuracy",
+        "unit": "%",
+        "direction": "higher",
+        "tiesAllowed": true
+      },
+      "links": {
+        "repo": "https://github.com/TIGER-AI-Lab/MMLU-Pro"
+      },
+      "sourceIds": [
+        "mmlu-pro-official"
+      ],
+      "summary": "更高难度、十选一的知识与推理评测。",
+      "languages": [
+        "en"
+      ],
+      "modalities": [
+        "text"
+      ],
+      "timeWindow": null,
+      "leaderboard": {
+        "benchmarkId": "mmlu-pro",
+        "resultCount": 0,
+        "leader": null,
+        "top3": [],
+        "group": {
+          "version": "1.0",
+          "subset": "full",
+          "metric": "accuracy",
+          "protocol": "unconfigured"
+        }
+      }
+    }
+  ]
+}

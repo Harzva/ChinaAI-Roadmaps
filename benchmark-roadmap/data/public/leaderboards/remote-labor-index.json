@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "remote-labor-index",
+    "canonicalName": "Remote Labor Index",
+    "category": "Knowledge Work",
+    "status": "collecting",
+    "summary": "远程数字劳动任务的端到端完成度评测。",
+    "metric": {
+      "name": "completion_rate",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://scale.com/research/remote-labor-index"
+    }
+  },
+  "group": {
+    "version": "2025",
+    "subset": "full",
+    "metric": "completion_rate",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

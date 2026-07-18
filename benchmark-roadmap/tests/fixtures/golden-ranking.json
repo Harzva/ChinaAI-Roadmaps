@@ -1,0 +1,14 @@
+{
+  "description": "Release golden set for benchmark-local ranking",
+  "direction": "higher",
+  "inputs": [
+    {"resultId":"b","benchmarkId":"demo","version":"1","subset":"full","metric":"score","protocol":"p","systemId":"beta","score":90,"evaluationDate":"2026-01-01","sourceType":"official","sourceUrl":"https://example.com/b","comparability":"comparable"},
+    {"resultId":"a","benchmarkId":"demo","version":"1","subset":"full","metric":"score","protocol":"p","systemId":"alpha","score":90,"evaluationDate":"2026-02-01","sourceType":"independent","sourceUrl":"https://example.com/a","comparability":"comparable"},
+    {"resultId":"c","benchmarkId":"demo","version":"1","subset":"full","metric":"score","protocol":"p","systemId":"gamma","score":88,"evaluationDate":"2026-03-01","sourceType":"official","sourceUrl":"https://example.com/c","comparability":"comparable"}
+  ],
+  "expected": [
+    {"resultId":"a","rank":1},
+    {"resultId":"b","rank":1},
+    {"resultId":"c","rank":3}
+  ]
+}

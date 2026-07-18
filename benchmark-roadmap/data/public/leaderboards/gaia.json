@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "gaia",
+    "canonicalName": "GAIA",
+    "category": "Knowledge Work",
+    "status": "ready",
+    "summary": "需要推理、工具和外部信息检索的现实问题评测。",
+    "metric": {
+      "name": "accuracy",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "dataset": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+      "leaderboard": "https://huggingface.co/spaces/gaia-benchmark/leaderboard"
+    }
+  },
+  "group": {
+    "version": "2023",
+    "subset": "full",
+    "metric": "accuracy",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}

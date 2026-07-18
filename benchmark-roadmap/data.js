@@ -9,6 +9,7 @@ window.ROADMAP_DATA = {
   searchPlaceholder: "搜索 SWE-bench、OSWorld、MiniAppBench、LongMemEval...",
   theme: { cyan: "#8ce7ff", green: "#91e887", amber: "#ffd166", coral: "#ff8b6e", pink: "#ff8ac8" },
   nav: [
+    { label: "Leaderboard", href: "./" },
     { label: "Agent Map", href: "../agent-roadmap/" },
     { label: "World Map", href: "../worldroadmap/" },
     { label: "Reasoning Map", href: "../reasoning-roadmap/" },

@@ -1,0 +1,406 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "osworld-v2",
+    "canonicalName": "OSWorld v2",
+    "category": "OS / Desktop",
+    "status": "ready",
+    "summary": "108 个跨应用、长程桌面操作任务，提供二元与部分得分。",
+    "metric": {
+      "name": "partial_credit",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://osworld-v2.xlang.ai/",
+      "repo": "https://github.com/xlang-ai/OSWorld"
+    }
+  },
+  "group": {
+    "version": "2.0",
+    "subset": "108-tasks",
+    "metric": "partial_credit",
+    "protocol": "reference-agent"
+  },
+  "top5": [
+    {
+      "resultId": "oswv2-opus48-batched",
+      "rank": 1,
+      "system": {
+        "systemId": "opus-4-8-batched",
+        "name": "Claude Opus 4.8 + batched tool calls",
+        "scaffold": "OSWorld reference agent",
+        "harness": "OSWorld v2",
+        "tools": [
+          "computer",
+          "batched_tool_calls"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-8",
+        "name": "Claude Opus 4.8",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 54.8,
+      "uncertainty": null,
+      "evaluationDate": "2026-06-01",
+      "source": {
+        "sourceId": "osworld-v2-official",
+        "type": "official",
+        "name": "OSWorld v2 official project",
+        "url": "https://osworld-v2.xlang.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "outputTokens": 244000
+        },
+        "environment": "OSWorld v2"
+      },
+      "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
+    },
+    {
+      "resultId": "oswv2-opus47",
+      "rank": 2,
+      "system": {
+        "systemId": "opus-4-7-osworld",
+        "name": "Claude Opus 4.7",
+        "scaffold": "OSWorld reference agent",
+        "harness": "OSWorld v2",
+        "tools": [
+          "computer"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-7",
+        "name": "Claude Opus 4.7",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 49.1,
+      "uncertainty": null,
+      "evaluationDate": "2026-03-01",
+      "source": {
+        "sourceId": "osworld-v2-official",
+        "type": "official",
+        "name": "OSWorld v2 official project",
+        "url": "https://osworld-v2.xlang.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "outputTokens": 150000
+        },
+        "environment": "OSWorld v2"
+      },
+      "notes": "Official page reports 18.2% binary score; partial-credit value transcribed from the comparison chart."
+    }
+  ],
+  "top10": [
+    {
+      "resultId": "oswv2-opus48-batched",
+      "rank": 1,
+      "system": {
+        "systemId": "opus-4-8-batched",
+        "name": "Claude Opus 4.8 + batched tool calls",
+        "scaffold": "OSWorld reference agent",
+        "harness": "OSWorld v2",
+        "tools": [
+          "computer",
+          "batched_tool_calls"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-8",
+        "name": "Claude Opus 4.8",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 54.8,
+      "uncertainty": null,
+      "evaluationDate": "2026-06-01",
+      "source": {
+        "sourceId": "osworld-v2-official",
+        "type": "official",
+        "name": "OSWorld v2 official project",
+        "url": "https://osworld-v2.xlang.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "outputTokens": 244000
+        },
+        "environment": "OSWorld v2"
+      },
+      "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
+    },
+    {
+      "resultId": "oswv2-opus47",
+      "rank": 2,
+      "system": {
+        "systemId": "opus-4-7-osworld",
+        "name": "Claude Opus 4.7",
+        "scaffold": "OSWorld reference agent",
+        "harness": "OSWorld v2",
+        "tools": [
+          "computer"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-7",
+        "name": "Claude Opus 4.7",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 49.1,
+      "uncertainty": null,
+      "evaluationDate": "2026-03-01",
+      "source": {
+        "sourceId": "osworld-v2-official",
+        "type": "official",
+        "name": "OSWorld v2 official project",
+        "url": "https://osworld-v2.xlang.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "outputTokens": 150000
+        },
+        "environment": "OSWorld v2"
+      },
+      "notes": "Official page reports 18.2% binary score; partial-credit value transcribed from the comparison chart."
+    }
+  ],
+  "all": [
+    {
+      "resultId": "oswv2-opus48-batched",
+      "rank": 1,
+      "system": {
+        "systemId": "opus-4-8-batched",
+        "name": "Claude Opus 4.8 + batched tool calls",
+        "scaffold": "OSWorld reference agent",
+        "harness": "OSWorld v2",
+        "tools": [
+          "computer",
+          "batched_tool_calls"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-8",
+        "name": "Claude Opus 4.8",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 54.8,
+      "uncertainty": null,
+      "evaluationDate": "2026-06-01",
+      "source": {
+        "sourceId": "osworld-v2-official",
+        "type": "official",
+        "name": "OSWorld v2 official project",
+        "url": "https://osworld-v2.xlang.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "max",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "outputTokens": 244000
+        },
+        "environment": "OSWorld v2"
+      },
+      "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
+    },
+    {
+      "resultId": "oswv2-opus47",
+      "rank": 2,
+      "system": {
+        "systemId": "opus-4-7-osworld",
+        "name": "Claude Opus 4.7",
+        "scaffold": "OSWorld reference agent",
+        "harness": "OSWorld v2",
+        "tools": [
+          "computer"
+        ]
+      },
+      "model": {
+        "modelId": "claude-opus-4-7",
+        "name": "Claude Opus 4.7",
+        "organization": "Anthropic",
+        "openWeights": false
+      },
+      "score": 49.1,
+      "uncertainty": null,
+      "evaluationDate": "2026-03-01",
+      "source": {
+        "sourceId": "osworld-v2-official",
+        "type": "official",
+        "name": "OSWorld v2 official project",
+        "url": "https://osworld-v2.xlang.ai/"
+      },
+      "comparability": "comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "outputTokens": 150000
+        },
+        "environment": "OSWorld v2"
+      },
+      "notes": "Official page reports 18.2% binary score; partial-credit value transcribed from the comparison chart."
+    }
+  ],
+  "availableGroups": [
+    {
+      "key": "2.0::108-tasks::partial_credit::reference-agent",
+      "resultCount": 2,
+      "version": "2.0",
+      "subset": "108-tasks",
+      "metric": "partial_credit",
+      "protocol": "reference-agent"
+    }
+  ],
+  "sotaTimeline": [
+    {
+      "date": "2026-03-01",
+      "leaders": [
+        {
+          "resultId": "oswv2-opus47",
+          "rank": 1,
+          "system": {
+            "systemId": "opus-4-7-osworld",
+            "name": "Claude Opus 4.7",
+            "scaffold": "OSWorld reference agent",
+            "harness": "OSWorld v2",
+            "tools": [
+              "computer"
+            ]
+          },
+          "model": {
+            "modelId": "claude-opus-4-7",
+            "name": "Claude Opus 4.7",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 49.1,
+          "uncertainty": null,
+          "evaluationDate": "2026-03-01",
+          "source": {
+            "sourceId": "osworld-v2-official",
+            "type": "official",
+            "name": "OSWorld v2 official project",
+            "url": "https://osworld-v2.xlang.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "high",
+            "attempts": 1,
+            "passK": 1,
+            "budget": {
+              "outputTokens": 150000
+            },
+            "environment": "OSWorld v2"
+          },
+          "notes": "Official page reports 18.2% binary score; partial-credit value transcribed from the comparison chart."
+        }
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "leaders": [
+        {
+          "resultId": "oswv2-opus48-batched",
+          "rank": 1,
+          "system": {
+            "systemId": "opus-4-8-batched",
+            "name": "Claude Opus 4.8 + batched tool calls",
+            "scaffold": "OSWorld reference agent",
+            "harness": "OSWorld v2",
+            "tools": [
+              "computer",
+              "batched_tool_calls"
+            ]
+          },
+          "model": {
+            "modelId": "claude-opus-4-8",
+            "name": "Claude Opus 4.8",
+            "organization": "Anthropic",
+            "openWeights": false
+          },
+          "score": 54.8,
+          "uncertainty": null,
+          "evaluationDate": "2026-06-01",
+          "source": {
+            "sourceId": "osworld-v2-official",
+            "type": "official",
+            "name": "OSWorld v2 official project",
+            "url": "https://osworld-v2.xlang.ai/"
+          },
+          "comparability": "comparable",
+          "runConfig": {
+            "effort": "max",
+            "attempts": 1,
+            "passK": 1,
+            "budget": {
+              "outputTokens": 244000
+            },
+            "environment": "OSWorld v2"
+          },
+          "notes": "Binary score is 20.6%; ranking uses the declared partial-credit metric."
+        }
+      ]
+    }
+  ],
+  "otherReports": [
+    {
+      "resultId": "oswv2-gpt55",
+      "system": {
+        "systemId": "gpt-5-5-osworld",
+        "name": "GPT-5.5",
+        "harness": "OSWorld v2"
+      },
+      "model": {
+        "modelId": "gpt-5-5",
+        "name": "GPT-5.5",
+        "organization": "OpenAI",
+        "openWeights": false
+      },
+      "score": 43.2,
+      "uncertainty": null,
+      "source": {
+        "type": "official",
+        "url": "https://osworld-v2.xlang.ai/"
+      },
+      "comparability": "partially_comparable",
+      "runConfig": {
+        "effort": "high",
+        "attempts": 1,
+        "passK": 1,
+        "budget": {
+          "outputTokens": 39000
+        },
+        "environment": "OSWorld v2"
+      },
+      "evaluationDate": "2026-05-01",
+      "notes": "Official page comparison; excluded from default Top-K because the chart value requires confirmation."
+    }
+  ],
+  "caveat": "Ranked only within this exact version, subset, metric and protocol."
+}

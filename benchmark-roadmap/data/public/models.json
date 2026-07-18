@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "models": [
+    {
+      "modelId": "claude-opus-4-5",
+      "name": "Claude Opus 4.5",
+      "organization": "Anthropic",
+      "releaseDate": "2025-11-01",
+      "openWeights": false,
+      "systems": [
+        "live-swe-claude-opus-4-5",
+        "sonar-foundation-claude-opus-4-5"
+      ]
+    },
+    {
+      "modelId": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "organization": "Anthropic",
+      "releaseDate": "2026-01-01",
+      "openWeights": false,
+      "systems": [
+        "opus-4-7-osworld"
+      ]
+    },
+    {
+      "modelId": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "organization": "Anthropic",
+      "releaseDate": "2026-05-01",
+      "openWeights": false,
+      "systems": [
+        "claude-code-opus-4-8",
+        "opus-4-8-batched"
+      ]
+    },
+    {
+      "modelId": "fable-5",
+      "name": "Fable 5",
+      "organization": "Anthropic",
+      "releaseDate": "2026-05-01",
+      "openWeights": false,
+      "systems": [
+        "claude-code-fable-5",
+        "terminus-2-fable-5",
+        "fable-5-max"
+      ]
+    },
+    {
+      "modelId": "gpt-5-5",
+      "name": "GPT-5.5",
+      "organization": "OpenAI",
+      "releaseDate": "2026-04-01",
+      "openWeights": false,
+      "systems": [
+        "codex-gpt-5-5",
+        "gpt-5-5-osworld",
+        "gpt-5-5-thinking-xhigh"
+      ]
+    },
+    {
+      "modelId": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "organization": "OpenAI",
+      "releaseDate": "2026-07-01",
+      "openWeights": false,
+      "systems": [
+        "gpt-5-6-sol-max"
+      ]
+    },
+    {
+      "modelId": "gpt-5-6-terra",
+      "name": "GPT-5.6 Terra",
+      "organization": "OpenAI",
+      "releaseDate": "2026-07-01",
+      "openWeights": false,
+      "systems": [
+        "gpt-5-6-terra-max"
+      ]
+    },
+    {
+      "modelId": "grok-4-5",
+      "name": "Grok 4.5",
+      "organization": "xAI",
+      "releaseDate": "2026-06-01",
+      "openWeights": false,
+      "systems": [
+        "cursor-grok-4-5"
+      ]
+    },
+    {
+      "modelId": "doubao-seed-code",
+      "name": "Doubao-Seed-Code",
+      "organization": "ByteDance",
+      "releaseDate": "2025-09-01",
+      "openWeights": false,
+      "systems": [
+        "trae-doubao-seed-code"
+      ]
+    },
+    {
+      "modelId": "gemini-3-pro-preview",
+      "name": "Gemini 3 Pro Preview",
+      "organization": "Google",
+      "releaseDate": "2025-11-18",
+      "openWeights": false,
+      "systems": [
+        "live-swe-gemini-3-pro"
+      ]
+    },
+    {
+      "modelId": "proprietary-stack",
+      "name": "Proprietary model stack",
+      "organization": "Multiple",
+      "releaseDate": null,
+      "openWeights": false,
+      "systems": [
+        "atlassian-rovo-dev"
+      ]
+    }
+  ]
+}

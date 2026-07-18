@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"model.schema.json","title":"Model","type":"object","required":["modelId","name","organization","openWeights"],"properties":{"modelId":{"type":"string","pattern":"^[a-z0-9-]+$"},"openWeights":{"type":"boolean"}},"additionalProperties":true}

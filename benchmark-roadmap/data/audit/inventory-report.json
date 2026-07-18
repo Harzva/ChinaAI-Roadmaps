@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T13:49:05.011Z",
+  "scannedFiles": [
+    "benchmark-roadmap/data.js",
+    "app/src/pages/Benchmarks.tsx",
+    "app/src/pages/DeepSeekOverview.tsx",
+    "app/src/pages/Kimi.tsx",
+    "app/src/pages/Glm.tsx",
+    "app/src/pages/Mimo.tsx"
+  ],
+  "summary": {
+    "registryEntries": 24,
+    "benchmarks": 21,
+    "suites": 2,
+    "datasets": 1,
+    "frameworksInRegistry": 0,
+    "auditMethodsInRegistry": 0,
+    "sourceCoveragePercent": 100,
+    "ready": 10,
+    "collecting": 8,
+    "needsSource": 3,
+    "legacy": 3,
+    "discoveredRegistryReferences": 20
+  },
+  "aliasResolutions": [
+    {
+      "alias": "SWE-Verified",
+      "benchmarkId": "swe-bench-verified"
+    },
+    {
+      "alias": "TerminalBench",
+      "benchmarkId": "terminal-bench-2-0",
+      "note": "Legacy bare alias is not assigned to 2.1."
+    },
+    {
+      "alias": "OSWorld",
+      "benchmarkId": "osworld-v1",
+      "note": "v2 has a separate identity."
+    },
+    {
+      "alias": "Mind2Web",
+      "benchmarkId": "online-mind2web"
+    }
+  ],
+  "excludedConcepts": [
+    "BrowserGym (framework)",
+    "Claw-Eval (audit method)",
+    "Benchmark Identity (audit method)",
+    "Harness Spec (audit method)",
+    "Cost Disclosure (audit method)",
+    "Failure Taxonomy (audit method)"
+  ],
+  "pendingReview": [
+    {
+      "benchmarkId": "mcp-atlas",
+      "reason": "Project identity and canonical source need independent confirmation."
+    },
+    {
+      "benchmarkId": "gdpval",
+      "reason": "No normalized public result feed is configured."
+    },
+    {
+      "benchmarkId": "tau2-bench",
+      "reason": "Leaderboard result adapter is pending."
+    }
+  ],
+  "uncoveredRegistryEntries": [
+    "terminal-bench-2-1",
+    "osworld-v2",
+    "metr-time-horizon",
+    "livebench"
+  ]
+}

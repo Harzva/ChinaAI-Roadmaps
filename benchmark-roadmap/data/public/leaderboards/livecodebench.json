@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T00:00:00Z",
+  "benchmark": {
+    "benchmarkId": "livecodebench",
+    "canonicalName": "LiveCodeBench",
+    "category": "Code",
+    "status": "ready",
+    "summary": "按时间滚动更新的代码生成与自修复评测。",
+    "metric": {
+      "name": "pass@1",
+      "unit": "%",
+      "direction": "higher",
+      "tiesAllowed": true
+    },
+    "links": {
+      "homepage": "https://livecodebench.github.io/",
+      "repo": "https://github.com/LiveCodeBench/LiveCodeBench"
+    }
+  },
+  "group": {
+    "version": "v6",
+    "subset": "full",
+    "metric": "pass@1",
+    "protocol": "unconfigured"
+  },
+  "top5": [],
+  "top10": [],
+  "all": [],
+  "availableGroups": [],
+  "sotaTimeline": [],
+  "otherReports": [],
+  "caveat": "No source-qualified comparable result is published yet."
+}
